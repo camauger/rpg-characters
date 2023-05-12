@@ -195,7 +195,6 @@ def get_files_in_folder(folder_path):
 # Example usage
 folder_path = "./static/images/"
 files_in_folder = get_files_in_folder(folder_path)
-print(files_in_folder)
 
 # Get all the characters with an image in images folder
 characters_with_images = []
@@ -207,6 +206,7 @@ for character in existing_characters:
 # Write the characters with images to a JSON file
 with open("characters_with_images.json", "w") as json_file:
     json.dump(characters_with_images, json_file, indent=4, default=lambda o: o.__dict__)
+    print(f"There are {len(characters_with_images)} characters with images.")
 
 
 # Get all the characters without an image in images folder
@@ -219,6 +219,7 @@ for character in existing_characters:
 # Write the characters without images to a JSON file
 with open("characters_without_images.json", "w") as json_file:
     json.dump(characters_without_images, json_file, indent=4, default=lambda o: o.__dict__)
+    print(f"There are {len(characters_without_images)} characters without images.")
 
 # Create a list of image prompts of the characters without images
 prompts = []

@@ -1,12 +1,8 @@
 Create a Surreal Portrait of Reagen Lisiayne. Reagen Lisiayne is a Young Male Human with a stocky body type. Reagen has ebony punk hair and grayish-white eyes. Auburn and Amethyst tones. Golden Hour. Medieval Fantasy Setting, D&D. --seed 197
 
+Create a Moody Portrait of Gaspar Dar. Gaspar Dar is a Middle-aged Male Tiefling with a v-shape body type. Gaspar has golden bob cut with fringe hair and hazel eyes. Rose and Bubblegum tones. Backlighting. Medieval Fantasy Setting, D&D. --seed 961
+
 Create a charismatic Moody Portrait of Even Elleises, a Criminal Monk. Even Elleises is a Old Male Elf with a wide-waisted body type. Even has chestnut plait hair and grayish-white eyes. Black and Olive tones. Candlelight. Detailed facial features, realistic. Forgotten Realms, Medieval Fantasy Setting, D&D. --seed 205
-
-Create a curious Environmental Portrait of Ernaline Iaa, a Entertainer Druid. Ernaline Iaa is a Middle-aged Non-binary Gnome with a top-emphasized body type. Ernaline has brown crown plait hair and emerald eyes. Carnation and Crimson tones. Silhouette Lighting. Detailed facial features, realistic. Forgotten Realms, Medieval Fantasy Setting, D&D. --seed 537
-
-Create a charismatic Documentary Portrait of Liana Vold, a Outlander Paladin. Liana Vold is a Middle-aged Female Dwarf with a upper midsection-emphasized body type. Liana has light layered cut with length hair and gold eyes. Lime and Olive tones. Soft Light. Detailed facial features, realistic. Forgotten Realms, Medieval Fantasy Setting, D&D. --seed 806
-
-Create a charismatic Candid Portrait of Webster Vold, a Noble Druid. Webster Vold is a Middle-aged Male Halfling with a upper midsection-emphasized body type. Webster has copper three-strand braid hair and slate eyes. Salmon and Olive tones. Natural Light. Detailed facial features, realistic. Forgotten Realms, Medieval Fantasy Setting, D&D. --seed 580
 
 In the style of anne stokes, create a charismatic character portrait of stewart calin, a acolyte gladiator. stewart calin is a senior male human with a well-built body type. stewart has platinum three-strand braid hair and teal eyes. hot pink and orchid pink tones. rim lighting. detailed facial features, realistic. full frame camera. humancore, forgotten realms, medieval fantasy setting, d&d. --s 1000 --upbeta --seed 33
 
