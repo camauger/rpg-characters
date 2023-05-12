@@ -24,7 +24,7 @@ In the style of anne stokes, create a charismatic character portrait of stewart 
 
 In the style of annie leibovitz, create a wise minimalist portrait of devin isismund, a courtier pirate. devin isismund is a adult female dragonborn with a athletic body type. devin has raven crown plait hair and amber eyes. carrot and raspberry tones. low key lighting. detailed facial features, realistic. bokeh. dragonborncore, forgotten realms, medieval fantasy setting, d&d. --s 1000 --upbeta --seed 141
 
-In the style of natalia p. gutiérrez, create a cautious moody portrait of lian elle, a archaeologist windwalker. lian elle is a adult female elf with a rounded upper body body type. lian has icy textured long hair hair and multi-colored eyes. orchid pink and salmon tones. top lighting. detailed facial features, realistic. high iso. elfcore, forgotten realms, medieval fantasy setting, d&d. --s 1000 --upbeta --seed 182
+In the style of natalia p. gutirrez, create a cautious moody portrait of lian elle, a archaeologist windwalker. lian elle is a adult female elf with a rounded upper body body type. lian has icy textured long hair hair and multi-colored eyes. orchid pink and salmon tones. top lighting. detailed facial features, realistic. high iso. elfcore, forgotten realms, medieval fantasy setting, d&d. --s 1000 --upbeta --seed 182
 
 In the style of seb mckinnon, create a adventurous studio portrait of wendie yneain, a uthgardt tribe member shadowblade. wendie yneain is a adult female elf with a curvy body type. wendie has ginger blunt bangs hair and gold eyes. amber and fern green tones. backlighting. detailed facial features, realistic. shallow depth of field. elfcore, forgotten realms, medieval fantasy setting, d&d. --s 1000 --upbeta --seed 533
 
