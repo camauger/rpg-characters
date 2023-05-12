@@ -14,3 +14,5 @@ data/locations.txt
 data/characters_data.csv
 static
 
+# Ignore api_settings.py
+api_settings.py

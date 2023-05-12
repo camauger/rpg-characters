@@ -1,11 +1,11 @@
-import random
-import json
+import random, json, csv
 import requests
 from name_composition import generate_random_first_name, generate_random_last_name
 from physical_description import PhysicalDescription
 from character_settings import CharacterBehavior, character_classes, ethnicity, background, age, gender
 from image_prompt import craft_image_prompt
-import csv
+# You will have to create your own api_settings.py file with your OpenAI API key
+from api_settings import api_key
 
 def get_number_of_existing_characters():
     try:
@@ -17,7 +17,6 @@ def get_number_of_existing_characters():
         return 0
 
 # Create a background story for an RPG character
-api_key = "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"
 def fetch_character_data(prompt, api_key):
     url = "https://api.openai.com/v1/engines/text-davinci-002/completions"
     headers = {
