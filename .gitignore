@@ -1,0 +1,16 @@
+# Python-specific ignore patterns
+*.pyc
+__pycache__/
+Lib
+Scripts
+
+# Ignore virtual environment folders (optional)
+venv/
+env/
+
+# Ignore generated data files
+data/characters.json
+data/locations.txt
+data/characters_data.csv
+static
+
