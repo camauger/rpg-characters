@@ -173,7 +173,7 @@
             "gender": "Female",
             "ethnicity": "Dragonborn",
             "name": "Ag Ana",
-            "image": "44.jpg"
+            "image": "44.png"
         },
         "nature": "playful",
         "ideal": "discovery",
@@ -204,7 +204,7 @@
             "gender": "Male",
             "ethnicity": "Elf",
             "name": "Even Elleises",
-            "image": "205.jpg"
+            "image": "205.png"
         },
         "nature": "charismatic",
         "ideal": "knowledge",
@@ -235,7 +235,7 @@
             "gender": "Non-binary",
             "ethnicity": "Gnome",
             "name": "Ernaline Iaa",
-            "image": "537.jpg"
+            "image": "537.png"
         },
         "nature": "curious",
         "ideal": "growth",
@@ -266,7 +266,7 @@
             "gender": "Female",
             "ethnicity": "Dwarf",
             "name": "Liana Vold",
-            "image": "806.jpg"
+            "image": "806.png"
         },
         "nature": "charismatic",
         "ideal": "independence",
@@ -297,7 +297,7 @@
             "gender": "Male",
             "ethnicity": "Halfling",
             "name": "Webster Vold",
-            "image": "580.jpg"
+            "image": "580.png"
         },
         "nature": "charismatic",
         "ideal": "respect",
@@ -328,7 +328,7 @@
             "gender": "Non-binary",
             "ethnicity": "Dragonborn",
             "name": "Gerdi Lis",
-            "image": "962.jpg"
+            "image": "962.png"
         },
         "nature": "reserved",
         "ideal": "independence",
@@ -359,7 +359,7 @@
             "gender": "Male",
             "ethnicity": "Human",
             "name": "Stewart Calin",
-            "image": "33.jpg"
+            "image": "33.png"
         },
         "nature": "charismatic",
         "ideal": "equality",
@@ -390,7 +390,7 @@
             "gender": "Female",
             "ethnicity": "Dragonborn",
             "name": "Devin Isismund",
-            "image": "141.jpg"
+            "image": "141.png"
         },
         "nature": "wise",
         "ideal": "discovery",
@@ -421,7 +421,7 @@
             "gender": "Female",
             "ethnicity": "Elf",
             "name": "Lian Elle",
-            "image": "182.jpg"
+            "image": "182.png"
         },
         "nature": "cautious",
         "ideal": "discovery",
@@ -452,7 +452,7 @@
             "gender": "Female",
             "ethnicity": "Elf",
             "name": "Wendie Yneain",
-            "image": "533.jpg"
+            "image": "533.png"
         },
         "nature": "adventurous",
         "ideal": "discovery",
@@ -483,7 +483,7 @@
             "gender": "Female",
             "ethnicity": "Half-Elf",
             "name": "Wynn Mond",
-            "image": "893.jpg"
+            "image": "893.png"
         },
         "nature": "resourceful",
         "ideal": "selflessness",
@@ -514,7 +514,7 @@
             "gender": "Female",
             "ethnicity": "Half-Elf",
             "name": "Hedvige Morarkalal",
-            "image": "379.jpg"
+            "image": "379.png"
         },
         "nature": "independent",
         "ideal": "innovation",
@@ -545,7 +545,7 @@
             "gender": "Female",
             "ethnicity": "Tiefling",
             "name": "Elayne Felfelius",
-            "image": "792.jpg"
+            "image": "792.png"
         },
         "nature": "charismatic",
         "ideal": "honor",
@@ -576,7 +576,7 @@
             "gender": "Male",
             "ethnicity": "Dwarf",
             "name": "Shelton Ora",
-            "image": "905.jpg"
+            "image": "905.png"
         },
         "nature": "cautious",
         "ideal": "discovery",
@@ -607,7 +607,7 @@
             "gender": "Female",
             "ethnicity": "Human",
             "name": "Codi Aaaan",
-            "image": "808.jpg"
+            "image": "808.png"
         },
         "nature": "bold",
         "ideal": "independence",

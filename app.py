@@ -5,7 +5,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def index():
-    with open('characters.json', 'r') as f:
+    with open('characters_with_images.json', 'r') as f:
         characters = json.load(f)
     return render_template('index.html', characters=characters, static_url_path='/static')
 

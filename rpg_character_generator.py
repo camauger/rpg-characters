@@ -103,14 +103,18 @@ def create_random_character():
 
 characters = []
 num_characters = input("How many characters do you want to create? ")
-while not num_characters.isdigit():
-    num_characters = input("Please enter a number: ")
-num_characters = int(num_characters)
-while len(characters) < num_characters:
-    new_character = create_random_character()
-    characters.append(new_character)
-print(f"Created {len(characters)} characters.")
 
+# Exit if 0 or less
+if int(num_characters) <= 0:
+    print("No characters created.")
+
+    while not num_characters.isdigit():
+        num_characters = input("Please enter a number: ")
+    num_characters = int(num_characters)
+    while len(characters) < num_characters:
+        new_character = create_random_character()
+        characters.append(new_character)
+    print(f"Created {len(characters)} characters.")
 
 # Create a csv file with the characters
 with open("data/characters_data.csv", "a", newline='') as csv_file:
@@ -161,3 +165,30 @@ for character_data in existing_characters:
 with open('data/image_prompts.txt', 'w') as file:
     file.writelines(prompts)
 
+# Final data
+import os
+
+def get_files_in_folder(folder_path):
+    files = []
+    for file_name in os.listdir(folder_path):
+        # Check if the path is a file (not a directory)
+        if os.path.isfile(os.path.join(folder_path, file_name)):
+            files.append(file_name)
+    return files
+
+# Example usage
+folder_path = "./static/images/"
+files_in_folder = get_files_in_folder(folder_path)
+print(files_in_folder)
+
+# Get all the characters with an image in images folder
+characters_with_images = []
+for character in existing_characters:
+    image_name = character.get('physical_description').get('image')
+    if image_name in files_in_folder:
+        characters_with_images.append(character)
+
+# Write the characters with images to a JSON file
+with open("characters_with_images.json", "w") as json_file:
+    json.dump(characters_with_images, json_file, indent=4, default=lambda o: o.__dict__)
+    
