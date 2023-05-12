@@ -18,3 +18,23 @@ Create a charismatic Documentary Portrait of Liana Vold, a Outlander Paladin. Li
 
 Create a charismatic Candid Portrait of Webster Vold, a Noble Druid. Webster Vold is a Middle-aged Male Halfling with a upper midsection-emphasized body type. Webster has copper three-strand braid hair and slate eyes. Salmon and Olive tones. Natural Light. Detailed facial features, realistic. Forgotten Realms, Medieval Fantasy Setting, D&D. --seed 580
 
+In the style of justin gerard, create a reserved minimalist portrait of gerdi lis, a outlander alchemist. gerdi lis is a senior non-binary dragonborn with a wide-waisted body type. gerdi has dark three-strand braid hair and rose eyes. terracotta and yellow ochre tones. backlighting. detailed facial features, realistic. full frame camera. dragonborncore, forgotten realms, medieval fantasy setting, d&d. --s 1000 --upbeta --seed 962
+
+In the style of anne stokes, create a charismatic character portrait of stewart calin, a acolyte gladiator. stewart calin is a senior male human with a well-built body type. stewart has platinum three-strand braid hair and teal eyes. hot pink and orchid pink tones. rim lighting. detailed facial features, realistic. full frame camera. humancore, forgotten realms, medieval fantasy setting, d&d. --s 1000 --upbeta --seed 33
+
+In the style of annie leibovitz, create a wise minimalist portrait of devin isismund, a courtier pirate. devin isismund is a adult female dragonborn with a athletic body type. devin has raven crown plait hair and amber eyes. carrot and raspberry tones. low key lighting. detailed facial features, realistic. bokeh. dragonborncore, forgotten realms, medieval fantasy setting, d&d. --s 1000 --upbeta --seed 141
+
+In the style of natalia p. gutiérrez, create a cautious moody portrait of lian elle, a archaeologist windwalker. lian elle is a adult female elf with a rounded upper body body type. lian has icy textured long hair hair and multi-colored eyes. orchid pink and salmon tones. top lighting. detailed facial features, realistic. high iso. elfcore, forgotten realms, medieval fantasy setting, d&d. --s 1000 --upbeta --seed 182
+
+In the style of seb mckinnon, create a adventurous studio portrait of wendie yneain, a uthgardt tribe member shadowblade. wendie yneain is a adult female elf with a curvy body type. wendie has ginger blunt bangs hair and gold eyes. amber and fern green tones. backlighting. detailed facial features, realistic. shallow depth of field. elfcore, forgotten realms, medieval fantasy setting, d&d. --s 1000 --upbeta --seed 533
+
+In the style of magali villeneuve, create a resourceful minimalist portrait of wynn mond, a entertainer martial artist. wynn mond is a young adult female half-elf with a top-heavy body type. wynn has auburn high pony hair and emerald eyes. chartreuse and sage tones. soft light. detailed facial features, realistic. natural light. half-elfcore, forgotten realms, medieval fantasy setting, d&d. --s 1000 --upbeta --seed 893
+
+In the style of gregory crewdson, create a independent fine art portrait of hedvige morarkalal, a faction agent frost mage. hedvige morarkalal is a middle-aged female half-elf with a balanced body type. hedvige has golden bun hair and gold eyes. coral and hot pink tones. side lighting. detailed facial features, realistic. iso 200. half-elfcore, forgotten realms, medieval fantasy setting, d&d. --s 1000 --upbeta --seed 379
+
+In the style of annie leibovitz, create a charismatic lifestyle portrait of elayne felfelius, a gladiator swordmage. elayne felfelius is a young adult female tiefling with a rounded upper body body type. elayne has silver crown plait hair and gold eyes. plum and terracotta tones. top lighting. detailed facial features, realistic. fill light. tieflingcore, forgotten realms, medieval fantasy setting, d&d. --s 1000 --upbeta --seed 792
+
+In the style of tony diterlizzi, create a cautious fashion portrait of shelton ora, a far traveler monk. shelton ora is a adult male dwarf with a well-built body type. shelton has salt and pepper bob cut with fringe hair and rose eyes. sage and lavender tones. sunlight. detailed facial features, realistic. bokeh. dwarfcore, forgotten realms, medieval fantasy setting, d&d. --s 1000 --upbeta --seed 905
+
+In the style of anne stokes, create a bold studio portrait of codi aaaan, a haunted one arcane healer. codi aaaan is a teenager female human with a well-proportioned body type. codi has copper plait hair and hazel eyes. orchid and silver tones. sunlight. detailed facial features, realistic. iso 400. humancore, forgotten realms, medieval fantasy setting, d&d. --s 1000 --upbeta --seed 808
+
