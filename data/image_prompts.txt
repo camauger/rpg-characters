@@ -8,8 +8,6 @@ Create a Surreal Portrait of Reagen Lisiayne. Reagen Lisiayne is a Young Male Hu
 
 Create a Moody Portrait of Gaspar Dar. Gaspar Dar is a Middle-aged Male Tiefling with a v-shape body type. Gaspar has golden bob cut with fringe hair and hazel eyes. Rose and Bubblegum tones. Backlighting. Medieval Fantasy Setting, D&D. --seed 961
 
-Create a playful Glamour Portrait of Ag Ana, a Noble Bard. Ag Ana is a Old Female Dragonborn with a upper midsection-emphasized body type. Ag has fair three-strand braid hair and golden eyes. Cherry and Purple tones. Candlelight. Detailed facial features, realistic. Forgotten Realms, Medieval Fantasy Setting, D&D. --seed 44
-
 Create a charismatic Moody Portrait of Even Elleises, a Criminal Monk. Even Elleises is a Old Male Elf with a wide-waisted body type. Even has chestnut plait hair and grayish-white eyes. Black and Olive tones. Candlelight. Detailed facial features, realistic. Forgotten Realms, Medieval Fantasy Setting, D&D. --seed 205
 
 Create a curious Environmental Portrait of Ernaline Iaa, a Entertainer Druid. Ernaline Iaa is a Middle-aged Non-binary Gnome with a top-emphasized body type. Ernaline has brown crown plait hair and emerald eyes. Carnation and Crimson tones. Silhouette Lighting. Detailed facial features, realistic. Forgotten Realms, Medieval Fantasy Setting, D&D. --seed 537
@@ -18,11 +16,7 @@ Create a charismatic Documentary Portrait of Liana Vold, a Outlander Paladin. Li
 
 Create a charismatic Candid Portrait of Webster Vold, a Noble Druid. Webster Vold is a Middle-aged Male Halfling with a upper midsection-emphasized body type. Webster has copper three-strand braid hair and slate eyes. Salmon and Olive tones. Natural Light. Detailed facial features, realistic. Forgotten Realms, Medieval Fantasy Setting, D&D. --seed 580
 
-In the style of justin gerard, create a reserved minimalist portrait of gerdi lis, a outlander alchemist. gerdi lis is a senior non-binary dragonborn with a wide-waisted body type. gerdi has dark three-strand braid hair and rose eyes. terracotta and yellow ochre tones. backlighting. detailed facial features, realistic. full frame camera. dragonborncore, forgotten realms, medieval fantasy setting, d&d. --s 1000 --upbeta --seed 962
-
 In the style of anne stokes, create a charismatic character portrait of stewart calin, a acolyte gladiator. stewart calin is a senior male human with a well-built body type. stewart has platinum three-strand braid hair and teal eyes. hot pink and orchid pink tones. rim lighting. detailed facial features, realistic. full frame camera. humancore, forgotten realms, medieval fantasy setting, d&d. --s 1000 --upbeta --seed 33
-
-In the style of annie leibovitz, create a wise minimalist portrait of devin isismund, a courtier pirate. devin isismund is a adult female dragonborn with a athletic body type. devin has raven crown plait hair and amber eyes. carrot and raspberry tones. low key lighting. detailed facial features, realistic. bokeh. dragonborncore, forgotten realms, medieval fantasy setting, d&d. --s 1000 --upbeta --seed 141
 
 In the style of natalia p. gutiérrez, create a cautious moody portrait of lian elle, a archaeologist windwalker. lian elle is a adult female elf with a rounded upper body body type. lian has icy textured long hair hair and multi-colored eyes. orchid pink and salmon tones. top lighting. detailed facial features, realistic. high iso. elfcore, forgotten realms, medieval fantasy setting, d&d. --s 1000 --upbeta --seed 182
 

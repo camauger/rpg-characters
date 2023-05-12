@@ -29,15 +29,15 @@
         <div class="row mt-5">
             {% for character in characters %}
             <div class="col-md-4">
+              
                 <div class="card mb-4">
                     <img src="../static/images/{{ character.id}}.png" class="card-img-top" alt="{{ character.full_name }}">
                     <div class="card-body" style="font-family: BookInsanityRemake;">
                         <h5 class="card-title" style="font-family: MrEavesRemake; color:#58180D;">{{ character.full_name }}</h5>
                         <h6 class="card-subtitle mb-2 text-muted">{{ character.ethnicity }} {{ character.character_class }}</h6>
-                        <p class="card-text"><strong>Background:</strong> {{ character.background }}</p>
-                        <p class="card-text"><strong>Physical description:</strong> {{ character.physical_description_text }}</p>
-                        <p class="card-text"><strong>Background Story:</strong> {{ character.background_story }}</p>
-                        <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+                        <p class="card-text"><strong>Background:</strong> {{ character.background }}</p>                
+                        <a href="{{ url_for('character', id=character.id) }}" class="btn btn-primary">More details</a>
+
                     </div>
                 </div>
             </div>

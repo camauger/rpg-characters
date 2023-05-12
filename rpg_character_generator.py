@@ -11,6 +11,7 @@ def get_number_of_existing_characters():
     try:
         with open("characters.json", "r") as json_file:
             existing_characters = json.load(json_file)
+            json_file.close()
         return len(existing_characters)
     except (FileNotFoundError, json.JSONDecodeError):
         # Handle file not found or invalid JSON error
@@ -99,6 +100,22 @@ def pick_random_age():
 def create_random_character():
     return Character(random.choice(character_classes), random.choice(background), random.choice(ethnicity), pick_random_age(), random_gender(), api_key)
 
+#Load the characters from the json file
+def load_characters():
+    try:
+        with open("characters.json", "r") as json_file:
+            existing_characters = json.load(json_file)
+        return existing_characters
+    except (FileNotFoundError, json.JSONDecodeError):
+        # Handle file not found or invalid JSON error
+        return []
+
+# Save the characters to a json file
+def save_characters(characters):
+    with open("characters.json", "w") as json_file:
+        json.dump(characters, json_file, indent=4)
+
+
 # Create a list of unique characters
 
 characters = []
@@ -136,17 +153,15 @@ with open("data/characters_data.csv", "a", newline='') as csv_file:
             "Image Prompt": character.image_prompt
         })
 
-
+# Load existing characters from the csv file and convert them to the json file
 # Load existing characters from the JSON file
-existing_characters = []
-try:
-    with open("characters.json", "r") as json_file:
-        existing_characters = json.load(json_file)
-except FileNotFoundError:
-    pass
+existing_characters = load_characters()
+print(len(existing_characters))
 
 # Convert Character instances to dictionaries
 character_dicts = [character.__dict__ for character in characters]
+print(character_dicts)
+
 
 # Append new characters to the existing list
 existing_characters.extend(character_dicts)
@@ -154,6 +169,7 @@ existing_characters.extend(character_dicts)
 # Write the updated characters to the JSON file
 with open("characters.json", "w") as json_file:
     json.dump(existing_characters, json_file, indent=4, default=lambda o: o.__dict__)
+
 
 # Create a list of image prompts
 prompts = []
@@ -191,4 +207,26 @@ for character in existing_characters:
 # Write the characters with images to a JSON file
 with open("characters_with_images.json", "w") as json_file:
     json.dump(characters_with_images, json_file, indent=4, default=lambda o: o.__dict__)
-    
+
+
+# Get all the characters without an image in images folder
+characters_without_images = []
+for character in existing_characters:
+    image_name = character.get('physical_description').get('image')
+    if image_name not in files_in_folder:
+        characters_without_images.append(character)
+
+# Write the characters without images to a JSON file
+with open("characters_without_images.json", "w") as json_file:
+    json.dump(characters_without_images, json_file, indent=4, default=lambda o: o.__dict__)
+
+# Create a list of image prompts of the characters without images
+prompts = []
+for character_data in characters_without_images:
+    image_prompt = character_data.get('image_prompt')
+    prompts.append(image_prompt + '\n\n')
+
+# Write the image prompts to a text file
+with open('data/characters_without_images.txt', 'w') as file:
+    file.writelines(prompts)
+
