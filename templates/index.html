@@ -8,22 +8,24 @@
     <title>RPG Characters</title>
 </head>
 <body>
-    <div class="container">
+    <header class="container">
         <h1 class="display-4 text-center mt-5">Welcome to the RPG Characters Collection</h1>
+    </header>
+    <div class="container">
+        
         
         <div class="row mt-5">
             {% for character in characters %}
-            <div class="col-md-6">
-                <div class="card mb-6">
-                  <img src="../static/images/portal.jpg" class="card-img-top" alt="{{ character.full_name }}">
-                    <!-- <img src="{{ character.image }}" class="card-img-top" alt="{{ character.full_name }}"> -->
+            <div class="col-md-4">
+                <div class="card mb-4">
+                    <img src="../static/images/{{ character.image }}" class="card-img-top" alt="{{ character.full_name }}">
                     <div class="card-body">
                         <h5 class="card-title">{{ character.full_name }}</h5>
-                        <p class="card-text"><strong>Ethnicity:</strong> {{ character.ethnicity }}</p>
-                        <p class="card-text"><strong>Class:</strong> {{ character.character_class }}</p>
+                        <h6 class="card-subtitle mb-2 text-muted">{{ character.ethnicity }} {{ character.character_class }}</h6>
                         <p class="card-text"><strong>Background:</strong> {{ character.background }}</p>
                         <p class="card-text"><strong>Physical description:</strong> {{ character.physical_description_text }}</p>
                         <p class="card-text"><strong>Background Story:</strong> {{ character.background_story }}</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
                     </div>
                 </div>
             </div>

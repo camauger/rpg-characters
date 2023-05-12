@@ -193,6 +193,36 @@
       "name": "Heterochromia",
       "synonyms": ["Multi-colored", "Different-colored"],
       "description": "A condition where each eye has a different color or where different parts of the same iris have different colors."
-    }
+    },
+    {
+      "name": "Black",
+      "synonyms": ["Dark"],
+      "description": "A deep, dark color that appears almost black."
+  },
+  {
+      "name": "Silver",
+      "synonyms": ["Grayish-white"],
+      "description": "A color that resembles shiny silver or grayish-white."
+  },
+  {
+      "name": "Yellow",
+      "synonyms": ["Gold"],
+      "description": "A bright, vibrant yellow color."
+  },
+  {
+      "name": "Pink",
+      "synonyms": ["Rose"],
+      "description": "A soft, delicate pink color."
+  },
+  {
+      "name": "Orange",
+      "synonyms": ["Amber"],
+      "description": "A warm, fiery orange color."
+  },
+  {
+      "name": "Turquoise",
+      "synonyms": ["Teal"],
+      "description": "A blue-green color reminiscent of the gemstone."
+  }
   ]
 }

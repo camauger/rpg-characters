@@ -148,4 +148,4 @@ lighting = [
 ]
 
 def craft_image_prompt(character):
-        return f"Create a {random.choice(portrait)} of {character.full_name}. {character.physical_description_text} {random.choice(colors)} and {random.choice(colors)} tones. {random.choice(lighting)}. --seed {character.id}"
+        return f"Create a {random.choice(portrait)} of {character.full_name}. {character.physical_description_text} {random.choice(colors)} and {random.choice(colors)} tones. {random.choice(lighting)}. Medieval Fantasy Setting, D&D. --seed {character.id}"

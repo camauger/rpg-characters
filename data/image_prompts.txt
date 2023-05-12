@@ -1,0 +1,10 @@
+Create a Lifestyle Portrait of Carlita Er. Carlita Er is a Young Male Human with a curvy body type. Carlita has dark fauxhawk hair and silver eyes. Coral Pink and Cerulean tones. Hard Light. --seed 607
+
+Create a Character Portrait of Cristy Mirrikenen. Cristy Mirrikenen is a Young Female Dwarf with a slender body type. Cristy has golden updo hair and golden eyes. Pearl and Silver tones. Rim Lighting. --seed 552
+
+Create a Dramatic Portrait of Pat Usarkrik. Pat Usarkrik is a Old Female Gnome with a narrow-hipped body type. Pat has snowy textured long hair hair and azure eyes. Pearl and Cream tones. High Key Lighting. --seed 320
+
+Create a Surreal Portrait of Sascha Voldarkgalis. Sascha Voldarkgalis is a Young Female Halfling with a curvy body type. Sascha has copper punk hair and golden eyes. Walnut and Pearl tones. Moonlight. --seed 133
+
+Create a Environmental Portrait of Sofia Isther. Sofia Isther is a Old Female Halfling with a uniform body type. Sofia has snowy short bob hair and multi-colored eyes. Pumpkin and Burnt Orange tones. Candlelight. --seed 529
+
