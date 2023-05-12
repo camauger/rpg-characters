@@ -1,10 +1,20 @@
-Create a Lifestyle Portrait of Carlita Er. Carlita Er is a Young Male Human with a curvy body type. Carlita has dark fauxhawk hair and silver eyes. Coral Pink and Cerulean tones. Hard Light. --seed 607
+Create a Character Portrait of Ransell Iusval. Ransell Iusval is a Old Male Halfling with a narrow-hipped body type. Ransell has fair high pony hair and azure eyes. Bubblegum and Bronze tones. Diffused Light. Medieval Fantasy Setting, D&D. --seed 204
 
-Create a Character Portrait of Cristy Mirrikenen. Cristy Mirrikenen is a Young Female Dwarf with a slender body type. Cristy has golden updo hair and golden eyes. Pearl and Silver tones. Rim Lighting. --seed 552
+Create a Surreal Portrait of Ogden Yneiaa. Ogden Yneiaa is a Young Non-binary Gnome with a curvy body type. Ogden has platinum fauxhawk hair and grayish-white eyes. Maroon and Fern Green tones. Backlighting. Medieval Fantasy Setting, D&D. --seed 302
 
-Create a Dramatic Portrait of Pat Usarkrik. Pat Usarkrik is a Old Female Gnome with a narrow-hipped body type. Pat has snowy textured long hair hair and azure eyes. Pearl and Cream tones. High Key Lighting. --seed 320
+Create a Minimalist Portrait of Gabrila Er. Gabrila Er is a Old Female Dwarf with a top-heavy body type. Gabrila has ash tail hair and hazel eyes. Crimson and Purple tones. Silhouette Lighting. Medieval Fantasy Setting, D&D. --seed 246
 
-Create a Surreal Portrait of Sascha Voldarkgalis. Sascha Voldarkgalis is a Young Female Halfling with a curvy body type. Sascha has copper punk hair and golden eyes. Walnut and Pearl tones. Moonlight. --seed 133
+Create a Surreal Portrait of Reagen Lisiayne. Reagen Lisiayne is a Young Male Human with a stocky body type. Reagen has ebony punk hair and grayish-white eyes. Auburn and Amethyst tones. Golden Hour. Medieval Fantasy Setting, D&D. --seed 197
 
-Create a Environmental Portrait of Sofia Isther. Sofia Isther is a Old Female Halfling with a uniform body type. Sofia has snowy short bob hair and multi-colored eyes. Pumpkin and Burnt Orange tones. Candlelight. --seed 529
+Create a Moody Portrait of Gaspar Dar. Gaspar Dar is a Middle-aged Male Tiefling with a v-shape body type. Gaspar has golden bob cut with fringe hair and hazel eyes. Rose and Bubblegum tones. Backlighting. Medieval Fantasy Setting, D&D. --seed 961
+
+Create a playful Glamour Portrait of Ag Ana, a Noble Bard. Ag Ana is a Old Female Dragonborn with a upper midsection-emphasized body type. Ag has fair three-strand braid hair and golden eyes. Cherry and Purple tones. Candlelight. Detailed facial features, realistic. Forgotten Realms, Medieval Fantasy Setting, D&D. --seed 44
+
+Create a charismatic Moody Portrait of Even Elleises, a Criminal Monk. Even Elleises is a Old Male Elf with a wide-waisted body type. Even has chestnut plait hair and grayish-white eyes. Black and Olive tones. Candlelight. Detailed facial features, realistic. Forgotten Realms, Medieval Fantasy Setting, D&D. --seed 205
+
+Create a curious Environmental Portrait of Ernaline Iaa, a Entertainer Druid. Ernaline Iaa is a Middle-aged Non-binary Gnome with a top-emphasized body type. Ernaline has brown crown plait hair and emerald eyes. Carnation and Crimson tones. Silhouette Lighting. Detailed facial features, realistic. Forgotten Realms, Medieval Fantasy Setting, D&D. --seed 537
+
+Create a charismatic Documentary Portrait of Liana Vold, a Outlander Paladin. Liana Vold is a Middle-aged Female Dwarf with a upper midsection-emphasized body type. Liana has light layered cut with length hair and gold eyes. Lime and Olive tones. Soft Light. Detailed facial features, realistic. Forgotten Realms, Medieval Fantasy Setting, D&D. --seed 806
+
+Create a charismatic Candid Portrait of Webster Vold, a Noble Druid. Webster Vold is a Middle-aged Male Halfling with a upper midsection-emphasized body type. Webster has copper three-strand braid hair and slate eyes. Salmon and Olive tones. Natural Light. Detailed facial features, realistic. Forgotten Realms, Medieval Fantasy Setting, D&D. --seed 580
 

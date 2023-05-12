@@ -2,7 +2,7 @@ import random, json, csv
 import requests
 from name_composition import generate_random_first_name, generate_random_last_name
 from physical_description import PhysicalDescription
-from character_settings import CharacterBehavior, character_classes, ethnicity, background, age, gender
+from character_settings import CharacterBehavior, character_classes, ethnicity, background, age_settings, gender
 from image_prompt import craft_image_prompt
 # You will have to create your own api_settings.py file with your OpenAI API key
 from api_settings import api_key
@@ -39,9 +39,9 @@ def fetch_character_data(prompt, api_key):
     return response_json['choices'][0]['text']
 
 class Character:
-    def __init__(self, character_class, background, ethnicity, age, gender="Female", api_key=api_key):
+    def __init__(self, character_class, background, ethnicity, age, gender, api_key=api_key):
         self.id = random.randint(1, 1000) + get_number_of_existing_characters()
-        self.first_name = generate_random_first_name()
+        self.first_name = generate_random_first_name(gender)
         self.last_name = generate_random_last_name()
         self.full_name = f"{self.first_name} {self.last_name}"
         self.gender = gender
@@ -71,7 +71,7 @@ class Character:
         return f"{self.full_name} is a {self.physical_description.age} {self.physical_description.gender} {self.ethnicity} with a {self.physical_description.body_type} body type. {self.first_name} has {self.physical_description.hair_color} {self.physical_description.hair_style} hair and {self.physical_description.eye_color} eyes."
 
     def create_background_story(self, api_key):
-        prompt = f"Create a background story for a RPG character named {self.full_name} who is a {self.character_class} in the world of Forgotten Realms. {self.physical_description_text} {self.psychological_description} Make the story no longer than 200 words."
+        prompt = f"Create a background story for a RPG character named {self.full_name} who is a {self.background} {self.character_class} in the world of Forgotten Realms. {self.physical_description_text} {self.psychological_description} Make the story no longer than 200 words."
         background_story = fetch_character_data(prompt, api_key)
         return background_story
 
@@ -86,8 +86,18 @@ class Character:
 def random_gender():
     return random.choices(gender, weights=(40, 50, 10))[0]
 
+import random
+
+def pick_random_age():
+    age_options = age_settings
+    age_weights = [0, 0, 15, 25, 35, 25, 15, 10, 5, 2, 2, 10]  # Adjust the weights based on desired distribution
+
+    random_age = random.choices(age_options, weights=age_weights)[0]
+    return random_age
+
+
 def create_random_character():
-    return Character(random.choice(character_classes), random.choice(background), random.choice(ethnicity), random.choice(age), random_gender(), api_key)
+    return Character(random.choice(character_classes), random.choice(background), random.choice(ethnicity), pick_random_age(), random_gender(), api_key)
 
 # Create a list of unique characters
 
@@ -99,6 +109,8 @@ num_characters = int(num_characters)
 while len(characters) < num_characters:
     new_character = create_random_character()
     characters.append(new_character)
+print(f"Created {len(characters)} characters.")
+
 
 # Create a csv file with the characters
 with open("data/characters_data.csv", "a", newline='') as csv_file:
@@ -119,6 +131,7 @@ with open("data/characters_data.csv", "a", newline='') as csv_file:
             "Background Story": character.background_story,
             "Image Prompt": character.image_prompt
         })
+
 
 # Load existing characters from the JSON file
 existing_characters = []

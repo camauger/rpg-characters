@@ -2,14 +2,27 @@
 <html lang="en">
 <head>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-
+    <link rel="stylesheet" href="../static/custom.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RPG Characters</title>
+
+    <style type="text/css">
+        @font-face {
+        font-family: BookInsanityRemake;
+        src:  url('../static/fonts/5e/Bookinsanity.woff2');
+        font-weight:normal; }
+        @font-face {
+    font-family: MrEavesRemake;
+    src: url('../static/fonts/5e/Mr Eaves Small Caps.woff2');
+    font-weight: normal;
+    font-style: normal
+}
+    </style>
 </head>
-<body>
+<body style="background-color: #EEE5CE;">
     <header class="container">
-        <h1 class="display-4 text-center mt-5">Welcome to the RPG Characters Collection</h1>
+        <h1 class="display-4 text-center mt-5" style="font-family: MrEavesRemake; color:#58180D;">the RPG Characters Collection</h1>
     </header>
     <div class="container">
         
@@ -18,14 +31,14 @@
             {% for character in characters %}
             <div class="col-md-4">
                 <div class="card mb-4">
-                    <img src="../static/images/{{ character.image }}" class="card-img-top" alt="{{ character.full_name }}">
-                    <div class="card-body">
-                        <h5 class="card-title">{{ character.full_name }}</h5>
+                    <img src="../static/images/{{ character.id}}.png" class="card-img-top" alt="{{ character.full_name }}">
+                    <div class="card-body" style="font-family: BookInsanityRemake;">
+                        <h5 class="card-title" style="font-family: MrEavesRemake; color:#58180D;">{{ character.full_name }}</h5>
                         <h6 class="card-subtitle mb-2 text-muted">{{ character.ethnicity }} {{ character.character_class }}</h6>
                         <p class="card-text"><strong>Background:</strong> {{ character.background }}</p>
                         <p class="card-text"><strong>Physical description:</strong> {{ character.physical_description_text }}</p>
                         <p class="card-text"><strong>Background Story:</strong> {{ character.background_story }}</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                        <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
                     </div>
                 </div>
             </div>

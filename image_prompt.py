@@ -1,6 +1,7 @@
 # Create an image prompt for a random character
 import random
 portrait = [
+  "Photorealistic portrait",
   "Photorealistic headshot",
   "Classic Portrait",
   "Candid Portrait",
@@ -147,5 +148,11 @@ lighting = [
   "Golden Hour",
 ]
 
+artists_and_photographers = ['Michael Komarck', 'Donato Giancola', 'Todd Lockwood', 'Kekai Kotaki', 'Wayne Reynolds', 'Cynthia Sheppard', 'Jesper Ejsing', 'Luis Royo', 'Boris Vallejo', 'Frank Frazetta', 'H.R. Giger', 'Brian Froud', 'Nekro', 'Jenny Dolfen', 'Tommy Arnold', 'Magali Villeneuve', 'Rob Alexander', 'Mark Zug', 'Larry Elmore', 'Tony DiTerlizzi', 'Viktor Titov', 'Anne Stokes', 'Keith Parkinson', 'Jessica Rossier', 'Elena Dudina', 'Ben Wootten', 'Amanda Diaz', 'Lara Jade', 'Annie Leibovitz', 'Gregory Crewdson', 'Erik Almas', 'Justin Gerard', 'Mona Finden', 'Rovina Cai', 'Kari Christensen', 'Howard Lyon', 'Noah Bradley', 'Julie Dillon', 'Rebecca Guay', 'Seb McKinnon', 'Alexandra Douglass', 'Natalia P. Gutiérrez', 'Karla Ortiz', 'Yigit Koroglu', 'Johannes Voss', 'Sam Burley', 'Cris Griffin', 'Emily Hare', 'Titus Lunter', 'Cynthia Sheppard', 'Darek Zabrocki', 'Alexandra Semushina']
+
+camera_settings_and_types = ['Aperture Priority Mode', 'Shutter Priority Mode', 'Manual Mode', 'Portrait Mode', '50mm Prime Lens', '85mm Prime Lens', 'Telephoto Lens', 'Wide-Angle Lens', 'Full Frame Camera', 'Crop Sensor Camera', 'Natural Light', 'Studio Lighting', 'Softbox', 'Beauty Dish', 'Fill Light', 'Reflector', 'Bokeh', 'Shallow Depth of Field', 'ISO 100', 'ISO 200', 'ISO 400', 'Low ISO', 'Medium ISO', 'High ISO']
+
+
 def craft_image_prompt(character):
-        return f"Create a {random.choice(portrait)} of {character.full_name}. {character.physical_description_text} {random.choice(colors)} and {random.choice(colors)} tones. {random.choice(lighting)}. Medieval Fantasy Setting, D&D. --seed {character.id}"
+        prompt = f"In the style of {random.choice(artists_and_photographers)}, create a {character.nature} {random.choice(portrait)} of {character.full_name}, a {character.background} {character.character_class}. {character.physical_description_text} {random.choice(colors)} and {random.choice(colors)} tones. {random.choice(lighting)}. Detailed facial features, realistic. {random.choice(camera_settings_and_types)}. {character.ethnicity}core, Forgotten Realms, Medieval Fantasy Setting, D&D. --s 1000 --upbeta --seed {character.id}".lower()
+        return prompt.capitalize()
