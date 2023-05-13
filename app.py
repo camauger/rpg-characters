@@ -3,6 +3,11 @@ from flask import Flask, render_template
 
 app = Flask(__name__)
 
+def configure_app(app):
+    app.config['FREEZER_RELATIVE_URLS'] = True
+    app.config['FREEZER_BASE_URL'] = 'https://zippy-rabanadas-30839c.netlify.app'
+
+
 def get_character_data(id):
     with open('characters_with_images.json', 'r') as f:
         characters = json.load(f)
