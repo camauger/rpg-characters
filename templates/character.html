@@ -48,8 +48,7 @@
     <div class="container">
       <div class="row">
         <div class="col-6">
-          <img
-            src="../static/images/{{ character.id}}.png"
+          <img src="{{url_for('static', filename='images/' + character.id + '.png')}}"
             class="img-fluid"
             alt="{{ character.full_name }}"
           />
