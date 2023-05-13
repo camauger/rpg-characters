@@ -8,7 +8,7 @@ freezer = Freezer(app)
 def configure_app(app):
     app.config['FREEZER_RELATIVE_URLS'] = True
     app.config['FREEZER_BASE_URL'] = os.environ.get('FREEZER_BASE_URL', '')
-    app.config["FREEZER_DESTINATION"] = "../build"
+    app.config["FREEZER_DESTINATION"] = './build'
     # app.config['FREEZER_BASE_URL'] = 'https://zippy-rabanadas-30839c.netlify.app'
 freezer = Freezer(app)
 
