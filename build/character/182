@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="../static/custom_css.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RPG Characters</title>
+
+    <style type="text/css">
+      @font-face {
+        font-family: BookInsanityRemake;
+        src: url("../static/fonts/5e/Bookinsanity.woff2");
+        font-weight: normal;
+      }
+      @font-face {
+        font-family: MrEavesRemake;
+        src: url("../static/fonts/5e/Mr Eaves Small Caps.woff2");
+        font-weight: normal;
+        font-style: normal;
+      }
+
+      :root {
+        --HB_Color_Background: #eee5ce;
+        --HB_Color_Accent: #e0e5c1;
+        --HB_Color_HeaderUnderline: #c0ad6a;
+        --HB_Color_HorizontalRule: #9c2b1b;
+        --HB_Color_HeaderText: #58180d;
+        --HB_Color_MonsterStatBackground: #f2e5b5;
+        --HB_Color_CaptionText: #766649;
+        --HB_Color_WatercolorStain: #bbad82;
+        --HB_Color_Footnotes: #c9ad6a;
+      }
+    </style>
+  </head>
+  <body style="background-color: #eee5ce">
+    <header class="container">
+      <h1
+        class="display-4 text-center mt-5"
+        style="font-family: MrEavesRemake; color: #58180d"
+      >
+        Lian Elle
+      </h1>
+    </header>
+    <div class="container">
+      <div class="row">
+        <div class="col-6">
+          <img
+            src="../static/images/182.png"
+            class="img-fluid"
+            alt="Lian Elle"
+          />
+        </div>
+
+        <div class="col-6">
+          <div>
+            <h2 style="font-family: MrEavesRemake; color: #58180d">Elf Archaeologist</h2>
+            <p>Class: Windwalker</p>
+            <p>Age: Adult</p>
+          </div>
+          <div>
+            <h3
+              style="
+                font-family: MrEavesRemake;
+                color: #58180d;
+                border-bottom: 2px solid var(--HB_Color_HeaderUnderline);
+              ">
+              Physical Description
+            </h3>
+            <p style="font-family: BookInsanityRemake">
+              Lian Elle is a Adult Female Elf with a rounded upper body body type. Lian has icy textured long hair hair and multi-colored eyes.
+            </p>
+          </div>
+          <div>
+            <h3
+            style="
+              font-family: MrEavesRemake;
+              color: #58180d;
+              border-bottom: 2px solid var(--HB_Color_HeaderUnderline);
+            ">
+              Background Story
+            </h3>
+            <p style="font-family: BookInsanityRemake">
+              
+
+Lian Elle is a cautious and timid Elf who has dedicated her life to discovery and knowledge. She has spent many years travelling the world in search of ancient artifacts and ruins. Her travels have led her to the Forgotten Realms, where she has become a renowned Archaeologist. Lian is a skilled Windwalker, and uses her abilities to navigate the dangerous ruins she explores. She is often manipulative, using her knowledge to convince others to help her in her quest for discovery.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <h3 style="font-family: MrEavesRemake; color: #58180d">Personality</h3>
+      <p>Ideal: discovery</p>
+    </div>
+    <footer class="container">
+      <p class="text-center">
+        Made with <span style="color: #e25555">&#9829;</span> by
+        <a href="https://ludomancien.com/">Christian Amauger</a>
+      </p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  </body>
+</html>

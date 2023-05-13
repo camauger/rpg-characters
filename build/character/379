@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="../static/custom_css.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RPG Characters</title>
+
+    <style type="text/css">
+      @font-face {
+        font-family: BookInsanityRemake;
+        src: url("../static/fonts/5e/Bookinsanity.woff2");
+        font-weight: normal;
+      }
+      @font-face {
+        font-family: MrEavesRemake;
+        src: url("../static/fonts/5e/Mr Eaves Small Caps.woff2");
+        font-weight: normal;
+        font-style: normal;
+      }
+
+      :root {
+        --HB_Color_Background: #eee5ce;
+        --HB_Color_Accent: #e0e5c1;
+        --HB_Color_HeaderUnderline: #c0ad6a;
+        --HB_Color_HorizontalRule: #9c2b1b;
+        --HB_Color_HeaderText: #58180d;
+        --HB_Color_MonsterStatBackground: #f2e5b5;
+        --HB_Color_CaptionText: #766649;
+        --HB_Color_WatercolorStain: #bbad82;
+        --HB_Color_Footnotes: #c9ad6a;
+      }
+    </style>
+  </head>
+  <body style="background-color: #eee5ce">
+    <header class="container">
+      <h1
+        class="display-4 text-center mt-5"
+        style="font-family: MrEavesRemake; color: #58180d"
+      >
+        Hedvige Morarkalal
+      </h1>
+    </header>
+    <div class="container">
+      <div class="row">
+        <div class="col-6">
+          <img
+            src="../static/images/379.png"
+            class="img-fluid"
+            alt="Hedvige Morarkalal"
+          />
+        </div>
+
+        <div class="col-6">
+          <div>
+            <h2 style="font-family: MrEavesRemake; color: #58180d">Half-Elf Faction Agent</h2>
+            <p>Class: Frost Mage</p>
+            <p>Age: Middle-aged</p>
+          </div>
+          <div>
+            <h3
+              style="
+                font-family: MrEavesRemake;
+                color: #58180d;
+                border-bottom: 2px solid var(--HB_Color_HeaderUnderline);
+              ">
+              Physical Description
+            </h3>
+            <p style="font-family: BookInsanityRemake">
+              Hedvige Morarkalal is a Middle-aged Female Half-Elf with a balanced body type. Hedvige has golden bun hair and gold eyes.
+            </p>
+          </div>
+          <div>
+            <h3
+            style="
+              font-family: MrEavesRemake;
+              color: #58180d;
+              border-bottom: 2px solid var(--HB_Color_HeaderUnderline);
+            ">
+              Background Story
+            </h3>
+            <p style="font-family: BookInsanityRemake">
+              
+
+Hedvige Morarkalal was born in Silverymoon to a human mother and elven father. Hedvige&#39;s father was a mage who had been part of a group of adventurers who had once stopped a great evil from taking over the world. Her father died when she was young, and her mother remarried a human man. Hedvige was raised in Silverymoon and always felt out of place. She was an independent and innovative child, and she always wanted to have adventures. When she was old enough, she left Silverymoon and became a faction agent for the Frost Mages. She has been all over the world, and has seen many different cultures. She is a pessimist by nature, but she is also easygoing and enjoys new experiences.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <h3 style="font-family: MrEavesRemake; color: #58180d">Personality</h3>
+      <p>Ideal: innovation</p>
+    </div>
+    <footer class="container">
+      <p class="text-center">
+        Made with <span style="color: #e25555">&#9829;</span> by
+        <a href="https://ludomancien.com/">Christian Amauger</a>
+      </p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  </body>
+</html>
