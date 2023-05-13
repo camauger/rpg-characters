@@ -1,12 +1,12 @@
 import json
-from flask import Flask, render_template
+from flask import Flask, render_template, url_for
+
+def get_image_url(filename):
+    base_url = 'https://zippy-rabanadas-30839c.netlify.app'
+    return f'{base_url}/static/{filename}'
+
 
 app = Flask(__name__)
-
-def configure_app(app):
-    app.config['FREEZER_RELATIVE_URLS'] = True
-    app.config['FREEZER_BASE_URL'] = 'https://zippy-rabanadas-30839c.netlify.app'
-
 
 def get_character_data(id):
     with open('characters_with_images.json', 'r') as f:
@@ -16,12 +16,28 @@ def get_character_data(id):
             return character
     return None
 
+def load_characters():
+    with open('characters_with_images.json', 'r') as f:
+        characters = json.load(f)   
+    return characters
+
 # Route for the home page
 @app.route('/')
 def index():
-    with open('characters_with_images.json', 'r') as f:
-        characters = json.load(f)
-    return render_template('index.html', characters=characters, static_url_path='/static')
+    characters = load_characters()
+    processed_characters = []
+
+    for character in characters:
+        image_url = get_image_url(character.get('physical_description').get('image'))
+        processed_characters.append({
+            'id': character.get('id'),
+            'full_name': character.get('first_name') + ' ' + character.get('last_name'),
+            'image_url': image_url,
+            # Include other character attributes as needed
+        })
+
+    return render_template('index.html', characters=processed_characters)
+
 
 # Route for individual character based on ID
 @app.route('/character/<int:id>.html')
