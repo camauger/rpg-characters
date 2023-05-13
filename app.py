@@ -19,7 +19,7 @@ def index():
     return render_template('index.html', characters=characters, static_url_path='/static')
 
 # Route for individual character based on ID
-@app.route('/character/<int:id>')
+@app.route('/character/<int:id>.html')
 def character(id):
     # Retrieve character data based on the ID
     character_data = get_character_data(id)
