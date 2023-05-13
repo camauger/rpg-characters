@@ -5,7 +5,6 @@ def get_image_url(filename):
     base_url = 'https://zippy-rabanadas-30839c.netlify.app'
     return f'{base_url}/static/{filename}'
 
-
 app = Flask(__name__)
 
 def get_character_data(id):
@@ -28,11 +27,10 @@ def index():
     processed_characters = []
 
     for character in characters:
-        image_url = get_image_url(character.get('physical_description').get('image'))
         processed_characters.append({
             'id': character.get('id'),
             'full_name': character.get('first_name') + ' ' + character.get('last_name'),
-            'image_url': image_url,
+            'image_url': f"{character.get('id')}.png"
             # Include other character attributes as needed
         })
 
