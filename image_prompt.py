@@ -152,7 +152,19 @@ artists_and_photographers = ['Michael Komarck', 'Donato Giancola', 'Todd Lockwoo
 
 camera_settings_and_types = ['Aperture Priority Mode', 'Shutter Priority Mode', 'Manual Mode', 'Portrait Mode', '50mm Prime Lens', '85mm Prime Lens', 'Telephoto Lens', 'Wide-Angle Lens', 'Full Frame Camera', 'Crop Sensor Camera', 'Natural Light', 'Studio Lighting', 'Softbox', 'Beauty Dish', 'Fill Light', 'Reflector', 'Bokeh', 'Shallow Depth of Field', 'ISO 100', 'ISO 200', 'ISO 400', 'Low ISO', 'Medium ISO', 'High ISO']
 
+illustrators = ["Tomer Hanuka", "James Jean", "Yuko Shimizu", "Sam Wolfe Connelly", "Yoshitaka Amano", "J.A.W. Cooper", "Audrey Kawasaki", "Esao Andrews", "Nico Delort", "Beeple", "Loish", "Feng Zhu", "Craig Mullins", "Sachin Teng", "Simon Stålenhag", "Jama Jurabaev", "Pascal Campion", "WLOP", "Nivanh Chanthara", "Marta Nael", "Ross Tran", "Ilya Kuvshinov", "Sparth"]
 
-def craft_image_prompt(character):
+def craft_image_prompt(character, illustration=False):
+        if illustration:
+                return craft_image_prompt_illustration(character)
+        else:
+                return craft_image_prompt_photo(character)
+
+
+def craft_image_prompt_photo(character):        
         prompt = f"In the style of {random.choice(artists_and_photographers)}, create a {character.nature} {random.choice(portrait)} of {character.full_name}, a {character.background} {character.character_class}. {character.physical_description_text} {random.choice(colors)} and {random.choice(colors)} tones. {random.choice(lighting)}. Detailed facial features, realistic. {random.choice(camera_settings_and_types)}. {character.ethnicity}core, Forgotten Realms, Medieval Fantasy Setting, D&D. --s 1000 --upbeta --seed {character.id}".lower()
+        return prompt.capitalize()
+
+def craft_image_prompt_illustration(character):
+        prompt = f"In the style of {random.choice(illustrators)}, create a {character.nature} {random.choice(portrait)} of {character.full_name}, a {character.background} {character.character_class}. {character.physical_description_text} {random.choice(colors)} and {random.choice(colors)} tones. {random.choice(lighting)}. {character.ethnicity}core, Forgotten Realms, Medieval Fantasy Setting, D&D. --s 1000 --upbeta --seed {character.id}".lower()
         return prompt.capitalize()

@@ -40,7 +40,7 @@ def fetch_character_data(prompt, api_key):
     return response_json['choices'][0]['text']
 
 class Character:
-    def __init__(self, character_class, background, ethnicity, age, gender, api_key=api_key):
+    def __init__(self, character_class, background, ethnicity, age, gender, api_key=api_key, image_type="photo"):
         self.id = random.randint(1, 1000) + get_number_of_existing_characters()
         self.first_name = generate_random_first_name(gender)
         self.last_name = generate_random_last_name()
@@ -58,6 +58,7 @@ class Character:
         self.behavior = CharacterBehavior().behavior()
         self.psychological_description = self.create_psychological_description()
         self.physical_description_text = self.create_physical_description_text()
+        self.image_type = image_type
         self.image_prompt = self.create_image_prompt()
         # Has to be last!
         self.background_story = self.create_background_story(api_key)
@@ -77,8 +78,11 @@ class Character:
         return background_story
 
     def create_image_prompt(self):
-        return craft_image_prompt(self)
-
+        if (self.image_type == "illustration"):
+            return craft_image_prompt(self, illustration=True)
+        else:
+            return craft_image_prompt(self)
+    
     def __str__(self):
        return f"{self.full_name} is a {self.ethnicity} {self.character_class} and a {self.background}"
 
