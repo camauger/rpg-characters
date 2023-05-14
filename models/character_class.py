@@ -1,11 +1,37 @@
+from models.physical_description import PhysicalDescription
+from settings.character_settings import CharacterBehavior
+from settings.image_prompt import craft_image_prompt
+from settings.name_composition import generate_random_first_name, generate_random_last_name
+import json
 import random
-from name_composition import generate_random_first_name, generate_random_last_name
-from physical_description import PhysicalDescription
-from character_settings import CharacterBehavior
-from image_prompt import craft_image_prompt
-from rpg_character_generator import fetch_character_data
+import requests
 # You will have to create your own api_settings.py file with your OpenAI API key
 from api_settings import api_key
+
+# Create a background story for an RPG character
+
+def fetch_character_data(prompt, api_key):
+    url = "https://api.openai.com/v1/engines/text-davinci-002/completions"
+    headers = {
+        "Content-Type": "application/json",
+        "Authorization": f"Bearer {api_key}",
+    }
+    data = {
+        "prompt": prompt,
+        "max_tokens": 200,
+        "n": 1,
+        "stop": None,
+        "temperature": 0.7,
+    }
+    response = requests.post(url, headers=headers, data=json.dumps(data))
+    response_json = response.json()
+
+    if response.status_code != 200:
+        raise Exception(f"Failed to fetch data from ChatGPT: {response_json}")
+
+    return response_json['choices'][0]['text']
+
+
 """
 This code is defining a class called Character.
 

@@ -210,11 +210,6 @@
       "description": "A bright, vibrant yellow color."
   },
   {
-      "name": "Pink",
-      "synonyms": ["Rose"],
-      "description": "A soft, delicate pink color."
-  },
-  {
       "name": "Orange",
       "synonyms": ["Amber"],
       "description": "A warm, fiery orange color."

@@ -1,7 +1,7 @@
-import random, json, csv
-import requests
-from character_settings import character_classes, ethnicity, background, age_settings, gender
-from character_class import Character
+import json, csv
+from settings.random_settings import pick_random_age, pick_random_gender, pick_random_ethnicity, pick_random_character_class, pick_random_background
+from models.character_class import Character
+
 # You will have to create your own api_settings.py file with your OpenAI API key
 from api_settings import api_key
 
@@ -15,46 +15,10 @@ def get_number_of_existing_characters():
         # Handle file not found or invalid JSON error
         return 0
 
-# Create a background story for an RPG character
-
-def fetch_character_data(prompt, api_key):
-    url = "https://api.openai.com/v1/engines/text-davinci-002/completions"
-    headers = {
-        "Content-Type": "application/json",
-        "Authorization": f"Bearer {api_key}",
-    }
-    data = {
-        "prompt": prompt,
-        "max_tokens": 200,
-        "n": 1,
-        "stop": None,
-        "temperature": 0.7,
-    }
-    response = requests.post(url, headers=headers, data=json.dumps(data))
-    response_json = response.json()
-
-    if response.status_code != 200:
-        raise Exception(f"Failed to fetch data from ChatGPT: {response_json}")
-
-    return response_json['choices'][0]['text']
-
-
 # Create a random character
-def random_gender():
-    return random.choices(gender, weights=(40, 50, 10))[0]
 
-import random
-
-def pick_random_age():
-    age_options = age_settings
-    age_weights = [0, 0, 15, 25, 35, 25, 15, 10, 5, 2, 2, 10]  # Adjust the weights based on desired distribution
-
-    random_age = random.choices(age_options, weights=age_weights)[0]
-    return random_age
-
-
-def create_random_character():
-    return Character(random.choice(character_classes), random.choice(background), random.choice(ethnicity), pick_random_age(), random_gender(), api_key)
+def create_random_character(image_type="photo"):
+    return Character(pick_random_character_class(), pick_random_background(), pick_random_ethnicity(), pick_random_age(), pick_random_gender(), api_key, image_type=image_type)
 
 #Load the characters from the json file
 def load_characters():
@@ -75,17 +39,21 @@ def save_characters(characters):
 # Create a list of unique characters
 
 characters = []
+print(len(characters))
+print("Welcome to the RPG Character Generator!")
 num_characters = input("How many characters do you want to create? ")
 
 # Exit if 0 or less
 if int(num_characters) <= 0:
     print("No characters created.")
-
+    exit()
+else:
     while not num_characters.isdigit():
         num_characters = input("Please enter a number: ")
     num_characters = int(num_characters)
     while len(characters) < num_characters:
-        new_character = create_random_character()
+        # Create a new character with illustration (forced)
+        new_character = create_random_character(image_type="illustration")
         characters.append(new_character)
     print(f"Created {len(characters)} characters.")
 
@@ -155,7 +123,8 @@ files_in_folder = get_files_in_folder(folder_path)
 # Get all the characters with an image in images folder
 characters_with_images = []
 for character in existing_characters:
-    image_name = character.get('physical_description').get('image')
+    image_name = f"{character.get('id')}.png"
+
     if image_name in files_in_folder:
         characters_with_images.append(character)
 
@@ -168,7 +137,8 @@ with open("characters_with_images.json", "w") as json_file:
 # Get all the characters without an image in images folder
 characters_without_images = []
 for character in existing_characters:
-    image_name = character.get('physical_description').get('image')
+    image_name = f"{character.get('id')}.png"
+
     if image_name not in files_in_folder:
         characters_without_images.append(character)
 

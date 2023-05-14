@@ -6,3 +6,71 @@ Create a charismatic Moody Portrait of Even Elleises, a Criminal Monk. Even Elle
 
 In the style of anne stokes, create a charismatic character portrait of stewart calin, a acolyte gladiator. stewart calin is a senior male human with a well-built body type. stewart has platinum three-strand braid hair and teal eyes. hot pink and orchid pink tones. rim lighting. detailed facial features, realistic. full frame camera. humancore, forgotten realms, medieval fantasy setting, d&d. --s 1000 --upbeta --seed 33
 
+In the style of sachin teng, create a charismatic surreal portrait of elene dra, a soldier airbender. elene dra is a adult female dwarf with a boxy body type. elene has salt and pepper three-strand braid hair and silver eyes. olive and carnation tones. natural light. dwarfcore, forgotten realms, medieval fantasy setting, d&d. --s 1000 --upbeta --seed 675
+
+In the style of sparth, create a resourceful head and shoulders portrait of rayshell ionvarbranmir, a outlander chronomancer. rayshell ionvarbranmir is a middle-aged female gnome with a bottom-heavy body type. rayshell has fair layered cut hair and hazel eyes. vermilion and crimson tones. diffused light. gnomecore, forgotten realms, medieval fantasy setting, d&d. --s 1000 --upbeta --seed 454
+
+In the style of sachin teng, create a patient moody portrait of merrili alsolvenlor, a mercenary veteran tidecaller. merrili alsolvenlor is a youthful female elf with a stocky body type. merrili has auburn plait hair and azure eyes. gold and sapphire tones. rembrandt lighting. elfcore, forgotten realms, medieval fantasy setting, d&d. --s 1000 --upbeta --seed 501
+
+In the style of yuko shimizu, create a bold loop lighting portrait of cleavland anelel, a waterdhavian noble gunslinger. cleavland anelel is a adult male half-elf with a upper midsection-emphasized body type. cleavland has platinum textured long hair hair and dark eyes. orange and honey tones. firelight. half-elfcore, forgotten realms, medieval fantasy setting, d&d. --s 1000 --upbeta --seed 926
+
+In the style of nivanh chanthara, create a resourceful documentary portrait of demetria lis, a far traveler warpriest. demetria lis is a young adult female human with a upper midsection-emphasized body type. demetria has jet-black fauxhawk hair and silver eyes. blush and lemon tones. side lighting. humancore, forgotten realms, medieval fantasy setting, d&d. --s 1000 --upbeta --seed 69
+
+In the style of sparth, create a impulsive three-quarter portrait of jess vivseryna, a anthropologist skald berserker. jess vivseryna is a youthful male half-elf with a midsection-emphasized body type. jess has auburn bob cut with fringe hair and amber eyes. black and chocolate tones. backlighting. half-elfcore, forgotten realms, medieval fantasy setting, d&d. --s 1000 --upbeta --seed 733
+
+In the style of yoshitaka amano, create a curious three-quarter portrait of cindi helitharkgar, a haunted one skald. cindi helitharkgar is a adult female half-orc with a uniform body type. cindi has light updo hair and rose eyes. caramel and blue tones. sunlight. half-orccore, forgotten realms, medieval fantasy setting, d&d. --s 1000 --upbeta --seed 891
+
+In the style of wlop, create a determined lifestyle portrait of leonard dra, a sailor lightning monk. leonard dra is a young adult male human with a slender body type. leonard has platinum punk hair and hazel eyes. sienna and caramel tones. diffused light. humancore, forgotten realms, medieval fantasy setting, d&d. --s 1000 --upbeta --seed 643
+
+In the style of sparth, create a reserved butterfly lighting portrait of korella araravorhelm, a anthropologist duelist. korella araravorhelm is a elderly non-binary dwarf with a lean body type. korella has icy textured hair and azure eyes. crimson and mahogany tones. golden hour. dwarfcore, forgotten realms, medieval fantasy setting, d&d. --s 1000 --upbeta --seed 659
+
+In the style of wlop, create a independent minimalist portrait of nicki asylil, a noble beast tamer. nicki asylil is a adult female elf with a muscular body type. nicki has light short bob hair and emerald eyes. crimson and teal tones. moonlight. elfcore, forgotten realms, medieval fantasy setting, d&d. --s 1000 --upbeta --seed 467
+
+In the style of loish, create a cautious full-length portrait of dunn mirarker, a folk hero shaman. dunn mirarker is a senior male dwarf with a rounded upper body body type. dunn has dark bob cut hair and grayish-white eyes. grape and steel blue tones. natural light. dwarfcore, forgotten realms, medieval fantasy setting, d&d. --s 1000 --upbeta --seed 891
+
+In the style of audrey kawasaki, create a resourceful low-key portrait of robenia inly, a waterdhavian noble runic mage. robenia inly is a ancient female human with a elliptical body type. robenia has fair layered cut with length hair and dark brown eyes. mahogany and tangerine tones. candlelight. humancore, forgotten realms, medieval fantasy setting, d&d. --s 1000 --upbeta --seed 857
+
+In the style of sachin teng, create a adventurous documentary portrait of thaddus thormondfel, a soldier earthshaker. thaddus thormondfel is a youthful male dwarf with a lean body type. thaddus has light halo braid hair and gold eyes. saffron and magenta tones. side lighting. dwarfcore, forgotten realms, medieval fantasy setting, d&d. --s 1000 --upbeta --seed 505
+
+In the style of pascal campion, create a patient environmental portrait of abbe elser, a cloistered scholar mindflayer. abbe elser is a middle-aged male halfling with a uniform body type. abbe has chestnut layered cut with length hair and rose eyes. bronze and raspberry tones. candlelight. halflingcore, forgotten realms, medieval fantasy setting, d&d. --s 1000 --upbeta --seed 883
+
+In the style of ilya kuvshinov, create a resourceful glamour lighting portrait of maire is, a city watch druid. maire is is a young adult female gnome with a slender body type. maire has salt and pepper short bob hair and azure eyes. beige and indigo tones. rembrandt lighting. gnomecore, forgotten realms, medieval fantasy setting, d&d. --s 1000 --upbeta --seed 39
+
+In the style of ilya kuvshinov, create a loyal classic portrait of bink iaithrhi, a outlander druidic knight. bink iaithrhi is a adult male half-orc with a midsection-emphasized body type. bink has light high pony hair and rose eyes. gold and ruby tones. high key lighting. half-orccore, forgotten realms, medieval fantasy setting, d&d. --s 1000 --upbeta --seed 787
+
+In the style of wlop, create a analytical short lighting portrait of marchall lisisith, a haunted one paladin. marchall lisisith is a timeless non-binary elf with a top-emphasized body type. marchall has snowy bob cut hair and rose eyes. blue and black tones. soft light. elfcore, forgotten realms, medieval fantasy setting, d&d. --s 1000 --upbeta --seed 82
+
+In the style of tomer hanuka, create a reserved broad lighting portrait of essa tormondius, a far traveler mystic. essa tormondius is a young adult female dwarf with a slender body type. essa has ash plait hair and grayish-white eyes. mercury and forest green tones. rembrandt lighting. dwarfcore, forgotten realms, medieval fantasy setting, d&d. --s 1000 --upbeta --seed 404
+
+In the style of jama jurabaev, create a loyal head and shoulders portrait of nerty asal, a anthropologist cleric. nerty asal is a teenager female half-orc with a lean body type. nerty has dark halo braid hair and silver eyes. vermilion and coral tones. split lighting. half-orccore, forgotten realms, medieval fantasy setting, d&d. --s 1000 --upbeta --seed 330
+
+In the style of marta nael, create a cautious high-angle portrait of drona gwen, a hermit warden. drona gwen is a young adult female halfling with a athletic body type. drona has chestnut tail hair and golden eyes. baby blue and gold tones. firelight. halflingcore, forgotten realms, medieval fantasy setting, d&d. --s 1000 --upbeta --seed 865
+
+In the style of tomer hanuka, create a bold three-quarter portrait of heidie iththal, a anthropologist ninja. heidie iththal is a middle-aged female human with a narrow-hipped body type. heidie has brown updo hair and grayish-white eyes. saffron and mint tones. candlelight. humancore, forgotten realms, medieval fantasy setting, d&d. --s 1000 --upbeta --seed 576
+
+In the style of pascal campion, create a patient butterfly lighting portrait of fee thalricricbran, a urchin runepriest. fee thalricricbran is a middle-aged male elf with a lean body type. fee has silver updo hair and dark eyes. green and coral tones. soft light. elfcore, forgotten realms, medieval fantasy setting, d&d. --s 1000 --upbeta --seed 695
+
+In the style of james jean, create a bold photorealistic portrait of aleksandr syletteisith, a mercenary veteran priest of shadows. aleksandr syletteisith is a young adult male half-elf with a broad-shouldered body type. aleksandr has golden fauxhawk hair and grayish-white eyes. emerald and coral tones. firelight. half-elfcore, forgotten realms, medieval fantasy setting, d&d. --s 1000 --upbeta --seed 220
+
+In the style of nico delort, create a adventurous photorealistic headshot of althea estlynara, a hermit ranger. althea estlynara is a adult female gnome with a boxy body type. althea has snowy crown plait hair and amber eyes. carnation and jade tones. soft light. gnomecore, forgotten realms, medieval fantasy setting, d&d. --s 1000 --upbeta --seed 168
+
+In the style of simon stålenhag, create a cautious fine art portrait of odelinda grim, a archaeologist monk. odelinda grim is a teenager female dwarf with a hip-emphasized body type. odelinda has copper tail hair and light blue eyes. brown and orchid pink tones. split lighting. dwarfcore, forgotten realms, medieval fantasy setting, d&d. --s 1000 --upbeta --seed 338
+
+In the style of nico delort, create a cautious fashion portrait of jori galdaneldra, a urchin blood mage. jori galdaneldra is a teenager female half-elf with a narrow-hipped body type. jori has silver layered cut with length hair and dark eyes. sage and bubblegum tones. top lighting. half-elfcore, forgotten realms, medieval fantasy setting, d&d. --s 1000 --upbeta --seed 754
+
+IMAGE_TYPE: Glamour Portrait | GENRE: Fantasy | EMOTION: analytical | SCENE: A Acolyte Runescribe Low-Angle Portrait Krefetz Thorric | ACTOR: Krefetz Thorric is a Adult Non-binary Human with a balanced body type. Krefetz has chestnut pixie cut hair and dark eyes. Krefetz Thorric's traits are: analytical, balance, faith, overconfident, impatient. | TONES: Copper Navy Blue tones | LIGHTING: Soft Light | TAGS: Forgotten Realms, Medieval Fantasy Setting, D&D. --s 1000 --upbeta --seed 694
+
+IMAGE_TYPE: Classic Portrait | GENRE: Fantasy | EMOTION: curious | SCENE: A Entertainer Priestess Butterfly Lighting Portrait Sven Asallor | ACTOR: Sven Asallor is a Ancient Male Human with a top-emphasized body type. Sven has platinum crown plait hair and teal eyes. Sven Asallor's traits are: curious, adventurousness, community, vengeful, ambitious. | TONES: Gold Green tones | LIGHTING: Firelight | TAGS: Forgotten Realms, Medieval Fantasy Setting, D&D. --s 1000 --upbeta --seed 789
+
+IMAGE_TYPE: Rembrandt Portrait | GENRE: Fantasy | EMOTION: analytical | SCENE: A City Watch Fighter Loop Lighting Portrait Alaster Isythsolvin | ACTOR: Alaster Isythsolvin is a Young Adult Male Dragonborn with a full-figured body type. Alaster has brown pixie cut hair and amber eyes. Alaster Isythsolvin's traits are: analytical, discovery, community, impatient, rebellious. | TONES: Crimson Baby Blue tones | LIGHTING: Moonlight | TAGS: Forgotten Realms, Medieval Fantasy Setting, D&D. --s 1000 --upbeta --seed 938
+
+IMAGE_TYPE: Full-Length Portrait | GENRE: Fantasy | EMOTION: honest | SCENE: A Far Traveler Pirate Photorealistic headshot Kearney Ora | ACTOR: Kearney Ora is a Ancient Male Human with a midsection-emphasized body type. Kearney has ash bob cut with fringe hair and honey eyes. Kearney Ora's traits are: honest, wisdom, revenge, prideful, timid. | TONES: Blush Cerulean tones | LIGHTING: Soft Light | TAGS: Forgotten Realms, Medieval Fantasy Setting, D&D. --s 1000 --upbeta --seed 326
+
+IMAGE_TYPE: Environmental Portrait | GENRE: Fantasy | EMOTION: impulsive | SCENE: A Waterdhavian Noble Cleric Glamour Lighting Portrait Deerdre Voldloreld | ACTOR: Deerdre Voldloreld is a Senior Female Dwarf with a bottom-heavy body type. Deerdre has snowy pixie cut hair and rose eyes. Deerdre Voldloreld's traits are: impulsive, honor, discovery, hot-tempered, stubborn. | TONES: Rose Ruby tones | LIGHTING: Silhouette Lighting | TAGS: Forgotten Realms, Medieval Fantasy Setting, D&D. --s 1000 --upbeta --seed 694
+
+IMAGE_TYPE: Candid Portrait | GENRE: Fantasy | EMOTION: adventurous | SCENE: A Courtier Swordmage Lifestyle Portrait Malina Mormond | ACTOR: Malina Mormond is a Teenager Female Human with a narrow-hipped body type. Malina has snowy three-strand braid hair and rose eyes. Malina Mormond's traits are: adventurous, honor, love, jealous, optimistic. | TONES: Mercury Black tones | LIGHTING: Moonlight | TAGS: Forgotten Realms, Medieval Fantasy Setting, D&D. --s 1000 --upbeta --seed 541
+
+IMAGE_TYPE: Full-Length Portrait | GENRE: Fantasy | EMOTION: resourceful | SCENE: A Clan Crafter Warrior Priest Environmental Portrait Tab Al | ACTOR: Tab Al is a Young Adult Male Dragonborn with a muscular body type. Tab has platinum blunt bangs hair and teal eyes. Tab Al's traits are: resourceful, independence, equality, reckless, impatient. | TONES: Plum Royal Purple tones | LIGHTING: Side Lighting | TAGS: Forgotten Realms, Medieval Fantasy Setting, D&D. --s 1000 --upbeta --seed 308
+
+IMAGE_TYPE: Fine Art Portrait | GENRE: Fantasy | EMOTION: loyal | SCENE: A Far Traveler Voidcaster Moody Portrait Magnum Neth | ACTOR: Magnum Neth is a Senior Male Human with a hip-emphasized body type. Magnum has copper fauxhawk hair and slate eyes. Magnum Neth's traits are: loyal, honor, friendship, prideful, pessimistic. | TONES: Opal White tones | LIGHTING: Silhouette Lighting | TAGS: Forgotten Realms, Medieval Fantasy Setting, D&D. --s 1000 --upbeta --seed 136
+

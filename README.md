@@ -13,9 +13,11 @@ Before running the script, ensure that you have the following:
 
 1. Download the code files and save them in a directory of your choice.
 2. Install the required Python packages using the following command:
+
    ```
    pip install requests csv
    ```
+
 3. Obtain an API key for the OpenAI GPT-3 language model. Replace the `api_key` variable in the script with your API key.
 
 ## Usage
@@ -23,9 +25,11 @@ Before running the script, ensure that you have the following:
 1. Open a terminal or command prompt.
 2. Navigate to the directory where the script is saved.
 3. Run the script using the following command:
+
    ```
    python rpg_character_generator.py
    ```
+
 4. Follow the prompts to specify the number of characters you want to create.
 5. Once the characters are generated, their details will be saved in the `data/characters_data.csv` file.
 6. The character descriptions, including the background stories and image prompts, will be stored in the `characters.json` and `data/image_prompts.txt` files, respectively.
@@ -44,4 +48,3 @@ The code utilizes the OpenAI GPT-3 language model for generating background stor
 Note: Ensure that you comply with the terms of service and usage policies of the OpenAI GPT-3 API when utilizing the language model for generating text.
 
 ---
-

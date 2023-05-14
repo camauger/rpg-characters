@@ -1,6 +1,7 @@
 # Create the physical description of the character
 import json
 import random
+from settings.random_settings import pick_random_hair_color
 
 def create_physical_description():
     with open('data/physical_description.json', 'r') as f:
@@ -22,17 +23,9 @@ def create_body_type():
 
 
 # Create the character's hair color
+
 def create_hair_color():
-    with open('data/physical_description.json', 'r') as f:
-        # Load the JSON string into a Python dictionary
-        data = json.load(f)
-
-       # Get a random hair color
-        random_hair_color = random.choice(data['hair_colors'])
-
-        # Get a random synonym of the hair color
-        random_synonym = random.choice(random_hair_color['synonyms'])
-        return random_synonym.lower()
+    return pick_random_hair_color()
 
 
 # Create the character's hair style

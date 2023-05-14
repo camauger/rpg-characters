@@ -25,9 +25,6 @@ def fetch_character_data(prompt, api_key):
     return response_json['choices'][0]['text']
 
 # Create a background story for an RPG character
-api_key = "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"
-
-
 
 def create_background_story(name, character_class, api_key):
     prompt = f"Create a background story for a RPG character named {name}.\n\nCharacter class: {character_class}"

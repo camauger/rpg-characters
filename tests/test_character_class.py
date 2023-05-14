@@ -3,7 +3,7 @@ from name_composition import generate_random_first_name, generate_random_last_na
 from physical_description import PhysicalDescription
 from character_settings import CharacterBehavior
 from image_prompt import craft_image_prompt
-from rpg_character_generator import fetch_character_data
+from character_class import Character
 # You will have to create your own api_settings.py file with your OpenAI API key
 from api_settings import api_key
 import unittest

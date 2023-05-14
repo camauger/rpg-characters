@@ -1,0 +1,113 @@
+{
+    "classes": [
+      {
+        "name": "Barbarian",
+        "subclasses": [
+          "Path of the Berserker",
+          "Path of the Totem Warrior",
+          "Path of the Battlerager",
+          "Path of the Wild Soul"
+        ]
+      },
+      {
+        "name": "Bard",
+        "subclasses": [
+          "College of Lore",
+          "College of Valor",
+          "College of Glamour",
+          "College of Whispers"
+        ]
+      },
+      {
+        "name": "Cleric",
+        "subclasses": [
+          "Life Domain",
+          "Light Domain",
+          "Nature Domain",
+          "Tempest Domain"
+        ]
+      },
+      {
+        "name": "Druid",
+        "subclasses": [
+          "Circle of the Land",
+          "Circle of the Moon",
+          "Circle of Dreams",
+          "Circle of the Shepherd"
+        ]
+      },
+      {
+        "name": "Fighter",
+        "subclasses": [
+          "Champion",
+          "Battle Master",
+          "Eldritch Knight",
+          "Psi Warrior"
+        ]
+      },
+      {
+        "name": "Monk",
+        "subclasses": [
+          "Way of the Open Hand",
+          "Way of Shadow",
+          "Way of the Four Elements",
+          "Way of the Astral Self"
+        ]
+      },
+      {
+        "name": "Paladin",
+        "subclasses": [
+          "Oath of Devotion",
+          "Oath of the Ancients",
+          "Oath of Vengeance",
+          "Oath of Redemption"
+        ]
+      },
+      {
+        "name": "Ranger",
+        "subclasses": [
+          "Hunter",
+          "Beast Master",
+          "Horizon Walker",
+          "Gloom Stalker"
+        ]
+      },
+      {
+        "name": "Rogue",
+        "subclasses": [
+          "Thief",
+          "Assassin",
+          "Arcane Trickster",
+          "Swashbuckler"
+        ]
+      },
+      {
+        "name": "Sorcerer",
+        "subclasses": [
+          "Draconic Bloodline",
+          "Wild Magic",
+          "Divine Soul",
+          "Shadow Magic"
+        ]
+      },
+      {
+        "name": "Warlock",
+        "subclasses": [
+          "The Archfey",
+          "The Fiend",
+          "The Great Old One",
+          "The Hexblade"
+        ]
+      },
+      {
+        "name": "Wizard",
+        "subclasses": [
+          "School of Abjuration",
+          "School of Conjuration",
+          "School of Divination",
+          "School of Enchantment"
+        ]
+      }
+    ]
+  }
+  
