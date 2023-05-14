@@ -1,5 +1,5 @@
 import json, csv
-from settings.random_settings import pick_random_age, pick_random_gender, pick_random_ethnicity, pick_random_character_class, pick_random_background
+from settings.random_settings import pick_random_age, pick_random_gender, pick_random_ethnicity, pick_random_character_class, pick_random_subclass, pick_random_background
 from models.character_class import Character
 
 # You will have to create your own api_settings.py file with your OpenAI API key
@@ -18,7 +18,13 @@ def get_number_of_existing_characters():
 # Create a random character
 
 def create_random_character(image_type="photo"):
-    return Character(pick_random_character_class(), pick_random_background(), pick_random_ethnicity(), pick_random_age(), pick_random_gender(), api_key, image_type=image_type)
+    random_class = pick_random_character_class()
+    random_subclass = pick_random_subclass(random_class)
+    random_class_name = random_class.get('name')
+    new_character = Character(random_class_name, random_subclass, pick_random_background(), pick_random_ethnicity(), pick_random_age(), pick_random_gender(), image_type=image_type)
+    print(new_character.image_prompt)
+    return new_character
+
 
 #Load the characters from the json file
 def load_characters():
@@ -44,6 +50,8 @@ print("Welcome to the RPG Character Generator!")
 num_characters = input("How many characters do you want to create? ")
 
 # Exit if 0 or less
+while not num_characters.isdigit():
+    num_characters = input("Please enter a number: ")
 if int(num_characters) <= 0:
     print("No characters created.")
     exit()
@@ -84,8 +92,6 @@ print(len(existing_characters))
 
 # Convert Character instances to dictionaries
 character_dicts = [character.__dict__ for character in characters]
-print(character_dicts)
-
 
 # Append new characters to the existing list
 existing_characters.extend(character_dicts)

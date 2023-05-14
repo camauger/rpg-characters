@@ -180,15 +180,11 @@ def craft_image_prompt_photo(character):
         prompt = f"In the style of {random.choice(artists_and_photographers)}, create a {character.nature} {random.choice(portrait)} of {character.full_name}, a {character.background} {character.character_class} | {character.physical_description_text} {random.choice(colors)} and {random.choice(colors)} tones | {random.choice(lighting)} | {character.psychological_description} | Detailed facial features, realistic | {random.choice(camera_settings_and_types)}. Forgotten Realms, Medieval Fantasy Setting, D&D. --s 1000 --upbeta --seed {character.id}".lower()
         return prompt.capitalize()
 
-def craft_image_prompt_illustration_old(character):
-        prompt = f"In the style of {random.choice(illustrators)}, create a {character.nature} {random.choice(portrait)} of {character.full_name}, a {character.background} {character.character_class} | {character.physical_description_text} {random.choice(colors)} and {random.choice(colors)} tones | {character.psychological_description} | Forgotten Realms, Medieval Fantasy Setting, D&D. --s 1000 --upbeta --seed {character.id}".lower()
-        return prompt.capitalize()
-
 def craft_image_prompt_illustration(character):
         image_type = random.choice(portrait)
         genre = "Fantasy"
         emotion = character.nature
-        scene = f"A {character.background} {character.character_class} {random.choice(portrait)} {character.full_name}"
+        scene = f"A {character.background} {character.character_class} named {character.full_name}"
         tones = f"{random.choice(colors)} {random.choice(colors)} tones"
         actor = f"{character.physical_description_text} {character.psychological_description}"
         lighting_type = random.choice(lighting)

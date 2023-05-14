@@ -10,7 +10,7 @@ def pick_random_gender():
     return pick_random_setting(gender_settings)
 
 def pick_random_background():
-    return random.choic(background_settings)
+    return random.choice(background_settings)
 
 def pick_random_age():
     age, age_weights = zip(*age_settings)
@@ -29,7 +29,8 @@ def pick_random_character_class():
     with open('data/character_classes.json', 'r') as f:
         # Load the JSON string into a Python dictionary
         data = json.load(f)
-        random_character_class = random.choice(data['classes'])
-        return random_character_class
+        random_class = random.choice(data['classes'])
+        return random_class
 
-       
+def pick_random_subclass(character_class):
+    return random.choice(character_class['subclasses'])
