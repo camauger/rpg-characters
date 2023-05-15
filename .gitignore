@@ -16,3 +16,7 @@ static
 
 # Ignore api_settings.py
 api_settings.py
+
+# Ignore build
+build/
+```
