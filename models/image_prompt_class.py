@@ -24,7 +24,7 @@ class ImagePrompt:
         self.image_type = self.image_type()
         
     def scene(self):
-        return f"{indefinite_article(self.character.background)} {self.character.character_class} named {self.character.full_name}"
+        return f"{indefinite_article(self.character.background)} {self.character.ethnicity} named {self.character.full_name}"
 
     def tones(self):
         return choose_two_and_join(colors)
@@ -34,7 +34,7 @@ class ImagePrompt:
 
     def tags(self):
         keywords = ', '.join(self.character.ethnicity_keywords)
-        return f"{keywords}, Forgotten Realms, Medieval Fantasy Setting, D&D. --s 1000 --upbeta --seed {self.character.id}"
+        return f"{keywords}, Forgotten Realms, Medieval Fantasy, D&D, Dungeons & Dragons. --s 1000 --upbeta --seed {self.character.id}"
 
     def actor(self):
         return f"{self.character.create_physical_description_text()}"
@@ -46,5 +46,4 @@ class ImagePrompt:
         return random.choice(portrait)
     
     def craft_image_prompt(self):
-
-        return f"IMAGE_TYPE: {self.image_type} in the style of {self.style} | GENRE: {self.genre} | EMOTION: {self.emotion} | SCENE: {self.scene} | ACTOR: {self.actor} | TONES: {self.tones} | LIGHTING: {self.lighting} | TAGS: {self.tags}"
+        return f"IMAGE_TYPE: {self.image_type} in the style of {self.style} | GENRE: {self.genre} | SCENE: {self.scene} | ACTOR: {self.actor} | TONES: {self.tones} | LIGHTING: {self.lighting} | TAGS: {self.tags}"

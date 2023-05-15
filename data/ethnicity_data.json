@@ -16,8 +16,11 @@
         "stout",
         "deep-set eyes",
         "earthy skin tones",
-        "braided hair",
-        "broad face"
+        "broad face",
+        "long beards",
+        "hardy",
+        "stubborn",
+        "gruff"
       ]
     },
     {
@@ -27,8 +30,6 @@
         "slender",
         "pointed ears",
         "almond-shaped eyes",
-        "fair skin",
-        "long hair",
         "graceful",
         "ageless",
         "delicate features"
@@ -78,7 +79,12 @@
         "broad nose",
         "heavy eyebrows",
         "wild hair",
-        "scarred"
+        "scarred",
+        "intimidating",
+        "fearsome",
+        "savage",
+        "brutish",
+        "barbaric"
       ]
     },
     {
@@ -87,10 +93,15 @@
         "horns",
         "tail",
         "fangs",
-        "red, blue or purple skin",
+        "purple skin",
         "glowing eyes",
         "sharp features",
-        "intimidating"
+        "devilish",
+        "demonic",
+        "fiendish",
+        "infernal",
+        "hellish"
+
       ]
     },
     {
@@ -102,7 +113,10 @@
         "scales",
         "tail",
         "claws",
-        "frills"
+        "frills",
+        "anthropomorphic dragon",
+        "reptilian",
+        "fearsome"
       ]
     },
     {
