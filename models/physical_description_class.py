@@ -8,6 +8,5 @@ class PhysicalDescription:
         self.hair_style = create_hair_style()
         self.eye_color = create_eye_color()
 
-
     def __str__(self) -> str:
         return f"The character has {self.hair_color} {self.hair_style} hair and {self.eye_color} eyes."

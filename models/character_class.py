@@ -1,6 +1,6 @@
 from models.character_behavior_class import CharacterBehavior
 from models.physical_description_class import PhysicalDescription
-from settings.image_prompt import craft_image_prompt
+from models.image_prompt_class import ImagePrompt
 from settings.name_composition import generate_random_first_name, generate_random_last_name
 from settings.random_settings import create_eye_color, create_hair_color, create_hair_style, create_physical_trait
 import random
@@ -64,7 +64,7 @@ class Character:
         self.background_story = self.create_background_story()
 
     def create_physical_description_text(self):
-        physical_description = f"{indefinite_article(self.physical_trait)} {self.gender} {self.ethnicity}. {self.full_name} has {self.hair_color} {self.hair_style} hair and {self.eye_color} eyes.".lower()
+        physical_description = f"{indefinite_article(self.physical_trait)} {self.gender.lower()} {self.ethnicity}. {self.full_name} has {self.hair_color} {self.hair_style} hair and {self.eye_color} eyes."
         return f"{self.full_name} is {physical_description}."
 
     def create_physical_description(self):
@@ -76,13 +76,14 @@ class Character:
         return background_story
 
     def create_behavior(self):
-        return CharacterBehavior()
-    
-    def create_behavior_text(self):
-        return self.behavior.__str__()
+        behavior = CharacterBehavior(character=self)
+        behavior_text = behavior.create_behavior()
+        return behavior_text
 
     def create_image_prompt(self):
-        return craft_image_prompt(self)
+        image_prompt = ImagePrompt(character=self)
+        prompt = image_prompt.craft_image_prompt()
+        return prompt
     
     def __str__(self):
         return f"{self.full_name} is a {self.ethnicity} {self.character_class} ({self.character_subclass}) and a {self.background}"
