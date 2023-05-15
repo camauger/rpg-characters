@@ -36,7 +36,7 @@ class CharacterBehavior:
         elif (self.character.gender == "Male"):
             return f"{self.character.full_name}'s ideal is {self.ideal()}. His flaw is {self.flaw()}, his bond is {self.bond()}, his behavior is {self.behavior()}, and his nature is {self.nature()}."
         else:
-            return f"{self.character.full_name}'s ideal is {self.ideal()}. Their flaw is {self.flaw()}, their bond is {self.bond()}, their behavior is {self.behavior()}, and their nature is {self.nature()}."
+            return f"{self.character.full_name}'s ideal is {self.ideal()}. {self.character.full_name}'s traits are: {self.flaw()}, {self.bond()}, {self.behavior()} and {self.nature()}."
 
     def __str__(self) -> str:
         return f"The character's ideal is {self.ideal()}, their flaw is {self.flaw()}, their bond is {self.bond()}, their behavior is {self.behavior()}, and their nature is {self.nature()}."
