@@ -44,7 +44,7 @@ Finally, the __str__ method is used to return a string representation of the cha
 """
 class Character:
     def __init__(self, character_class, character_subclass, background, ethnicity, ethnicity_keywords, age, gender):
-        self.id = random.randint(1, 1000)
+        self.id = random.randint(1, 2000)
         self.first_name = generate_random_first_name(gender)
         self.last_name = generate_random_last_name()
         self.full_name = f"{self.first_name} {self.last_name}"

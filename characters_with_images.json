@@ -109,5 +109,142 @@
         "behavior": "Colin Danyel's ideal is creativity. His flaw is hot-tempered, his bond is equality, his behavior is ambitious, and his nature is reserved.",
         "image_prompt": "IMAGE_TYPE: Photorealistic portrait in the style of Cynthia Sheppard and Magali Villeneuve | GENRE: Fantasy | EMOTION: Colin Danyel's ideal is creativity. His flaw is hot-tempered, his bond is equality, his behavior is ambitious, and his nature is reserved. | SCENE: a Cloistered Scholar Sorcerer named Colin Danyel | ACTOR: Colin Danyel is a Radiant male Elf. Colin Danyel has blond tail hair and slate eyes. | TONES: Maroon and Vermilion | LIGHTING: Hard Light | TAGS: ['tall', 'slender', 'pointed ears', 'almond-shaped eyes', 'fair skin', 'long hair', 'graceful', 'ageless', 'delicate features'], Forgotten Realms, Medieval Fantasy Setting, D&D. --s 1000 --upbeta --seed 461",
         "background_story": "\n\nColin Danyel was once a promising young student at the Cloistered Scholar Sorcery academy. He was top of his class in all his studies and was on track to become one of the greats. However, his temper got the better of him one day and he was expelled from the academy. Colin was still determined to prove himself and become a great sorcerer. He began to study on his own, learning all he could about magic. He also began to experiment with his own spells, creating new and more powerful ones. Colin slowly began to make a name for himself in the magical community. However, he always felt like an outsider, like he didn't quite belong. This only made him more determined to be the best. Colin's ambition knows no bounds and he will stop at nothing to achieve his goals."
+    },
+    {
+        "id": 751,
+        "first_name": "Merl",
+        "last_name": "A",
+        "full_name": "Merl A",
+        "gender": "Non-binary",
+        "character_class": "Bard",
+        "character_subclass": "College of Lore",
+        "background": "City Watch",
+        "ethnicity": "Human",
+        "ethnicity_keywords": [
+            "medium height",
+            "medium build"
+        ],
+        "age": "Elderly",
+        "physical_description": {
+            "physical_trait": "Slender",
+            "hair_color": "Light Brown",
+            "hair_style": "pixie cut",
+            "eye_color": "different-colored"
+        },
+        "physical_trait": "Alluring",
+        "hair_color": "Yellow",
+        "hair_style": "layered cut with length",
+        "eye_color": "dark brown",
+        "behavior": "Merl A's ideal is freedom. Merl A's traits are: easily influenced, faith, timid and resourceful.",
+        "image_prompt": "IMAGE_TYPE: Headshot in the style of H.R. Giger and Pascal Campion | GENRE: Fantasy | EMOTION: Merl A's ideal is freedom. Merl A's traits are: easily influenced, faith, timid and resourceful. | SCENE: a City Watch Bard named Merl A | ACTOR: Merl A is an Alluring non-binary Human. Merl A has yellow layered cut with length hair and dark brown eyes. | TONES: Firebrick and Navy Blue | LIGHTING: Rembrandt Lighting | TAGS: medium height, medium build, Forgotten Realms, Medieval Fantasy Setting, D&D. --s 1000 --upbeta --seed 751",
+        "background_story": "\n\nMerl A was born into a family of bards who traveled the Forgotten Realms performing for anyone who would listen. When Merl A was old enough, they joined their family on the road. They quickly realized that they didn't enjoy the nomadic lifestyle and yearned for a place to call home. They eventually settled in a small town and joined the city watch. Merl A uses their bardic talents to keep the peace and help the citizens of the town. They are always looking for ways to help others and make the world a better place."
+    },
+    {
+        "id": 124,
+        "first_name": "Rosina",
+        "last_name": "Iaines",
+        "full_name": "Rosina Iaines",
+        "gender": "Female",
+        "character_class": "Warlock",
+        "character_subclass": "The Great Old One",
+        "background": "Noble",
+        "ethnicity": "Aasimar",
+        "ethnicity_keywords": [
+            "radiant",
+            "glowing eyes",
+            "fair skin",
+            "halo",
+            "celestial",
+            "ethereal",
+            "angelic"
+        ],
+        "age": "Adult",
+        "physical_description": {
+            "physical_trait": "Handsome",
+            "hair_color": "Dark Brown",
+            "hair_style": "high pony",
+            "eye_color": "light blue"
+        },
+        "physical_trait": "Slender",
+        "hair_color": "Light Brown",
+        "hair_style": "layered cut with length",
+        "eye_color": "grayish-white",
+        "behavior": "Rosina Iaines's ideal is creativity. Her flaw is easily influenced, her bond is legacy, her behavior is nurturing, and her nature is energetic.",
+        "image_prompt": "IMAGE_TYPE: Rembrandt Portrait in the style of Marta Nael and Annie Leibovitz | GENRE: Fantasy | EMOTION: Rosina Iaines's ideal is creativity. Her flaw is easily influenced, her bond is legacy, her behavior is nurturing, and her nature is energetic. | SCENE: a Noble Warlock named Rosina Iaines | ACTOR: Rosina Iaines is a Slender female Aasimar. Rosina Iaines has light brown layered cut with length hair and grayish-white eyes. | TONES: Pink and Platinum | LIGHTING: Low Key Lighting | TAGS: radiant, glowing eyes, fair skin, halo, celestial, ethereal, angelic, Forgotten Realms, Medieval Fantasy Setting, D&D. --s 1000 --upbeta --seed 124",
+        "personality_description": "\n\nRosina Iaines is an energetic person who is very creative. She is easily influenced by others, but she is also very nurturing. Her legacy is very important to her.",
+        "background_story": "\n\nRosina Iaines was born into a noble family with a long legacy of warlocks. Her parents were both warlocks and her grandparents were as well. Her great-grandparents were the first in their family to be warlocks, and they passed down their knowledge and power to their children and grandchildren. Rosina was always a creative child, and she loved to use her imagination to create new things. She was also easily influenced by others, and she often followed the lead of her parents and grandparents. As she grew older, she began to develop her own power and learn how to control it. She also began to nurture her own creativity, and she became a powerful warlock in her own right. Today, Rosina is a respected member of the Warlock Council, and she uses her power to protect the people of Forgotten Realms."
+    },
+    {
+        "id": 481,
+        "first_name": "Talia",
+        "last_name": "Rikiusenmir",
+        "full_name": "Talia Rikiusenmir",
+        "gender": "Female",
+        "character_class": "Druid",
+        "character_subclass": "Circle of Dreams",
+        "background": "Gladiator",
+        "ethnicity": "Elf",
+        "ethnicity_keywords": [
+            "tall",
+            "slender",
+            "pointed ears",
+            "almond-shaped eyes",
+            "fair skin",
+            "long hair",
+            "graceful",
+            "ageless",
+            "delicate features"
+        ],
+        "age": "Elderly",
+        "physical_description": {
+            "physical_trait": "Petite",
+            "hair_color": "Blond",
+            "hair_style": "crown plait",
+            "eye_color": "slate"
+        },
+        "physical_trait": "Slender",
+        "hair_color": "Mahogany",
+        "hair_style": "bob cut with fringe",
+        "eye_color": "dark",
+        "behavior": "Talia Rikiusenmir's ideal is harmony. Her flaw is stubborn, her bond is friendship, her behavior is nurturing, and her nature is inquisitive.",
+        "image_prompt": "IMAGE_TYPE: Minimalist Portrait in the style of Natalia P. Guti\u00e9rrez and Ben Wootten | GENRE: Fantasy | EMOTION: Talia Rikiusenmir's ideal is harmony. Her flaw is stubborn, her bond is friendship, her behavior is nurturing, and her nature is inquisitive. | SCENE: a Gladiator Druid named Talia Rikiusenmir | ACTOR: Talia Rikiusenmir is a Slender female Elf. Talia Rikiusenmir has mahogany bob cut with fringe hair and dark eyes. | TONES: Sage and Sapphire | LIGHTING: Candlelight | TAGS: tall, slender, pointed ears, almond-shaped eyes, fair skin, long hair, graceful, ageless, delicate features, Forgotten Realms, Medieval Fantasy Setting, D&D. --s 1000 --upbeta --seed 481",
+        "personality_description": "\n\nTalia Rikiusenmir is a kind and gentle soul who longs for nothing more than peace and harmony in her life. Though she is fiercely loyal to her friends and always quick to nurture those around her, Talia can be quite stubborn when it comes to matters that are important to her. She is also an inquisitive person by nature, always eager to learn more about the world and the people around her.",
+        "background_story": "\n\nTalia Rikiusenmir was born into a family of gladiators. Her father was a well-known druid who had retired from fighting to teach his daughter the ways of druidism. Her mother was a human who had also been a gladiator. Talia Rikiusenmir grew up learning how to fight and how to use her druidic powers to heal others. She always had a natural affinity for animals, and she would often sneak away to the forest to commune with the wild creatures there. When she was old enough, she joined her parents in the arena, fighting as a druid for the first time. She quickly proved herself to be a skilled fighter and a powerful druid. She quickly rose through the ranks of the gladiators, becoming one of the most popular fighters in the arena. When she was not fighting, she would often be found in the forest, helping the animals or communing with the spirits of nature. Talia Rik"
+    },
+    {
+        "id": 381,
+        "first_name": "Van",
+        "last_name": "Ellea",
+        "full_name": "Van Ellea",
+        "gender": "Male",
+        "character_class": "Fighter",
+        "character_subclass": "Champion",
+        "background": "Knight",
+        "ethnicity": "Halfling",
+        "ethnicity_keywords": [
+            "small",
+            "childlike",
+            "curly hair",
+            "round face",
+            "rosy cheeks",
+            "barefoot",
+            "cheerful",
+            "nimble"
+        ],
+        "age": "Adult",
+        "physical_description": {
+            "physical_trait": "Elegant",
+            "hair_color": "Sandy",
+            "hair_style": "layered cut with length",
+            "eye_color": "dark"
+        },
+        "physical_trait": "Alluring",
+        "hair_color": "Ashen",
+        "hair_style": "updo",
+        "eye_color": "dark",
+        "behavior": "Van Ellea's ideal is harmony. His flaw is cowardly, his bond is tradition, his behavior is aggressive, and his nature is adventurous.",
+        "image_prompt": "IMAGE_TYPE: Profile Portrait in the style of Emily Hare and Craig Mullins | GENRE: Fantasy | EMOTION: Van Ellea's ideal is harmony. His flaw is cowardly, his bond is tradition, his behavior is aggressive, and his nature is adventurous. | SCENE: a Knight Fighter named Van Ellea | ACTOR: Van Ellea is an Alluring male Halfling. Van Ellea has ashen updo hair and dark eyes. | TONES: Onyx and Black | LIGHTING: Soft Light | TAGS: small, childlike, curly hair, round face, rosy cheeks, barefoot, cheerful, nimble, Forgotten Realms, Medieval Fantasy Setting, D&D. --s 1000 --upbeta --seed 381",
+        "personality_description": "\n\nVan Ellea is a character who is very idealistic, and who strongly believes in the importance of harmony. However, he can also be quite cowardly at times, and is often reluctant to take risks or to embrace change. He is very aggressive in his behavior, and is always quick to lash out if he feels threatened. However, he is also quite adventurous in nature, and is always willing to explore new things and to take risks.",
+        "background_story": "\n\nVan Ellea was born into a family of knights. His father was a great knight who fought in many battles and his mother was a gentle woman who cared for the sick and needy. When Van Ellea was just a boy, his father was killed in battle and his mother died of a disease. Van Ellea was left alone in the world. He was taken in by a family of knights who raised him and taught him the ways of knighthood. When he was old enough, he joined the knights and fought in many battles. He became a great knight himself and was respected by all. However, Van Ellea always felt that something was missing in his life. He was not content with just being a knight. He wanted more. One day, he heard about a group of adventurers who were looking for a new member. Van Ellea saw this as his chance to find what he was looking for. He joined the group and went on many adventures with"
     }
 ]

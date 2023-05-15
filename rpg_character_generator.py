@@ -14,9 +14,9 @@ def get_number_of_existing_characters():
     except (FileNotFoundError, json.JSONDecodeError):
         # Handle file not found or invalid JSON error
         return 0
+    
 
 # Create a random character
-
 def create_random_character():
     random_class = pick_random_character_class()
     random_subclass = pick_random_subclass(random_class)
@@ -27,7 +27,6 @@ def create_random_character():
     new_character = Character(random_class_name, random_subclass, pick_random_background(), random_ethnicity_name, ethnicity_keywords, pick_random_age(), pick_random_gender())
     print(new_character.image_prompt)
     return new_character
-
 
 #Load the characters from the json file
 def load_characters():
@@ -48,23 +47,39 @@ def save_characters(characters):
 # Create a list of unique characters
 characters = []
 print("Welcome to the RPG Character Generator!")
+print("This program will create a number of random characters for you.")
+# Ask for number of characters until valid integer input
 num_characters = input("How many characters do you want to create? ")
-
-# Exit if 0 or less
 while not num_characters.isdigit():
     num_characters = input("Please enter a number: ")
-if int(num_characters) <= 0:
+
+num_characters = int(num_characters)
+if num_characters <= 0:
     print("No characters created.")
     exit()
-else:
+
+for _ in range(num_characters):
+    new_character = create_random_character()
+    characters.append(new_character)
+
+print(f"Created {len(characters)} characters.")
+# Ask if the user wants to create more characters
+create_more = input("Do you want to create more characters? (y/n) ")
+while create_more.lower() == 'y':
+    num_characters = input("How many characters do you want to create? ")
     while not num_characters.isdigit():
         num_characters = input("Please enter a number: ")
     num_characters = int(num_characters)
-    while len(characters) < num_characters:
-        # Create a new character with illustration (forced)
+    if num_characters <= 0:
+        print("No characters created.")
+        exit()
+    for _ in range(num_characters):
         new_character = create_random_character()
         characters.append(new_character)
+        print(new_character.image_prompt)
     print(f"Created {len(characters)} characters.")
+    create_more = input("Do you want to create more characters? (y/n) ")
+
 
 # Load existing characters from the JSON file
 existing_characters = load_characters()
@@ -101,15 +116,13 @@ def get_files_in_folder(folder_path):
             files.append(file_name)
     return files
 
-# Example usage
-folder_path = "./static/images/"
-files_in_folder = get_files_in_folder(folder_path)
 
 # Get all the characters with an image in images folder
+folder_path = "./static/images/"
+files_in_folder = get_files_in_folder(folder_path)
 characters_with_images = []
 for character in existing_characters:
     image_name = f"{character.get('id')}.png"
-
     if image_name in files_in_folder:
         characters_with_images.append(character)
 
@@ -123,7 +136,6 @@ with open("characters_with_images.json", "w") as json_file:
 characters_without_images = []
 for character in existing_characters:
     image_name = f"{character.get('id')}.png"
-
     if image_name not in files_in_folder:
         characters_without_images.append(character)
 
