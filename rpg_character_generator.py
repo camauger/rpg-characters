@@ -1,5 +1,5 @@
 import json, csv
-from settings.random_settings import pick_random_age, pick_random_gender, pick_random_ethnicity, pick_random_character_class, pick_random_subclass, pick_random_background
+from settings.random_settings import pick_random_age, pick_random_gender, pick_random_ethnicity, pick_random_character_class, pick_random_subclass, pick_random_background, get_ethnicity_keywords
 from models.character_class import Character
 
 # You will have to create your own api_settings.py file with your OpenAI API key
@@ -21,7 +21,10 @@ def create_random_character():
     random_class = pick_random_character_class()
     random_subclass = pick_random_subclass(random_class)
     random_class_name = random_class.get('name')
-    new_character = Character(random_class_name, random_subclass, pick_random_background(), pick_random_ethnicity(), pick_random_age(), pick_random_gender())
+    random_ethnicity = pick_random_ethnicity()
+    random_ethnicity_name = random_ethnicity.get('race')
+    ethnicity_keywords = get_ethnicity_keywords(random_ethnicity)
+    new_character = Character(random_class_name, random_subclass, pick_random_background(), random_ethnicity_name, ethnicity_keywords, pick_random_age(), pick_random_gender())
     print(new_character.image_prompt)
     return new_character
 

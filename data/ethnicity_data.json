@@ -1,0 +1,121 @@
+{
+  "ethnicity": [
+    {
+      "race": "Human",
+      "keywords": [
+        "medium height",
+        "medium build"
+      ]
+    },
+    {
+      "race": "Dwarf",
+      "keywords": [
+        "short",
+        "stocky",
+        "muscular",
+        "stout",
+        "deep-set eyes",
+        "earthy skin tones",
+        "braided hair",
+        "broad face"
+      ]
+    },
+    {
+      "race": "Elf",
+      "keywords": [
+        "tall",
+        "slender",
+        "pointed ears",
+        "almond-shaped eyes",
+        "fair skin",
+        "long hair",
+        "graceful",
+        "ageless",
+        "delicate features"
+      ]
+    },
+    {
+      "race": "Halfling",
+      "keywords": [
+        "small",
+        "childlike",
+        "curly hair",
+        "round face",
+        "rosy cheeks",
+        "barefoot",
+        "cheerful",
+        "nimble"
+      ]
+    },
+    {
+      "race": "Gnome",
+      "keywords": [
+        "very small",
+        "bright eyes",
+        "round face",
+        "pointed ears",
+        "rosy cheeks"
+      ]
+    },
+    {
+      "race": "Half-Elf",
+      "keywords": [
+        "medium height",
+        "slim",
+        "pointed ears",
+        "fair skin",
+        "various eye colors",
+        "mix of human and elf features"
+      ]
+    },
+    {
+      "race": "Half-Orc",
+      "keywords": [
+        "tall",
+        "muscular",
+        "green skin",
+        "tusks",
+        "broad nose",
+        "heavy eyebrows",
+        "wild hair",
+        "scarred"
+      ]
+    },
+    {
+      "race": "Tiefling",
+      "keywords": [
+        "horns",
+        "tail",
+        "fangs",
+        "red, blue or purple skin",
+        "glowing eyes",
+        "sharp features",
+        "intimidating"
+      ]
+    },
+    {
+      "race": "Dragonborn",
+      "keywords": [
+        "tall",
+        "muscular",
+        "dragon-like face",
+        "scales",
+        "tail",
+        "claws",
+        "frills"
+      ]
+    },
+    {
+      "race": "Aasimar",
+      "keywords": [
+        "radiant",
+        "glowing eyes",
+        "fair skin",
+        "halo",
+        "celestial",
+        "ethereal",
+        "angelic"
+      ]
+    }
+  ]
+}

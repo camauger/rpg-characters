@@ -27,6 +27,19 @@ def pick_random_hair_color():
 def pick_random_physical_trait():
     return random.choice(physical_settings)
 
+
+# Pick a random ethnicity
+def pick_random_ethnicity():
+    with open('data/ethnicity_data.json', 'r') as f:
+        # Load the JSON string into a Python dictionary
+        data = json.load(f)
+        random_class = random.choice(data['ethnicity'])
+        return random_class
+
+def get_ethnicity_keywords(ethnicity):
+    return ethnicity['keywords']
+
+
 # Pick a random class
 def pick_random_character_class():
     with open('data/character_classes.json', 'r') as f:

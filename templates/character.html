@@ -44,54 +44,75 @@
       >
         {{character.full_name}}
       </h1>
+      <div class="display-4 text-center mb-4">
+        <h3 style="font-family: MrEavesRemake;">
+          {{ character.ethnicity }} {{ character.gender}} {{
+          character.background }}
+        </h3>
+        <h3 style="font-family: MrEavesRemake;">
+          {{ character.character_class }} - {{
+          character.character_subclass}}
+        </h3>
+      </div>
     </header>
     <div class="container">
       <div class="row">
         <div class="col-6">
-          <img src="{{ url_for('static', filename='images/' ~ character.id ~ '.png') }}" class="img-fluid" alt="{{ character.full_name }}">
-
+          <img
+            src="{{ url_for('static', filename='images/' ~ character.id ~ '.png') }}"
+            class="img-fluid"
+            alt="{{ character.full_name }}"
+          />
         </div>
 
         <div class="col-6">
-          <div>
-            <h2 style="font-family: MrEavesRemake; color: #58180d">{{ character.ethnicity }} {{ character.background }}</h2>
-            <p>Class: {{ character.character_class }}</p>
-            <p>Age: {{ character.age }}</p>
-          </div>
+    
           <div>
             <h3
               style="
                 font-family: MrEavesRemake;
                 color: #58180d;
                 border-bottom: 2px solid var(--HB_Color_HeaderUnderline);
-              ">
-              Physical Description
-            </h3>
-            <p style="font-family: BookInsanityRemake">
-              {{ character.physical_description_text }}
-            </p>
-          </div>
-          <div>
-            <h3
-            style="
-              font-family: MrEavesRemake;
-              color: #58180d;
-              border-bottom: 2px solid var(--HB_Color_HeaderUnderline);
-            ">
+              "
+            >
               Background Story
             </h3>
             <p style="font-family: BookInsanityRemake">
               {{ character.background_story }}
             </p>
+            <h3
+              style="
+                font-family: MrEavesRemake;
+                color: #58180d;
+                border-bottom: 2px solid var(--HB_Color_HeaderUnderline);
+              "
+            >
+              Personality
+            </h3>
+            {% if character.personality_description: %}
+            <p style="font-family: BookInsanityRemake">
+              {{character.personality_description}}
+            </p>
+            {% else %}
+            <p style="font-family: BookInsanityRemake">
+              {{character.behavior}}
+            </p>
+            {% endif %}
           </div>
         </div>
       </div>
-
-      <h3 style="font-family: MrEavesRemake; color: #58180d">Personality</h3>
-      <p>Ideal: {{ character.ideal }}</p>
     </div>
-    <footer class="container">
-      <p class="text-center">
+
+    <footer
+      class="mt-4 py-4"
+      style="
+        background-color: #58180d;
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+      "
+    >
+      <p class="text-center" style="color: #bbad82">
         Made with <span style="color: #e25555">&#9829;</span> by
         <a href="https://ludomancien.com/">Christian Amauger</a>
       </p>

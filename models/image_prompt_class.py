@@ -1,25 +1,50 @@
 import random
 from settings.image_prompt_settings import artists_and_photographers, colors, illustrators, lighting, portrait
 from utils.indefinite_article import indefinite_article
+from settings.random_settings import get_ethnicity_keywords
+
+
+def choose_two_and_join(elements):
+    choices = random.sample(elements, 2)
+    return ' and '.join(str(choice) for choice in choices)
+
+# Create a class object for the character's image prompt
 
 class ImagePrompt:
     def __init__(self, character):
         self.character = character
+        self.genre = "Fantasy"
+        self.emotion = self.character.behavior
+        self.scene = self.scene()
+        self.tones = self.tones()
+        self.style = self.style()
+        self.tags = self.tags()
+        self.actor = self.actor()
+        self.lighting = self.lighting()
+        self.image_type = self.image_type()
+        
+    def scene(self):
+        return f"{indefinite_article(self.character.background)} {self.character.character_class} named {self.character.full_name}"
 
+    def tones(self):
+        return choose_two_and_join(colors)
+    
+    def style(self):
+        return choose_two_and_join(artists_and_photographers + illustrators)
+
+    def tags(self):
+        keywords = ', '.join(self.character.ethnicity_keywords)
+        return f"{keywords}, Forgotten Realms, Medieval Fantasy Setting, D&D. --s 1000 --upbeta --seed {self.character.id}"
+
+    def actor(self):
+        return f"{self.character.create_physical_description_text()}"
+
+    def lighting(self):
+        return random.choice(lighting)
+    
+    def image_type(self):
+        return random.choice(portrait)
+    
     def craft_image_prompt(self):
-        image_type = random.choice(portrait)
-        genre = "Fantasy"
-        emotion = self.character.behavior
-        scene = f"{indefinite_article(self.character.background)} {self.character.character_class} named {self.character.full_name}"
 
-        pick_tones = random.sample(colors, 2)
-        tones = ' and '.join(str(choice) for choice in pick_tones)
-
-        total_styles = artists_and_photographers + illustrators
-        pick_styles = random.sample(total_styles, 2)
-        styles = ' and '.join(str(choice) for choice in pick_styles)
-
-        actor = f"{self.character.create_physical_description_text()}"
-        lighting_type = random.choice(lighting)
-        tags = f"Forgotten Realms, Medieval Fantasy Setting, D&D. --s 1000 --upbeta --seed {self.character.id}"
-        return f"IMAGE_TYPE: {image_type} in the style of {styles} | GENRE: {genre} | EMOTION: {emotion} | SCENE: {scene} | ACTOR: {actor} | TONES: {tones} | LIGHTING: {lighting_type} | TAGS: {tags}"
+        return f"IMAGE_TYPE: {self.image_type} in the style of {self.style} | GENRE: {self.genre} | EMOTION: {self.emotion} | SCENE: {self.scene} | ACTOR: {self.actor} | TONES: {self.tones} | LIGHTING: {self.lighting} | TAGS: {self.tags}"

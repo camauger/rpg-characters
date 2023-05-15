@@ -43,7 +43,7 @@ Additionally, it creates physical and psychological descriptions for the charact
 Finally, the __str__ method is used to return a string representation of the character.
 """
 class Character:
-    def __init__(self, character_class, character_subclass, background, ethnicity, age, gender):
+    def __init__(self, character_class, character_subclass, background, ethnicity, ethnicity_keywords, age, gender):
         self.id = random.randint(1, 1000)
         self.first_name = generate_random_first_name(gender)
         self.last_name = generate_random_last_name()
@@ -53,7 +53,9 @@ class Character:
         self.character_subclass = character_subclass
         self.background = background
         self.ethnicity = ethnicity
+        self.ethnicity_keywords = ethnicity_keywords
         self.age = age
+        self.physical_description = self.create_physical_description()
         self.physical_trait = create_physical_trait()
         self.hair_color = create_hair_color()
         self.hair_style = create_hair_style()
@@ -61,10 +63,11 @@ class Character:
         self.behavior = self.create_behavior()
         self.image_prompt = self.create_image_prompt()
         # Has to be last!
+        self.personality_description = self.create_personality_description()
         self.background_story = self.create_background_story()
 
     def create_physical_description_text(self):
-        physical_description = f"{indefinite_article(self.physical_trait)} {self.gender.lower()} {self.ethnicity}. {self.full_name} has {self.hair_color} {self.hair_style} hair and {self.eye_color} eyes."
+        physical_description = f"{indefinite_article(self.physical_trait)} {self.gender.lower()} {self.ethnicity}. {self.full_name} has {self.hair_color.lower()} {self.hair_style} hair and {self.eye_color} eyes"
         return f"{self.full_name} is {physical_description}."
 
     def create_physical_description(self):
@@ -80,6 +83,11 @@ class Character:
         behavior_text = behavior.create_behavior()
         return behavior_text
 
+    def create_personality_description(self):
+        prompt = f"Make a description of a character's personality based on this sentence: {self.behavior}"
+        personality = fetch_character_data(prompt, api_key)
+        return personality
+    
     def create_image_prompt(self):
         image_prompt = ImagePrompt(character=self)
         prompt = image_prompt.craft_image_prompt()
