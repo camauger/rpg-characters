@@ -17,11 +17,11 @@ def get_number_of_existing_characters():
 
 # Create a random character
 
-def create_random_character(image_type="photo"):
+def create_random_character():
     random_class = pick_random_character_class()
     random_subclass = pick_random_subclass(random_class)
     random_class_name = random_class.get('name')
-    new_character = Character(random_class_name, random_subclass, pick_random_background(), pick_random_ethnicity(), pick_random_age(), pick_random_gender(), image_type=image_type)
+    new_character = Character(random_class_name, random_subclass, pick_random_background(), pick_random_ethnicity(), pick_random_age(), pick_random_gender())
     print(new_character.image_prompt)
     return new_character
 
@@ -39,13 +39,11 @@ def load_characters():
 # Save the characters to a json file
 def save_characters(characters):
     with open("characters.json", "w") as json_file:
-        json.dump(characters, json_file, indent=4)
+        json.dump(characters, json_file, indent=4, default=lambda o: o.__dict__)
 
 
 # Create a list of unique characters
-
 characters = []
-print(len(characters))
 print("Welcome to the RPG Character Generator!")
 num_characters = input("How many characters do you want to create? ")
 
@@ -61,31 +59,10 @@ else:
     num_characters = int(num_characters)
     while len(characters) < num_characters:
         # Create a new character with illustration (forced)
-        new_character = create_random_character(image_type="illustration")
+        new_character = create_random_character()
         characters.append(new_character)
     print(f"Created {len(characters)} characters.")
 
-# Create a csv file with the characters
-with open("data/characters_data.csv", "a", newline='') as csv_file:
-    csv_writer = csv.DictWriter(csv_file, fieldnames=["First Name", "Last Name", "Class", "Background", "Ethnicity", "Age", "Image", "Physical description", "Physical description Text","Background Story", "Image Prompt"])
-    if csv_file.tell() == 0:
-        csv_writer.writeheader()
-    for character in characters:
-        csv_writer.writerow({
-            "First Name": character.first_name,
-            "Last Name": character.last_name,
-            "Class": character.character_class,
-            "Background": character.background,
-            "Ethnicity": character.ethnicity,
-            "Age": character.age,
-            "Image": character.physical_description.image,
-            "Physical description": character.physical_description.__dict__,
-            "Physical description Text": character.physical_description_text,
-            "Background Story": character.background_story,
-            "Image Prompt": character.image_prompt
-        })
-
-# Load existing characters from the csv file and convert them to the json file
 # Load existing characters from the JSON file
 existing_characters = load_characters()
 print(len(existing_characters))
@@ -99,7 +76,6 @@ existing_characters.extend(character_dicts)
 # Write the updated characters to the JSON file
 with open("characters.json", "w") as json_file:
     json.dump(existing_characters, json_file, indent=4, default=lambda o: o.__dict__)
-
 
 # Create a list of image prompts
 prompts = []

@@ -70,33 +70,8 @@ gender_settings = [
 ('Non-binary', 10)
 ]
 
-class CharacterBehavior:
-    def __init__(self):
-        self.settings = self.load_settings()
+physical_settings = ["Tall", "Short", "Slender", "Muscular", "Lean", "Athletic", "Curvy", "Voluptuous", "Stocky", "Chiseled", "Petite", "Plump", "Stout", "Bulky", "Svelte", "Lithe", "Solid", "Broad-shouldered", "Delicate", "Lanky", "Sinewy", "Compact", "Shapely", "Ripped", "Toned", "Angular", "Gorgeous", "Handsome", "Pretty", "Attractive", "Exotic", "Elegant", "Graceful", "Striking", "Radiant", "Youthful", "Aging", "Weathered", "Wrinkled", "Wizened", "Scarred", "Fierce", "Intimidating", "Fierce", "Commanding", "Mysterious", "Enigmatic", "Alluring", "Seductive", "Mesmerizing", "Majestic", "Regal", "Noble"]
 
-    def load_settings(self):
-        with open('data/character_behavior.json', 'r') as f:
-            data = json.load(f)
-        return data
 
-    def ideal(self):
-        random_ideal = random.choice(self.settings['ideals'])
-        return random_ideal.lower()
-    
-    def flaw(self):
-        random_flaw = random.choice(self.settings['flaws'])
-        return random_flaw.lower()
-    
-    def bond(self):
-        random_bond = random.choice(self.settings['bonds'])
-        return random_bond.lower()
-    
-    def behavior(self):
-        random_behavior = random.choice(self.settings['behaviors'])
-        return random_behavior.lower()
-    
-    def nature(self):
-        random_nature = random.choice(self.settings['natures'])
-        return random_nature.lower()
 
 
