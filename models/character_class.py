@@ -1,10 +1,12 @@
 from models.character_behavior_class import CharacterBehavior
+from models.physical_description_class import PhysicalDescription
 from settings.image_prompt import craft_image_prompt
 from settings.name_composition import generate_random_first_name, generate_random_last_name
 from settings.random_settings import create_eye_color, create_hair_color, create_hair_style, create_physical_trait
 import random
 import requests
 import json
+from utils.indefinite_article import indefinite_article
 from api_settings import api_key
 # Create a background story for an RPG character
 
@@ -61,17 +63,23 @@ class Character:
         # Has to be last!
         self.background_story = self.create_background_story()
 
-    def create_physical_description(self):
-        return f"{self.full_name} is a {self.physical_trait} {self.gender} {self.ethnicity}. {self.full_name} has {self.hair_color} {self.hair_style} hair and {self.eye_color} eyes."
+    def create_physical_description_text(self):
+        physical_description = f"{indefinite_article(self.physical_trait)} {self.gender} {self.ethnicity}. {self.full_name} has {self.hair_color} {self.hair_style} hair and {self.eye_color} eyes.".lower()
+        return f"{self.full_name} is {physical_description}."
 
+    def create_physical_description(self):
+        return PhysicalDescription()
 
     def create_background_story(self):
-        prompt = f"Create a background story for a RPG character named {self.full_name} who is a {self.background} {self.character_class} in the world of Forgotten Realms. {self.behavior} Make the story no longer than 200 words."
+        prompt = f"Create a background story for a RPG character named {self.full_name} who is {indefinite_article(self.background)} {self.character_class} in the world of Forgotten Realms. {self.behavior} Make the story no longer than 200 words."
         background_story = fetch_character_data(prompt, api_key)
         return background_story
 
     def create_behavior(self):
-        return CharacterBehavior().__str__()
+        return CharacterBehavior()
+    
+    def create_behavior_text(self):
+        return self.behavior.__str__()
 
     def create_image_prompt(self):
         return craft_image_prompt(self)
