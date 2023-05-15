@@ -1,8 +1,6 @@
 import random
-from settings.image_prompt_settings import artists_and_photographers, colors, illustrators, lighting, portrait
+from settings.image_prompt_settings import artists_and_photographers, colors, illustrators, lighting, portrait, artists
 from utils.indefinite_article import indefinite_article
-from settings.random_settings import get_ethnicity_keywords
-
 
 def choose_two_and_join(elements):
     choices = random.sample(elements, 2)
@@ -30,7 +28,7 @@ class ImagePrompt:
         return choose_two_and_join(colors)
     
     def style(self):
-        return choose_two_and_join(artists_and_photographers + illustrators)
+        return random.choice(artists_and_photographers + illustrators + artists)
 
     def tags(self):
         keywords = ', '.join(self.character.ethnicity_keywords)

@@ -37,35 +37,34 @@
     </style>
   </head>
   <body style="background-color: #eee5ce">
-    <header class="container"></header>
-    <div class="container-fluid">
+    <header class="container">
+      <h1
+        class="display-4 text-center mt-5"
+        style="font-family: MrEavesRemake; color: #58180d"
+      >
+        Sarge Miriusiusthal
+      </h1>
+      <div class="display-4 text-center mb-4">
+        <h3 style="font-family: MrEavesRemake;">
+          Dragonborn Male Inheritor
+        </h3>
+        <h3 style="font-family: MrEavesRemake;">
+          Warlock - The Fiend
+        </h3>
+      </div>
+    </header>
+    <div class="container">
       <div class="row">
         <div class="col-6">
           <img
-            src="{{ url_for('static', filename='images/' ~ character.id ~ '.png') }}"
+            src="../static/images/266.png"
             class="img-fluid"
-            alt="{{ character.full_name }}"
+            alt="Sarge Miriusiusthal"
           />
         </div>
 
         <div class="col-6">
-          <div class="container">
-            <h1
-            class="display-4 text-center mt-5"
-            style="font-family: MrEavesRemake; color: #58180d"
-          >
-            {{character.full_name}}
-          </h1>
-          <div class="display-4 text-center mb-4">
-            <h3 style="font-family: MrEavesRemake">
-              {{ character.ethnicity }} {{ character.gender}} {{
-              character.background }}
-            </h3>
-            <h3 style="font-family: MrEavesRemake">
-              {{ character.character_class }} - {{
-              character.character_subclass}}
-            </h3>
-          </div>
+    
           <div>
             <h3
               style="
@@ -77,7 +76,11 @@
               Background Story
             </h3>
             <p style="font-family: BookInsanityRemake">
-              {{ character.background_story }}
+              
+
+Sarge Miriusiusthal’s was born in the small town of Mirius in the year 932. His father was a blacksmith and his mother was a herbalist. When Sarge was five years old, his parents died in a fire that consumed their home. Sarge was the only one who survived. He was found by a group of adventurers who were passing through town. They took him in and raised him as their own. Sarge grew up adventuring with them, and learned everything he could about the world around him. He developed a strong bond with his adoptive family, and was always the first to volunteer for any dangerous mission.
+
+In 955, when Sarge was 23 years old, his adoptive family was killed by a group of marauders. Sarge was the only one who survived. He vowed to get revenge on those who killed his family. He tracked the marauders down, and killed them all. After that,
             </p>
             <h3
               style="
@@ -88,29 +91,19 @@
             >
               Personality
             </h3>
-            {% if character.personality_description: %}
+            
             <p style="font-family: BookInsanityRemake">
-              {{character.personality_description}}
+              
+
+Sarge Miriusiusthal is a very curious person who loves to discover new things. He can be quite prideful at times and is very loyal to his friends. He is also quite perceptive, often picking up on things that others might miss.
             </p>
-            {% else %}
-            <p style="font-family: BookInsanityRemake">
-              {{character.behavior}}
-            </p>
-            {% endif %}
-          </div>
+            
           </div>
         </div>
       </div>
     </div>
-    <footer class="footer mt-auto py-3 bg-light">
-      <div class="container">
-        <p class="text-center" style="color: #bbad82">
-          Made with <span style="color: #e25555">&#9829;</span> by
-          <a href="https://ludomancien.com/">Christian Amauger</a>
-        </p>
-      </div>
-    </footer>
-    <!-- <footer
+
+    <footer
       class="mt-4 py-4"
       style="
         background-color: #58180d;
@@ -123,7 +116,7 @@
         Made with <span style="color: #e25555">&#9829;</span> by
         <a href="https://ludomancien.com/">Christian Amauger</a>
       </p>
-    </footer> -->
+    </footer>
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>

@@ -37,35 +37,34 @@
     </style>
   </head>
   <body style="background-color: #eee5ce">
-    <header class="container"></header>
-    <div class="container-fluid">
+    <header class="container">
+      <h1
+        class="display-4 text-center mt-5"
+        style="font-family: MrEavesRemake; color: #58180d"
+      >
+        Marabel Bri
+      </h1>
+      <div class="display-4 text-center mb-4">
+        <h3 style="font-family: MrEavesRemake;">
+          Half-Elf Female Hermit
+        </h3>
+        <h3 style="font-family: MrEavesRemake;">
+          Monk - Way of the Four Elements
+        </h3>
+      </div>
+    </header>
+    <div class="container">
       <div class="row">
         <div class="col-6">
           <img
-            src="{{ url_for('static', filename='images/' ~ character.id ~ '.png') }}"
+            src="../static/images/798.png"
             class="img-fluid"
-            alt="{{ character.full_name }}"
+            alt="Marabel Bri"
           />
         </div>
 
         <div class="col-6">
-          <div class="container">
-            <h1
-            class="display-4 text-center mt-5"
-            style="font-family: MrEavesRemake; color: #58180d"
-          >
-            {{character.full_name}}
-          </h1>
-          <div class="display-4 text-center mb-4">
-            <h3 style="font-family: MrEavesRemake">
-              {{ character.ethnicity }} {{ character.gender}} {{
-              character.background }}
-            </h3>
-            <h3 style="font-family: MrEavesRemake">
-              {{ character.character_class }} - {{
-              character.character_subclass}}
-            </h3>
-          </div>
+    
           <div>
             <h3
               style="
@@ -77,7 +76,9 @@
               Background Story
             </h3>
             <p style="font-family: BookInsanityRemake">
-              {{ character.background_story }}
+              
+
+Marabel Bri was born to a wealthy family in the city of Waterdeep. When she was young, her parents died in a fire and she was sent to live with her aunt and uncle in the small town of Daggerford. Marabel grew up a wild child, always getting into trouble. She was never content to stay in one place for long and would often sneak off into the woods to explore. When she was sixteen, she left Daggerford for good and set out on her own. She made her way to the city of Neverwinter where she met a monk who taught her the ways of meditation and self-reliance. After years of study, Marabel became a hermit monk herself and now wanders the Forgotten Realms, helping those in need and seeking enlightenment.
             </p>
             <h3
               style="
@@ -88,29 +89,19 @@
             >
               Personality
             </h3>
-            {% if character.personality_description: %}
+            
             <p style="font-family: BookInsanityRemake">
-              {{character.personality_description}}
+              
+
+Marabel Bri is an independent woman who is also very arrogant. She feels a sense of duty to those around her, but can also be very impatient. She is a bold woman who is not afraid to speak her mind.
             </p>
-            {% else %}
-            <p style="font-family: BookInsanityRemake">
-              {{character.behavior}}
-            </p>
-            {% endif %}
-          </div>
+            
           </div>
         </div>
       </div>
     </div>
-    <footer class="footer mt-auto py-3 bg-light">
-      <div class="container">
-        <p class="text-center" style="color: #bbad82">
-          Made with <span style="color: #e25555">&#9829;</span> by
-          <a href="https://ludomancien.com/">Christian Amauger</a>
-        </p>
-      </div>
-    </footer>
-    <!-- <footer
+
+    <footer
       class="mt-4 py-4"
       style="
         background-color: #58180d;
@@ -123,7 +114,7 @@
         Made with <span style="color: #e25555">&#9829;</span> by
         <a href="https://ludomancien.com/">Christian Amauger</a>
       </p>
-    </footer> -->
+    </footer>
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>

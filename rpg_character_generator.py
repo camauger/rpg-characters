@@ -1,4 +1,4 @@
-import json, csv
+import json, random
 from settings.random_settings import pick_random_age, pick_random_gender, pick_random_ethnicity, pick_random_character_class, pick_random_subclass, pick_random_background, get_ethnicity_keywords
 from models.character_class import Character
 
@@ -15,6 +15,28 @@ def get_number_of_existing_characters():
         # Handle file not found or invalid JSON error
         return 0
     
+def get_existing_character_ids():
+    try:
+        with open("characters.json", "r") as json_file:
+            existing_characters = json.load(json_file)
+            json_file.close()
+        return [character.get('id') for character in existing_characters]
+
+    except (FileNotFoundError, json.JSONDecodeError):
+        # Handle file not found or invalid JSON error
+        return 0
+
+existing_ids = get_existing_character_ids()
+
+def generate_character_id(existing_ids):
+    while True:
+        # Generate a random number as the character ID
+        character_id = random.randint(1, 9999)
+        
+        # Check if the generated ID already exists in the list
+        if character_id not in existing_ids:
+            return character_id
+
 
 # Create a random character
 def create_random_character():
@@ -24,7 +46,8 @@ def create_random_character():
     random_ethnicity = pick_random_ethnicity()
     random_ethnicity_name = random_ethnicity.get('race')
     ethnicity_keywords = get_ethnicity_keywords(random_ethnicity)
-    new_character = Character(random_class_name, random_subclass, pick_random_background(), random_ethnicity_name, ethnicity_keywords, pick_random_age(), pick_random_gender())
+    id
+    new_character = Character(generate_character_id(existing_ids), random_class_name, random_subclass, pick_random_background(), random_ethnicity_name, ethnicity_keywords, pick_random_age(), pick_random_gender())
     print(new_character.image_prompt)
     return new_character
 
