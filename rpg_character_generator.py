@@ -67,31 +67,13 @@ def save_characters(characters):
         json.dump(characters, json_file, indent=4, default=lambda o: o.__dict__)
 
 
-# Create a list of unique characters
-characters = []
-print("Welcome to the RPG Character Generator!")
-print("This program will create a number of random characters for you.")
-# Ask for number of characters until valid integer input
-num_characters = input("How many characters do you want to create? ")
-while not num_characters.isdigit():
-    num_characters = input("Please enter a number: ")
-
-num_characters = int(num_characters)
-if num_characters <= 0:
-    print("No characters created.")
-    exit()
-
-for _ in range(num_characters):
-    new_character = create_random_character()
-    characters.append(new_character)
-
-print(f"Created {len(characters)} characters.")
-# Ask if the user wants to create more characters
-create_more = input("Do you want to create more characters? (y/n) ")
-while create_more.lower() == 'y':
+def create_random_character_option():
+    print("This program will create a number of random characters for you.")
+    # Ask for number of characters until valid integer input
     num_characters = input("How many characters do you want to create? ")
     while not num_characters.isdigit():
         num_characters = input("Please enter a number: ")
+
     num_characters = int(num_characters)
     if num_characters <= 0:
         print("No characters created.")
@@ -99,9 +81,41 @@ while create_more.lower() == 'y':
     for _ in range(num_characters):
         new_character = create_random_character()
         characters.append(new_character)
-        print(new_character.image_prompt)
     print(f"Created {len(characters)} characters.")
+    # Ask if the user wants to create more characters
     create_more = input("Do you want to create more characters? (y/n) ")
+    while create_more.lower() == 'y':
+        num_characters = input("How many characters do you want to create? ")
+        while not num_characters.isdigit():
+            num_characters = input("Please enter a number: ")
+            num_characters = int(num_characters)
+            if num_characters <= 0:
+             print("No characters created.")
+             exit()
+            for _ in range(num_characters):
+                new_character = create_random_character()
+                characters.append(new_character)
+                print(new_character.image_prompt)
+            if num_characters == 1:
+                print(f"Created {len(characters)} character.")
+            else:
+                print(f"Created {len(characters)} characters.")
+                create_more = input("Do you want to create more characters? (y/n) ")
+
+
+# Create a list of unique characters
+characters = []
+print("Welcome to the RPG Character Generator!")
+
+# Menu
+print("1. Create random characters")
+print("0. Exit the program")
+choice = input("What do you want to do? ")
+if choice == "1":
+    create_random_character_option()
+elif choice == "0":
+    print("Goodbye!")
+    exit()
 
 
 # Load existing characters from the JSON file

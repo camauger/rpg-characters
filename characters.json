@@ -811,42 +811,6 @@
         "background_story": "\n\nErin El was born into a noble family of knights and clerics. His parents were both knights who served the gods of light and goodness. When Erin was just a child, his parents were killed in battle while defending their kingdom from a horde of orcs. Erin was raised by his grandparents, who were also knights and clerics. As he grew up, Erin swore to follow in his parents' footsteps and become a knight himself. After completing his training, Erin was knighted and given the title of \"Knight Cleric.\" He has since served his kingdom with distinction, using his skills as both a warrior and a cleric to protect the innocent and vanquish evil from the land."
     },
     {
-        "id": 308,
-        "first_name": "Isador",
-        "last_name": "Lymi",
-        "full_name": "Isador Lymi",
-        "gender": "Male",
-        "character_class": "Rogue",
-        "character_subclass": "Assassin",
-        "background": "Haunted One",
-        "ethnicity": "Dwarf",
-        "ethnicity_keywords": [
-            "short",
-            "stocky",
-            "muscular",
-            "stout",
-            "deep-set eyes",
-            "earthy skin tones",
-            "braided hair",
-            "broad face"
-        ],
-        "age": "Middle-aged",
-        "physical_description": {
-            "physical_trait": "Petite",
-            "hair_color": "Streaked",
-            "hair_style": "updo",
-            "eye_color": "amber"
-        },
-        "physical_trait": "Ripped",
-        "hair_color": "Golden",
-        "hair_style": "layered cut with length",
-        "eye_color": "emerald",
-        "behavior": "Isador Lymi's ideal is discovery. His flaw is stubborn, his bond is faith, his behavior is nurturing, and his nature is honest.",
-        "image_prompt": "IMAGE_TYPE: Character Portrait in the style of Elena Dudina and Brian Froud | GENRE: Fantasy | EMOTION: Isador Lymi's ideal is discovery. His flaw is stubborn, his bond is faith, his behavior is nurturing, and his nature is honest. | SCENE: a Haunted One Rogue named Isador Lymi | ACTOR: Isador Lymi is a Ripped male Dwarf. Isador Lymi has golden layered cut with length hair and emerald eyes. | TONES: Amber and Steel Blue | LIGHTING: Backlighting | TAGS: short, stocky, muscular, stout, deep-set eyes, earthy skin tones, braided hair, broad face, Forgotten Realms, Medieval Fantasy Setting, D&D. --s 1000 --upbeta --seed 308",
-        "personality_description": "\n\nIsador Lymi is a curious and determined individual who is always seeking out new and exciting things. However, he can be quite stubborn and set in his ways, sticking to his own beliefs and convictions. He is also a very nurturing and caring person, always looking out for others. Isador is an honest person who believes in being truthful to others.",
-        "background_story": "\n\nIsador Lymi was born to a family of scholars in the city of Waterdeep. From a young age, he showed a great aptitude for learning and was always asking questions. His parents encouraged his love of knowledge, and he spent many hours in the library, poring over books on history, geography, and anything else he could find.\n\nWhen he was sixteen, Isador left home to travel the world and see all that he could. He had many adventures, and made new friends (and enemies) along the way. He also discovered his talent for thievery, and quickly learned how to pick locks and pockets.\n\nEventually, Isador settled down in the city of Baldur's Gate, where he opened a bookstore. He continued to travel from time to time, but always returned to his beloved bookstore.\n\nOne day, while Isador was on one of his travels, he was attacked by a group of bandits. He was outnumbered and"
-    },
-    {
         "id": 417,
         "first_name": "Luella",
         "last_name": "Alara",
@@ -1701,5 +1665,79 @@
         "image_prompt": "IMAGE_TYPE: Minimalist Portrait in the style of Rufino Tamayo | GENRE: Fantasy | SCENE: a Hermit Dwarf named Albina Ser | ACTOR: Albina Ser is a Compact female Dwarf. Albina Ser has blond short crop hair and gold eyes. | TONES: Dandelion and Black | LIGHTING: Hard Light | TAGS: short, stocky, muscular, stout, deep-set eyes, earthy skin tones, broad face, long beards, hardy, stubborn, gruff, Forgotten Realms, Medieval Fantasy, D&D, Dungeons & Dragons. --s 1000 --upbeta --seed 2006",
         "personality_description": "\n\nAlbina Ser is a wise and generous person who is selfless and puts her family first. She can be prideful at times, but overall she is a kind and caring person.",
         "background_story": "\n\nAlbina Ser was born into a family of nomadic herders in the Forgotten Realms. When she was five years old, her parents were killed by a group of bandits. Albina and her younger brother, Aiden, were the only survivors. Aiden was taken in by a kindly farmer, but Albina ran away into the wilderness. She survived by her wits and her fists, becoming a fierce fighter. After a few years, she stumbled upon a hermit's cave. The hermit, a wise old man, took her in and taught her the ways of the world. Albina learned from him how to live off the land, and how to defend herself from those who would do her harm. She also learned that the best way to help others is to first help oneself. When the hermit died, Albina took over his cave and continues to live there to this day. She rarely leaves, but when she does, she uses her skills to help those"
+    },
+    {
+        "id": 9143,
+        "first_name": "Roxane",
+        "last_name": "Emae",
+        "full_name": "Roxane Emae",
+        "gender": "Female",
+        "character_class": "Ranger",
+        "character_subclass": "Gloom Stalker",
+        "background": "Inheritor",
+        "ethnicity": "Aasimar",
+        "ethnicity_keywords": [
+            "radiant",
+            "glowing eyes",
+            "fair skin",
+            "halo",
+            "celestial",
+            "ethereal",
+            "angelic"
+        ],
+        "age": "Adult",
+        "physical_description": {
+            "physical_trait": "Broad-shouldered",
+            "hair_color": "Blue",
+            "hair_style": "blunt bangs",
+            "eye_color": "multi-colored"
+        },
+        "physical_trait": "Alluring",
+        "hair_color": "Golden",
+        "hair_style": "layered cut",
+        "eye_color": "amber",
+        "behavior": "Roxane Emae's ideal is mercy. Her flaw is overconfident, her bond is adventure, her behavior is logical, and her nature is honest.",
+        "image_prompt": "IMAGE_TYPE: Full-Length Portrait in the style of Leiji Matsumoto | GENRE: Fantasy | SCENE: an Inheritor Aasimar named Roxane Emae | ACTOR: Roxane Emae is an Alluring female Aasimar. Roxane Emae has golden layered cut hair and amber eyes. | TONES: Purple and Saffron | LIGHTING: Moonlight | TAGS: radiant, glowing eyes, fair skin, halo, celestial, ethereal, angelic, Forgotten Realms, Medieval Fantasy, D&D, Dungeons & Dragons. --s 1000 --upbeta --seed 9143",
+        "personality_description": "\n\nRoxane Emae is a merciful person who is also overconfident. She enjoys adventure and behaves logically. She is also an honest person.",
+        "background_story": "\n\nRoxane Emae was born to a family of rangers in the Forgotten Realms. She grew up learning the ways of the ranger and inherited her parents' skills in tracking and archery. When she came of age, she joined the Rangers of the North, a group of rangers who protect the borders of the Forgotten Realms from encroaching evil. She quickly proved herself to be a skilled tracker and archer, and was promoted to the rank of Inheritor Ranger.\n\nAs an Inheritor Ranger, Roxane is responsible for leading groups of rangers on missions to track down and eliminate evil creatures that threaten the Forgotten Realms. She is a skilled fighter and strategist, and her quick thinking and cool head have saved her team on more than one occasion.\n\nDespite her skills, Roxane is not without her flaws. She is sometimes overconfident in her abilities, and her rash decisions have led her into more than one dangerous situation. But her sense of adventure and her"
+    },
+    {
+        "id": 5362,
+        "first_name": "Morganica",
+        "last_name": "Dan",
+        "full_name": "Morganica Dan",
+        "gender": "Female",
+        "character_class": "Bard",
+        "character_subclass": "College of Lore",
+        "background": "Soldier",
+        "ethnicity": "Tiefling",
+        "ethnicity_keywords": [
+            "horns",
+            "tail",
+            "fangs",
+            "purple skin",
+            "glowing eyes",
+            "sharp features",
+            "devilish",
+            "demonic",
+            "fiendish",
+            "infernal",
+            "hellish"
+        ],
+        "age": "Senior",
+        "physical_description": {
+            "physical_trait": "Short",
+            "hair_color": "Sandy",
+            "hair_style": "blunt bangs",
+            "eye_color": "multi-colored"
+        },
+        "physical_trait": "Scarred",
+        "hair_color": "Sandy",
+        "hair_style": "halo braid",
+        "eye_color": "different-colored",
+        "behavior": "Morganica Dan's ideal is creativity. Her flaw is vengeful, her bond is legacy, her behavior is brave, and her nature is curious.",
+        "image_prompt": "IMAGE_TYPE: Surreal Portrait in the style of Hal Foster | GENRE: Fantasy | SCENE: a Soldier Tiefling named Morganica Dan | ACTOR: Morganica Dan is a Scarred female Tiefling. Morganica Dan has sandy halo braid hair and different-colored eyes. | TONES: Firebrick and Magenta | LIGHTING: Top Lighting | TAGS: horns, tail, fangs, purple skin, glowing eyes, sharp features, devilish, demonic, fiendish, infernal, hellish, Forgotten Realms, Medieval Fantasy, D&D, Dungeons & Dragons. --s 1000 --upbeta --seed 5362",
+        "personality_description": "\n\nMorganica Dan is an idealist who is creative and curious by nature. She can be vengeful if she feels she or her legacy has been wronged, but is otherwise brave and determined.",
+        "background_story": "\n\nMorganica Dan was born into a family of bards in the Forgotten Realms. She was always creativity, and her parents encouraged her to pursue her dreams. When she was old enough, she joined the military and became a soldier bard. She quickly rose through the ranks and became one of the most respected bards in the military.\n\nHowever, Morganica's vengeful nature sometimes got the better of her. If she felt someone had wronged her, she would stop at nothing to get revenge. This led to her becoming involved in many conflicts, both personal and political.\n\nDespite her flaws, Morganica was a brave and curious woman. She was always willing to stand up for what she believed in and was always exploring new things. She was also fiercely loyal to her family and friends.\n\nMorganica's curiosity led her to discover many hidden secrets in the Forgotten Realms. She was also one of the few people who knew about the existence of the magical creatures"
     }
 ]

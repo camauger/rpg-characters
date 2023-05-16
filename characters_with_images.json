@@ -287,42 +287,6 @@
         "background_story": "\n\nTalia Rikiusenmir was born into a family of gladiators. Her father was a well-known druid who had retired from fighting to teach his daughter the ways of druidism. Her mother was a human who had also been a gladiator. Talia Rikiusenmir grew up learning how to fight and how to use her druidic powers to heal others. She always had a natural affinity for animals, and she would often sneak away to the forest to commune with the wild creatures there. When she was old enough, she joined her parents in the arena, fighting as a druid for the first time. She quickly proved herself to be a skilled fighter and a powerful druid. She quickly rose through the ranks of the gladiators, becoming one of the most popular fighters in the arena. When she was not fighting, she would often be found in the forest, helping the animals or communing with the spirits of nature. Talia Rik"
     },
     {
-        "id": 308,
-        "first_name": "Isador",
-        "last_name": "Lymi",
-        "full_name": "Isador Lymi",
-        "gender": "Male",
-        "character_class": "Rogue",
-        "character_subclass": "Assassin",
-        "background": "Haunted One",
-        "ethnicity": "Dwarf",
-        "ethnicity_keywords": [
-            "short",
-            "stocky",
-            "muscular",
-            "stout",
-            "deep-set eyes",
-            "earthy skin tones",
-            "braided hair",
-            "broad face"
-        ],
-        "age": "Middle-aged",
-        "physical_description": {
-            "physical_trait": "Petite",
-            "hair_color": "Streaked",
-            "hair_style": "updo",
-            "eye_color": "amber"
-        },
-        "physical_trait": "Ripped",
-        "hair_color": "Golden",
-        "hair_style": "layered cut with length",
-        "eye_color": "emerald",
-        "behavior": "Isador Lymi's ideal is discovery. His flaw is stubborn, his bond is faith, his behavior is nurturing, and his nature is honest.",
-        "image_prompt": "IMAGE_TYPE: Character Portrait in the style of Elena Dudina and Brian Froud | GENRE: Fantasy | EMOTION: Isador Lymi's ideal is discovery. His flaw is stubborn, his bond is faith, his behavior is nurturing, and his nature is honest. | SCENE: a Haunted One Rogue named Isador Lymi | ACTOR: Isador Lymi is a Ripped male Dwarf. Isador Lymi has golden layered cut with length hair and emerald eyes. | TONES: Amber and Steel Blue | LIGHTING: Backlighting | TAGS: short, stocky, muscular, stout, deep-set eyes, earthy skin tones, braided hair, broad face, Forgotten Realms, Medieval Fantasy Setting, D&D. --s 1000 --upbeta --seed 308",
-        "personality_description": "\n\nIsador Lymi is a curious and determined individual who is always seeking out new and exciting things. However, he can be quite stubborn and set in his ways, sticking to his own beliefs and convictions. He is also a very nurturing and caring person, always looking out for others. Isador is an honest person who believes in being truthful to others.",
-        "background_story": "\n\nIsador Lymi was born to a family of scholars in the city of Waterdeep. From a young age, he showed a great aptitude for learning and was always asking questions. His parents encouraged his love of knowledge, and he spent many hours in the library, poring over books on history, geography, and anything else he could find.\n\nWhen he was sixteen, Isador left home to travel the world and see all that he could. He had many adventures, and made new friends (and enemies) along the way. He also discovered his talent for thievery, and quickly learned how to pick locks and pockets.\n\nEventually, Isador settled down in the city of Baldur's Gate, where he opened a bookstore. He continued to travel from time to time, but always returned to his beloved bookstore.\n\nOne day, while Isador was on one of his travels, he was attacked by a group of bandits. He was outnumbered and"
-    },
-    {
         "id": 381,
         "first_name": "Van",
         "last_name": "Ellea",
@@ -780,5 +744,78 @@
         "image_prompt": "IMAGE_TYPE: High-Key Portrait in the style of James Jean | GENRE: Fantasy | SCENE: a Knight Human named Kennith Lynbri | ACTOR: Kennith Lynbri is a Voluptuous male Human. Kennith Lynbri has red bob cut with fringe hair and different-colored eyes. | TONES: Fern Green and Gray | LIGHTING: Silhouette Lighting | TAGS: medium height, medium build, Forgotten Realms, Medieval Fantasy, D&D, Dungeons & Dragons. --s 1000 --upbeta --seed 5071",
         "personality_description": "\n\nKennith Lynbri is an idealistic person who believes in equality for all. He can be impulsive at times and his bond is justice. He is an extroverted person and is wise beyond his years.",
         "background_story": "\n\nKennith Lynbri grew up in a small town in the Forgotten Realms. His parents were both bards, and they instilled in him a love of music and storytelling. When he was old enough, Kennith set out on his own to explore the world and learn as much as he could. He quickly realized that the world was not as fair as he had been led to believe, and he became determined to fight for justice. He became a knight, and using his bardic skills, he began to rally others to his cause. He quickly gained a reputation as a powerful fighter and a skilled leader. He has since dedicated his life to fighting for the oppressed and ensuring that everyone has a voice."
+    },
+    {
+        "id": 3494,
+        "first_name": "Rockwell",
+        "last_name": "A",
+        "full_name": "Rockwell A",
+        "gender": "Male",
+        "character_class": "Druid",
+        "character_subclass": "Circle of the Land",
+        "background": "Outlander",
+        "ethnicity": "Half-Elf",
+        "ethnicity_keywords": [
+            "medium height",
+            "slim",
+            "pointed ears",
+            "fair skin",
+            "various eye colors",
+            "mix of human and elf features"
+        ],
+        "age": "Young Adult",
+        "physical_description": {
+            "physical_trait": "Enigmatic",
+            "hair_color": "Indigo",
+            "hair_style": "bob cut with fringe",
+            "eye_color": "amber"
+        },
+        "physical_trait": "Angular",
+        "hair_color": "Purple",
+        "hair_style": "bun",
+        "eye_color": "slate",
+        "behavior": "Rockwell A's ideal is mercy. His flaw is impatient, his bond is freedom, his behavior is nurturing, and his nature is curious.",
+        "image_prompt": "IMAGE_TYPE: Loop Lighting Portrait in the style of Victo Ngai | GENRE: Fantasy | SCENE: an Outlander Half-Elf named Rockwell A | ACTOR: Rockwell A is an Angular male Half-Elf. Rockwell A has purple bun hair and slate eyes. | TONES: Green and Blush | LIGHTING: Rembrandt Lighting | TAGS: medium height, slim, pointed ears, fair skin, various eye colors, mix of human and elf features, Forgotten Realms, Medieval Fantasy, D&D, Dungeons & Dragons. --s 1000 --upbeta --seed 3494",
+        "personality_description": "\n\nRockwell A is a kind and compassionate person who believes in giving people a second chance. However, he can be impatient and sometimes doesn't give people the time they need to change. He is fiercely independent and doesn't like anyone telling him what to do. He is also very curious and likes to ask questions.",
+        "background_story": "\n\nRockwell A was once a member of a druidic circle that sought to protect the natural world from the destruction wrought by civilization. However, when Rockwell saw the suffering caused by the circle's actions, he could no longer continue with their methods. He left the circle and struck out on his own, using his druidic magic to help those in need, regardless of whether they were friend or foe. This eventually led him to become an Outlander, a druid who is not bound to any one place. He now wanders the Forgotten Realms, helping those he comes across and searching for a way to end the suffering of all."
+    },
+    {
+        "id": 2006,
+        "first_name": "Albina",
+        "last_name": "Ser",
+        "full_name": "Albina Ser",
+        "gender": "Female",
+        "character_class": "Barbarian",
+        "character_subclass": "Path of the Battlerager",
+        "background": "Hermit",
+        "ethnicity": "Dwarf",
+        "ethnicity_keywords": [
+            "short",
+            "stocky",
+            "muscular",
+            "stout",
+            "deep-set eyes",
+            "earthy skin tones",
+            "broad face",
+            "long beards",
+            "hardy",
+            "stubborn",
+            "gruff"
+        ],
+        "age": "Timeless",
+        "physical_description": {
+            "physical_trait": "Commanding",
+            "hair_color": "Light Brown",
+            "hair_style": "bob cut",
+            "eye_color": "grayish-white"
+        },
+        "physical_trait": "Compact",
+        "hair_color": "Blond",
+        "hair_style": "short crop",
+        "eye_color": "gold",
+        "behavior": "Albina Ser's ideal is selflessness. Her flaw is prideful, her bond is family, her behavior is generous, and her nature is wise.",
+        "image_prompt": "IMAGE_TYPE: Minimalist Portrait in the style of Rufino Tamayo | GENRE: Fantasy | SCENE: a Hermit Dwarf named Albina Ser | ACTOR: Albina Ser is a Compact female Dwarf. Albina Ser has blond short crop hair and gold eyes. | TONES: Dandelion and Black | LIGHTING: Hard Light | TAGS: short, stocky, muscular, stout, deep-set eyes, earthy skin tones, broad face, long beards, hardy, stubborn, gruff, Forgotten Realms, Medieval Fantasy, D&D, Dungeons & Dragons. --s 1000 --upbeta --seed 2006",
+        "personality_description": "\n\nAlbina Ser is a wise and generous person who is selfless and puts her family first. She can be prideful at times, but overall she is a kind and caring person.",
+        "background_story": "\n\nAlbina Ser was born into a family of nomadic herders in the Forgotten Realms. When she was five years old, her parents were killed by a group of bandits. Albina and her younger brother, Aiden, were the only survivors. Aiden was taken in by a kindly farmer, but Albina ran away into the wilderness. She survived by her wits and her fists, becoming a fierce fighter. After a few years, she stumbled upon a hermit's cave. The hermit, a wise old man, took her in and taught her the ways of the world. Albina learned from him how to live off the land, and how to defend herself from those who would do her harm. She also learned that the best way to help others is to first help oneself. When the hermit died, Albina took over his cave and continues to live there to this day. She rarely leaves, but when she does, she uses her skills to help those"
     }
 ]
