@@ -1,10 +1,6 @@
 import json
 from flask import Flask, render_template
 
-def get_image_url(filename):
-    base_url = 'https://zippy-rabanadas-30839c.netlify.app'
-    return f'{base_url}/static/{filename}'
-
 app = Flask(__name__, static_folder='static', static_url_path='/static')
 
 def get_character_data(id):
