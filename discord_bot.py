@@ -5,8 +5,7 @@ from dotenv import load_dotenv
 from PIL import Image
 import os
 import time
-
-discord_token = "MTEwODEyNjgyMzAxNzA4Njk4Ng.G9nh0t.AKL-8QejAUjDPfsUbfAAy5w5MorNUmvfODY2wU"
+from api_settings import discord_token
 
 load_dotenv()
 client = commands.Bot(command_prefix="*", intents=discord.Intents.all())

@@ -17,3 +17,6 @@ static
 # Ignore api_settings.py
 api_settings.py
 
+# Image folders
+input
+output
