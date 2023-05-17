@@ -67,7 +67,7 @@ async def download_image(url, filename, upscaled=False):
         print(f"Image downloaded: {filename}")
         input_file = os.path.join(input_folder, filename)
         if len(filename) < 10:
-            static_folder = "static/images"
+            static_folder = "large_images"
             os.rename(f"{directory}/{input_folder}/{filename}", f"{directory}/{static_folder}/{filename}")
         elif upscaled:
             os.rename(f"{directory}/{input_folder}/{filename}", f"{directory}/{output_folder}/{filename}")
