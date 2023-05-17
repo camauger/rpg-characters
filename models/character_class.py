@@ -42,18 +42,18 @@ Additionally, it creates physical and psychological descriptions for the charact
 Finally, the __str__ method is used to return a string representation of the character.
 """
 class Character:
-    def __init__(self, id, character_class, character_subclass, background, ethnicity, ethnicity_keywords, age, gender):
+    def __init__(self, id, params):
         self.id = id
-        self.first_name = generate_random_first_name(gender)
+        self.first_name = generate_random_first_name(params.gender)
         self.last_name = generate_random_last_name()
         self.full_name = f"{self.first_name} {self.last_name}"
-        self.gender = gender
-        self.character_class = character_class
-        self.character_subclass = character_subclass
-        self.background = background
-        self.ethnicity = ethnicity
-        self.ethnicity_keywords = ethnicity_keywords
-        self.age = age
+        self.gender = params.gender
+        self.character_class = params.character_class
+        self.character_subclass = params.character_subclass
+        self.background = params.background
+        self.ethnicity = params.ethnicity
+        self.ethnicity_keywords = params.ethnicity_keywords
+        self.age = params.age
         self.physical_description = self.create_physical_description()
         self.physical_trait = create_physical_trait()
         self.hair_color = create_hair_color()

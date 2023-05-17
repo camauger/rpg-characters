@@ -24,5 +24,5 @@ def optimize_images(input_directory, output_directory, quality=90, max_size=1024
             new_path = os.path.join(output_directory, new_filename)
             img.save(new_path, "JPEG", quality=quality)
 
-optimize_images("./large_images", "./static/images")
+#optimize_images("./large_images", "./static/images")
 

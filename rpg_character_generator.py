@@ -1,7 +1,7 @@
 import json, random
 from settings.random_settings import pick_random_age, pick_random_gender, pick_random_ethnicity, pick_random_character_class, pick_random_subclass, pick_random_background, get_ethnicity_keywords
 from models.character_class import Character
-
+from utils.image_optim import optimize_images
 # You will have to create your own api_settings.py file with your OpenAI API key
 from api_settings import api_key
 
@@ -38,16 +38,37 @@ def generate_character_id(existing_ids):
             return character_id
 
 
+# Create a non random character
+def create_specific_character(params):
+    params = {}
+    params.random_class = input("What class do you want your character to be? ")
+    params.random_subclass = input("What subclass do you want your character to be? ")
+    params.random_class_name = params.random_class.get('name')
+    params.random_ethnicity = input("What is your character's ethnicity?")
+    params.random_ethnicity_name = params.random_ethnicity.get('race')
+    params.ethnicity_keywords = get_ethnicity_keywords(params.random_ethnicity)
+    params.age = input("How old is your character? ")
+    params.gender = input("What is your character's gender?")
+    new_character = Character(generate_character_id(existing_ids), params)
+    return new_character
+
 # Create a random character
+def create_random_params():
+    params = {}
+    params.random_class = pick_random_character_class()
+    params.random_subclass = pick_random_subclass(params.random_class)
+    params.random_class_name = params.random_class.get('name')
+    params.random_ethnicity = pick_random_ethnicity()
+    params.random_ethnicity_name = params.random_ethnicity.get('race')
+    params.ethnicity_keywords = get_ethnicity_keywords(params.random_ethnicity)
+    params.age = pick_random_age()
+    params.gender = pick_random_gender()
+    return params
+
+
 def create_random_character():
-    random_class = pick_random_character_class()
-    random_subclass = pick_random_subclass(random_class)
-    random_class_name = random_class.get('name')
-    random_ethnicity = pick_random_ethnicity()
-    random_ethnicity_name = random_ethnicity.get('race')
-    ethnicity_keywords = get_ethnicity_keywords(random_ethnicity)
-    id
-    new_character = Character(generate_character_id(existing_ids), random_class_name, random_subclass, pick_random_background(), random_ethnicity_name, ethnicity_keywords, pick_random_age(), pick_random_gender())
+    params = create_random_params()
+    new_character = Character(generate_character_id(existing_ids), params)
     print(new_character.image_prompt)
     return new_character
 
@@ -93,6 +114,7 @@ def create_random_character_option():
         if create_more != 'y':
             break
 
+
     print("Finished creating characters.")
 
 
@@ -103,10 +125,19 @@ print("Welcome to the RPG Character Generator!")
 
 # Menu
 print("1. Create random characters")
+print("2. Optimize images")
+print("3. Create a specific character")
 print("0. Exit the program")
+
 choice = input("What do you want to do? ")
 if choice == "1":
     create_random_character_option()
+elif choice == "2":
+    optimize_images("./large_images", "./static/images")
+    print("Images optimized!")
+    exit()
+elif choice == "3":
+    create_specific_character()
 elif choice == "0":
     print("Goodbye!")
     exit()

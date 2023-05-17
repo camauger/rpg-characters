@@ -132,7 +132,7 @@ async def on_message(message):
 def start_discord_bot():
     client.run(discord_token)
 
-#start_discord_bot()
+start_discord_bot()
 
 import shutil
 import os
