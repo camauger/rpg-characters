@@ -3,7 +3,6 @@ from models.physical_description_class import PhysicalDescription
 from models.image_prompt_class import ImagePrompt
 from settings.name_composition import generate_random_first_name, generate_random_last_name
 from settings.random_settings import create_eye_color, create_hair_color, create_hair_style, create_physical_trait
-import random
 import requests
 import json
 from utils.indefinite_article import indefinite_article
