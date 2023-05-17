@@ -13,7 +13,13 @@ def configure_app(app):
 freezer = Freezer(app)
 
 @freezer.register_generator
+def index():
+    yield '/'
+
+
+@freezer.register_generator
 def character():
+    # yield a URL for each possible value of id
     with open('characters_with_images.json', 'r') as f:
         characters = json.load(f)
     for character in characters:

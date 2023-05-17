@@ -31,9 +31,9 @@ def index():
 def character(id):
     # Retrieve character data based on the ID
     character_data = get_character_data(id)
-
     # Process character data and render the template
     return render_template('character.html', character=character_data)
+
 
 if __name__ == '__main__':
     app.run(debug=False)

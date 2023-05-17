@@ -58,6 +58,7 @@
     </nav>
   </header>
   <div class="container-fluid">
+    {% if character: %}
     <div class="row">
       <div class="col-6">
         <img src="{{ url_for('static', filename='images/' ~ character.id ~ '.png') }}" class="img-fluid"
@@ -109,6 +110,7 @@
           </div>
         </div>
       </div>
+      {% endif %}
     </div>
   </div>
   <footer class="footer mt-auto py-3 bg-light">
