@@ -44,16 +44,16 @@ Finally, the __str__ method is used to return a string representation of the cha
 class Character:
     def __init__(self, id, params):
         self.id = id
-        self.first_name = generate_random_first_name(params.gender)
+        self.first_name = generate_random_first_name(params['gender'])
         self.last_name = generate_random_last_name()
         self.full_name = f"{self.first_name} {self.last_name}"
-        self.gender = params.gender
-        self.character_class = params.character_class
-        self.character_subclass = params.character_subclass
-        self.background = params.background
-        self.ethnicity = params.ethnicity
-        self.ethnicity_keywords = params.ethnicity_keywords
-        self.age = params.age
+        self.gender = params['gender']
+        self.character_class = params['random_class']
+        self.character_subclass = params['random_subclass']
+        self.background = params['background']
+        self.ethnicity = params['random_ethnicity'].get('race')
+        self.ethnicity_keywords = params['ethnicity_keywords']
+        self.age = params['age']
         self.physical_description = self.create_physical_description()
         self.physical_trait = create_physical_trait()
         self.hair_color = create_hair_color()
@@ -64,6 +64,7 @@ class Character:
         # Has to be last!
         self.personality_description = self.create_personality_description()
         self.background_story = self.create_background_story()
+
 
     def create_physical_description_text(self):
         physical_description = f"{indefinite_article(self.physical_trait)} {self.gender.lower()} {self.ethnicity}. {self.full_name} has {self.hair_color.lower()} {self.hair_style} hair and {self.eye_color} eyes"

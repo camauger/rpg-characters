@@ -2,8 +2,12 @@ import json, random
 from settings.random_settings import pick_random_age, pick_random_gender, pick_random_ethnicity, pick_random_character_class, pick_random_subclass, pick_random_background, get_ethnicity_keywords
 from models.character_class import Character
 from utils.image_optim import optimize_images
+from discord_bot import move_files
+import os
 # You will have to create your own api_settings.py file with your OpenAI API key
 from api_settings import api_key
+
+
 
 def get_number_of_existing_characters():
     try:
@@ -41,36 +45,40 @@ def generate_character_id(existing_ids):
 # Create a non random character
 def create_specific_character(params):
     params = {}
-    params.random_class = input("What class do you want your character to be? ")
-    params.random_subclass = input("What subclass do you want your character to be? ")
-    params.random_class_name = params.random_class.get('name')
-    params.random_ethnicity = input("What is your character's ethnicity?")
-    params.random_ethnicity_name = params.random_ethnicity.get('race')
-    params.ethnicity_keywords = get_ethnicity_keywords(params.random_ethnicity)
-    params.age = input("How old is your character? ")
-    params.gender = input("What is your character's gender?")
+    params["random class"] = input("What class do you want your character to be? ")
+    params['random_subclass'] = input("What subclass do you want your character to be? ")
+    params['random_class_name'] = params['random_class']
+    params['random_ethnicity']= input("What is your character's ethnicity?")
+    params['random_ethnicity_name'] = params['random_ethnicity'].get('race')
+    params['ethnicity_keywords'] = get_ethnicity_keywords(params['random_ethnicity'])
+    params['age'] = input("How old is your character? ")
+    params['gender'] = input("What is your character's gender?")
+    params['background'] = input("What is your character's background?")
     new_character = Character(generate_character_id(existing_ids), params)
     return new_character
+
 
 # Create a random character
 def create_random_params():
     params = {}
-    params.random_class = pick_random_character_class()
-    params.random_subclass = pick_random_subclass(params.random_class)
-    params.random_class_name = params.random_class.get('name')
-    params.random_ethnicity = pick_random_ethnicity()
-    params.random_ethnicity_name = params.random_ethnicity.get('race')
-    params.ethnicity_keywords = get_ethnicity_keywords(params.random_ethnicity)
-    params.age = pick_random_age()
-    params.gender = pick_random_gender()
-    return params
+    params['random_class'] = pick_random_character_class()
+    params['random_subclass'] = pick_random_subclass(params['random_class'])
+    params['random_class_name'] = params['random_class']
+    params['random_ethnicity'] = pick_random_ethnicity()
+    params['random_ethnicity_name'] = params['random_ethnicity'].get('race')
+    params['ethnicity_keywords'] = get_ethnicity_keywords(params['random_ethnicity'])
+    params['age'] = pick_random_age()
+    params['gender'] = pick_random_gender()
+    params['background'] = pick_random_background()
 
+    return params
 
 def create_random_character():
     params = create_random_params()
     new_character = Character(generate_character_id(existing_ids), params)
     print(new_character.image_prompt)
     return new_character
+
 
 #Load the characters from the json file
 def load_characters():
@@ -114,61 +122,38 @@ def create_random_character_option():
         if create_more != 'y':
             break
 
-
     print("Finished creating characters.")
 
 
-
-# Create a list of unique characters
 characters = []
-print("Welcome to the RPG Character Generator!")
 
-# Menu
-print("1. Create random characters")
-print("2. Optimize images")
-print("3. Create a specific character")
-print("0. Exit the program")
+def manage_characters():
+    # Load existing characters from the JSON file
+    existing_characters = load_characters()
+    print(len(existing_characters))
 
-choice = input("What do you want to do? ")
-if choice == "1":
-    create_random_character_option()
-elif choice == "2":
-    optimize_images("./large_images", "./static/images")
-    print("Images optimized!")
-    exit()
-elif choice == "3":
-    create_specific_character()
-elif choice == "0":
-    print("Goodbye!")
-    exit()
+    # Convert Character instances to dictionaries
+    character_dicts = [character.__dict__ for character in characters]
 
+    # Append new characters to the existing list
+    existing_characters.extend(character_dicts)
 
-# Load existing characters from the JSON file
-existing_characters = load_characters()
-print(len(existing_characters))
+    # Write the updated characters to the JSON file
+    with open("characters.json", "w") as json_file:
+        json.dump(existing_characters, json_file, indent=4, default=lambda o: o.__dict__)
 
-# Convert Character instances to dictionaries
-character_dicts = [character.__dict__ for character in characters]
+    # Create a list of image prompts
+    prompts = []
+    for character_data in existing_characters:
+        image_prompt = character_data.get('image_prompt')
+        prompts.append(image_prompt + '\n\n')
 
-# Append new characters to the existing list
-existing_characters.extend(character_dicts)
-
-# Write the updated characters to the JSON file
-with open("characters.json", "w") as json_file:
-    json.dump(existing_characters, json_file, indent=4, default=lambda o: o.__dict__)
-
-# Create a list of image prompts
-prompts = []
-for character_data in existing_characters:
-    image_prompt = character_data.get('image_prompt')
-    prompts.append(image_prompt + '\n\n')
-
-# Write the image prompts to a text file
-with open('data/image_prompts.txt', 'w') as file:
-    file.writelines(prompts)
+    # Write the image prompts to a text file
+    with open('data/image_prompts.txt', 'w') as file:
+        file.writelines(prompts)
 
 # Final data
-import os
+
 
 def get_files_in_folder(folder_path):
     files = []
@@ -180,45 +165,80 @@ def get_files_in_folder(folder_path):
 
 
 # Get all the characters with an image in images folder
-folder_path = "./static/images/"
-files_in_folder = get_files_in_folder(folder_path)
-characters_with_images = []
-for character in existing_characters:
-    image_name = f"{character.get('id')}.png"
-    if image_name in files_in_folder:
-        characters_with_images.append(character)
+def get_characters_with_image():
+    existing_characters = load_characters()
+    folder_path = "./static/images/"
+    files_in_folder = get_files_in_folder(folder_path)
+    characters_with_images = []
+    for character in existing_characters:
+        image_name = f"{character.get('id')}.png"
+        if image_name in files_in_folder:
+            characters_with_images.append(character)
 
-# Write the characters with images to a JSON file
-with open("characters_with_images.json", "w") as json_file:
-    json.dump(characters_with_images, json_file, indent=4, default=lambda o: o.__dict__)
-    print(f"There are {len(characters_with_images)} characters with images.")
+    # Write the characters with images to a JSON file
+    with open("characters_with_images.json", "w") as json_file:
+        json.dump(characters_with_images, json_file, indent=4, default=lambda o: o.__dict__)
+        print(f"There are {len(characters_with_images)} characters with images.")
 
 
 # Get all the characters without an image in images folder
-characters_without_images = []
-for character in existing_characters:
-    image_name = f"{character.get('id')}.png"
-    if image_name not in files_in_folder:
-        characters_without_images.append(character)
+def get_characters_without_image():
+    existing_characters = load_characters()
+    files_in_folder = get_files_in_folder("./static/images/")
+    characters_without_images = []
+    for character in existing_characters:
+        image_name = f"{character.get('id')}.png"
+        if image_name not in files_in_folder:
+            characters_without_images.append(character)
 
-# Write the characters without images to a JSON file
-with open("characters_without_images.json", "w") as json_file:
-    json.dump(characters_without_images, json_file, indent=4, default=lambda o: o.__dict__)
-    print(f"There are {len(characters_without_images)} characters without images.")
+    # Write the characters without images to a JSON file
+    with open("characters_without_images.json", "w") as json_file:
+        json.dump(characters_without_images, json_file, indent=4, default=lambda o: o.__dict__)
+        print(f"There are {len(characters_without_images)} characters without images.")
 
-# Create an image for each character without an image
-#import create_image
-#for character_data in characters_without_images:
-#    image_prompt = character.get('image_prompt')
-#    image = create_image.create_image(image_prompt, character_data.get('id'))
+    # Create a list of image prompts of the characters without images
+    prompts = []
+    for character_data in characters_without_images:
+        image_prompt = character_data.get('image_prompt')
+        prompts.append(image_prompt + '\n\n')
 
-# Create a list of image prompts of the characters without images
-prompts = []
-for character_data in characters_without_images:
-    image_prompt = character_data.get('image_prompt')
-    prompts.append(image_prompt + '\n\n')
+    # Write the image prompts to a text file
+    with open('data/characters_without_images.txt', 'w') as file:
+        file.writelines(prompts)
 
-# Write the image prompts to a text file
-with open('data/characters_without_images.txt', 'w') as file:
-    file.writelines(prompts)
 
+# Create a list of unique characters
+existing_characters = load_characters()
+characters = []
+print("Welcome to the RPG Character Generator!")
+
+# Menu
+print("1. Create random characters")
+print("2. Optimize images")
+print("3. Create a specific character")
+print("4. Move files")
+print("5. Manage characters")
+print("0. Exit the program")
+
+choice = input("What do you want to do? ")
+if choice == "1":
+    create_random_character_option()
+elif choice == "2":
+    optimize_images("./large_images", "./static/images")
+    print("Images optimized!")
+    exit()
+elif choice == "3":
+    create_specific_character()
+elif choice == "4":
+    move_files()
+    print("Files moved!")
+    exit()
+elif choice == "5":
+    manage_characters()
+    get_characters_with_image()
+    get_characters_without_image()
+    print("Characters managed!")
+    exit()
+elif choice == "0":
+    print("Goodbye!")
+    exit()

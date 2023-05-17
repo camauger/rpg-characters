@@ -95,7 +95,12 @@ async def on_message(message):
     # If only 1 attachment, download it
     if len(message.attachments) == 1:
         for attachment in message.attachments:
-            file_name = f"{attachment.filename}"
+            if get_seed_number(message.content) != "":
+                seed = get_seed_number(message.content)
+                file_name = f"{seed}.png"
+                print(file_name)
+            else:
+                file_name = f"{attachment.filename}"
             if attachment.filename.lower().endswith((".png", ".jpg", ".jpeg", ".gif")):
                 await download_image(url=attachment.url, filename=file_name, upscaled=True)
     elif len(message.attachments) > 1:
@@ -132,7 +137,7 @@ async def on_message(message):
 def start_discord_bot():
     client.run(discord_token)
 
-start_discord_bot()
+#start_discord_bot()
 
 import shutil
 import os
@@ -145,4 +150,4 @@ def move_files():
     for file_name in file_names:
         shutil.move(os.path.join(source_dir, file_name), target_dir)
 
-#move_files()
+
