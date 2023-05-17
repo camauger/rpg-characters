@@ -6,11 +6,23 @@ from PIL import Image
 import os
 import time
 from api_settings import discord_token
+import re
 
 load_dotenv()
 client = commands.Bot(command_prefix="*", intents=discord.Intents.all())
 directory = os.getcwd()
 print(directory)
+
+def get_seed_number(message):
+    match = re.search("--seed (\d+)", message)
+
+    if match:
+        return match.group(1)
+    else:
+        print("No seed found in message.")
+        return ""
+        
+
 
 def split_image(image_file):
     with Image.open(image_file) as im:
@@ -45,8 +57,10 @@ async def download_image(url, filename):
             f.write(response.content)
         print(f"Image downloaded: {filename}")
         input_file = os.path.join(input_folder, filename)
-
-        if "UPSCALED_" not in filename:
+        if len(filename) < 10:
+            static_folder = "static/images"
+            os.rename(f"{directory}/{input_folder}/{filename}", f"{directory}/{static_folder}/{filename}")
+        elif "UPSCALED_" not in filename:
             file_prefix = os.path.splitext(filename)[0]
             # Split the image
             top_left, top_right, bottom_left, bottom_right = split_image(input_file)
@@ -55,10 +69,12 @@ async def download_image(url, filename):
             top_right.save(os.path.join(output_folder, file_prefix + "_top_right.jpg"))
             bottom_left.save(os.path.join(output_folder, file_prefix + "_bottom_left.jpg"))
             bottom_right.save(os.path.join(output_folder, file_prefix + "_bottom_right.jpg"))
+            # Delete the input file
+            os.remove(f"{directory}/{input_folder}/{filename}")
         else:
             os.rename(f"{directory}/{input_folder}/{filename}", f"{directory}/{output_folder}/{filename}")
-        # Delete the input file
-        os.remove(f"{directory}/{input_folder}/{filename}")
+            # Delete the input file
+            os.remove(f"{directory}/{input_folder}/{filename}")
 
 @client.event
 async def on_ready():
@@ -68,12 +84,18 @@ async def on_ready():
 async def on_message(message):
     print(message.content)
     for attachment in message.attachments:
-        if "Upscaled by" in message.content:
+        if get_seed_number(message.content) != "":
+            seed = get_seed_number(message.content)
+            file_name = f"{seed}.png"
+            print(file_name)
+        elif "Upscaled by" in message.content:
             file_prefix = 'UPSCALED_'
+            file_name = f"{file_prefix}{attachment.filename}"
         else:
             file_prefix = ''
+            file_name = f"{file_prefix}{attachment.filename}"
         if attachment.filename.lower().endswith((".png", ".jpg", ".jpeg", ".gif")):
-            await download_image(attachment.url, f"{file_prefix}{attachment.filename}")
+            await download_image(attachment.url, filename=file_name)
 
 
     # use Discord message to download images from a channel history, example: "history:50"
@@ -93,4 +115,8 @@ async def on_message(message):
                         time.sleep(10)
                         continue
 
-client.run(discord_token)
+# Start the bot
+def start_discord_bot():
+    client.run(discord_token)
+
+start_discord_bot()

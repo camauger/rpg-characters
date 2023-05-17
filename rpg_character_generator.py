@@ -182,10 +182,10 @@ with open("characters_without_images.json", "w") as json_file:
     print(f"There are {len(characters_without_images)} characters without images.")
 
 # Create an image for each character without an image
-import create_image
-for character_data in characters_without_images:
-    image_prompt = character.get('image_prompt')
-    image = create_image.create_image(image_prompt, character_data.get('id'))
+#import create_image
+#for character_data in characters_without_images:
+#    image_prompt = character.get('image_prompt')
+#    image = create_image.create_image(image_prompt, character_data.get('id'))
 
 # Create a list of image prompts of the characters without images
 prompts = []
