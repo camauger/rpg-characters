@@ -66,41 +66,35 @@ def save_characters(characters):
     with open("characters.json", "w") as json_file:
         json.dump(characters, json_file, indent=4, default=lambda o: o.__dict__)
 
-
-def create_random_character_option():
-    print("This program will create a number of random characters for you.")
-    # Ask for number of characters until valid integer input
-    num_characters = input("How many characters do you want to create? ")
-    while not num_characters.isdigit():
-        num_characters = input("Please enter a number: ")
-
-    num_characters = int(num_characters)
-    if num_characters <= 0:
-        print("No characters created.")
-        exit()
+# Create a number of random characters
+def create_characters(num_characters, characters):
     for _ in range(num_characters):
         new_character = create_random_character()
         characters.append(new_character)
-    print(f"Created {len(characters)} characters.")
-    # Ask if the user wants to create more characters
-    create_more = input("Do you want to create more characters? (y/n) ")
-    while create_more.lower() == 'y':
+        print(new_character.image_prompt)
+    return characters
+
+# Manage the creation of random characters
+def create_random_character_option():
+    print("This program will create a number of random characters for you.")
+    characters = []
+
+    while True:
         num_characters = input("How many characters do you want to create? ")
-        while not num_characters.isdigit():
-            num_characters = input("Please enter a number: ")
-            num_characters = int(num_characters)
-            if num_characters <= 0:
-             print("No characters created.")
-             exit()
-            for _ in range(num_characters):
-                new_character = create_random_character()
-                characters.append(new_character)
-                print(new_character.image_prompt)
-            if num_characters == 1:
-                print(f"Created {len(characters)} character.")
-            else:
-                print(f"Created {len(characters)} characters.")
-                create_more = input("Do you want to create more characters? (y/n) ")
+        while not num_characters.isdigit() or int(num_characters) <= 0:
+            num_characters = input("Please enter a valid number greater than 0: ")
+        
+        num_characters = int(num_characters)
+        characters = create_characters(num_characters, characters)
+
+        print(f"Created {len(characters)} character(s).")
+
+        create_more = input("Do you want to create more characters? (y/n) ").lower()
+        if create_more != 'y':
+            break
+
+    print("Finished creating characters.")
+
 
 
 # Create a list of unique characters

@@ -1055,44 +1055,6 @@
         "background_story": "\n\nTatiania Iusaldnyxer was born into a noble family in the city of Neverwinter. From a young age, she showed an aptitude for magic and was sent to study at the city's prestigious academy. However, Tatiania quickly grew disillusioned with the academy's rigid structure and traditional ways of teaching. She began to experiment with her magic, seeking to find new and more powerful ways to use it.\n\nThis led her down a dangerous path, and she soon began to dabble in the dark arts. Her experiments attracted the attention of the city's guards, and she was forced to flee Neverwinter. She eventually made her way to the city of Waterdeep, where she began to ply her trade as a charlatan sorcerer.\n\nTatiania is a skilled con artist and manipulator. She uses her magic to deceive and trick people, always seeking to gain an advantage for herself. She is a master of illusion and deception"
     },
     {
-        "id": 1343,
-        "first_name": "Allyce",
-        "last_name": "Is",
-        "full_name": "Allyce Is",
-        "gender": "Female",
-        "character_class": "Rogue",
-        "character_subclass": "Thief",
-        "background": "Archaeologist",
-        "ethnicity": "Dragonborn",
-        "ethnicity_keywords": [
-            "tall",
-            "muscular",
-            "dragon-like face",
-            "scales",
-            "tail",
-            "claws",
-            "frills",
-            "anthropomorphic dragon",
-            "reptilian",
-            "fearsome"
-        ],
-        "age": "Adult",
-        "physical_description": {
-            "physical_trait": "Handsome",
-            "hair_color": "Ash Brown",
-            "hair_style": "textured long hair",
-            "eye_color": "golden"
-        },
-        "physical_trait": "Shapely",
-        "hair_color": "Red",
-        "hair_style": "bun",
-        "eye_color": "different-colored",
-        "behavior": "Allyce Is's ideal is unity. Her flaw is vengeful, her bond is loyalty, her behavior is intuitive, and her nature is adventurous.",
-        "image_prompt": "IMAGE_TYPE: High-Angle Portrait in the style of Alexandra Douglass and Yuko Shimizu | GENRE: Fantasy | SCENE: an Archaeologist Dragonborn named Allyce Is | ACTOR: Allyce Is is a Shapely female Dragonborn. Allyce Is has red bun hair and different-colored eyes. | TONES: Coffee and Chartreuse | LIGHTING: Rembrandt Lighting | TAGS: tall, muscular, dragon-like face, scales, tail, claws, frills, anthropomorphic dragon, reptilian, fearsome, Forgotten Realms, Medieval Fantasy, D&D, Dungeons & Dragons. --s 1000 --upbeta --seed 1343",
-        "personality_description": "\n\nAllyce Is is an idealist who longs for unity in the world. She can be vengeful when she feels betrayed, and she is fiercely loyal to her friends and family. Allyce is an intuitive thinker and an adventurous spirit.",
-        "background_story": "\n\nAllyce Is was born into a family of archaeologists in the Forgotten Realms. She grew up listening to stories of ancient civilizations and dreaming of discovering lost treasures. When she was old enough, she set out on her own to explore the world. She quickly realized that she had a talent for finding hidden objects and unlocking ancient mysteries. She also discovered that she enjoyed the thrill of adventure and the excitement of combat. She became a rogue archaeologist, using her skills to find treasure and fight monsters. She has made a name for herself as a daring adventurer, and she is always looking for her next big adventure."
-    },
-    {
         "id": 1874,
         "first_name": "Shay",
         "last_name": "Rayn",
@@ -1853,5 +1815,38 @@
         "image_prompt": "IMAGE_TYPE: Moody Portrait in the style of Charles Blackman | GENRE: Fantasy | SCENE: a Gladiator Halfling named Janina Venrav | ACTOR: Janina Venrav is a Mesmerizing female Halfling. Janina Venrav has mahogany updo hair and grayish-white eyes. | TONES: Sapphire and Tangerine | LIGHTING: Soft Light | TAGS: small, childlike, curly hair, round face, rosy cheeks, barefoot, cheerful, nimble, Forgotten Realms, Medieval Fantasy, D&D, Dungeons & Dragons. --s 1000 --upbeta --seed 5062",
         "personality_description": "\n\nJanina Venrav is an innovative thinker who is always looking for new and better ways to do things. However, she can be forgetful and may sometimes rebel against authority figures. She is very determined and will not give up easily.",
         "background_story": "\n\nJanina Venrav was born to a family of wizards who resided in the city of Waterdeep. From a young age, she showed an aptitude for magic and was taken under the wing of her father, who was a respected wizard in the city. Janina quickly began to outstrip her father's abilities, and at the age of sixteen, she was admitted to the prestigious Wizard's Academy in the city of Silverymoon.\n\nJanina excelled at her studies, but she quickly became bored with the traditional methods of magic. She began to experiment with her spells, looking for new and innovative ways to use them. This soon got her in trouble with her professors, who saw her as a rebellious troublemaker.\n\nAfter graduating from the academy, Janina decided to see the world and put her skills to the test. She quickly found herself in the employ of a wealthy merchant who was looking for someone to protect his caravan from bandits. Janina used her magic to"
+    },
+    {
+        "id": 8006,
+        "first_name": "Sissy",
+        "last_name": "Is",
+        "full_name": "Sissy Is",
+        "gender": "Female",
+        "character_class": "Fighter",
+        "character_subclass": "Champion",
+        "background": "Criminal",
+        "ethnicity": "Gnome",
+        "ethnicity_keywords": [
+            "very small",
+            "bright eyes",
+            "round face",
+            "pointed ears",
+            "rosy cheeks"
+        ],
+        "age": "Adult",
+        "physical_description": {
+            "physical_trait": "Alluring",
+            "hair_color": "Blond",
+            "hair_style": "three-strand braid",
+            "eye_color": "amber"
+        },
+        "physical_trait": "Graceful",
+        "hair_color": "Dark Brown",
+        "hair_style": "layered cut",
+        "eye_color": "amber",
+        "behavior": "Sissy Is's ideal is creativity. Her flaw is forgetful, her bond is love, her behavior is stubborn, and her nature is inquisitive.",
+        "image_prompt": "IMAGE_TYPE: Full-Length Portrait in the style of H. R. Giger | GENRE: Fantasy | SCENE: a Criminal Gnome named Sissy Is | ACTOR: Sissy Is is a Graceful female Gnome. Sissy Is has dark brown layered cut hair and amber eyes. | TONES: Pink and Caramel | LIGHTING: Firelight | TAGS: very small, bright eyes, round face, pointed ears, rosy cheeks, Forgotten Realms, Medieval Fantasy, D&D, Dungeons & Dragons. --s 1000 --upbeta --seed 8006",
+        "personality_description": "\n\nSissy Is is a creative and forgetful person who loves stubbornly and inquires naturally.",
+        "background_story": "\n\nSissy Is was born into a family of criminals. Her parents were always getting into fights and her older brothers were always getting into trouble. When she was old enough, she decided to follow in their footsteps and become a criminal fighter. She quickly realized that she was good at it and that she loved the creativity that came with it. However, she was also forgetful and often forgot things that she was supposed to do. This often got her into trouble, but she always managed to get out of it. She is also very stubborn and has a hard time following orders. However, she is also very inquisitive and always wants to know what is going on."
     }
 ]

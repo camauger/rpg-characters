@@ -1853,5 +1853,38 @@
         "image_prompt": "IMAGE_TYPE: Moody Portrait in the style of Charles Blackman | GENRE: Fantasy | SCENE: a Gladiator Halfling named Janina Venrav | ACTOR: Janina Venrav is a Mesmerizing female Halfling. Janina Venrav has mahogany updo hair and grayish-white eyes. | TONES: Sapphire and Tangerine | LIGHTING: Soft Light | TAGS: small, childlike, curly hair, round face, rosy cheeks, barefoot, cheerful, nimble, Forgotten Realms, Medieval Fantasy, D&D, Dungeons & Dragons. --s 1000 --upbeta --seed 5062",
         "personality_description": "\n\nJanina Venrav is an innovative thinker who is always looking for new and better ways to do things. However, she can be forgetful and may sometimes rebel against authority figures. She is very determined and will not give up easily.",
         "background_story": "\n\nJanina Venrav was born to a family of wizards who resided in the city of Waterdeep. From a young age, she showed an aptitude for magic and was taken under the wing of her father, who was a respected wizard in the city. Janina quickly began to outstrip her father's abilities, and at the age of sixteen, she was admitted to the prestigious Wizard's Academy in the city of Silverymoon.\n\nJanina excelled at her studies, but she quickly became bored with the traditional methods of magic. She began to experiment with her spells, looking for new and innovative ways to use them. This soon got her in trouble with her professors, who saw her as a rebellious troublemaker.\n\nAfter graduating from the academy, Janina decided to see the world and put her skills to the test. She quickly found herself in the employ of a wealthy merchant who was looking for someone to protect his caravan from bandits. Janina used her magic to"
+    },
+    {
+        "id": 8006,
+        "first_name": "Sissy",
+        "last_name": "Is",
+        "full_name": "Sissy Is",
+        "gender": "Female",
+        "character_class": "Fighter",
+        "character_subclass": "Champion",
+        "background": "Criminal",
+        "ethnicity": "Gnome",
+        "ethnicity_keywords": [
+            "very small",
+            "bright eyes",
+            "round face",
+            "pointed ears",
+            "rosy cheeks"
+        ],
+        "age": "Adult",
+        "physical_description": {
+            "physical_trait": "Alluring",
+            "hair_color": "Blond",
+            "hair_style": "three-strand braid",
+            "eye_color": "amber"
+        },
+        "physical_trait": "Graceful",
+        "hair_color": "Dark Brown",
+        "hair_style": "layered cut",
+        "eye_color": "amber",
+        "behavior": "Sissy Is's ideal is creativity. Her flaw is forgetful, her bond is love, her behavior is stubborn, and her nature is inquisitive.",
+        "image_prompt": "IMAGE_TYPE: Full-Length Portrait in the style of H. R. Giger | GENRE: Fantasy | SCENE: a Criminal Gnome named Sissy Is | ACTOR: Sissy Is is a Graceful female Gnome. Sissy Is has dark brown layered cut hair and amber eyes. | TONES: Pink and Caramel | LIGHTING: Firelight | TAGS: very small, bright eyes, round face, pointed ears, rosy cheeks, Forgotten Realms, Medieval Fantasy, D&D, Dungeons & Dragons. --s 1000 --upbeta --seed 8006",
+        "personality_description": "\n\nSissy Is is a creative and forgetful person who loves stubbornly and inquires naturally.",
+        "background_story": "\n\nSissy Is was born into a family of criminals. Her parents were always getting into fights and her older brothers were always getting into trouble. When she was old enough, she decided to follow in their footsteps and become a criminal fighter. She quickly realized that she was good at it and that she loved the creativity that came with it. However, she was also forgetful and often forgot things that she was supposed to do. This often got her into trouble, but she always managed to get out of it. She is also very stubborn and has a hard time following orders. However, she is also very inquisitive and always wants to know what is going on."
     }
 ]

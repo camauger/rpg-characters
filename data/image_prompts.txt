@@ -110,3 +110,5 @@ IMAGE_TYPE: Environmental Portrait in the style of Camille Pissarro | GENRE: Fan
 
 IMAGE_TYPE: Moody Portrait in the style of Charles Blackman | GENRE: Fantasy | SCENE: a Gladiator Halfling named Janina Venrav | ACTOR: Janina Venrav is a Mesmerizing female Halfling. Janina Venrav has mahogany updo hair and grayish-white eyes. | TONES: Sapphire and Tangerine | LIGHTING: Soft Light | TAGS: small, childlike, curly hair, round face, rosy cheeks, barefoot, cheerful, nimble, Forgotten Realms, Medieval Fantasy, D&D, Dungeons & Dragons. --s 1000 --upbeta --seed 5062
 
+IMAGE_TYPE: Full-Length Portrait in the style of H. R. Giger | GENRE: Fantasy | SCENE: a Criminal Gnome named Sissy Is | ACTOR: Sissy Is is a Graceful female Gnome. Sissy Is has dark brown layered cut hair and amber eyes. | TONES: Pink and Caramel | LIGHTING: Firelight | TAGS: very small, bright eyes, round face, pointed ears, rosy cheeks, Forgotten Realms, Medieval Fantasy, D&D, Dungeons & Dragons. --s 1000 --upbeta --seed 8006
+
