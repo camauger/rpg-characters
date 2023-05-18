@@ -1,50 +1,56 @@
 # RPG Character Generator
 
-This code provides a Python script for generating random RPG (Role-Playing Game) characters. It utilizes various modules and classes to create unique character attributes, descriptions, and background stories. The generated characters can be stored in a CSV file and their details can be saved in a JSON file.
+This Python script is a Role-Playing Game (RPG) Character Generator. It allows you to create, manage, and archive RPG characters with various attributes such as age, gender, ethnicity, class, subclass, and background. The characters are stored in a JSON file, and the script also supports image optimization and Discord bot integration.
 
-## Prerequisites
+## Features
 
-Before running the script, ensure that you have the following:
-
-- Python 3 installed on your system.
-- The required Python packages installed: `requests`, `csv`.
-
-## Setup
-
-1. Download the code files and save them in a directory of your choice.
-2. Install the required Python packages using the following command:
-
-   ```
-   pip install requests csv
-   ```
-
-3. Obtain an API key for the OpenAI GPT-3 language model. Replace the `api_key` variable in the script with your API key.
+1. **Create Random Characters**: Generate a random character with random attributes.
+2. **Create Specific Characters**: Create a character with specific attributes based on user input.
+3. **Manage Characters**: Load existing characters from a JSON file, add new characters, and save them back to the file.
+4. **Character Images**: Manage character images, including checking which characters have images and which do not.
+5. **Discord Bot Integration**: Start a Discord bot (the bot's functionality is not detailed in this script).
+6. **Optimize Images**: Optimize images in a specified directory.
+7. **Archive Files**: Move files to an archive (the specifics of this functionality are not detailed in this script).
 
 ## Usage
 
-1. Open a terminal or command prompt.
-2. Navigate to the directory where the script is saved.
-3. Run the script using the following command:
+Run the script in a Python environment. You will be presented with a menu of options:
 
-   ```
-   python rpg_character_generator.py
-   ```
+```
+Welcome to the RPG Character Generator!
+1. Create random characters
+2. Optimize images
+3. Create a specific character
+4. Archive files
+5. Manage characters
+6. Start the Discord bot
+0. Exit the program
+```
 
-4. Follow the prompts to specify the number of characters you want to create.
-5. Once the characters are generated, their details will be saved in the `data/characters_data.csv` file.
-6. The character descriptions, including the background stories and image prompts, will be stored in the `characters.json` and `data/image_prompts.txt` files, respectively.
+Enter the number of the option you want to choose.
 
-## Extending the Code
+## Dependencies
 
-- You can modify the character attributes, such as character classes, backgrounds, ethnicities, ages, and genders, by updating the corresponding lists in the `character_settings.py` module.
-- To customize the physical description and behavior of characters, you can modify the respective classes in the `physical_description.py` and `character_settings.py` modules.
-- The `name_composition.py` module provides methods for generating random first and last names. You can customize the name generation logic in this module.
-- To improve the generated background stories, you can experiment with different prompts or modify the `fetch_character_data` function in the script to interact with the OpenAI GPT-3 API differently.
+This script imports several modules, some of which are not included in the standard Python library:
 
-## Credits
+- `json`
+- `random`
+- `os`
+- `settings.random_settings`
+- `models.character_class`
+- `utils.image_optim`
+- `discord_bot`
 
-The code utilizes the OpenAI GPT-3 language model for generating background stories. The physical descriptions, names, and character attributes are randomly generated using the provided modules.
+Please ensure that you have all necessary modules installed in your Python environment before running the script.
 
-Note: Ensure that you comply with the terms of service and usage policies of the OpenAI GPT-3 API when utilizing the language model for generating text.
+## Limitations
 
----
+The script has a maximum limit of 9999 characters. If you try to create more characters than this, you will be asked to delete some characters before creating new ones.
+
+## Contributing
+
+Contributions to this script are welcome. Please fork the repository and create a pull request with your changes.
+
+## License
+
+This script is available under the [MIT License](https://opensource.org/licenses/MIT).
