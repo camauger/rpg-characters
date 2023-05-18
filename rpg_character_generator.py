@@ -4,36 +4,29 @@ from models.character_class import Character
 from utils.image_optim import optimize_images
 from discord_bot import move_files
 import os
-# You will have to create your own api_settings.py file with your OpenAI API key
-from api_settings import api_key
 
-def get_number_of_existing_characters():
+MAX_CHARACTER_ID = 9999
+MAX_CHARACTER_COUNT = 9999
+
+# Get the number of characters and their IDs from the JSON file
+# Usage:
+#character_count, existing_ids = get_character_info()
+def get_character_info():
     try:
         with open("characters.json", "r") as json_file:
             existing_characters = json.load(json_file)
-            json_file.close()
-        return len(existing_characters)
+        character_count = len(existing_characters)
+        character_ids = [character.get('id') for character in existing_characters]
+        return character_count, character_ids
     except (FileNotFoundError, json.JSONDecodeError):
         # Handle file not found or invalid JSON error
-        return 0
-    
-def get_existing_character_ids():
-    try:
-        with open("characters.json", "r") as json_file:
-            existing_characters = json.load(json_file)
-            json_file.close()
-        return [character.get('id') for character in existing_characters]
+        return 0, []
 
-    except (FileNotFoundError, json.JSONDecodeError):
-        # Handle file not found or invalid JSON error
-        return 0
-
-existing_ids = get_existing_character_ids()
-
+# Generate a random character ID
 def generate_character_id(existing_ids):
     while True:
         # Generate a random number as the character ID
-        character_id = random.randint(1, 9999)
+        character_id = random.randint(1, MAX_CHARACTER_ID)
         
         # Check if the generated ID already exists in the list
         if character_id not in existing_ids:
@@ -42,18 +35,21 @@ def generate_character_id(existing_ids):
 
 # Create a non random character
 def create_specific_character(params):
-    params = {}
-    params["random class"] = input("What class do you want your character to be? ")
-    params['random_subclass'] = input("What subclass do you want your character to be? ")
-    params['random_class_name'] = params['random_class']
-    params['random_ethnicity']= input("What is your character's ethnicity?")
-    params['random_ethnicity_name'] = params['random_ethnicity'].get('race')
-    params['ethnicity_keywords'] = get_ethnicity_keywords(params['random_ethnicity'])
-    params['age'] = input("How old is your character? ")
-    params['gender'] = input("What is your character's gender?")
-    params['background'] = input("What is your character's background?")
-    new_character = Character(generate_character_id(existing_ids), params)
-    return new_character
+    character_count, existing_ids = get_character_info()
+    if character_count <= MAX_CHARACTER_COUNT:
+        params["random class"] = input("What class do you want your character to be? ")
+        params['random_subclass'] = input("What subclass do you want your character to be? ")
+        params['random_class_name'] = params['random_class']
+        params['random_ethnicity']= input("What is your character's ethnicity?")
+        params['random_ethnicity_name'] = params['random_ethnicity'].get('race')
+        params['ethnicity_keywords'] = get_ethnicity_keywords(params['random_ethnicity'])
+        params['age'] = input("How old is your character? ")
+        params['gender'] = input("What is your character's gender?")
+        params['background'] = input("What is your character's background?")
+        new_character = Character(generate_character_id(existing_ids), params)
+        return new_character
+    else:
+        print("There are too many characters. Please delete some characters before creating a new one.")
 
 
 # Create a random character
@@ -73,9 +69,13 @@ def create_random_params():
 
 def create_random_character():
     params = create_random_params()
-    new_character = Character(generate_character_id(existing_ids), params)
-    print(new_character.image_prompt)
-    return new_character
+    character_count, existing_ids = get_character_info()
+    if character_count <= MAX_CHARACTER_COUNT:
+        new_character = Character(generate_character_id(existing_ids), params)
+        print(new_character.image_prompt)
+        return new_character
+    else:
+        print("There are too many characters. Please delete some characters before creating a new one.")
 
 
 #Load the characters from the json file

@@ -67,7 +67,7 @@
         </div>
       </nav>
     </header>
-    <div class="container-fluid">
+    <div class="container-fluid" style="margin-bottom: 90px;">
       {% if character: %}
       <div class="row">
         <div class="col-6">
@@ -108,7 +108,7 @@
               Background Story
             </h3>
             <p style="font-family: BookInsanityRemake">
-              {{ character.background_story }}
+              {{ character.background_story|safe }}
             </p>
             <h3
               style="
@@ -121,11 +121,11 @@
             </h3>
             {% if character.personality_description: %}
             <p style="font-family: BookInsanityRemake">
-              {{character.personality_description}}
+              {{character.personality_description|safe}}
             </p>
             {% else %}
             <p style="font-family: BookInsanityRemake">
-              {{character.behavior}}
+              {{character.behavior|safe}}
             </p>
             {% endif %}
           </div>

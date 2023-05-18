@@ -8,8 +8,13 @@ def get_character_data(id):
         characters = json.load(f)
     for character in characters:
         if character.get('id') == id:
+            # Replace '\n\n' with '<br>' in all string fields
+            for key, value in character.items():
+                if isinstance(value, str):
+                    character[key] = value.replace('\n\n', '<br>')
             return character
     return None
+
 
 def load_characters():
     with open('characters_with_images.json', 'r') as f:

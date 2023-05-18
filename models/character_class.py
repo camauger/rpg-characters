@@ -17,7 +17,7 @@ def fetch_character_data(prompt, api_key):
     }
     data = {
         "prompt": prompt,
-        "max_tokens": 200,
+        "max_tokens": 400,
         "n": 1,
         "stop": None,
         "temperature": 0.7,
@@ -76,6 +76,8 @@ class Character:
     def create_background_story(self):
         prompt = f"Create a background story for a RPG character named {self.full_name} who is {indefinite_article(self.background)} {self.character_class} in the world of Forgotten Realms. {self.behavior} - Make it 3 paragraphs. Make the story no longer than 200 words. End the background story with a potential adventure hook."
         background_story = fetch_character_data(prompt, api_key)
+        # Transform the /n in paragraphs into <br> for HTML
+        ## background_story = background_story.replace('\n\n', '<br>')
         return background_story
 
     def create_behavior(self):
