@@ -74,7 +74,7 @@ class Character:
         return PhysicalDescription()
 
     def create_background_story(self):
-        prompt = f"Create a background story for a RPG character named {self.full_name} who is {indefinite_article(self.background)} {self.character_class} in the world of Forgotten Realms. {self.behavior} Make the story no longer than 200 words."
+        prompt = f"Create a background story for a RPG character named {self.full_name} who is {indefinite_article(self.background)} {self.character_class} in the world of Forgotten Realms. {self.behavior} - Make it 3 paragraphs. Make the story no longer than 200 words. End the background story with a potential adventure hook."
         background_story = fetch_character_data(prompt, api_key)
         return background_story
 
