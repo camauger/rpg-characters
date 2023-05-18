@@ -7,8 +7,6 @@ import os
 # You will have to create your own api_settings.py file with your OpenAI API key
 from api_settings import api_key
 
-
-
 def get_number_of_existing_characters():
     try:
         with open("characters.json", "r") as json_file:
@@ -106,8 +104,8 @@ def create_characters(num_characters, characters):
 # Manage the creation of random characters
 def create_random_character_option():
     print("This program will create a number of random characters for you.")
+    existing_characters = load_characters()
     characters = []
-
     while True:
         num_characters = input("How many characters do you want to create? ")
         while not num_characters.isdigit() or int(num_characters) <= 0:
@@ -115,14 +113,14 @@ def create_random_character_option():
         
         num_characters = int(num_characters)
         characters = create_characters(num_characters, characters)
-
         print(f"Created {len(characters)} character(s).")
 
         create_more = input("Do you want to create more characters? (y/n) ").lower()
         if create_more != 'y':
             break
-
-    print("Finished creating characters.")
+    existing_characters.extend(characters)
+    save_characters(existing_characters)
+    print(f"Finished creating characters. There are now a total of {len(existing_characters)} characters.")
 
 
 characters = []
@@ -178,7 +176,10 @@ def get_characters_with_image():
     # Write the characters with images to a JSON file
     with open("characters_with_images.json", "w") as json_file:
         json.dump(characters_with_images, json_file, indent=4, default=lambda o: o.__dict__)
-        print(f"There are {len(characters_with_images)} characters with images.")
+        if len(characters_with_images) > 0:
+            print(f"There are {len(characters_with_images)} characters with images.")
+        else:
+            print("There are no characters with images.")
 
 
 # Get all the characters without an image in images folder
@@ -194,7 +195,10 @@ def get_characters_without_image():
     # Write the characters without images to a JSON file
     with open("characters_without_images.json", "w") as json_file:
         json.dump(characters_without_images, json_file, indent=4, default=lambda o: o.__dict__)
-        print(f"There are {len(characters_without_images)} characters without images.")
+        if len(characters_without_images) > 0:
+            print(f"There are {len(characters_without_images)} characters without images.")
+        else:
+            print("There are no characters without images.")
 
     # Create a list of image prompts of the characters without images
     prompts = []
@@ -216,10 +220,11 @@ print("Welcome to the RPG Character Generator!")
 print("1. Create random characters")
 print("2. Optimize images")
 print("3. Create a specific character")
-print("4. Move files")
+print("4. Archive files")
 print("5. Manage characters")
 print("6. Start the Discord bot")
 print("0. Exit the program")
+from discord_bot import start_discord_bot
 
 choice = input("What do you want to do? ")
 if choice == "1":
@@ -242,7 +247,7 @@ elif choice == "5":
     exit()
 elif choice == "6":
     print("Starting the Discord bot...")
-    os.system("python discord_bot.py")
+    start_discord_bot()
 elif choice == "0":
     print("Goodbye!")
     exit()

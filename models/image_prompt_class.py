@@ -22,7 +22,7 @@ class ImagePrompt:
         self.image_type = self.image_type()
         
     def scene(self):
-        return f"{indefinite_article(self.character.background)} {self.character.ethnicity} {self.character.class_name} named {self.character.full_name}"
+        return f"{indefinite_article(self.character.background)} {self.character.ethnicity} {self.character.character_class} named {self.character.full_name}"
 
     def tones(self):
         return choose_two_and_join(colors)

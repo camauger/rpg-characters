@@ -48,7 +48,7 @@ class Character:
         self.last_name = generate_random_last_name()
         self.full_name = f"{self.first_name} {self.last_name}"
         self.gender = params['gender']
-        self.character_class = params['random_class']
+        self.character_class = params['random_class'].get('name')
         self.character_subclass = params['random_subclass']
         self.background = params['background']
         self.ethnicity = params['random_ethnicity'].get('race')
