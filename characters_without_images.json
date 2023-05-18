@@ -1,1 +1,37 @@
-[]
+[
+    {
+        "id": 6713,
+        "first_name": "Gina",
+        "last_name": "Iusen",
+        "full_name": "Gina Iusen",
+        "gender": "Female",
+        "character_class": "Paladin",
+        "character_subclass": "Oath of Vengeance",
+        "background": "Courtier",
+        "ethnicity": "Elf",
+        "ethnicity_keywords": [
+            "tall",
+            "slender",
+            "pointed ears",
+            "almond-shaped eyes",
+            "graceful",
+            "ageless",
+            "delicate features"
+        ],
+        "age": "Middle-aged",
+        "physical_description": {
+            "physical_trait": "Stocky",
+            "hair_color": "Auburn",
+            "hair_style": "textured long hair",
+            "eye_color": "golden"
+        },
+        "physical_trait": "Compact",
+        "hair_color": "Mahogany",
+        "hair_style": "three-strand braid",
+        "eye_color": "grayish-white",
+        "behavior": "Gina Iusen's ideal is selflessness. Her flaw is arrogant, her bond is forgiveness, her behavior is optimistic, and her nature is cautious.",
+        "image_prompt": "IMAGE_TYPE: Close-up Portrait in the style of Howard Lyon | GENRE: Fantasy | SCENE: a Courtier Elf Paladin named Gina Iusen | ACTOR: Gina Iusen is a Compact female Elf. Gina Iusen has mahogany three-strand braid hair and grayish-white eyes. | TONES: Ruby and Fern Green | LIGHTING: Silhouette Lighting | TAGS: tall, slender, pointed ears, almond-shaped eyes, graceful, ageless, delicate features, Forgotten Realms, Medieval Fantasy, D&D, Dungeons & Dragons. --s 1000 --upbeta --seed 6713",
+        "personality_description": "\n\nGina Iusen is a character who is selfless and forgiving. She is also optimistic and cautious by nature.",
+        "background_story": "\n\nGina Iusen was born into a noble family and raised in the city of Waterdeep. She grew up surrounded by luxury, but she was always aware of the inequality that existed in the world. When she was old enough, she left her family's estate and joined the Paladins of the Order of the Silver Hand. For years, Gina fought for justice and helped those in need. She became known as a great champion of the people.\n\nOne day, Gina was called to the city of Neverwinter to help defend it against a horde of demons. The battle was fierce, but Gina and her allies were able to drive the demons back. In the aftermath of the battle, Gina met a young woman named Alanna. Alanna was orphaned in the attack and she had nowhere to go. Gina took Alanna under her wing and promised to protect her.\n\nNow, Gina continues to travel the world, fighting for justice and helping those in need. She is always on the lookout for new adventure, and she is always ready to help those in need."
+    }
+]

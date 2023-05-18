@@ -224,5 +224,112 @@
         "image_prompt": "IMAGE_TYPE: Profile Portrait in the style of Rockwell Kent | GENRE: Fantasy | SCENE: a Noble Half-Orc Sorcerer named Essy Onarafel | ACTOR: Essy Onarafel is a Graceful female Half-Orc. Essy Onarafel has light brown layered cut with length hair and emerald eyes. | TONES: Beige and Terracotta | LIGHTING: Sunlight | TAGS: tall, muscular, green skin, tusks, broad nose, heavy eyebrows, wild hair, scarred, intimidating, fearsome, savage, brutish, barbaric, Forgotten Realms, Medieval Fantasy, D&D, Dungeons & Dragons. --s 1000 --upbeta --seed 754",
         "personality_description": "\n\nEssy is a merciful person who is forgetful and often forgets important details. She is bonded to peace and is oftenbehaves in a brave and courageous manner. She is very analytical and often looks at things from a logical perspective.",
         "background_story": "\n\nEssy Onarafel was born into a family of Sorcerers who had served the royal court of Cormyr for generations. When she was old enough, she was sent to study at the Wizards' Guild in Silverymoon. There, she learned the ways of magic and honed her skills. After graduation, she returned to Cormyr and took her place in the court.\n\nFor years, she served her kingdom and its people with distinction. She used her magic to protect them from harm and to help them in their times of need. However, there was always a part of her that yearned for more. She wanted to explore the world and see all that it had to offer.\n\nOne day, she heard about a group of adventurers who were looking for someone with her skills. She met with them and, after hearing about their quest, decided to join them. She knows that it won't be easy, but she is ready to face whatever challenges come her way.\n\nEssy's wild magic, a heritage of her half-orc bloodline, was something she had difficulty taming, leading to unpredictable surges of power. Despite the risks, Essy saw potential in this chaos, knowing that if she could learn to harness it, her power could grow beyond conventional limits. She hoped to eventually turn it into a tool for the greater good of Cormyr.\n\nThe pull of the open road led Essy on many quests with her band of adventurers. During their travels, she gathered numerous tales, marvels, and mysteries, her heart becoming even more connected with the magic-infused realm. But no matter the distance she traveled, her loyalty to her homeland remained unscathed. She longed for the day when her wild magic could serve the kingdom she loved.\n\nHer recent adventures, however, unveiled a foreboding prophecy from an ancient draconic tablet: a great calamity is to befall Cormyr. The enigmatic inscription seemed to refer to a dormant chaos, something that mirrored the wild magic within Essy herself. This revelation filled her with dread, yet it also offered an adventure hook: it hinted at the existence of a legendary artifact, the 'Heart of Chaos', said to possess the ability to control and harness wild magic. She believes this artifact could either save her kingdom or cast it into ruin, depending on who wielded it.\n\nWith a deep sense of responsibility, Essy returned to Cormyr, ready to delve into this mystery. Her newfound mission is to find the Heart of Chaos and control its power before it falls into the wrong hands, all while balancing the unpredictable forces within her own being. She is convinced that this path, full of peril and uncertainty, is her destiny. For the love of Cormyr and its people, Essy prepares herself to confront this challenge head on, no matter what awaits her in the depths of the unknown."
+    },
+    {
+        "id": 2711,
+        "first_name": "Idelle",
+        "last_name": "Eldthorniusthorn",
+        "full_name": "Idelle Eldthorniusthorn",
+        "gender": "Female",
+        "character_class": "Paladin",
+        "character_subclass": "Oath of Vengeance",
+        "background": "Uthgardt Tribe Member",
+        "ethnicity": "Half-Elf",
+        "ethnicity_keywords": [
+            "medium height",
+            "slim",
+            "pointed ears",
+            "fair skin",
+            "various eye colors",
+            "mix of human and elf features"
+        ],
+        "age": "Adult",
+        "physical_description": {
+            "physical_trait": "Radiant",
+            "hair_color": "Auburn",
+            "hair_style": "short bob",
+            "eye_color": "amber"
+        },
+        "physical_trait": "Svelte",
+        "hair_color": "Yellow",
+        "hair_style": "blunt bangs",
+        "eye_color": "teal",
+        "behavior": "Idelle Eldthorniusthorn's ideal is discovery. Her flaw is jealous, her bond is friendship, her behavior is ambitious, and her nature is bold.",
+        "image_prompt": "IMAGE_TYPE: Moody Portrait in the style of Cindy Sherman | GENRE: Fantasy | SCENE: an Uthgardt Tribe Member Half-Elf Paladin named Idelle Eldthorniusthorn | ACTOR: Idelle Eldthorniusthorn is a Svelte female Half-Elf. Idelle Eldthorniusthorn has yellow blunt bangs hair and teal eyes. | TONES: Blush and Emerald | LIGHTING: Sunlight | TAGS: medium height, slim, pointed ears, fair skin, various eye colors, mix of human and elf features, Forgotten Realms, Medieval Fantasy, D&D, Dungeons & Dragons. --s 1000 --upbeta --seed 2711",
+        "personality_description": "\n\nIdelle is an ambitious person who is always looking for new discoveries. She can be a bit jealous of others, but she values friendship and is always bold in her actions.",
+        "background_story": "\n\nIdelle Eldthorniusthorn was born into the Uthgardt tribe. She grew up learning the ways of the tribe and the skills needed to survive in the wilderness. When she was old enough, she became a member of the tribe's hunting party. She quickly proved herself to be a skilled hunter and tracker.\n\nOne day, while tracking a deer, she came across a strange stone. It was unlike anything she had ever seen before. She took it back to her tribe and showed it to the shaman. The shaman told her that the stone was a sacred artifact of the Uthgardt tribe. He said that it must be returned to the tribe's sacred site.\n\nIdelle set out on the journey to return the stone. Along the way, she was attacked by a group of bandits. She fought them off and continued on her journey. When she arrived at the sacred site, she placed the stone on the altar. As she did, she had a vision of a great evil rising in the north.\n\nWhen she returned to her tribe, she told the shaman what she had seen. He said that she was chosen by the gods to stop this evil. She was given the title of Paladin and set out on her quest to stop the evil.\n\nOne possible adventure hook for Idelle is that she discovers that the evil she needs to stop is a group of bandits who have been terrorizing the area. She sets out to stop them and discovers that they are being controlled by a powerful wizard. She must stop the wizard before he can control more people and cause more chaos."
+    },
+    {
+        "id": 6713,
+        "first_name": "Gina",
+        "last_name": "Iusen",
+        "full_name": "Gina Iusen",
+        "gender": "Female",
+        "character_class": "Paladin",
+        "character_subclass": "Oath of Vengeance",
+        "background": "Courtier",
+        "ethnicity": "Elf",
+        "ethnicity_keywords": [
+            "tall",
+            "slender",
+            "pointed ears",
+            "almond-shaped eyes",
+            "graceful",
+            "ageless",
+            "delicate features"
+        ],
+        "age": "Middle-aged",
+        "physical_description": {
+            "physical_trait": "Stocky",
+            "hair_color": "Auburn",
+            "hair_style": "textured long hair",
+            "eye_color": "golden"
+        },
+        "physical_trait": "Compact",
+        "hair_color": "Mahogany",
+        "hair_style": "three-strand braid",
+        "eye_color": "grayish-white",
+        "behavior": "Gina Iusen's ideal is selflessness. Her flaw is arrogant, her bond is forgiveness, her behavior is optimistic, and her nature is cautious.",
+        "image_prompt": "IMAGE_TYPE: Close-up Portrait in the style of Howard Lyon | GENRE: Fantasy | SCENE: a Courtier Elf Paladin named Gina Iusen | ACTOR: Gina Iusen is a Compact female Elf. Gina Iusen has mahogany three-strand braid hair and grayish-white eyes. | TONES: Ruby and Fern Green | LIGHTING: Silhouette Lighting | TAGS: tall, slender, pointed ears, almond-shaped eyes, graceful, ageless, delicate features, Forgotten Realms, Medieval Fantasy, D&D, Dungeons & Dragons. --s 1000 --upbeta --seed 6713",
+        "personality_description": "\n\nGina Iusen is a character who is selfless and forgiving. She is also optimistic and cautious by nature.",
+        "background_story": "\n\nGina Iusen was born into a noble family and raised in the city of Waterdeep. She grew up surrounded by luxury, but she was always aware of the inequality that existed in the world. When she was old enough, she left her family's estate and joined the Paladins of the Order of the Silver Hand. For years, Gina fought for justice and helped those in need. She became known as a great champion of the people.\n\nOne day, Gina was called to the city of Neverwinter to help defend it against a horde of demons. The battle was fierce, but Gina and her allies were able to drive the demons back. In the aftermath of the battle, Gina met a young woman named Alanna. Alanna was orphaned in the attack and she had nowhere to go. Gina took Alanna under her wing and promised to protect her.\n\nNow, Gina continues to travel the world, fighting for justice and helping those in need. She is always on the lookout for new adventure, and she is always ready to help those in need."
+    },
+    {
+        "id": 2591,
+        "first_name": "Sigvard",
+        "last_name": "Nethin",
+        "full_name": "Sigvard Nethin",
+        "gender": "Male",
+        "character_class": "Druid",
+        "character_subclass": "Circle of Dreams",
+        "background": "Knight",
+        "ethnicity": "Dragonborn",
+        "ethnicity_keywords": [
+            "tall",
+            "muscular",
+            "dragon-like face",
+            "scales",
+            "tail",
+            "claws",
+            "frills",
+            "dragon anthropomorphic humanoid",
+            "reptilian",
+            "fearsome"
+        ],
+        "age": "Senior",
+        "physical_description": {
+            "physical_trait": "Youthful",
+            "hair_color": "Blond",
+            "hair_style": "updo",
+            "eye_color": "amber"
+        },
+        "physical_trait": "Stocky",
+        "hair_color": "Pink",
+        "hair_style": "textured",
+        "eye_color": "grayish-white",
+        "behavior": "Sigvard Nethin's ideal is honor. His flaw is gullible, his bond is tradition, his behavior is pessimistic, and his nature is bold.",
+        "image_prompt": "IMAGE_TYPE: Three-Quarter Portrait in the style of Gerhard Richter | GENRE: Fantasy | SCENE: a Knight Dragonborn Druid named Sigvard Nethin | ACTOR: Sigvard Nethin is a Stocky male Dragonborn. Sigvard Nethin has pink textured hair and grayish-white eyes. | TONES: Blue and Salmon | LIGHTING: Split Lighting | TAGS: tall, muscular, dragon-like face, scales, tail, claws, frills, dragon anthropomorphic humanoid, reptilian, fearsome, Forgotten Realms, Medieval Fantasy, D&D, Dungeons & Dragons. --s 1000 --upbeta --seed 2591",
+        "personality_description": "\n\nSigvard Nethin is a honorable person who is also gullible and pessimistic. He is bold and stands by tradition.",
+        "background_story": "\n\nSigvard Nethin was born the son of a knight and a druid in the Forgotten Realms. He was raised with the values of honor and tradition. As a child, he was often teased by other kids for being different. He didn't understand why they couldn't just accept him for who he was. When he was old enough, he left home to find his own way in the world.\n\nHe eventually became a knight druid, and found a place where he belonged. He dedicated himself to protecting the natural world and those who couldn't protect themselves. He made it his mission to make sure that no one ever had to go through the pain and isolation that he did as a child.\n\nOne day, Sigvard heard a rumor that a group of bandits was terrorizing a nearby village. He went to investigate, and found that the rumors were true. He was able to track down the bandits and defeat them, but not before they had caused a lot of damage.\n\nThe villagers were grateful, and asked him to stay and help them rebuild. He agreed, and has been living in the village ever since. He's made it his home, and is always ready to defend it from any threat."
     }
 ]

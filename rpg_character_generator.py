@@ -98,7 +98,7 @@ def create_characters(num_characters, characters):
     for _ in range(num_characters):
         new_character = create_random_character()
         characters.append(new_character)
-        print(new_character.image_prompt)
+        # print(new_character.image_prompt)
     return characters
 
 # Manage the creation of random characters

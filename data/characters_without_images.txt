@@ -1,0 +1,2 @@
+IMAGE_TYPE: Close-up Portrait in the style of Howard Lyon | GENRE: Fantasy | SCENE: a Courtier Elf Paladin named Gina Iusen | ACTOR: Gina Iusen is a Compact female Elf. Gina Iusen has mahogany three-strand braid hair and grayish-white eyes. | TONES: Ruby and Fern Green | LIGHTING: Silhouette Lighting | TAGS: tall, slender, pointed ears, almond-shaped eyes, graceful, ageless, delicate features, Forgotten Realms, Medieval Fantasy, D&D, Dungeons & Dragons. --s 1000 --upbeta --seed 6713
+
