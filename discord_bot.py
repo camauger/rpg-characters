@@ -91,7 +91,7 @@ async def on_ready():
 
 @client.event
 async def on_message(message):
-    print(message.content)
+    
     # If only 1 attachment, download it
     if len(message.attachments) == 1:
         for attachment in message.attachments:

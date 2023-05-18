@@ -218,6 +218,7 @@ print("2. Optimize images")
 print("3. Create a specific character")
 print("4. Move files")
 print("5. Manage characters")
+print("6. Start the Discord bot")
 print("0. Exit the program")
 
 choice = input("What do you want to do? ")
@@ -239,6 +240,9 @@ elif choice == "5":
     get_characters_without_image()
     print("Characters managed!")
     exit()
+elif choice == "6":
+    print("Starting the Discord bot...")
+    os.system("python discord_bot.py")
 elif choice == "0":
     print("Goodbye!")
     exit()
