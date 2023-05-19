@@ -122,7 +122,12 @@ def create_random_character_option():
 
         create_more = input("Do you want to create more characters? (y/n) ").lower()
         if create_more != 'y':
-            break
+            start_bot = input("Do you want to start the Discord bot? (y/n) ").lower()
+            if start_bot == 'y':
+                start_discord_bot()
+            else:
+                break
+            
     existing_characters.extend(characters)
     save_characters(existing_characters)
     print(f"Finished creating characters. There are now a total of {len(existing_characters)} characters.")

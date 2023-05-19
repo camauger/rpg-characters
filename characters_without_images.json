@@ -33,5 +33,44 @@
         "image_prompt": "IMAGE_TYPE: Close-up Portrait in the style of Howard Lyon | GENRE: Fantasy | SCENE: a Courtier Elf Paladin named Gina Iusen | ACTOR: Gina Iusen is a Compact female Elf. Gina Iusen has mahogany three-strand braid hair and grayish-white eyes. | TONES: Ruby and Fern Green | LIGHTING: Silhouette Lighting | TAGS: tall, slender, pointed ears, almond-shaped eyes, graceful, ageless, delicate features, Forgotten Realms, Medieval Fantasy, D&D, Dungeons & Dragons. --s 1000 --upbeta --seed 6713",
         "personality_description": "\n\nGina Iusen is a character who is selfless and forgiving. She is also optimistic and cautious by nature.",
         "background_story": "\n\nGina Iusen was born into a noble family and raised in the city of Waterdeep. She grew up surrounded by luxury, but she was always aware of the inequality that existed in the world. When she was old enough, she left her family's estate and joined the Paladins of the Order of the Silver Hand. For years, Gina fought for justice and helped those in need. She became known as a great champion of the people.\n\nOne day, Gina was called to the city of Neverwinter to help defend it against a horde of demons. The battle was fierce, but Gina and her allies were able to drive the demons back. In the aftermath of the battle, Gina met a young woman named Alanna. Alanna was orphaned in the attack and she had nowhere to go. Gina took Alanna under her wing and promised to protect her.\n\nNow, Gina continues to travel the world, fighting for justice and helping those in need. She is always on the lookout for new adventure, and she is always ready to help those in need."
+    },
+    {
+        "id": 7745,
+        "first_name": "Tiena",
+        "last_name": "Ythvargargon",
+        "full_name": "Tiena Ythvargargon",
+        "gender": "Female",
+        "character_class": "Bard",
+        "character_subclass": "College of Whispers",
+        "background": "Folk Hero",
+        "ethnicity": "Tiefling",
+        "ethnicity_keywords": [
+            "horns",
+            "tail",
+            "fangs",
+            "purple skin",
+            "glowing eyes",
+            "sharp features",
+            "devilish",
+            "demonic",
+            "fiendish",
+            "infernal",
+            "hellish"
+        ],
+        "age": "Adult",
+        "physical_description": {
+            "physical_trait": "Wizened",
+            "hair_color": "Black",
+            "hair_style": "halo braid",
+            "eye_color": "multi-colored"
+        },
+        "physical_trait": "Curvy",
+        "hair_color": "Mahogany",
+        "hair_style": "blunt bangs",
+        "eye_color": "dark",
+        "behavior": "Tiena Ythvargargon's ideal is knowledge. Her flaw is overconfident, her bond is peace, her behavior is gentle, and her nature is wise.",
+        "image_prompt": "Moody Portrait in the style of Friedensreich Regentag Dunkelbunt Hundertwasser | Fantasy | a Folk Hero Tiefling Bard named Tiena Ythvargargon | Tiena Ythvargargon is a Curvy female Tiefling. Tiena Ythvargargon has mahogany blunt bangs hair and dark eyes. | Amethyst and Mauve tones | Rim Lighting | horns, tail, fangs, purple skin, glowing eyes, sharp features, devilish, demonic, fiendish, infernal, hellish, Forgotten Realms, Medieval Fantasy, D&D, Dungeons & Dragons. --s 1000 --upbeta --seed 7745",
+        "personality_description": "\n\nTiena Ythvargargon is a wise and gentle person who is overconfident in her knowledge. She is bonded to peace and her ideal is to gain more knowledge.",
+        "background_story": "\n\nTiena Ythvargargon was born to a family of farmers in a small village in the Forgotten Realms. She was always a bright child, and she loved to learn. When she was old enough, she left home to travel the world and learn all she could. She quickly realized that she had a gift for music, and she began to use her songs to teach others about the things she had learned. She quickly became known as a folk hero, and her songs were known far and wide.\n\nOne day, Tiena was approached by a group of adventurers who asked her to join them on a quest to stop a group of bandits who had been terrorizing the countryside. Tiena agreed, and she used her songs to inspire the adventurers to fight for justice. In the end, the adventurers were successful, and Tiena became known as a hero.\n\nNow, Tiena continues to travel the world, using her songs to teach others and inspire them to do good. She is always on the lookout for new adventures, and she is always ready to help those in need."
     }
 ]

@@ -296,5 +296,82 @@
         "image_prompt": "IMAGE_TYPE: Three-Quarter Portrait in the style of Gerhard Richter | GENRE: Fantasy | SCENE: a Knight Dragonborn Druid named Sigvard Nethin | ACTOR: Sigvard Nethin is a Stocky male Dragonborn. Sigvard Nethin has pink textured hair and grayish-white eyes. | TONES: Blue and Salmon | LIGHTING: Split Lighting | TAGS: tall, muscular, dragon-like face, scales, tail, claws, frills, dragon anthropomorphic humanoid, reptilian, fearsome, Forgotten Realms, Medieval Fantasy, D&D, Dungeons & Dragons. --s 1000 --upbeta --seed 2591",
         "personality_description": "\n\nSigvard Nethin is a honorable person who is also gullible and pessimistic. He is bold and stands by tradition.",
         "background_story": "\n\nSigvard Nethin was born the son of a knight and a druid in the Forgotten Realms. He was raised with the values of honor and tradition. As a child, he was often teased by other kids for being different. He didn't understand why they couldn't just accept him for who he was. When he was old enough, he left home to find his own way in the world.\n\nHe eventually became a knight druid, and found a place where he belonged. He dedicated himself to protecting the natural world and those who couldn't protect themselves. He made it his mission to make sure that no one ever had to go through the pain and isolation that he did as a child.\n\nOne day, Sigvard heard a rumor that a group of bandits was terrorizing a nearby village. He went to investigate, and found that the rumors were true. He was able to track down the bandits and defeat them, but not before they had caused a lot of damage.\n\nThe villagers were grateful, and asked him to stay and help them rebuild. He agreed, and has been living in the village ever since. He's made it his home, and is always ready to defend it from any threat."
+    },
+    {
+        "id": 4949,
+        "first_name": "Kenyon",
+        "last_name": "Eldion",
+        "full_name": "Kenyon Eldion",
+        "gender": "Male",
+        "character_class": "Cleric",
+        "character_subclass": "Nature Domain",
+        "background": "Mercenary Veteran",
+        "ethnicity": "Dragonborn",
+        "ethnicity_keywords": [
+            "tall",
+            "muscular",
+            "dragon-like face",
+            "scales",
+            "tail",
+            "claws",
+            "frills",
+            "dragon anthropomorphic humanoid",
+            "reptilian",
+            "fearsome"
+        ],
+        "age": "Ancient",
+        "physical_description": {
+            "physical_trait": "Mysterious",
+            "hair_color": "Dark Brown",
+            "hair_style": "pixie cut",
+            "eye_color": "dark"
+        },
+        "physical_trait": "Toned",
+        "hair_color": "Sandy",
+        "hair_style": "high pony",
+        "eye_color": "dark brown",
+        "behavior": "Kenyon Eldion's ideal is respect. His flaw is arrogant, his bond is community, his behavior is impatient, and his nature is curious.",
+        "image_prompt": "Classic Portrait in the style of Grzegorz Domaradzki | Fantasy | a Mercenary Veteran Dragonborn Cleric named Kenyon Eldion | Kenyon Eldion is a Toned male Dragonborn. Kenyon Eldion has sandy high pony hair and dark brown eyes. | Coral and Cerulean tones | Candlelight | tall, muscular, dragon-like face, scales, tail, claws, frills, dragon anthropomorphic humanoid, reptilian, fearsome, Forgotten Realms, Medieval Fantasy, D&D, Dungeons & Dragons. --s 1000 --upbeta --seed 4949",
+        "personality_description": "\n\nKenyon is a Respectful individual who has a strong sense of community. He can at times be arrogant and impatient, but his curious nature allows him to explore different aspects of life.",
+        "background_story": "\n\nKenyon Eldion was born the only child of a poor miner and a maid in the city of Waterdeep. When he was five, his father was killed in a mining accident. His mother was forced to take whatever work she could find to support them. Kenyon began working in the mines at the age of ten. He worked hard and saved every coin he could. When he was eighteen, he left Waterdeep to find his fortune.\n\nHe became a mercenary, and quickly proved himself to be a skilled fighter. He made a name for himself, and soon became one of the most sought-after mercenaries in the realm. He fought in many battles, and killed countless enemies. He was respected by his comrades and feared by his enemies.\n\nEventually, Kenyon grew tired of the life of a mercenary. He yearned for something more than just fighting and killing. He wanted to make a difference in the world. He became a cleric of Tyr, the god of justice. He devoted himself to his new calling, and quickly rose through the ranks of the church.\n\nNow, Kenyon is a veteran cleric, and he has been called to Waterdeep on a mission by the church. He is to investigate a possible cult of Tyr that has been preying on the city's poor and helpless. Kenyon is eager to put his skills to use in service of his god, and he is determined to root out the cult and bring justice to those who have been harmed by it."
+    },
+    {
+        "id": 5179,
+        "first_name": "Leslie",
+        "last_name": "Ethsyl",
+        "full_name": "Leslie Ethsyl",
+        "gender": "Female",
+        "character_class": "Druid",
+        "character_subclass": "Circle of the Shepherd",
+        "background": "Criminal",
+        "ethnicity": "Tiefling",
+        "ethnicity_keywords": [
+            "horns",
+            "tail",
+            "fangs",
+            "purple skin",
+            "glowing eyes",
+            "sharp features",
+            "devilish",
+            "demonic",
+            "fiendish",
+            "infernal",
+            "hellish"
+        ],
+        "age": "Youthful",
+        "physical_description": {
+            "physical_trait": "Radiant",
+            "hair_color": "Indigo",
+            "hair_style": "tail",
+            "eye_color": "emerald"
+        },
+        "physical_trait": "Enigmatic",
+        "hair_color": "Platinum",
+        "hair_style": "tail",
+        "eye_color": "amber",
+        "behavior": "Leslie Ethsyl's ideal is innovation. Her flaw is cynical, her bond is love, her behavior is easygoing, and her nature is inquisitive.",
+        "image_prompt": "Photorealistic portrait in the style of Kim Jung Gi | Fantasy | a Criminal Tiefling Druid named Leslie Ethsyl | Leslie Ethsyl is an Enigmatic female Tiefling. Leslie Ethsyl has platinum tail hair and amber eyes. | Lemon and Yellow Ochre tones | Split Lighting | horns, tail, fangs, purple skin, glowing eyes, sharp features, devilish, demonic, fiendish, infernal, hellish, Forgotten Realms, Medieval Fantasy, D&D, Dungeons & Dragons. --s 1000 --upbeta --seed 5179",
+        "personality_description": "\n\nLeslie is an innovative person who is easygoing and inquisitive by nature. She has a cynical personality and her main bond is love.",
+        "background_story": "\n\nLeslie Ethsyl has always been an outsider. She grew up on the streets of Neverwinter and quickly learned that the only way to survive was to be quick and cunning. She soon developed a reputation as a talented thief. Her skills caught the attention of a local crime lord who took her under his wing. Leslie quickly rose through the ranks of the criminal underworld. She became known for her daring heists and her willingness to take on any job, no matter how dangerous.\n\nLeslie's criminal career came to an abrupt end when she was caught by the authorities. She was sentenced to life in prison. It was in prison that Leslie met a druid who introduced her to the ways of nature. Leslie quickly developed a deep connection to the natural world. She used her druidic powers to escape from prison and disappear into the wilds of the Forgotten Realms.\n\nLeslie now uses her druidic powers to help those who have been wronged by the criminal justice system. She is a champion of the oppressed and the underdog. Leslie is always looking for new ways to help those in need. She is drawn to adventure and excitement."
     }
 ]
