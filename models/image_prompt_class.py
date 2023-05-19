@@ -44,4 +44,4 @@ class ImagePrompt:
         return random.choice(portrait)
     
     def craft_image_prompt(self):
-        return f"IMAGE_TYPE: {self.image_type} in the style of {self.style} | GENRE: {self.genre} | SCENE: {self.scene} | ACTOR: {self.actor} | TONES: {self.tones} | LIGHTING: {self.lighting} | TAGS: {self.tags}"
+        return f"{self.image_type} in the style of {self.style} | {self.genre} | {self.scene} | {self.actor} | {self.tones} tones | {self.lighting} | {self.tags}"
