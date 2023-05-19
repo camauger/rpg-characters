@@ -27,6 +27,13 @@ def index():
     # Render the template
     return render_template('index.html', characters=load_characters())
 
+# Route for the about page
+@app.route('/about.html')
+def about():
+    # Render the template
+    return render_template('about.html')
+
+
 # Route for individual character based on ID
 @app.route('/character/<int:id>.html')
 def character(id):
