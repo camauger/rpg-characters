@@ -41,6 +41,8 @@ Additionally, it creates physical and psychological descriptions for the charact
 
 Finally, the __str__ method is used to return a string representation of the character.
 """
+
+
 class Character:
     def __init__(self, id, params):
         self.id = id

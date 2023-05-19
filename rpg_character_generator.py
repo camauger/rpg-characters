@@ -2,12 +2,20 @@ import json, random
 from settings.random_settings import pick_random_age, pick_random_gender, pick_random_ethnicity, pick_random_character_class, pick_random_subclass, pick_random_background, get_ethnicity_keywords
 from models.character_class import Character
 from utils.image_optim import optimize_images
-from discord_bot import move_files
+from discord_bot import move_files, start_discord_bot
 import os
 
 MAX_CHARACTER_ID = 9999
 MAX_CHARACTER_COUNT = 9999
 
+def check_character_count():
+    existing_characters = load_characters()
+    if len(existing_characters) > MAX_CHARACTER_COUNT:
+        print("There are too many characters. Please delete some characters before creating a new one.")
+        return False
+    else:
+        return True
+    
 # Get the number of characters and their IDs from the JSON file
 # Usage:
 #character_count, existing_ids = get_character_info()
@@ -34,23 +42,21 @@ def generate_character_id(existing_ids):
 
 
 # Create a non random character
-def create_specific_character(params):
+def create_specific_character():
     character_count, existing_ids = get_character_info()
-    if character_count <= MAX_CHARACTER_COUNT:
-        params["random class"] = input("What class do you want your character to be? ")
-        params['random_subclass'] = input("What subclass do you want your character to be? ")
-        params['random_class_name'] = params['random_class']
-        params['random_ethnicity']= input("What is your character's ethnicity?")
-        params['random_ethnicity_name'] = params['random_ethnicity'].get('race')
-        params['ethnicity_keywords'] = get_ethnicity_keywords(params['random_ethnicity'])
-        params['age'] = input("How old is your character? ")
-        params['gender'] = input("What is your character's gender?")
-        params['background'] = input("What is your character's background?")
-        new_character = Character(generate_character_id(existing_ids), params)
-        return new_character
-    else:
-        print("There are too many characters. Please delete some characters before creating a new one.")
-
+    params = {}
+    params["random class"] = input("What class do you want your character to be? ")
+    params['random_subclass'] = input("What subclass do you want your character to be? ")
+    params['random_class_name'] = params['random_class']
+    params['random_ethnicity']= input("What is your character's ethnicity?")
+    params['random_ethnicity_name'] = params['random_ethnicity'].get('race')
+    params['ethnicity_keywords'] = get_ethnicity_keywords(params['random_ethnicity'])
+    params['age'] = input("How old is your character? ")
+    params['gender'] = input("What is your character's gender?")
+    params['background'] = input("What is your character's background?")
+    new_character = Character(generate_character_id(existing_ids), params)
+    return new_character
+   
 
 # Create a random character
 def create_random_params():
@@ -64,18 +70,17 @@ def create_random_params():
     params['age'] = pick_random_age()
     params['gender'] = pick_random_gender()
     params['background'] = pick_random_background()
-
     return params
 
 def create_random_character():
     params = create_random_params()
     character_count, existing_ids = get_character_info()
-    if character_count <= MAX_CHARACTER_COUNT:
+    if check_character_count():
         new_character = Character(generate_character_id(existing_ids), params)
         print(new_character.image_prompt)
         return new_character
     else:
-        print("There are too many characters. Please delete some characters before creating a new one.")
+        None
 
 
 #Load the characters from the json file
@@ -224,17 +229,18 @@ print("4. Archive files")
 print("5. Manage characters")
 print("6. Start the Discord bot")
 print("0. Exit the program")
-from discord_bot import start_discord_bot
 
 choice = input("What do you want to do? ")
 if choice == "1":
-    create_random_character_option()
+    if check_character_count():
+        create_random_character_option()
 elif choice == "2":
     optimize_images("./large_images", "./static/images")
     print("Images optimized!")
     exit()
 elif choice == "3":
-    create_specific_character()
+    if check_character_count():
+        create_specific_character()
 elif choice == "4":
     move_files()
     print("Files moved!")
