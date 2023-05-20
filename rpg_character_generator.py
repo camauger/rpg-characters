@@ -6,15 +6,32 @@ from utils.image_optim import optimize_images
 from discord_bot import move_files, start_discord_bot
 import os
 
+
 class CharacterManager:
     """Class to manage characters"""
-    MAX_CHARACTER_ID = 9999 # Maximum character ID
-    MAX_CHARACTER_COUNT = 9999 # Maximum number of characters
-    FILE_PATH = "characters.json" # Path to the JSON file containing character data
+    """
+    The CharacterManager class is used to manage characters in a game. It has several methods that can be used to create, save, and manage characters.
+    The __init__ method initializes the class by loading existing characters from a JSON file.
+    The load_characters method reads the JSON file and returns a list of existing characters.
+    The save_characters method saves characters to a JSON file. The check_character_count method checks if the maximum number of characters has been reached.
+    The get_character_info method gets information about existing characters. The generate_character_id method generates a unique character ID.
+    The get_character_params method gets parameters for a new character.
+    The create_character method creates a new character.
+    The create_characters method creates multiple characters.
+    The create_random_character_option method creates a number of random characters.
+    The manage_characters method manages existing characters.
+    The get_characters_with_image method gets characters with images.
+    The get_characters_without_image method gets characters without images.
+    The get_files_in_folder method gets a list of files in a folder.
+    """
+    MAX_CHARACTER_ID = 9999  # Maximum character ID
+    MAX_CHARACTER_COUNT = 9999  # Maximum number of characters
+    FILE_PATH = "characters.json"  # Path to the JSON file containing character data
 
     def __init__(self):
         """Initialize the CharacterManager class"""
-        self.characters = self.load_characters() # Load existing characters from the JSON file
+        self.characters = self.load_characters(
+        )  # Load existing characters from the JSON file
 
     def load_characters(self):
         """Load existing characters from the JSON file"""
@@ -32,7 +49,8 @@ class CharacterManager:
         if filename is None:
             filename = self.FILE_PATH
         with open(filename, "w") as json_file:
-            json.dump(characters, json_file, indent=4, default=lambda o: o.__dict__)
+            json.dump(characters, json_file, indent=4,
+                      default=lambda o: o.__dict__)
 
     def check_character_count(self):
         """Check if the maximum number of characters has been reached"""
@@ -40,7 +58,7 @@ class CharacterManager:
         if len(existing_characters) > self.MAX_CHARACTER_COUNT:
             print(
                 "There are too many characters. Please delete some characters before creating a new one.")
-            return False    
+            return False
         return True
 
     def get_character_info(self):
@@ -65,24 +83,32 @@ class CharacterManager:
     def get_character_params(self, is_random):
         """Get parameters for a new character"""
         params = {}
-        params['random_class'] = pick_random_character_class() if is_random else input("What class do you want your character to be? ")
-        params['random_subclass'] = pick_random_subclass(params['random_class']) if is_random else input("What subclass do you want your character to be? ")
+        params['random_class'] = pick_random_character_class() if is_random else input(
+            "What class do you want your character to be? ")
+        params['random_subclass'] = pick_random_subclass(params['random_class']) if is_random else input(
+            "What subclass do you want your character to be? ")
         params['random_class_name'] = params['random_class']
-        params['random_ethnicity'] = pick_random_ethnicity() if is_random else input("What is your character's ethnicity?")
-        params['random_ethnicity_name'] = params['random_ethnicity'].get('race')
-        params['ethnicity_keywords'] = get_ethnicity_keywords(params['random_ethnicity'])
-        params['age'] = pick_random_age() if is_random else input("How old is your character? ")
-        params['gender'] = pick_random_gender() if is_random else input("What is your character's gender?")
-        params['background'] = pick_random_background() if is_random else input("What is your character's background?")
+        params['random_ethnicity'] = pick_random_ethnicity(
+        ) if is_random else input("What is your character's ethnicity?")
+        params['random_ethnicity_name'] = params['random_ethnicity'].get(
+            'race')
+        params['ethnicity_keywords'] = get_ethnicity_keywords(
+            params['random_ethnicity'])
+        params['age'] = pick_random_age() if is_random else input(
+            "How old is your character? ")
+        params['gender'] = pick_random_gender() if is_random else input(
+            "What is your character's gender?")
+        params['background'] = pick_random_background() if is_random else input(
+            "What is your character's background?")
         return params
-    
+
     def create_character(self, is_random):
         """Create a new character"""
         character_count, existing_ids = self.get_character_info()
         if self.check_character_count():
             params = self.get_character_params(is_random)
             new_character = Character(self.generate_character_id(existing_ids),
-            params)
+                                      params)
             print(new_character.image_prompt)
             return new_character
         return None
@@ -92,7 +118,7 @@ class CharacterManager:
         for _ in range(num_characters):
             new_character = self.create_character(is_random=True)
             self.characters.append(new_character)
-    
+
     def create_random_character_option(self):
         """Create a number of random characters"""
         print("This program will create a number of random characters for you.")
@@ -103,21 +129,21 @@ class CharacterManager:
                 "How many characters do you want to create? ")
             while not num_characters.isdigit() or int(num_characters) <= 0:
                 num_characters = input(
-                "Please enter a valid number greater than 0: ")
+                    "Please enter a valid number greater than 0: ")
 
             num_characters = int(num_characters)
-            characters = self.create_characters(num_characters, characters)
+            characters = self.create_characters(num_characters)
             print(f"Created {len(characters)} character(s).")
 
             self.characters.extend(characters)
             self.save_characters(self.characters)
             print(
-            f"Finished creating characters. There are now a total of {len(existing_characters)} characters.")
+                f"Finished creating characters. There are now a total of {len(existing_characters)} characters.")
             create_more = input(
-            "Do you want to create more characters? (y/n) ").lower()
+                "Do you want to create more characters? (y/n) ").lower()
             if create_more != 'y':
                 start_bot = input(
-                "Do you want to start the Discord bot? (y/n) ").lower()
+                    "Do you want to start the Discord bot? (y/n) ").lower()
             if start_bot == 'y':
                 start_discord_bot()
             else:
@@ -125,10 +151,12 @@ class CharacterManager:
 
     def manage_characters(self):
         """Manage existing characters"""
-        characters_dicts = [character.__dict__ for character in self.characters]
+        characters_dicts = [
+            character.__dict__ for character in self.characters]
         self.characters.extend(characters_dicts)
         self.save_characters(self.characters)
-        prompts = [character_data.get('image_prompt') + '\n\n' for character_data in self.characters]
+        prompts = [character_data.get(
+            'image_prompt') + '\n\n' for character_data in self.characters]
         with open('data/image_prompts.txt', 'w') as file:
             file.writelines(prompts)
 
@@ -136,23 +164,28 @@ class CharacterManager:
         """Get characters with images"""
         folder_path = "./static/images/"
         files_in_folder = self.get_files_in_folder(folder_path)
-        characters_with_images = [character for character in self.characters if f"{character.get('id')}.png" in files_in_folder]
-        self.save_characters(characters_with_images, "characters_with_images.json")
+        characters_with_images = [
+            character for character in self.characters if f"{character.get('id')}.png" in files_in_folder]
+        self.save_characters(characters_with_images,
+                             "characters_with_images.json")
         print(f"There are {len(characters_with_images)} characters with images." if characters_with_images else "There are no characters with images.")
-
 
     def get_characters_without_image(self):
         """Get characters without images"""
         files_in_folder = self.get_files_in_folder("./static/images/")
-        characters_without_images = [character for character in self.characters if f"{character.get('id')}.png" not in files_in_folder]
-        self.save_characters(characters_without_images, "characters_without_images.json")
-        prompts = [character_data.get('image_prompt') + '\n\n' for character_data in characters_without_images]
+        characters_without_images = [
+            character for character in self.characters if f"{character.get('id')}.png" not in files_in_folder]
+        self.save_characters(characters_without_images,
+                             "characters_without_images.json")
+        prompts = [character_data.get(
+            'image_prompt') + '\n\n' for character_data in characters_without_images]
         with open('data/characters_without_images.txt', 'w') as file:
             file.writelines(prompts)
 
     def get_files_in_folder(self, folder_path):
         """Get list of files in a folder"""
         return [file_name for file_name in os.listdir(folder_path) if os.path.isfile(os.path.join(folder_path, file_name))]
+
 
 def main():
     print("Welcome to the RPG Character Generator!")
@@ -178,7 +211,7 @@ def main():
         exit()
     elif choice == "3":
         if character_manager.check_character_count():
-            character_manager.create_specific_character()
+            character_manager.create_character(is_random=False)
     elif choice == "4":
         move_files()
         print("Files moved!")
