@@ -1,9 +1,6 @@
 from PIL import Image
 import os
 
-from PIL import Image
-import os
-
 def optimize_images(input_directory, output_directory, quality=90, max_size=1024):
     if not os.path.exists(output_directory):
         os.makedirs(output_directory)
