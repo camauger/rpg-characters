@@ -85,8 +85,8 @@ class Character:
 
             # Assign subrace information
             self.subrace = params.get('random_subrace', {})
-            self.subrace_name = self.subrace.get('name')
-            self.subrace_id = self.subrace.get('id')
+            self.subrace_name = self.subrace.get('name', '')
+            self.subrace_id = self.subrace.get('id', '')
         
             # Assign ethnicity keywords
             self.ethnicity_keywords = get_ethnicity_keywords(random_ethnicity, self.subrace)
@@ -99,13 +99,15 @@ class Character:
             self.hair_style = create_hair_style()
             self.eye_color = create_eye_color()
             self.behavior = self.create_behavior()
+            self.picture_id = self.create_picture_id()
             self.image_prompt = self.create_image_prompt()
             self.personality_description = self.create_personality_description()
             self.background_story = self.create_background_story()
-            self.picture_id = self.create_picture_id()
+            
         
         except (KeyError, TypeError) as e:
             raise Exception(f"Invalid parameter format: {e}")
+
 
     def get_subrace_name(self):
         if self.subrace is not None:
@@ -122,7 +124,8 @@ class Character:
         else:
             gender_id = '00'
 
-        return gender_id + self.ethnicity_id + self.subrace_id + self.character_class_id + self.character_subclass_id + self.background_id + str(self.id)
+        return (gender_id or '') + (self.ethnicity_id or '') + (self.subrace_id or '') + (self.character_class_id or '') + (self.character_subclass_id or '') + (self.background_id or '') + str(self.id)
+
 
     def create_physical_description_text(self):
         physical_description = f"{indefinite_article(self.physical_trait)} {self.gender.lower()} {self.ethnicity}. {self.full_name} has {self.hair_color.lower()} {self.hair_style} hair and {self.eye_color} eyes"

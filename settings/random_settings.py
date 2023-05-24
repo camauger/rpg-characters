@@ -40,7 +40,9 @@ def pick_random_ethnicity():
         return random_race
 
 def get_ethnicity_keywords(ethnicity, subrace):
-    return ethnicity['keywords'] + subrace['keywords']
+    ethnicity_keywords = ethnicity.get('keywords', [])
+    subrace_keywords = subrace.get('keywords', [])
+    return ethnicity_keywords + subrace_keywords
 
 def pick_random_subrace(race):
     # If race has no subrace
