@@ -33,12 +33,16 @@ def pick_random_ethnicity():
     with open('data/ethnicity_data.json', 'r') as f:
         # Load the JSON string into a Python dictionary
         data = json.load(f)
-        random_class = random.choice(data['ethnicity'])
-        return random_class
+        random_race = random.choice(data['ethnicity'])
+        return random_race
 
-def get_ethnicity_keywords(ethnicity):
-    return ethnicity['keywords']
+def get_ethnicity_keywords(ethnicity, subrace):
+    return ethnicity['keywords'] + subrace['keywords']
 
+def pick_random_subrace(race):
+    if race['subraces'] == None:
+        return None
+    return random.choice(race['subraces'])
 
 # Pick a random class
 def pick_random_character_class():

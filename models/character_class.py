@@ -2,7 +2,7 @@ from models.character_behavior_class import CharacterBehavior
 from models.physical_description_class import PhysicalDescription
 from models.image_prompt_class import ImagePrompt
 from settings.name_composition import generate_random_first_name, generate_random_last_name
-from settings.random_settings import create_eye_color, create_hair_color, create_hair_style, create_physical_trait
+from settings.random_settings import create_eye_color, create_hair_color, create_hair_style, create_physical_trait, get_ethnicity_keywords
 import requests
 import json
 from utils.indefinite_article import indefinite_article
@@ -51,10 +51,11 @@ class Character:
         self.full_name = f"{self.first_name} {self.last_name}"
         self.gender = params['gender']
         self.character_class = params['random_class'].get('name')
-        self.character_subclass = params['random_subclass']
+        self.character_subclass = params['random_subclass'].get('name')
         self.background = params['background']
-        self.ethnicity = params['random_ethnicity'].get('race')
-        self.ethnicity_keywords = params['ethnicity_keywords']
+        self.ethnicity = params['random_ethnicity']['race']
+        self.subrace = params['random_subrace']['name']
+        self.ethnicity_keywords = get_ethnicity_keywords(params['random_ethnicity'], params['random_subrace'])
         self.age = params['age']
         self.physical_description = self.create_physical_description()
         self.physical_trait = create_physical_trait()
@@ -66,7 +67,7 @@ class Character:
         # Has to be last!
         self.personality_description = self.create_personality_description()
         self.background_story = self.create_background_story()
-
+        self.full_id = params['random_subclass'].get('id')
 
     def create_physical_description_text(self):
         physical_description = f"{indefinite_article(self.physical_trait)} {self.gender.lower()} {self.ethnicity}. {self.full_name} has {self.hair_color.lower()} {self.hair_style} hair and {self.eye_color} eyes"

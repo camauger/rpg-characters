@@ -2,6 +2,7 @@
   "ethnicity": [
     {
       "race": "Human",
+      "id": "001",
       "keywords": [
         "medium height",
         "medium build"
@@ -9,6 +10,7 @@
     },
     {
       "race": "Dwarf",
+      "id": "002",
       "keywords": [
         "short",
         "stocky",
@@ -21,10 +23,35 @@
         "hardy",
         "stubborn",
         "gruff"
+      ],
+      "subraces": [
+        {
+          "name": "Hill Dwarf",
+          "id": "0021",
+          "keywords": [
+            "stout and tough",
+            "exceptional endurance",
+            "wisdom",
+            "strength"
+          ]
+        },
+        {
+          "name": "Mountain Dwarf",
+          "id": "0022",
+          "keywords": [
+            "warrior",
+            "miner",
+            "smith",
+            "artisans",
+            "hardiness",
+            "combat training"
+          ]
+        }
       ]
     },
     {
       "race": "Elf",
+      "id": "003",
       "keywords": [
         "tall",
         "slender",
@@ -33,10 +60,48 @@
         "graceful",
         "ageless",
         "delicate features"
+      ],
+      "subraces": [
+        {
+          "name": "High Elf",
+          "id": "0031",
+          "keywords": [
+            "arcane",
+            "magic",
+            "scholarly",
+            "graceful",
+            "weapon training"
+          ]
+        },
+        {
+          "name": "Wood Elf",
+          "id": "0032",
+          "keywords": [
+            "agile",
+            "quick",
+            "forest dwellers",
+            "masters of the bow",
+            "fleet-footed",
+            "mask of the wild"
+          ]
+        },
+        {
+          "name": "Dark Elf (Drow)",
+          "id": "0033",
+          "keywords": [
+            "underdark",
+            "subterranean",
+            "cunning",
+            "mysterious",
+            "superior darkvision",
+            "magic resistance"
+          ]
+        }
       ]
     },
     {
       "race": "Halfling",
+      "id": "004",
       "keywords": [
         "small",
         "childlike",
@@ -46,20 +111,68 @@
         "barefoot",
         "cheerful",
         "nimble"
+      ],
+      "subraces": [
+        {
+          "name": "Lightfoot Halfling",
+          "id": "0041",
+          "keywords": [
+            "natural stealth",
+            "hide easily",
+            "good-natured",
+            "friendly"
+          ]
+        },
+        {
+          "name": "Stout Halfling",
+          "id": "0042",
+          "keywords": [
+            "exceptional fortitude",
+            "resilient",
+            "durable",
+            "stout resilience"
+          ]
+        }
       ]
     },
     {
       "race": "Gnome",
+      "id": "005",
       "keywords": [
         "very small",
         "bright eyes",
         "round face",
         "pointed ears",
         "rosy cheeks"
+      ],
+      "subraces": [
+        {
+          "name": "Forest Gnome",
+          "id": "0051",
+          "keywords": [
+            "illusion magic",
+            "stealth",
+            "pranks",
+            "love of nature",
+            "mask of the wild"
+          ]
+        },
+        {
+          "name": "Rock Gnome",
+          "id": "0052",
+          "keywords": [
+            "tinkerer",
+            "engineering",
+            "inventions",
+            "mechanical devices",
+            "tinkering abilities"
+          ]
+        }
       ]
     },
     {
       "race": "Half-Elf",
+      "id": "006",
       "keywords": [
         "medium height",
         "slim",
@@ -71,6 +184,7 @@
     },
     {
       "race": "Half-Orc",
+      "id": "007",
       "keywords": [
         "tall",
         "muscular",
@@ -89,6 +203,7 @@
     },
     {
       "race": "Tiefling",
+      "id": "008",
       "keywords": [
         "horns",
         "tail",
@@ -101,11 +216,43 @@
         "fiendish",
         "infernal",
         "hellish"
-
+      ],
+      "subraces": [
+        {
+          "name": "Asmodeus Tiefling",
+          "id": "0081",
+          "keywords": [
+            "Asmodeus bloodline",
+            "rulership",
+            "leadership",
+            "commanding presence"
+          ]
+        },
+        {
+          "name": "Mephistopheles Tiefling",
+          "id": "0082",
+          "keywords": [
+            "Mephistopheles bloodline",
+            "fire magic",
+            "manipulation",
+            "deception"
+          ]
+        },
+        {
+          "name": "Zariel Tiefling",
+          "id": "0083",
+          "keywords": [
+            "Zariel bloodline",
+            "warriors",
+            "combat prowess",
+            "resilience"
+          ]
+        }
       ]
     },
     {
       "race": "Dragonborn",
+      "id": "009",
       "keywords": [
         "tall",
         "muscular",
@@ -121,6 +268,7 @@
     },
     {
       "race": "Aasimar",
+      "id": "010",
       "keywords": [
         "radiant",
         "glowing eyes",
@@ -129,6 +277,38 @@
         "celestial",
         "ethereal",
         "angelic"
+      ],
+      "subraces": [
+        {
+          "name": "Protector Aasimar",
+          "id": "0101",
+          "keywords": [
+            "angelic guardian",
+            "healing hands",
+            "wings",
+            "celestial resistance"
+          ]
+        },
+        {
+          "name": "Scourge Aasimar",
+          "id": "0102",
+          "keywords": [
+            "radiant consumption",
+            "destructive energy",
+            "burst of radiant damage",
+            "divine light"
+          ]
+        },
+        {
+          "name": "Fallen Aasimar",
+          "id": "0103",
+          "keywords": [
+            "dark transformation",
+            "necrotic damage",
+            "wings of shadow",
+            "divine aversion"
+          ]
+        }
       ]
     }
   ]

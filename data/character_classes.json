@@ -1,113 +1,238 @@
 {
-    "classes": [
-      {
-        "name": "Barbarian",
-        "subclasses": [
-          "Path of the Berserker",
-          "Path of the Totem Warrior",
-          "Path of the Battlerager",
-          "Path of the Wild Soul"
-        ]
-      },
-      {
-        "name": "Bard",
-        "subclasses": [
-          "College of Lore",
-          "College of Valor",
-          "College of Glamour",
-          "College of Whispers"
-        ]
-      },
-      {
-        "name": "Cleric",
-        "subclasses": [
-          "Life Domain",
-          "Light Domain",
-          "Nature Domain",
-          "Tempest Domain"
-        ]
-      },
-      {
-        "name": "Druid",
-        "subclasses": [
-          "Circle of the Land",
-          "Circle of the Moon",
-          "Circle of Dreams",
-          "Circle of the Shepherd"
-        ]
-      },
-      {
-        "name": "Fighter",
-        "subclasses": [
-          "Champion",
-          "Battle Master",
-          "Eldritch Knight",
-          "Psi Warrior"
-        ]
-      },
-      {
-        "name": "Monk",
-        "subclasses": [
-          "Way of the Open Hand",
-          "Way of Shadow",
-          "Way of the Four Elements",
-          "Way of the Astral Self"
-        ]
-      },
-      {
-        "name": "Paladin",
-        "subclasses": [
-          "Oath of Devotion",
-          "Oath of the Ancients",
-          "Oath of Vengeance",
-          "Oath of Redemption"
-        ]
-      },
-      {
-        "name": "Ranger",
-        "subclasses": [
-          "Hunter",
-          "Beast Master",
-          "Horizon Walker",
-          "Gloom Stalker"
-        ]
-      },
-      {
-        "name": "Rogue",
-        "subclasses": [
-          "Thief",
-          "Assassin",
-          "Arcane Trickster",
-          "Swashbuckler"
-        ]
-      },
-      {
-        "name": "Sorcerer",
-        "subclasses": [
-          "Draconic Bloodline",
-          "Wild Magic",
-          "Divine Soul",
-          "Shadow Magic"
-        ]
-      },
-      {
-        "name": "Warlock",
-        "subclasses": [
-          "The Archfey",
-          "The Fiend",
-          "The Great Old One",
-          "The Hexblade"
-        ]
-      },
-      {
-        "name": "Wizard",
-        "subclasses": [
-          "School of Abjuration",
-          "School of Conjuration",
-          "School of Divination",
-          "School of Enchantment"
-        ]
-      }
-    ]
-  }
-  
+  "classes": [
+        {
+          "name": "Barbarian",
+          "id": "010",
+          "subclasses": [
+            {
+              "name": "Path of the Berserker",
+              "id": "011"
+            },
+            {
+              "name": "Path of the Totem Warrior",
+              "id": "012"
+            },
+            {
+              "name": "Path of the Battlerager",
+              "id": "013"
+            },
+            {
+              "name": "Path of the Wild Soul",
+              "id": "014"
+            }
+          ]
+        },
+        {
+          "name": "Bard",
+          "id": "020",
+          "subclasses": [
+            {
+              "name": "College of Lore",
+              "id": "021"
+            },
+            {
+              "name": "College of Valor",
+              "id": "022"
+            },
+            {
+              "name": "College of Glamour",
+              "id": "023"
+            },
+            {
+              "name": "College of Whispers",
+              "id": "024"
+            }
+          ]
+        },
+        {
+          "name": "Cleric",
+          "id": "030",
+          "subclasses": [
+            {
+              "name": "Life Domain",
+              "id": "031"
+            },
+            {
+              "name": "Light Domain",
+              "id": "032"
+            },
+            {
+              "name": "Nature Domain",
+              "id": "033"
+            },
+            {
+              "name": "Tempest Domain",
+              "id": "034"
+            }
+          ]
+        },
+        {
+          "name": "Druid",
+          "id": "040",
+          "subclasses": [
+            {
+              "name": "Circle of the Land",
+              "id": "041"
+            },
+            {
+              "name": "Circle of the Moon",
+              "id": "042"
+            },
+            {
+              "name": "Circle of Dreams",
+              "id": "043"
+            },
+            {
+              "name": "Circle of the Shepherd",
+              "id": "044"
+            }
+          ]
+        },
+        {
+          "name": "Fighter",
+          "id": "050",
+          "subclasses": [
+            {
+              "name": "Champion",
+              "id": "051"
+            },
+            {
+              "name": "Battle Master",
+              "id": "052"
+            },
+            {
+              "name": "Eldritch Knight",
+              "id": "053"
+            },
+            {
+              "name": "Psi Warrior",
+              "id": "054"
+            }
+          ]
+        },
+        {
+          "name": "Monk",
+          "id": "060",
+          "subclasses": [
+            {
+              "name": "Way of the Open Hand",
+              "id": "061"
+            },
+            {
+              "name": "Way of Shadow",
+              "id": "062"
+            },
+            {
+              "name": "Way of the Four Elements",
+              "id": "063"
+            },
+            {
+              "name": "Way of the Astral Self",
+              "id": "064"
+            }
+          ]
+        },
+        {
+          "name": "Paladin",
+          "id": "070",
+          "subclasses": [
+            {
+              "name": "Oath of Devotion",
+              "id": "071"
+            },
+            {
+              "name": "Oath of the Ancients",
+              "id": "072"
+            },
+            {
+              "name": "Oath of Vengeance",
+              "id": "073"
+            },
+            {
+              "name": "Oath of Redemption",
+              "id": "074"
+            }
+          ]
+        },
+        {
+          "name": "Ranger",
+          "id": "080",
+          "subclasses": [
+            {
+              "name": "Hunter",
+              "id": "081"
+            },
+            {
+              "name": "Beast Master",
+              "id": "082"
+            },
+            {
+              "name": "Horizon Walker",
+              "id": "083"
+            },
+            {
+              "name": "Gloom Stalker",
+              "id": "084"
+            }
+          ]
+        },
+        {
+          "name": "Rogue",
+          "id": "090",
+          "subclasses": [
+            {
+              "name": "Thief",
+              "id": "091"
+            },
+            {
+              "name": "Assassin",
+              "id": "092"
+            },
+            {
+              "name": "Arcane Trickster",
+              "id": "093"
+            },
+            {
+              "name": "Swashbuckler",
+              "id": "094"
+            }
+          ]
+        },
+        {
+          "name": "Sorcerer",
+          "id": "100",
+          "subclasses": [
+            {
+              "name": "Draconic Bloodline",
+              "id": "101"
+            },
+            {
+              "name": "Wild Magic",
+              "id": "102"
+            },
+            {
+              "name": "Divine Soul",
+              "id": "103"
+            },
+            {
+              "name": "Shadow Magic",
+              "id": "104"
+            }
+          ]
+        },
+        {
+          "name": "Warlock",
+          "id": "110",
+          "subclasses": [
+            {
+              "name": "The Archfey",
+              "id": "111"
+            },
+            {
+              "name": "The Fiend",
+              "id": "112"
+            }
+          ]
+        }
+      ]
+}

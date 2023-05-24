@@ -1,6 +1,6 @@
 import json
 import random
-from settings.random_settings import pick_random_age, pick_random_gender, pick_random_ethnicity, pick_random_character_class, pick_random_subclass, pick_random_background, get_ethnicity_keywords
+from settings.random_settings import pick_random_age, pick_random_gender, pick_random_ethnicity, pick_random_subrace, pick_random_character_class, pick_random_subclass, pick_random_background, get_ethnicity_keywords
 from models.character_class import Character
 from utils.image_optim import optimize_images
 from discord_bot import move_files, start_discord_bot
@@ -88,12 +88,27 @@ class CharacterManager:
         params['random_subclass'] = pick_random_subclass(params['random_class']) if is_random else input(
             "What subclass do you want your character to be? ")
         params['random_class_name'] = params['random_class']
-        params['random_ethnicity'] = pick_random_ethnicity(
-        ) if is_random else input("What is your character's ethnicity?")
-        params['random_ethnicity_name'] = params['random_ethnicity'].get(
-            'race')
-        params['ethnicity_keywords'] = get_ethnicity_keywords(
-            params['random_ethnicity'])
+
+
+        if is_random:
+            params['random_ethnicity'] = pick_random_ethnicity()
+            params['random_ethnicity_name'] = params['random_ethnicity']['race']
+            params['random_subrace'] = pick_random_subrace(params['random_ethnicity'])
+        else:
+            ethnicity_input = input("What is your character's ethnicity?")
+            # Find the ethnicity based on the input (assuming the input matches a valid ethnicity)
+            with open('data/ethnicity_data.json', 'r') as f:
+            # Load the JSON string into a Python dictionary
+                data = json.load(f)
+            params['random_ethnicity'] = next((ethnicity for ethnicity in data['ethnicity'] if ethnicity['race'] == ethnicity_input), None)
+            if params['random_ethnicity']:
+                params['random_ethnicity_name'] = params['random_ethnicity']['race']
+                subrace_input = input("What is your character's subrace?")
+                params['random_subrace'] = next((subrace for subrace in params['random_ethnicity']['subraces'] if subrace['name'] == subrace_input), None)
+            else:
+                print("Invalid ethnicity input!")
+
+
         params['age'] = pick_random_age() if is_random else input(
             "How old is your character? ")
         params['gender'] = pick_random_gender() if is_random else input(
@@ -132,11 +147,10 @@ class CharacterManager:
                     "Please enter a valid number greater than 0: ")
 
             num_characters = int(num_characters)
-            characters = self.create_characters(num_characters)
-            print(f"Created {len(characters)} character(s).")
-
-            self.characters.extend(characters)
+            self.create_characters(num_characters)
             self.save_characters(self.characters)
+            existing_characters = self.load_characters()
+            print(f"Created {num_characters} character(s).")
             print(
                 f"Finished creating characters. There are now a total of {len(existing_characters)} characters.")
             create_more = input(
@@ -144,10 +158,11 @@ class CharacterManager:
             if create_more != 'y':
                 start_bot = input(
                     "Do you want to start the Discord bot? (y/n) ").lower()
-            if start_bot == 'y':
-                start_discord_bot()
-            else:
-                break
+                if start_bot == 'y':
+                    start_discord_bot()
+                else:
+                    break
+            
 
     def manage_characters(self):
         """Manage existing characters"""
