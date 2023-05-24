@@ -13,6 +13,8 @@ class ImagePrompt:
         self.character = character
         self.genre = "Fantasy"
         self.emotion = self.character.behavior
+        self.ethnicity = self.character.ethnicity_name
+        self.background = self.character.background_name
         self.scene = self.scene()
         self.tones = self.tones()
         self.style = self.style()
@@ -22,7 +24,7 @@ class ImagePrompt:
         self.image_type = self.image_type()
         
     def scene(self):
-        return f"{indefinite_article(self.character.background)} {self.character.ethnicity} {self.character.character_class} named {self.character.full_name}"
+        return f"{indefinite_article(self.background)} {self.ethnicity} {self.character.character_class} named {self.character.full_name}"
 
     def tones(self):
         return choose_two_and_join(colors)

@@ -1,5 +1,29 @@
 
+import json
+
+def transform_background_settings(background_settings):
+    background_data = []
+
+    # Sort the background_settings array
+    sorted_background_settings = sorted(background_settings)
+
+    # Transform the background_settings array into a list of dictionaries
+    for index, background_name in enumerate(sorted_background_settings, start=1):
+        background_data.append({
+            "name": background_name,
+            "id": str(index).zfill(3)
+        })
+
+    # Write the background data to a JSON file
+    with open('./settings/background_data.json', 'w') as f:
+        json.dump(background_data, f, indent=4)
+
 background_settings = ['Acolyte', 'Charlatan', 'Criminal', 'Entertainer', 'Folk Hero', 'Guild Artisan', 'Hermit', 'Noble', 'Outlander', 'Sage', 'Sailor', 'Soldier', 'Urchin', 'Anthropologist', 'Archaeologist', 'Haunted One', 'City Watch', 'Clan Crafter', 'Cloistered Scholar', 'Courtier', 'Faction Agent', 'Far Traveler', 'Gladiator', 'Knight', 'Knight of the Order', 'Mercenary Veteran', 'Urban Bounty Hunter', 'Uthgardt Tribe Member', 'Waterdhavian Noble', 'Inheritor', 'Spy']
+
+# Call the function and pass the background_settings array as an argument
+#transform_background_settings(background_settings)
+
+
 
 ethnicity_settings = [
         ('Human', 60),

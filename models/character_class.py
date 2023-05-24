@@ -51,10 +51,18 @@ class Character:
         self.full_name = f"{self.first_name} {self.last_name}"
         self.gender = params['gender']
         self.character_class = params['random_class'].get('name')
+        self.character_class_id = params['random_class'].get('id')
         self.character_subclass = params['random_subclass'].get('name')
+        self.character_subclass_id = params['random_subclass'].get('id')
         self.background = params['background']
+        self.background_name = params['background']['name']
+        self.background_id = params['background']['id']
         self.ethnicity = params['random_ethnicity']['race']
-        self.subrace = params['random_subrace']['name']
+        self.ethnicity_name = params['random_ethnicity']['race']
+        self.ethnicity_id = params['random_ethnicity']['id']
+        self.subrace = params['random_subrace']
+        self.subrace_name = self.get_subrace_name()
+        self.subrace_id = params['random_subrace']['id']
         self.ethnicity_keywords = get_ethnicity_keywords(params['random_ethnicity'], params['random_subrace'])
         self.age = params['age']
         self.physical_description = self.create_physical_description()
@@ -67,7 +75,24 @@ class Character:
         # Has to be last!
         self.personality_description = self.create_personality_description()
         self.background_story = self.create_background_story()
-        self.full_id = params['random_subclass'].get('id')
+        self.picture_id = self.create_full_id()
+
+    def get_subrace_name(self):
+        if self.subrace is not None:
+            return self.subrace['name']
+        else:
+            return ''
+
+    def create_picture_id(self):
+        gender_id = ""
+        if self.gender == 'Male':
+            gender_id = '01'
+        elif self.gender == 'Female':
+            gender_id = '02'
+        else:
+            gender_id = '00'
+
+        return gender_id + self.ethnicity_id + self.subrace_id + self.character_class_id + self.character_subclass_id + self.background_id + str(self.id)
 
     def create_physical_description_text(self):
         physical_description = f"{indefinite_article(self.physical_trait)} {self.gender.lower()} {self.ethnicity}. {self.full_name} has {self.hair_color.lower()} {self.hair_style} hair and {self.eye_color} eyes"
@@ -77,7 +102,7 @@ class Character:
         return PhysicalDescription()
 
     def create_background_story(self):
-        prompt = f"Create a background story for a RPG character named {self.full_name} who is {indefinite_article(self.background)} {self.character_class} in the world of Forgotten Realms. {self.behavior} - Make it 3 paragraphs. Make the story no longer than 200 words. End the background story with a potential adventure hook."
+        prompt = f"Write a background story for an RPG character named {self.full_name}, a {self.character_class} in the world of Forgotten Realms. The character is a {self.background_name} with {self.ethnicity} heritage. Describe their upbringing, key events in their life, and their motivations. Please write three paragraphs with a total word count of around 300 words. Conclude the background story by including a potential adventure hook or a mystery that the character seeks to unravel."
         background_story = fetch_character_data(prompt, api_key)
         # Transform the /n in paragraphs into <br> for HTML
         ## background_story = background_story.replace('\n\n', '<br>')

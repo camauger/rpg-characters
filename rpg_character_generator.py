@@ -189,7 +189,7 @@ class CharacterManager:
         """Get characters without images"""
         files_in_folder = self.get_files_in_folder("./static/images/")
         characters_without_images = [
-            character for character in self.characters if f"{character.get('id')}.png" not in files_in_folder]
+            character for character in self.characters if f"{character.get('picture_id')}.png" not in files_in_folder]
         self.save_characters(characters_without_images,
                              "characters_without_images.json")
         prompts = [character_data.get(

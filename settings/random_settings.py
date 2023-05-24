@@ -10,7 +10,10 @@ def pick_random_gender():
     return pick_random_setting(gender_settings)
 
 def pick_random_background():
-    return random.choice(background_settings)
+    with open('data/background_data.json', 'r') as f:
+    # Load the JSON string into a Python dictionary
+        data = json.load(f)
+        return random.choice(data['backgrounds'])
 
 def pick_random_age():
     age, age_weights = zip(*age_settings)
@@ -40,9 +43,11 @@ def get_ethnicity_keywords(ethnicity, subrace):
     return ethnicity['keywords'] + subrace['keywords']
 
 def pick_random_subrace(race):
-    if race['subraces'] == None:
-        return None
+    # If race has no subrace
+    if race.get('subraces') is None:
+        return race
     return random.choice(race['subraces'])
+
 
 # Pick a random class
 def pick_random_character_class():
