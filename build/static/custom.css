@@ -1,0 +1,12 @@
+@font-face {
+    font-family: BookInsanityRemake;
+    src: url("../static/fonts/5e/Bookinsanity.woff2");
+    font-weight: normal;
+  }
+
+  @font-face {
+    font-family: MrEavesRemake;
+    src: url("../static/fonts/5e/Mr Eaves Small Caps.woff2");
+    font-weight: normal;
+    font-style: normal;
+  }

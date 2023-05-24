@@ -1,197 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="../static/custom_css.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>RPG Characters</title>
 
-<head>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-  <link rel="stylesheet" href="../static/custom.css">
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>RPG Characters</title>
+  </head>
 
-  <style type="text/css">
-    @font-face {
-      font-family: BookInsanityRemake;
-      src: url('../static/fonts/5e/Bookinsanity.woff2');
-      font-weight: normal;
-    }
-
-    @font-face {
-      font-family: MrEavesRemake;
-      src: url('../static/fonts/5e/Mr Eaves Small Caps.woff2');
-      font-weight: normal;
-      font-style: normal
-    }
-  </style>
-</head>
-
-<body style="background-color: #EEE5CE;">
-  <header class="container">
-    <nav class="navbar navbar-expand-lg navbar-light" style="font-family: MrEavesRemake; background-color: #EEE5CE;">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="#">RPG Characters</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="/">Home</a>
-            </li>
-          </ul>
-
-        </div>
-      </div>
-    </nav>
-    <h1 class="display-4 text-center mt-5" style="font-family: MrEavesRemake; color:#58180D;">the RPG Characters
-      Collection</h1>
-  </header>
-  <div class="container-fluid" style="margin-bottom: 90px;">
-
-    <div class="row mt-5">
-      
-      <div class="col-md-4">
-
-        <div class="card mb-4" style="background-color: #F2E5B5;">
-          <img src="static/images/1687.png" class="card-img-top"
-            alt="Findlay Isusmoral">
-
-          <div class="card-body" style="font-family: BookInsanityRemake;">
-            <h5 class="card-title" style="font-family: MrEavesRemake; color:#58180D;">Findlay Isusmoral</h5>
-            <h6 class="card-subtitle mb-2">Dwarf Rogue</h6>
-            <h6 class="card-subtitle mb-2">Criminal</h6>
-            <a href="character/1687.html" class="btn btn-outline-secondary">More details</a>
-
+  <body style="background-color: #eee5ce">
+    <header class="container">
+      <nav
+        class="navbar navbar-expand-lg navbar-light"
+        style="font-family: MrEavesRemake; background-color: #eee5ce"
+      >
+        <div class="container-fluid">
+          <a class="navbar-brand" href="/index.html">RPG Characters</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="/">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="/about.html">About</a>
+              </li>
+            </ul>
           </div>
         </div>
+      </nav>
+      <h1
+        class="display-4 text-center mt-5"
+        style="font-family: MrEavesRemake; color: #58180d"
+      >
+        the RPG Characters Collection
+      </h1>
+    </header>
+    <div class="container-fluid" style="margin-bottom: 90px">
+      <div class="row mt-5">
+        
       </div>
-      
-      <div class="col-md-4">
-
-        <div class="card mb-4" style="background-color: #F2E5B5;">
-          <img src="static/images/4092.png" class="card-img-top"
-            alt="Thadeus In">
-
-          <div class="card-body" style="font-family: BookInsanityRemake;">
-            <h5 class="card-title" style="font-family: MrEavesRemake; color:#58180D;">Thadeus In</h5>
-            <h6 class="card-subtitle mb-2">Half-Elf Cleric</h6>
-            <h6 class="card-subtitle mb-2">Sage</h6>
-            <a href="character/4092.html" class="btn btn-outline-secondary">More details</a>
-
-          </div>
-        </div>
-      </div>
-      
-      <div class="col-md-4">
-
-        <div class="card mb-4" style="background-color: #F2E5B5;">
-          <img src="static/images/3140.png" class="card-img-top"
-            alt="Dall Aniaes">
-
-          <div class="card-body" style="font-family: BookInsanityRemake;">
-            <h5 class="card-title" style="font-family: MrEavesRemake; color:#58180D;">Dall Aniaes</h5>
-            <h6 class="card-subtitle mb-2">Elf Ranger</h6>
-            <h6 class="card-subtitle mb-2">Urchin</h6>
-            <a href="character/3140.html" class="btn btn-outline-secondary">More details</a>
-
-          </div>
-        </div>
-      </div>
-      
-      <div class="col-md-4">
-
-        <div class="card mb-4" style="background-color: #F2E5B5;">
-          <img src="static/images/6418.png" class="card-img-top"
-            alt="Martinsen Yndor">
-
-          <div class="card-body" style="font-family: BookInsanityRemake;">
-            <h5 class="card-title" style="font-family: MrEavesRemake; color:#58180D;">Martinsen Yndor</h5>
-            <h6 class="card-subtitle mb-2">Half-Orc Wizard</h6>
-            <h6 class="card-subtitle mb-2">Cloistered Scholar</h6>
-            <a href="character/6418.html" class="btn btn-outline-secondary">More details</a>
-
-          </div>
-        </div>
-      </div>
-      
-      <div class="col-md-4">
-
-        <div class="card mb-4" style="background-color: #F2E5B5;">
-          <img src="static/images/4879.png" class="card-img-top"
-            alt="Burlie Emara">
-
-          <div class="card-body" style="font-family: BookInsanityRemake;">
-            <h5 class="card-title" style="font-family: MrEavesRemake; color:#58180D;">Burlie Emara</h5>
-            <h6 class="card-subtitle mb-2">Halfling Rogue</h6>
-            <h6 class="card-subtitle mb-2">Sailor</h6>
-            <a href="character/4879.html" class="btn btn-outline-secondary">More details</a>
-
-          </div>
-        </div>
-      </div>
-      
-      <div class="col-md-4">
-
-        <div class="card mb-4" style="background-color: #F2E5B5;">
-          <img src="static/images/754.png" class="card-img-top"
-            alt="Essy Onarafel">
-
-          <div class="card-body" style="font-family: BookInsanityRemake;">
-            <h5 class="card-title" style="font-family: MrEavesRemake; color:#58180D;">Essy Onarafel</h5>
-            <h6 class="card-subtitle mb-2">Half-Orc Sorcerer</h6>
-            <h6 class="card-subtitle mb-2">Noble</h6>
-            <a href="character/754.html" class="btn btn-outline-secondary">More details</a>
-
-          </div>
-        </div>
-      </div>
-      
-      <div class="col-md-4">
-
-        <div class="card mb-4" style="background-color: #F2E5B5;">
-          <img src="static/images/2711.png" class="card-img-top"
-            alt="Idelle Eldthorniusthorn">
-
-          <div class="card-body" style="font-family: BookInsanityRemake;">
-            <h5 class="card-title" style="font-family: MrEavesRemake; color:#58180D;">Idelle Eldthorniusthorn</h5>
-            <h6 class="card-subtitle mb-2">Half-Elf Paladin</h6>
-            <h6 class="card-subtitle mb-2">Uthgardt Tribe Member</h6>
-            <a href="character/2711.html" class="btn btn-outline-secondary">More details</a>
-
-          </div>
-        </div>
-      </div>
-      
-      <div class="col-md-4">
-
-        <div class="card mb-4" style="background-color: #F2E5B5;">
-          <img src="static/images/2591.png" class="card-img-top"
-            alt="Sigvard Nethin">
-
-          <div class="card-body" style="font-family: BookInsanityRemake;">
-            <h5 class="card-title" style="font-family: MrEavesRemake; color:#58180D;">Sigvard Nethin</h5>
-            <h6 class="card-subtitle mb-2">Dragonborn Druid</h6>
-            <h6 class="card-subtitle mb-2">Knight</h6>
-            <a href="character/2591.html" class="btn btn-outline-secondary">More details</a>
-
-          </div>
-        </div>
-      </div>
-      
     </div>
-  </div>
-  <footer class="footer fixed-bottom mt-auto py-3" style="background-color: #58180D;">
-    <div class="container">
-      <p class="text-center" style="color: #bbad82">
-        Made with <span style="color: #e25555">&#9829;</span> by
-        <a href="https://ludomancien.com/">Christian Amauger</a>
-      </p>
-    </div>
-  </footer>
+    <footer
+      class="footer fixed-bottom mt-auto py-3"
+      style="background-color: #58180d"
+    >
+      <div class="container">
+        <p class="text-center" style="color: #bbad82">
+          Made with <span style="color: #e25555">&#9829;</span> by
+          <a href="https://ludomancien.com/">Christian Amauger</a>
+        </p>
+      </div>
+    </footer>
 
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-</body>
-
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+  </body>
 </html>

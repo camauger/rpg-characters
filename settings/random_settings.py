@@ -1,5 +1,5 @@
 import random, json
-from settings.character_settings import gender_settings, age_settings, ethnicity_settings, hair_colors_settings, background_settings, physical_settings
+from settings.character_settings import gender_settings, age_settings, hair_colors_settings, physical_settings
 
 
 def pick_random_setting(setting):
@@ -19,10 +19,6 @@ def pick_random_age():
     age, age_weights = zip(*age_settings)
     return random.choices(age, weights=age_weights)[0]
 
-def pick_random_ethnicity():
-    ethnicity, ethnicity_weights= zip(*ethnicity_settings)
-    return random.choices(ethnicity, weights=ethnicity_weights)[0]
-
 def pick_random_hair_color():
     hair_color, hair_weights= zip(*hair_colors_settings)
     return random.choices(hair_color, weights=hair_weights)[0]
@@ -30,13 +26,12 @@ def pick_random_hair_color():
 def pick_random_physical_trait():
     return random.choice(physical_settings)
 
-
-# Pick a random ethnicity
 def pick_random_ethnicity():
     with open('data/ethnicity_data.json', 'r') as f:
         # Load the JSON string into a Python dictionary
         data = json.load(f)
         random_race = random.choice(data['ethnicity'])
+        print("Picked ethnicity:", random_race)
         return random_race
 
 def get_ethnicity_keywords(ethnicity, subrace):
@@ -118,3 +113,6 @@ def create_eye_color():
         # Get a random synonym of the eye color
         random_synonym = random.choice(random_eye_color['synonyms'])
         return random_synonym.lower()
+    
+
+pick_random_ethnicity()
