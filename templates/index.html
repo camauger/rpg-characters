@@ -11,7 +11,6 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>RPG Characters</title>
-
   </head>
 
   <body style="background-color: #eee5ce">
@@ -39,7 +38,9 @@
                 <a class="nav-link" aria-current="page" href="/">Home</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="/about.html">About</a>
+                <a class="nav-link" aria-current="page" href="/about.html"
+                  >About</a
+                >
               </li>
             </ul>
           </div>
@@ -75,7 +76,9 @@
               <h6 class="card-subtitle mb-2">
                 {{ character.ethnicity }} {{ character.character_class }}
               </h6>
-              <h6 class="card-subtitle mb-2">{{ character.background_name }}</h6>
+              <h6 class="card-subtitle mb-2">
+                {{ character.background_name }}
+              </h6>
               <a
                 href="{{ url_for('character', id=character.id) }}"
                 class="btn btn-outline-secondary"

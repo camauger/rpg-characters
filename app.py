@@ -39,6 +39,12 @@ def load_characters():
 def index():
     # Render the template
     characters=load_characters()
+
+    for character in characters:
+        character['has_picture'] = file_exists('static/images', f"{character['picture_id']}.png")
+        if character['has_picture'] == False:
+            character['picture_id'] = 'default'
+            
     print(f"Displaying {len(characters)} characters.")
     return render_template('index.html', characters=characters)
 
