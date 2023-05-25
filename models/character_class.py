@@ -7,7 +7,7 @@ import requests
 import json
 from utils.indefinite_article import indefinite_article
 from api_settings import api_key
-
+from discord_bot import start_discord_bot, send_message_to_channel
 # Create a background story for an RPG character
 def fetch_character_data(prompt, api_key):
     url = "https://api.openai.com/v1/engines/text-davinci-002/completions"

@@ -1,4 +1,5 @@
 import discord
+from discord import Webhook, SyncWebhook
 from discord.ext import commands
 import requests
 from dotenv import load_dotenv
@@ -8,8 +9,6 @@ import time
 from api_settings import discord_token
 import re
 
-# This bot was inspired by @Michael King https://medium.com/@neonforge
-# https://medium.com/@neonforge/how-to-create-a-discord-bot-with-python-and-host-it-on-heroku-41c558e2b596
 
 
 
@@ -66,8 +65,9 @@ async def download_image(url, filename, upscaled=False):
             f.write(response.content)
         print(f"Image downloaded: {filename}")
         input_file = os.path.join(input_folder, filename)
-        if len(filename) < 10:
-            static_folder = "large_images"
+        if len(filename) < 20:
+            #static_folder = "large_images"
+            static_folder = "static/images"
             os.rename(f"{directory}/{input_folder}/{filename}", f"{directory}/{static_folder}/{filename}")
         elif upscaled:
             os.rename(f"{directory}/{input_folder}/{filename}", f"{directory}/{output_folder}/{filename}")
@@ -88,6 +88,14 @@ async def download_image(url, filename, upscaled=False):
 @client.event
 async def on_ready():
     print("Bot connected")
+
+WEB_HOOK = "https://discord.com/api/webhooks/1111032075961774090/bWDinfBeUvkPj2fDtcvP18h_MoIQquLZL50zqmNnFkIUcCGUREt7Tk2slER4f7LOIeYv"
+
+
+def send_message_to_channel(message):
+    webhook = SyncWebhook.from_url(WEB_HOOK)
+    webhook.send(f"/imagine {message}")
+
 
 @client.event
 async def on_message(message):
@@ -137,7 +145,6 @@ async def on_message(message):
 def start_discord_bot():
     client.run(discord_token)
 
-#start_discord_bot()
 
 import shutil
 import os

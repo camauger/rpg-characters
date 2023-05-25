@@ -2,7 +2,7 @@ import json
 import random
 from settings.random_settings import pick_random_age, pick_random_gender, pick_random_ethnicity, pick_random_subrace, pick_random_character_class, pick_random_subclass, pick_random_background, get_ethnicity_keywords
 from models.character_class import Character
-from discord_bot import start_discord_bot
+from discord_bot import start_discord_bot, send_message_to_channel
 import os
 
 
@@ -99,7 +99,7 @@ class CharacterManager:
         if self.check_character_count():
             params = self.get_character_params(is_random)
             new_character = Character(self.generate_character_id(existing_ids), params)
-            print(new_character.image_prompt)
+            send_message_to_channel(new_character.image_prompt)
             return new_character
         return None
 
