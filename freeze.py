@@ -20,7 +20,7 @@ def index():
 @freezer.register_generator
 def character():
     # yield a URL for each possible value of id
-    with open('characters_with_images.json', 'r') as f:
+    with open('characters.json', 'r') as f:
         characters = json.load(f)
     for character in characters:
         yield {'id': character.get('id')}

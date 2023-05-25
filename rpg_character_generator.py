@@ -11,9 +11,8 @@ def main():
     print("2. Optimize images")
     print("3. Create a specific character")
     print("4. Archive files")
-    print("5. Manage characters")
-    print("6. Start the Discord bot")
-    print("7. Update a specific character")
+    print("5. Start the Discord bot")
+    print("6. Update a specific character")
     print("0. Exit the program")
 
     choice = input("What do you want to do? ")
@@ -31,14 +30,9 @@ def main():
         move_files()
         print("Files moved!")
     elif choice == "5":
-        character_manager.manage_characters()
-        character_manager.get_characters_by_image(True)
-        character_manager.get_characters_by_image(False)
-        print("Characters managed!")
-    elif choice == "6":
         print("Starting the Discord bot...")
         start_discord_bot()
-    elif choice == "7":
+    elif choice == "6":
         character_manager.update_character_prompt()
 
     elif choice == "0":

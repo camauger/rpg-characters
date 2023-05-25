@@ -22,8 +22,9 @@ class CharacterManager:
         try:
             with open(self.FILE_PATH, "r") as json_file:
                 character_data = json.load(json_file)
-                existing_characters = [Character(character['id'], character) for character in character_data]
-            return existing_characters
+                characters = [Character(character['id'], character) for character in character_data]
+            print(f"Loaded {len(characters)} characters.")
+            return characters
         except (FileNotFoundError, json.JSONDecodeError):
             return []
 
@@ -130,31 +131,6 @@ class CharacterManager:
                     start_discord_bot()
                 else:
                     exit()
-
-    def manage_characters(self):
-        """Manage existing characters"""
-        self.get_characters_by_image(True)
-        self.get_characters_by_image(False)
-
-    def get_characters_by_image(self, has_image=True):
-        """Get characters based on whether they have images"""
-        folder_path = "./static/images/"
-        files_in_folder = self.get_files_in_folder(folder_path)
-
-        if has_image:
-            characters = [character for character in self.characters if f"{character.picture_id}.png" in files_in_folder]
-            filename = "characters_with_images.json"
-        else:
-            characters = [character for character in self.characters if f"{character.picture_id}.png" not in files_in_folder]
-            filename = "characters_without_images.json"
-
-        self.save_characters(characters, filename)
-
-        # If getting characters without images, write image prompts to a file
-        if not has_image:
-            prompts = [character_data.image_prompt + '\n\n' for character_data in characters]
-            with open('data/characters_without_images.txt', 'w') as file:
-                file.writelines(prompts)
 
     def update_character_prompt(self):
         """Prompt the user to update a character's information"""

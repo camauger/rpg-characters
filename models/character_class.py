@@ -53,7 +53,7 @@ Finally, the __str__ method is used to return a string representation of the cha
 class Character:
     def __init__(self, character_id, params):
         # Initialize the Character object with the provided ID and parameters
-        #try:
+        try:
             # Assign basic character information
             self.id = character_id
             self.first_name = generate_random_first_name(params['gender'])
@@ -104,8 +104,8 @@ class Character:
             self.background_story = self.create_background_story()
             
         
-        #except (KeyError, TypeError) as e:
-        #    raise Exception(f"Invalid parameter format: {e}")
+        except (KeyError, TypeError) as e:
+           raise Exception(f"Invalid parameter format: {e}")
 
 
     def get_subrace_name(self):

@@ -18,7 +18,7 @@ app = Flask(__name__, static_folder='static', static_url_path='/static')
 character_manager = CharacterManager()
 
 def get_character_data(id):
-    with open('characters_with_images.json', 'r') as f:
+    with open('characters.json', 'r') as f:
         characters = json.load(f)
     for character in characters:
         if character.get('id') == id:
@@ -30,7 +30,7 @@ def get_character_data(id):
     return None
 
 def load_characters():
-    with open('characters_with_images.json', 'r') as f:
+    with open('characters.json', 'r') as f:
         characters = json.load(f)
     return characters
 
@@ -38,7 +38,9 @@ def load_characters():
 @app.route('/')
 def index():
     # Render the template
-    return render_template('index.html', characters=load_characters())
+    characters=load_characters()
+    print(f"Displaying {len(characters)} characters.")
+    return render_template('index.html', characters=characters)
 
 # Route for the about page
 @app.route('/about.html')
@@ -58,7 +60,7 @@ def character(id):
     return render_template('character.html', character=character_data, has_picture=has_picture)
 
 # Route for the create page
-@app.route('/create', methods=['GET', 'POST'])
+@app.route('/create.html', methods=['GET', 'POST'])
 def create_character():
     if request.method == 'POST':
         # Handle the form submission

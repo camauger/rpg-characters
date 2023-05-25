@@ -58,7 +58,7 @@
         <div class="col-md-4">
           <div class="card mb-4" style="background-color: #f2e5b5">
             <img
-              src="{{ url_for('static', filename='images/' ~ character.id ~ '.png') }}"
+              src="{{ url_for('static', filename='images/' ~ character.picture_id ~ '.png') }}"
               class="card-img-top"
               height="auto"
               width="auto"
@@ -75,7 +75,7 @@
               <h6 class="card-subtitle mb-2">
                 {{ character.ethnicity }} {{ character.character_class }}
               </h6>
-              <h6 class="card-subtitle mb-2">{{ character.background }}</h6>
+              <h6 class="card-subtitle mb-2">{{ character.background_name }}</h6>
               <a
                 href="{{ url_for('character', id=character.id) }}"
                 class="btn btn-outline-secondary"

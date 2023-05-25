@@ -77,16 +77,10 @@
       </nav>
     </header>
     <div class="container-fluid" style="margin-bottom: 90px">
-      {% if character: %}
+      
       <div class="row">
         <div class="col-md-6">
-          {% if has_picture %}
-          <img
-            src="{{ url_for('static', filename='images/' ~ character.picture_id ~ '.png') }}"
-            class="img-fluid"
-            alt="{{ character.full_name }}"
-          />
-          {% else %}
+          
           <h2>This character portrait will be created soon.</h2>
           <p>Subscribe to be informed when it will be updated!</p>
           <form action="/subscribe" method="post">
@@ -100,7 +94,7 @@
 
 
 
-          {% endif %}
+          
         </div>
 
         <div class="col-md-6">
@@ -110,16 +104,14 @@
                 class="display-4 text-center mt-5"
                 style="font-family: MrEavesRemake; color: #58180d"
               >
-                {{character.full_name}}
+                Blair Felvar
               </h1>
               <div class="display-4 text-center mb-4">
                 <h3 style="font-family: MrEavesRemake">
-                  {{ character.ethnicity }} {{ character.gender}} {{
-                  character.background_name }}
+                  Dwarf Female Anthropologist
                 </h3>
                 <h3 style="font-family: MrEavesRemake">
-                  {{ character.character_class }} - {{
-                  character.character_subclass}}
+                  Paladin - Oath of the Ancients
                 </h3>
               </div>
               <div>
@@ -133,7 +125,7 @@
                   Background Story
                 </h3>
                 <p style="font-family: BookInsanityRemake">
-                  {{ character.background_story|safe }}
+                  <br>Blair Felvar was born and raised in the city of Neverwinter. Her father, Doric Felvar, was a well-respected dwarf merchant who traded in rare and valuable items. Her mother, Moria, was a human woman who worked as a healer at the local temple of Tyr. Blair was raised with strong values and a love of history and culture. She studied hard, and her parents encouraged her to follow her dreams. When she was old enough, she left Neverwinter to study anthropology at the prestigious University of Silverymoon.<br>During her studies, Blair became interested in the lost city of Illusk. She spent several years researching the city, and eventually convinced a group of adventurers to help her search for it. The search was successful, and Blair discovered many ancient artifacts that shed new light on the history of Illusk. She also uncovered a dark secret: the city had been destroyed by a powerful creature that had been trapped inside it.<br>Blair has since returned to Neverwinter, where she now works as a professor at the University of Silverymoon. She continues to research the history of Illusk, and is determined to find a way to destroy the creature that destroyed the city.
                 </p>
                 <h3
                   style="
@@ -144,20 +136,16 @@
                 >
                   Personality
                 </h3>
-                {% if character.personality_description: %}
+                
                 <p style="font-family: BookInsanityRemake">
-                  {{character.personality_description|safe}}
+                  <br>Blair Felvar is a character who is idealistic and seeks harmony. However, she can be manipulative in order to achieve her goals. She is also brave and mysterious.
                 </p>
-                {% else %}
-                <p style="font-family: BookInsanityRemake">
-                  {{character.behavior|safe}}
-                </p>
-                {% endif %}
+                
               </div>
             </div>
           </div>
         </div>
-        {% endif %}
+        
       </div>
     </div>
     <footer

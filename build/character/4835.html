@@ -77,16 +77,10 @@
       </nav>
     </header>
     <div class="container-fluid" style="margin-bottom: 90px">
-      {% if character: %}
+      
       <div class="row">
         <div class="col-md-6">
-          {% if has_picture %}
-          <img
-            src="{{ url_for('static', filename='images/' ~ character.picture_id ~ '.png') }}"
-            class="img-fluid"
-            alt="{{ character.full_name }}"
-          />
-          {% else %}
+          
           <h2>This character portrait will be created soon.</h2>
           <p>Subscribe to be informed when it will be updated!</p>
           <form action="/subscribe" method="post">
@@ -100,7 +94,7 @@
 
 
 
-          {% endif %}
+          
         </div>
 
         <div class="col-md-6">
@@ -110,16 +104,14 @@
                 class="display-4 text-center mt-5"
                 style="font-family: MrEavesRemake; color: #58180d"
               >
-                {{character.full_name}}
+                Zak Kal
               </h1>
               <div class="display-4 text-center mb-4">
                 <h3 style="font-family: MrEavesRemake">
-                  {{ character.ethnicity }} {{ character.gender}} {{
-                  character.background_name }}
+                  None Male Sailor
                 </h3>
                 <h3 style="font-family: MrEavesRemake">
-                  {{ character.character_class }} - {{
-                  character.character_subclass}}
+                  None - None
                 </h3>
               </div>
               <div>
@@ -133,7 +125,7 @@
                   Background Story
                 </h3>
                 <p style="font-family: BookInsanityRemake">
-                  {{ character.background_story|safe }}
+                  <br>Zak Kal was born and raised on the island of Luskan, one of the largest ports in the Forgotten Realms. His father was a sailor and his mother was a None. He always felt like he didn't quite fit in, but he loved the sea and the adventure that came with it. He left home at a young age to join his father's crew and has been sailing ever since.<br>Zak has always been a bit of a rebellious spirit. He's gotten into a lot of fights and has even been arrested a few times. But he always manages to talk his way out of trouble. He's also a bit of a womanizer and has broken a few hearts in his day.<br>The one thing that Zak is really good at is sailing. He's an expert navigator and has a natural talent for it. He's also a master of knots and can tie them faster than anyone else on his crew.<br>Zak is currently sailing on the Sea of Swords. He's been hired by a group of pirates to help them find a lost treasure. He's not sure what the treasure is, but he's excited to find out. He's also hoping that this adventure will help him find out more about his own heritage.
                 </p>
                 <h3
                   style="
@@ -144,20 +136,16 @@
                 >
                   Personality
                 </h3>
-                {% if character.personality_description: %}
+                
                 <p style="font-family: BookInsanityRemake">
-                  {{character.personality_description|safe}}
+                  <br>Zak Kal is an adventurer at heart. He's always looking for the next big thrill and loves to take risks. He's also fiercely loyal to those he cares about and has a strong sense of duty. He's intuitive and resourceful, able to think on his feet and come up with creative solutions.
                 </p>
-                {% else %}
-                <p style="font-family: BookInsanityRemake">
-                  {{character.behavior|safe}}
-                </p>
-                {% endif %}
+                
               </div>
             </div>
           </div>
         </div>
-        {% endif %}
+        
       </div>
     </div>
     <footer

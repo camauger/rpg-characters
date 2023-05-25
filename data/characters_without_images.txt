@@ -1,4 +1,4 @@
-Photorealistic portrait in the style of Kaja Foglio | Fantasy | a Sailor None None named Farlay Est | Farlay Est is an Exotic male None. Farlay Est has pink layered cut with length hair and silver eyes. | Baby Blue and Azure tones | Candlelight | , Fantasy, Medieval Fantasy, Dungeons & Dragons. --s 1000 --upbeta --seed 010254835
+Character Portrait in the style of Julie Dillon | Fantasy | a Sailor None None named Ben Zen | Ben Zen is an Intimidating male None. Ben Zen has black punk hair and emerald eyes. | Lemon and Carnation tones | Backlighting | , Fantasy, Medieval Fantasy, Dungeons & Dragons. --s 1000 --upbeta --seed 010254835
 
-Low-Angle Portrait in the style of Lyubov Popova | Fantasy | an Anthropologist None None named Janina Afaeser | Janina Afaeser is a Petite female None. Janina Afaeser has indigo high pony hair and gold eyes. | Chocolate and Olive tones | Diffused Light | , Fantasy, Medieval Fantasy, Dungeons & Dragons. --s 1000 --upbeta --seed 020023290
+Split Lighting Portrait in the style of Craig Mullins | Fantasy | an Anthropologist None None named Farah Syl | Farah Syl is a Scarred female None. Farah Syl has brown bob cut hair and amber eyes. | Teal and Olive tones | Rim Lighting | , Fantasy, Medieval Fantasy, Dungeons & Dragons. --s 1000 --upbeta --seed 020023290
 
