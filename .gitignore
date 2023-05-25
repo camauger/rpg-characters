@@ -9,9 +9,9 @@ venv/
 env/
 
 # Ignore generated data files
-#characters.json
-#data/locations.txt
-#data/characters_data.csv
+characters.json
+data/locations.txt
+data/characters_data.csv
 
 
 # Ignore api_settings.py
