@@ -65,7 +65,12 @@
                 <a class="nav-link" aria-current="page" href="/">Home</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="/about.html">About</a>
+                <a class="nav-link" aria-current="page" href="/create-character.html"
+                  >Create a Character</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="/about.html"
+                  >About</a>
               </li>
             </ul>
           </div>
@@ -73,27 +78,16 @@
       </nav>
     </header>
     <div class="container-fluid" style="margin-bottom: 90px">
-      <!DOCTYPE html>
-      <html>
-      <head>
-          <title>Create Character</title>
-      </head>
-      <body>
-          <h1>Create Character</h1>
-      
-          <form action="/create" method="post">
-             
-              <label for="is_random">Create Random Character?</label><br>
-              <input type="checkbox" id="is_random" name="is_random" value="true"><br>
-              <input type="submit" value="Create Character">
-          </form>
-      
-          <a href="/">Go Back</a>
-      </body>
-      </html>
-      
-
+      <h1>Create Character</h1>
+      <div class="form-group"></div>
+      <p>You can create a random character.</p>
+      <form action="/create" method="post">
+        <label for="is_random">Create Random Character?</label><br />
+        <!-- <input type="checkbox" id="is_random" name="is_random" value="true"><br> -->
+        <input type="submit" value="Create Character" />
+      </form>
     </div>
+
     <footer
       class="footer fixed-bottom mt-auto py-3"
       style="background-color: #58180d"
