@@ -133,34 +133,28 @@ class CharacterManager:
 
     def manage_characters(self):
         """Manage existing characters"""
-        prompts = [character_data.image_prompt + '\n\n' for character_data in self.characters if character_data.image_prompt is not None]
-
-        with open('data/image_prompts.txt', 'w') as file:
-            file.writelines(prompts)
-
-
+        self.get_characters_by_image(True)
+        self.get_characters_by_image(False)
 
     def get_characters_by_image(self, has_image=True):
         """Get characters based on whether they have images"""
         folder_path = "./static/images/"
         files_in_folder = self.get_files_in_folder(folder_path)
-        
+
         if has_image:
             characters = [character for character in self.characters if f"{character.picture_id}.png" in files_in_folder]
             filename = "characters_with_images.json"
         else:
-            characters = [character for character in self.characters if f"{character.picture_id}.png" in files_in_folder]
+            characters = [character for character in self.characters if f"{character.picture_id}.png" not in files_in_folder]
             filename = "characters_without_images.json"
-        
+
         self.save_characters(characters, filename)
-        
+
         # If getting characters without images, write image prompts to a file
         if not has_image:
-            prompts = [character_data.get('image_prompt') + '\n\n' for character_data in characters]
+            prompts = [character_data.image_prompt + '\n\n' for character_data in characters]
             with open('data/characters_without_images.txt', 'w') as file:
                 file.writelines(prompts)
-        
-        print(f"There are {len(characters)} characters{' with' if has_image else ' without'} images." if characters else f"There are no characters{' with' if has_image else ' without'} images.")
 
     def update_character_prompt(self):
         """Prompt the user to update a character's information"""

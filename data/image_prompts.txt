@@ -1,18 +1,2 @@
-Moody Portrait in the style of Arshile Gorky | Fantasy | a Cloistered Scholar None None named Cathrin Bran | Cathrin Bran is a Lean female None. Cathrin Bran has streaked textured long hair hair and golden eyes. | Burnt Orange and Orange tones | Golden Hour | , Fantasy, Medieval Fantasy, Dungeons & Dragons. --s 1000 --upbeta --seed 020077438
-
-Fine Art Portrait in the style of Keith Parkinson | Fantasy | a Haunted One None None named Tuck Venhel | Tuck Venhel is a Lithe male None. Tuck Venhel has mahogany punk hair and amber eyes. | Carrot and Gold tones | Moonlight | , Fantasy, Medieval Fantasy, Dungeons & Dragons. --s 1000 --upbeta --seed 010161407
-
-Three-Quarter Portrait in the style of Greg Rutkowsk | Fantasy | a Cloistered Scholar None None named Deonne Mirion | Deonne Mirion is a Scarred female None. Deonne Mirion has blue pixie cut hair and light blue eyes. | Jade and Cobalt Blue tones | High Key Lighting | , Fantasy, Medieval Fantasy, Dungeons & Dragons. --s 1000 --upbeta --seed 020077438
-
-Low-Angle Portrait in the style of Hayao Miyazaki | Fantasy | a Haunted One None None named Romeo Ithion | Romeo Ithion is a Gorgeous male None. Romeo Ithion has blond layered cut hair and azure eyes. | Sienna and Copper tones | Side Lighting | , Fantasy, Medieval Fantasy, Dungeons & Dragons. --s 1000 --upbeta --seed 010161407
-
-Surreal Portrait in the style of Loish | Fantasy | a Cloistered Scholar None None named Lark Ric | Lark Ric is an Athletic female None. Lark Ric has ashen three-strand braid hair and hazel eyes. | Terracotta and Olive tones | Rembrandt Lighting | , Fantasy, Medieval Fantasy, Dungeons & Dragons. --s 1000 --upbeta --seed 020077438
-
-Close-up Portrait in the style of Oskar Kokoschka | Fantasy | a Haunted One None None named Nils Ithricasrik | Nils Ithricasrik is a Stocky male None. Nils Ithricasrik has ashen bun hair and silver eyes. | Opal and Raspberry tones | High Key Lighting | , Fantasy, Medieval Fantasy, Dungeons & Dragons. --s 1000 --upbeta --seed 010161407
-
-Lifestyle Portrait in the style of Mab Graves | Fantasy | a Cloistered Scholar None None named Maribelle Mundmirven | Maribelle Mundmirven is a Wizened female None. Maribelle Mundmirven has dark brown updo hair and golden eyes. | Mahogany and Coffee tones | Rim Lighting | , Fantasy, Medieval Fantasy, Dungeons & Dragons. --s 1000 --upbeta --seed 020077438
-
-Lifestyle Portrait in the style of Viktor Titov | Fantasy | a Haunted One None None named Lloyd Iusius | Lloyd Iusius is a Broad-shouldered male None. Lloyd Iusius has blond bob cut hair and dark eyes. | Vermilion and Olive tones | Low Key Lighting | , Fantasy, Medieval Fantasy, Dungeons & Dragons. --s 1000 --upbeta --seed 010161407
-
-Moody Portrait in the style of Julie Dillon | Fantasy | a Charlatan None None named Frannie Sollimundyn | Frannie Sollimundyn is a Short female None. Frannie Sollimundyn has green pixie cut hair and gold eyes. | Burnt Orange and Maroon tones | Firelight | , Fantasy, Medieval Fantasy, Dungeons & Dragons. --s 1000 --upbeta --seed 020047520
+Glamour Lighting Portrait in the style of Takato Yamamoto | Fantasy | a Sailor None None named Chancey Em | Chancey Em is a Commanding male None. Chancey Em has auburn layered cut hair and hazel eyes. | Crimson and Buttercup tones | Backlighting | , Fantasy, Medieval Fantasy, Dungeons & Dragons. --s 1000 --upbeta --seed 010254835
 

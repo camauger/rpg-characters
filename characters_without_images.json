@@ -1,1 +1,82 @@
-[]
+[
+    {
+        "id": 4835,
+        "first_name": "Farlay",
+        "last_name": "Est",
+        "full_name": "Farlay Est",
+        "gender": "Male",
+        "character_class": null,
+        "character_class_id": null,
+        "character_subclass": null,
+        "character_subclass_id": null,
+        "background": {
+            "name": "Sailor",
+            "id": "025"
+        },
+        "background_name": "Sailor",
+        "background_id": "025",
+        "ethnicity": null,
+        "ethnicity_name": null,
+        "ethnicity_id": null,
+        "subrace": {},
+        "subrace_name": "",
+        "subrace_id": "",
+        "ethnicity_keywords": [],
+        "age": "Adult",
+        "physical_description": {
+            "physical_trait": "Stout",
+            "hair_color": "Dark Brown",
+            "hair_style": "layered cut with length",
+            "eye_color": "slate"
+        },
+        "physical_trait": "Exotic",
+        "hair_color": "Pink",
+        "hair_style": "layered cut with length",
+        "eye_color": "silver",
+        "behavior": "Farlay Est's ideal is discovery. His flaw is easily influenced, his bond is faith, his behavior is logical, and his nature is reserved.",
+        "picture_id": "010254835",
+        "image_prompt": "Photorealistic portrait in the style of Kaja Foglio | Fantasy | a Sailor None None named Farlay Est | Farlay Est is an Exotic male None. Farlay Est has pink layered cut with length hair and silver eyes. | Baby Blue and Azure tones | Candlelight | , Fantasy, Medieval Fantasy, Dungeons & Dragons. --s 1000 --upbeta --seed 010254835",
+        "personality_description": "\n\nFarlay Est is a curious person who is always looking to discover new things. He can be easily influenced by others and is very logical in his thinking. He is a reserved person who is very faithful to his beliefs.",
+        "background_story": "\n\nFarlay Est was born to a family of sailors in the bustling port city of Waterdeep. From a young age, they were fascinated by the ships that came into port and the stories their parents would tell of far-off lands. When they were old enough, they set out to sea, eager to explore the world for themselves.\n\nThey quickly learned that the life of a sailor was not as glamorous as they had imagined. The days were long and the work was hard, but they loved it. They made a name for themselves as a skilled navigator and an expert in reading the weather.\n\nOne day, while sailing through the treacherous waters off the coast of Chult, their ship was attacked by pirates. Most of the crew was killed, but Farlay managed to escape. They swore to find the pirates responsible and bring them to justice.\n\nThis quest has brought them to the city of Baldur's Gate, where they hope to find clues to the pirates' whereabouts. However, they are not the only one looking for the pirates. There are others who would kill to get their hands on the bounty. Farlay must be careful not to let their quest for revenge consume them."
+    },
+    {
+        "id": 3290,
+        "first_name": "Janina",
+        "last_name": "Afaeser",
+        "full_name": "Janina Afaeser",
+        "gender": "Female",
+        "character_class": null,
+        "character_class_id": null,
+        "character_subclass": null,
+        "character_subclass_id": null,
+        "background": {
+            "name": "Anthropologist",
+            "id": "002"
+        },
+        "background_name": "Anthropologist",
+        "background_id": "002",
+        "ethnicity": null,
+        "ethnicity_name": null,
+        "ethnicity_id": null,
+        "subrace": {},
+        "subrace_name": "",
+        "subrace_id": "",
+        "ethnicity_keywords": [],
+        "age": "Middle-aged",
+        "physical_description": {
+            "physical_trait": "Lanky",
+            "hair_color": "Black",
+            "hair_style": "punk",
+            "eye_color": "azure"
+        },
+        "physical_trait": "Petite",
+        "hair_color": "Indigo",
+        "hair_style": "high pony",
+        "eye_color": "gold",
+        "behavior": "Janina Afaeser's ideal is independence. Her flaw is jealous, her bond is discovery, her behavior is humble, and her nature is inquisitive.",
+        "picture_id": "020023290",
+        "image_prompt": "Low-Angle Portrait in the style of Lyubov Popova | Fantasy | an Anthropologist None None named Janina Afaeser | Janina Afaeser is a Petite female None. Janina Afaeser has indigo high pony hair and gold eyes. | Chocolate and Olive tones | Diffused Light | , Fantasy, Medieval Fantasy, Dungeons & Dragons. --s 1000 --upbeta --seed 020023290",
+        "personality_description": "\n\nJanina Afaeser is an independent person who is also jealous and humble. She is curious by nature and loves to discover new things.",
+        "background_story": "\n\nJanina Afaeser was born in the city of Waterdeep to a family of None heritage. Her parents were both scholars, and her upbringing was one of privileged comfort. Janina was always a bright and curious child, and she excelled in her studies. She developed a love for history and anthropology, and she dreamed of one day becoming an explorer like her hero, the famous archaeologist Volo.\n\nWhen Janina was sixteen, her parents were killed in a freak accident. Devastated, Janina threw herself into her studies, determined to make something of herself. She graduated from the prestigious Arcane University at the top of her class, and she was soon recruited by the Waterdeep government to work as an anthropologist.\n\nFor the past ten years, Janina has been working for the Waterdeep government, studying the cultures of the Sword Coast. She has made many important discoveries, and her work has earned her a great deal of respect. Recently, Janina has become interested in the ancient ruins of the city of Neverwinter. She believes that there is much to learn from these ruins, and she is determined to uncover their secrets."
+    }
+]

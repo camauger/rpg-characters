@@ -73,88 +73,26 @@
       </nav>
     </header>
     <div class="container-fluid" style="margin-bottom: 90px">
-      {% if character: %}
-      <div class="row">
-        <div class="col-md-6">
-          {% if has_picture %}
-          <img
-            src="{{ url_for('static', filename='images/' ~ character.picture_id ~ '.png') }}"
-            class="img-fluid"
-            alt="{{ character.full_name }}"
-          />
-          {% else %}
-          <h2>This character portrait will be created soon.</h2>
-          <p>Subscribe to be informed when it will be updated!</p>
-          <form action="/subscribe" method="post">
-            <div class="form-group">
-              <label for="email">Email</label>
-              <input type="email" class="form-control" id="email" name="email" aria-describedby="emailHelp" placeholder="Enter email">
-              <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-            </div>
-            <button type="submit" value="Subscribe" class="btn btn-primary">Submit</button>
+      <!DOCTYPE html>
+      <html>
+      <head>
+          <title>Create Character</title>
+      </head>
+      <body>
+          <h1>Create Character</h1>
+      
+          <form action="/create" method="post">
+             
+              <label for="is_random">Create Random Character?</label><br>
+              <input type="checkbox" id="is_random" name="is_random" value="true"><br>
+              <input type="submit" value="Create Character">
           </form>
+      
+          <a href="/">Go Back</a>
+      </body>
+      </html>
+      
 
-
-
-          {% endif %}
-        </div>
-
-        <div class="col-md-6">
-          <div class="container">
-            <div class="px-4">
-              <h1
-                class="display-4 text-center mt-5"
-                style="font-family: MrEavesRemake; color: #58180d"
-              >
-                {{character.full_name}}
-              </h1>
-              <div class="display-4 text-center mb-4">
-                <h3 style="font-family: MrEavesRemake">
-                  {{ character.ethnicity }} {{ character.gender}} {{
-                  character.background_name }}
-                </h3>
-                <h3 style="font-family: MrEavesRemake">
-                  {{ character.character_class }} - {{
-                  character.character_subclass}}
-                </h3>
-              </div>
-              <div>
-                <h3
-                  style="
-                    font-family: MrEavesRemake;
-                    color: #58180d;
-                    border-bottom: 2px solid var(--HB_Color_HeaderUnderline);
-                  "
-                >
-                  Background Story
-                </h3>
-                <p style="font-family: BookInsanityRemake">
-                  {{ character.background_story|safe }}
-                </p>
-                <h3
-                  style="
-                    font-family: MrEavesRemake;
-                    color: #58180d;
-                    border-bottom: 2px solid var(--HB_Color_HeaderUnderline);
-                  "
-                >
-                  Personality
-                </h3>
-                {% if character.personality_description: %}
-                <p style="font-family: BookInsanityRemake">
-                  {{character.personality_description|safe}}
-                </p>
-                {% else %}
-                <p style="font-family: BookInsanityRemake">
-                  {{character.behavior|safe}}
-                </p>
-                {% endif %}
-              </div>
-            </div>
-          </div>
-        </div>
-        {% endif %}
-      </div>
     </div>
     <footer
       class="footer fixed-bottom mt-auto py-3"

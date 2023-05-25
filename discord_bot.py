@@ -1,19 +1,15 @@
 import discord
-from discord import Webhook, SyncWebhook
+from discord import SyncWebhook
 from discord.ext import commands
 import requests
 from dotenv import load_dotenv
 from PIL import Image
 import os
 import time
-from api_settings import discord_token
-import re
-
-
-
+from api_settings import discord_token, WEB_HOOK
 
 load_dotenv()
-client = commands.Bot(command_prefix="*", intents=discord.Intents.all())
+bot = commands.Bot(command_prefix="*", intents=discord.Intents.all())
 directory = os.getcwd()
 print(directory)
 
@@ -85,21 +81,25 @@ async def download_image(url, filename, upscaled=False):
             # Delete the input file
             os.remove(f"{directory}/{input_folder}/{filename}")
 
-@client.event
+@bot.event
 async def on_ready():
     print("Bot connected")
 
-WEB_HOOK = "https://discord.com/api/webhooks/1111032075961774090/bWDinfBeUvkPj2fDtcvP18h_MoIQquLZL50zqmNnFkIUcCGUREt7Tk2slER4f7LOIeYv"
-
-
 def send_message_to_channel(message):
     webhook = SyncWebhook.from_url(WEB_HOOK)
-    webhook.send(f"/imagine {message}")
+    webhook.send(f"{message}")
+    imagine(message)
+
+@bot.command()
+async def imagine(ctx, *, message):  # The * allows for multi-word arguments
+    channel_id = 1110536849799254056
+    channel = bot.get_channel(channel_id)
+    await channel.send(f"/imagine {message}")
 
 
-@client.event
+
+@bot.event
 async def on_message(message):
-    
     # If only 1 attachment, download it
     if len(message.attachments) == 1:
         for attachment in message.attachments:
@@ -143,7 +143,7 @@ async def on_message(message):
 
 # Start the bot
 def start_discord_bot():
-    client.run(discord_token)
+    bot.run(discord_token)
 
 
 import shutil
