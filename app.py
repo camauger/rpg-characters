@@ -5,8 +5,6 @@ import discord
 from discord.ext import commands
 from models.character_manager_class import CharacterManager
 from api_settings import discord_token
-
-
 import os
 
 def file_exists(folder_path, filename):
@@ -17,11 +15,11 @@ def file_exists(folder_path, filename):
 app = Flask(__name__, static_folder='static', static_url_path='/static')
 character_manager = CharacterManager()
 
-def get_character_data(id):
+def get_character_data(picture_id):
     with open('characters.json', 'r') as f:
         characters = json.load(f)
     for character in characters:
-        if character.get('id') == id:
+        if character.get('picture_id') == picture_id:
             # Replace '\n\n' with '<br>' in all string fields
             for key, value in character.items():
                 if isinstance(value, str):
@@ -37,16 +35,9 @@ def load_characters():
 # Route for the home page
 @app.route('/')
 def index():
-    # Render the template
-    characters=load_characters()
-
-    for character in characters:
-        character['has_picture'] = file_exists('static/images', f"{character['picture_id']}.png")
-        if character['has_picture'] == False:
-            character['picture_id'] = 'default'
-            
-    print(f"Displaying {len(characters)} characters.")
+    characters = load_characters()
     return render_template('index.html', characters=characters)
+
 
 # Route for the about page
 @app.route('/about.html')
@@ -55,15 +46,14 @@ def about():
     return render_template('about.html')
 
 # Route for individual character based on ID
-@app.route('/character/<int:id>.html')
-def character(id):
+@app.route('/character/<int:picture_id>.html')
+def character(picture_id):
     # Retrieve character data based on the ID
-    character_data = get_character_data(id)
+    character_data = get_character_data(picture_id)
     # Check if the character has an image:
-    has_picture= file_exists('static/images', f"{character_data['picture_id']}.png")
     
     # Process character data and render the template
-    return render_template('character.html', character=character_data, has_picture=has_picture)
+    return render_template('character.html', character=character_data)
 
 # Route for the create page
 @app.route('/create.html', methods=['GET', 'POST'])

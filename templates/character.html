@@ -77,10 +77,9 @@
       </nav>
     </header>
     <div class="container-fluid" style="margin-bottom: 90px">
-      {% if character: %}
       <div class="row">
         <div class="col-md-6">
-          {% if has_picture %}
+          {% if character.has_image %}
           <img
             src="{{ url_for('static', filename='images/' ~ character.picture_id ~ '.png') }}"
             class="img-fluid"
@@ -97,9 +96,6 @@
             </div>
             <button type="submit" value="Subscribe" class="btn btn-primary">Submit</button>
           </form>
-
-
-
           {% endif %}
         </div>
 
@@ -157,7 +153,6 @@
             </div>
           </div>
         </div>
-        {% endif %}
       </div>
     </div>
     <footer

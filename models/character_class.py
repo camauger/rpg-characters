@@ -49,7 +49,10 @@ Additionally, it creates physical and psychological descriptions for the charact
 
 Finally, the __str__ method is used to return a string representation of the character.
 """
-
+import os
+def file_exists(folder_path, filename):
+    file_path = os.path.join(folder_path, filename)
+    return os.path.exists(file_path)
 class Character:
     def __init__(self, character_id, params):
         # Initialize the Character object with the provided ID and parameters
@@ -102,11 +105,15 @@ class Character:
             self.image_prompt = self.create_image_prompt()
             self.personality_description = self.create_personality_description()
             self.background_story = self.create_background_story()
+
+            self.has_image = file_exists('static/images', f"{self.picture_id}.png")
             
         
         except (KeyError, TypeError) as e:
            raise Exception(f"Invalid parameter format: {e}")
 
+    def update_has_image(self):
+        self.has_image = file_exists('static/images', f"{self.picture_id}.png")
 
     def get_subrace_name(self):
         if self.subrace is not None:
