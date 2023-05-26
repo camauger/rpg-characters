@@ -13,7 +13,6 @@ from settings.random_settings import (
     get_ethnicity_keywords
 )
 from models.character_class import Character
-from discord_bot import start_discord_bot
 
 
 class CharacterManager:
@@ -65,9 +64,6 @@ class CharacterManager:
         # Write updated data to file
         with open(self.FILE_PATH, 'w') as json_file:
             json.dump(updated_data, json_file, indent=4)
-
-
-
 
     def check_character_count(self):
         """Check if the maximum number of characters has been reached"""
@@ -162,11 +158,7 @@ class CharacterManager:
 
             print(f"Finished creating characters. There are now a total of {len(self.characters)} characters.")
             create_more = input("Do you want to create more characters? (y/n) ").lower()
-            if create_more != 'y':
-                start_bot = input("Do you want to start the Discord bot? (y/n) ").lower()
-                if start_bot == 'y':
-                    start_discord_bot()
-                else:
+            if create_more != 'y':               
                     break  # Exit the loop and continue running the program
 
 
