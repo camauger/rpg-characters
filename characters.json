@@ -1,1 +1,266 @@
-[]
+[
+    {
+        "id": 5661,
+        "first_name": "Loralie",
+        "last_name": "Theris",
+        "full_name": "Loralie Theris",
+        "gender": "Female",
+        "character_class": "Bard",
+        "character_class_id": "020",
+        "character_subclass": "College of Whispers",
+        "character_subclass_id": "024",
+        "background": {
+            "name": "Far Traveler",
+            "id": "12"
+        },
+        "background_name": "Far Traveler",
+        "background_id": "12",
+        "ethnicity": "Half-Orc",
+        "ethnicity_name": "Half-Orc",
+        "ethnicity_id": "007",
+        "subrace": {
+            "race": "Half-Orc",
+            "id": "007",
+            "keywords": [
+                "tall",
+                "muscular",
+                "green skin",
+                "tusks",
+                "broad nose",
+                "heavy eyebrows",
+                "wild hair",
+                "scarred",
+                "intimidating",
+                "fearsome",
+                "savage",
+                "brutish",
+                "barbaric"
+            ]
+        },
+        "subrace_name": "",
+        "subrace_id": "007",
+        "ethnicity_keywords": [
+            "tall",
+            "muscular",
+            "green skin",
+            "tusks",
+            "broad nose",
+            "heavy eyebrows",
+            "wild hair",
+            "scarred",
+            "intimidating",
+            "fearsome",
+            "savage",
+            "brutish",
+            "barbaric"
+        ],
+        "age": "Teenager",
+        "physical_description": {
+            "trait": "Elegant",
+            "hair_color": "Fluorescent",
+            "hair_style": "three-strand braid"
+        },
+        "physical_trait": "Elegant",
+        "hair_color": "Fluorescent",
+        "hair_style": "three-strand braid",
+        "eye_color": "gold",
+        "behavior": "Loralie Theris's ideal is balance. Her flaw is prideful, her bond is tradition, her behavior is kind, and her nature is reserved.",
+        "picture_id": "02007007020024125661",
+        "image_prompt": "Dramatic Portrait in the style of Gottfried Helnwein | Fantasy | a Far Traveler Half-Orc Bard named Loralie Theris | Loralie Theris is an Elegant female Half-Orc. Loralie Theris has fluorescent three-strand braid hair and gold eyes. | Opal and Tan tones | Candlelight | tall, muscular, green skin, tusks, broad nose, heavy eyebrows, wild hair, scarred, intimidating, fearsome, savage, brutish, barbaric, Fantasy, Medieval Fantasy, Dungeons & Dragons. --s 1000 --upbeta",
+        "personality_description": "\n\nLoralie Theris's personality is one that is balanced. She has a strong sense of pride, but is also very kind and reserved. She is someone who values tradition and is verybehaved.",
+        "background_story": "\n\nLoralie was born to a human mother and a half-orc father in a small village on the outskirts of the Kingdom of Calimshan. Her parents were both outcasts from their respective societies, and they found solace in each other. Loralie grew up hearing stories of far-off lands from her parents, and she developed a wanderlust at a young age. When she was sixteen, she left her home and set out to see the world for herself.\n\nLoralie has been travelling for the past ten years, and she has seen more of the world than she ever could have imagined. She has been to the frozen tundra of the North, the steamy jungles of Chult, and the arid deserts of Anauroch. She has made a name for herself as a talented bard, and her songs have brought joy to many.\n\nLoralie is currently on a quest to find her half-brother, who was taken from her parents when she was a child. She has heard rumours that he is being held captive in a dungeon in the city of Waterdeep, and she is determined to rescue him.",
+        "has_image": false
+    },
+    {
+        "id": 1396,
+        "first_name": "Reinhart",
+        "last_name": "Gar",
+        "full_name": "Reinhart Gar",
+        "gender": "Non-binary",
+        "character_class": "Warlock",
+        "character_class_id": "110",
+        "character_subclass": "The Fiend",
+        "character_subclass_id": "112",
+        "background": {
+            "name": "Criminal",
+            "id": "09"
+        },
+        "background_name": "Criminal",
+        "background_id": "09",
+        "ethnicity": "Elf",
+        "ethnicity_name": "Elf",
+        "ethnicity_id": "003",
+        "subrace": {
+            "name": "Dark Elf (Drow)",
+            "id": "0033",
+            "keywords": [
+                "underdark",
+                "subterranean",
+                "cunning",
+                "mysterious"
+            ]
+        },
+        "subrace_name": "Dark Elf (Drow)",
+        "subrace_id": "0033",
+        "ethnicity_keywords": [
+            "tall",
+            "slender",
+            "pointed ears",
+            "almond-shaped eyes",
+            "graceful",
+            "ageless",
+            "delicate features",
+            "underdark",
+            "subterranean",
+            "cunning",
+            "mysterious"
+        ],
+        "age": "Senior",
+        "physical_description": {
+            "trait": "Angular",
+            "hair_color": "Brown",
+            "hair_style": "short crop"
+        },
+        "physical_trait": "Angular",
+        "hair_color": "Brown",
+        "hair_style": "short crop",
+        "eye_color": "dark brown",
+        "behavior": "Reinhart Gar's ideal is justice. Reinhart Gar's traits are: jealous, freedom, optimistic and wise.",
+        "picture_id": "000030033110112091396",
+        "image_prompt": "Environmental Portrait in the style of Ivan Bilibin | Fantasy | a Criminal Elf Warlock named Reinhart Gar | Reinhart Gar is an Angular non-binary Elf. Reinhart Gar has brown short crop hair and dark brown eyes. | Ivory and Mustard tones | Hard Light | tall, slender, pointed ears, almond-shaped eyes, graceful, ageless, delicate features, underdark, subterranean, cunning, mysterious, Fantasy, Medieval Fantasy, Dungeons & Dragons. --s 1000 --upbeta",
+        "personality_description": "\n\nReinhart Gar is a character who is jealous of others, craves freedom and is optimistic about the world. He is also wise, often giving advice to others.",
+        "background_story": "\n\nReinhart Gar was born in the city of Waterdeep to a criminal Elf named Darl Gar and a Human named Reinhart. Darl was a wanted man and was constantly on the run from the law. He was a skilled thief and often involved in illegal underground fighting rings. Reinhart's mother died when he was young and his father did not want him. He was given to a Human couple who raised him as their own. The couple was kind but they were also poor. They could not afford to send Reinhart to school so he was illiterate. When he was old enough, he began working odd jobs to help support the family. He did whatever he could to survive.\n\nWhen he was sixteen, his adoptive parents were killed in a fire. Reinhart was left alone and penniless. He turned to thievery to survive. He was caught and sentenced to death. However, Darl Gar intervened and offered to take his son in. Darl had been hiding from the law and was living in the city's underground. He taught his son everything he knew about thievery and fighting. Reinhart quickly became a skilled thief and fighter.\n\nDarl was killed in a fight with the law. Reinhart was arrested and sentenced to death. However, he escaped and fled to the city of Neverwinter. There he met a Warlock named Kelson. Kelson took Reinhart under his wing and taught him everything he knew about magic. Reinhart quickly became a powerful Warlock.\n\nReinhart now uses his skills to help others. He is motivated by the desire to help those who cannot help themselves. He is a skilled thief and fighter. He is also an accomplished sorcerer. He is always seeking new challenges and adventures.",
+        "has_image": false
+    },
+    {
+        "id": 9301,
+        "first_name": "Kaczer",
+        "last_name": "Enoph",
+        "full_name": "Kaczer Enoph",
+        "gender": "Non-binary",
+        "character_class": "Paladin",
+        "character_class_id": "070",
+        "character_subclass": "Oath of Vengeance",
+        "character_subclass_id": "073",
+        "background": {
+            "name": "Knight",
+            "id": "19"
+        },
+        "background_name": "Knight",
+        "background_id": "19",
+        "ethnicity": "Half-Orc",
+        "ethnicity_name": "Half-Orc",
+        "ethnicity_id": "007",
+        "subrace": {
+            "race": "Half-Orc",
+            "id": "007",
+            "keywords": [
+                "tall",
+                "muscular",
+                "green skin",
+                "tusks",
+                "broad nose",
+                "heavy eyebrows",
+                "wild hair",
+                "scarred",
+                "intimidating",
+                "fearsome",
+                "savage",
+                "brutish",
+                "barbaric"
+            ]
+        },
+        "subrace_name": "",
+        "subrace_id": "007",
+        "ethnicity_keywords": [
+            "tall",
+            "muscular",
+            "green skin",
+            "tusks",
+            "broad nose",
+            "heavy eyebrows",
+            "wild hair",
+            "scarred",
+            "intimidating",
+            "fearsome",
+            "savage",
+            "brutish",
+            "barbaric"
+        ],
+        "age": "Young Adult",
+        "physical_description": {
+            "trait": "Striking",
+            "hair_color": "Lilac",
+            "hair_style": "fauxhawk"
+        },
+        "physical_trait": "Striking",
+        "hair_color": "Lilac",
+        "hair_style": "fauxhawk",
+        "eye_color": "multi-colored",
+        "behavior": "Kaczer Enoph's ideal is honor. Kaczer Enoph's traits are: jealous, loyalty, extroverted and wise.",
+        "picture_id": "00007007070073199301",
+        "image_prompt": "Classic Portrait in the style of Viktor Vasnetsov | Fantasy | a Knight Half-Orc Paladin named Kaczer Enoph | Kaczer Enoph is a Striking non-binary Half-Orc. Kaczer Enoph has lilac fauxhawk hair and multi-colored eyes. | Black and Violet tones | Low Key Lighting | tall, muscular, green skin, tusks, broad nose, heavy eyebrows, wild hair, scarred, intimidating, fearsome, savage, brutish, barbaric, Fantasy, Medieval Fantasy, Dungeons & Dragons. --s 1000 --upbeta",
+        "personality_description": "\n\nKaczer Enoph is a very honorable person. They are always loyal to their friends and family, and are always looking out for their best interests. They can be a bit jealous at times, but only because they want to make sure that everyone is being treated fairly. They are extroverted and wise, and always have something interesting to say.",
+        "background_story": "\n\nKaczer Enoph was born to an Orcish chieftain and a human woman who was taken as a slave. Kaczer was raised as an orc, but always felt a pull towards his human side. When he was old enough, he left his tribe in search of his mother's people. He eventually found a small human village and was welcomed with open arms. Kaczer learned about the ways of humans and their gods. He found that he had a knack for healing and decided to become a Paladin. Kaczer has been adventuring with a group of like-minded individuals for years, seeking to right wrongs and help those in need.\n\nOne day, while the group was investigating a group of bandits terrorizing a small town, they stumbled upon a much larger conspiracy. Kaczer's Paladin sense told him that there was more to this than meets the eye. With the help of his friends, Kaczer set out to uncover the truth. They eventually discovered that the bandits were working for a powerful wizard who was using them to kidnap people for some unknown purpose. Kaczer and his friends managed to stop the wizard and save the people, but they still don't know what the wizard was up to. Kaczer is determined to find out and make sure that no one else falls victim to the wizard's evil scheme.",
+        "has_image": false
+    },
+    {
+        "id": 9013,
+        "first_name": "Mcintosh",
+        "last_name": "Nimith",
+        "full_name": "Mcintosh Nimith",
+        "gender": "Non-binary",
+        "character_class": "Barbarian",
+        "character_class_id": "010",
+        "character_subclass": "Path of the Battlerager",
+        "character_subclass_id": "013",
+        "background": {
+            "name": "Inheritor",
+            "id": "18"
+        },
+        "background_name": "Inheritor",
+        "background_id": "18",
+        "ethnicity": "Aasimar",
+        "ethnicity_name": "Aasimar",
+        "ethnicity_id": "010",
+        "subrace": {
+            "name": "Scourge Aasimar",
+            "id": "0102",
+            "keywords": [
+                "radiant consumption",
+                "destructive energy",
+                "divine light"
+            ]
+        },
+        "subrace_name": "Scourge Aasimar",
+        "subrace_id": "0102",
+        "ethnicity_keywords": [
+            "radiant",
+            "glowing eyes",
+            "fair skin",
+            "halo",
+            "celestial",
+            "ethereal",
+            "angelic",
+            "radiant consumption",
+            "destructive energy",
+            "divine light"
+        ],
+        "age": "Adult",
+        "physical_description": {
+            "trait": "Pretty",
+            "hair_color": "Sandy",
+            "hair_style": "updo"
+        },
+        "physical_trait": "Pretty",
+        "hair_color": "Sandy",
+        "hair_style": "updo",
+        "eye_color": "hazel",
+        "behavior": "Mcintosh Nimith's ideal is balance. Mcintosh Nimith's traits are: prideful, adventure, extroverted and determined.",
+        "picture_id": "000100102010013189013",
+        "image_prompt": "Character Portrait in the style of Friedensreich Regentag Dunkelbunt Hundertwasser | Fantasy | an Inheritor Aasimar Barbarian named Mcintosh Nimith | Mcintosh Nimith is a Pretty non-binary Aasimar. Mcintosh Nimith has sandy updo hair and hazel eyes. | Tangerine and Pearl tones | Side Lighting | radiant, glowing eyes, fair skin, halo, celestial, ethereal, angelic, radiant consumption, destructive energy, divine light, Fantasy, Medieval Fantasy, Dungeons & Dragons. --s 1000 --upbeta",
+        "personality_description": "\n\nMcintosh Nimith is a prideful person who is always looking for new adventures. They are very determined and always try to achieve a sense of balance in their life.",
+        "background_story": "\n\nMcintosh Nimith was born to a human mother and an Aasimar father who were both part of a small nomadic tribe that wandered the plains of the Forgotten Realms. When McIntosh was five, his father was killed by a group of bandits who attacked their camp. His mother did her best to protect him, but she was outnumbered and outmatched. The bandits took McIntosh captive, intending to sell him into slavery. He was eventually sold to a group of orc slavers who took him to the city of Neverwinter.\n\nFor the next ten years, McIntosh was forced to work in the city's mines, until he was finally freed by a group of adventurers who were passing through Neverwinter on a quest. McIntosh joined the adventurers, hoping to find a way to get revenge on the orc slavers. The adventurers eventually helped him track down the slavers, and McIntosh killed them all with his bare hands.\n\nAfter the adventure, McIntosh decided to wander the Realms, searching for a place to call home. He eventually settled in the city of Waterdeep, where he became a member of the city guard. He now patrols the streets of Waterdeep, keeping the peace and helping those in need.\n\nOne night, while on patrol, McIntosh comes across a group of thugs who are attacking a helpless civilian. McIntosh intervenes, and is able to chase the thugs off. The civilian, a young woman named Aria, is very grateful for McIntosh's help. She tells him that her family has been targeted by a group of criminals who are extorting them for money. McIntosh agrees to help Aria and her family, and this leads him on a adventure to uncover the criminal organization that is terrorizing Waterdeep.",
+        "has_image": false
+    }
+]

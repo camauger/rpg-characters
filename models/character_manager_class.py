@@ -33,18 +33,41 @@ class CharacterManager:
         try:
             with open(self.FILE_PATH, "r") as json_file:
                 character_data = json.load(json_file)
-                self.characters = [Character(character['id'], character)
-                                    for character in character_data]
+                self.characters = [
+                    Character(character['id'], character)
+                    for character in character_data
+                ]
 
             print(f"Loaded {len(self.characters)} characters.")
         except (FileNotFoundError, json.JSONDecodeError):
             self.characters = []
 
-    def save_characters(self):
-        """Save characters to the JSON file"""
-        character_data = [character.to_dict() for character in self.characters]
-        with open(self.FILE_PATH, "w") as json_file:
-            json.dump(character_data, json_file, indent=4)
+
+    def save_characters(self, characters=None):
+        """Append new characters to the existing characters in the JSON file"""
+        # If no characters are passed, use the existing characters
+        if characters is None:
+            characters = self.characters
+
+        # Transform all Character objects into dictionaries
+        character_data = [character.to_dict() for character in characters]
+
+        # Load existing data
+        try:
+            with open(self.FILE_PATH, 'r') as json_file:
+                existing_data = json.load(json_file)
+        except FileNotFoundError:
+            existing_data = []
+
+        # Append new data
+        updated_data = existing_data + character_data
+
+        # Write updated data to file
+        with open(self.FILE_PATH, 'w') as json_file:
+            json.dump(updated_data, json_file, indent=4)
+
+
+
 
     def check_character_count(self):
         """Check if the maximum number of characters has been reached"""
@@ -55,10 +78,11 @@ class CharacterManager:
 
     def generate_character_id(self, existing_ids):
         """Generate a unique character ID"""
-        while True:
+        character_id = random.randint(1, self.MAX_CHARACTER_ID)
+        while character_id in existing_ids:
             character_id = random.randint(1, self.MAX_CHARACTER_ID)
-            if character_id not in existing_ids:
-                return character_id
+        return character_id
+
 
     def get_character_params(self, is_random):
         """Get parameters for a new character"""
@@ -96,24 +120,36 @@ class CharacterManager:
         character_count, existing_ids = self.get_character_info()
         if self.check_character_count():
             params = self.get_character_params(is_random)
-            new_character = Character(self.generate_character_id(existing_ids), params)
-            new_character.update_has_image()
+            character_id = self.generate_character_id(existing_ids)
+            new_character = Character(character_id, params)
+            existing_ids.append(character_id)  # Update the existing IDs list
+
+            #new_character.update_has_image()
             # create a new text file with the prompt
             with open(f"./data/image_prompts/{new_character.picture_id}.txt", "w") as file:
                 file.write(new_character.picture_id + "\n" + new_character.image_prompt + "\n")
-            
-            self.characters.append(new_character)  # Add the new character to the list
+
+            #self.save_characters(characters=[new_character])  # Save the new character to the JSON file
+            #self.characters.append(new_character)  # Add the new character to the list
             return new_character
         return None
+
+
 
 
     def create_characters(self, num_characters):
         """Create multiple characters"""
         new_characters = []
-        for _ in range(num_characters):
-            new_character = self.create_character(is_random=True)
-            if new_character:
-                new_characters.append(new_character)
+        character_count, existing_ids = self.get_character_info()
+        if self.check_character_count():
+            for _ in range(num_characters):
+                if character_count >= self.MAX_CHARACTER_COUNT:
+                    print("There are too many characters. Please delete some characters before creating a new one.")
+                    break
+                new_character = self.create_character(is_random=True)
+                if new_character:
+                    new_characters.append(new_character)
+                    
         return new_characters
 
 
@@ -129,18 +165,17 @@ class CharacterManager:
             new_characters = self.create_characters(num_characters)
             if new_characters:
                 self.characters.extend(new_characters)  # Add the new characters to the list
-                #self.save_characters()  # Save the characters after creation
+                self.save_characters(new_characters)  # Save the characters after creation
 
-            existing_characters = self.characters
-            print(f"Created {num_characters} character(s).")
-            print(f"Finished creating characters. There are now a total of {len(existing_characters)} characters.")
+            print(f"Finished creating characters. There are now a total of {len(self.characters)} characters.")
             create_more = input("Do you want to create more characters? (y/n) ").lower()
             if create_more != 'y':
                 start_bot = input("Do you want to start the Discord bot? (y/n) ").lower()
                 if start_bot == 'y':
                     start_discord_bot()
                 else:
-                    exit()
+                    break  # Exit the loop and continue running the program
+
 
     def update_character_prompt(self):
         """Prompt the user to update a character's information"""
