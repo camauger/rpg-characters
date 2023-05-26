@@ -112,6 +112,50 @@ class Character:
         except (KeyError, TypeError) as e:
            raise Exception(f"Invalid parameter format: {e}")
 
+    def to_dict(self):
+        """Convert the character object to a dictionary"""
+        return {
+            'id': self.id,
+            'first_name': self.first_name,
+            'last_name': self.last_name,
+            'full_name': self.full_name,
+            'gender': self.gender,
+            'character_class': self.character_class,
+            'character_class_id': self.character_class_id,
+            'character_subclass': self.character_subclass,
+            'character_subclass_id': self.character_subclass_id,
+            'background': self.background,
+            'background_name': self.background_name,
+            'background_id': self.background_id,
+            'ethnicity': self.ethnicity,
+            'ethnicity_name': self.ethnicity_name,
+            'ethnicity_id': self.ethnicity_id,
+            'subrace': self.subrace,
+            'subrace_name': self.subrace_name,
+            'subrace_id': self.subrace_id,
+            'ethnicity_keywords': self.ethnicity_keywords,
+            'age': self.age,
+            'physical_description': {
+                'trait': self.physical_trait,
+                'hair_color': self.hair_color,
+                'hair_style': self.hair_style
+            },
+            'physical_trait': self.physical_trait,
+            'hair_color': self.hair_color,
+            'hair_style': self.hair_style,
+            'eye_color': self.eye_color,
+            'behavior': self.behavior,
+            'picture_id': self.picture_id,
+            'image_prompt': self.image_prompt,
+            'personality_description': self.personality_description,
+            'background_story': self.background_story,
+            'has_image': self.has_image
+        }
+    
+    def update_has_image(self):
+        self.has_image = file_exists('static/images', f"{self.picture_id}.png")
+
+
     def get_subrace_name(self):
         if self.subrace is not None:
             return self.subrace['name']

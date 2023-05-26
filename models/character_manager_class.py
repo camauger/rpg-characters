@@ -15,23 +15,21 @@ class CharacterManager:
 
     def __init__(self):
         """Initialize the CharacterManager class"""
-        self.characters = self.load_characters(
-        )  # Load existing characters from the JSON file
+        self.characters = []  # Define the characters attribute as an empty list
+        self.load_characters()  # Load existing characters from the JSON file
 
     def load_characters(self):
         """Load existing characters from the JSON file"""
         try:
             with open(self.FILE_PATH, "r") as json_file:
                 character_data = json.load(json_file)
-                characters = [Character(character['picture_id'], character)
-                              for character in character_data]
-                for character in characters:
-                    character.update_has_image()
+                self.characters = [Character(character['id'], character)
+                                for character in character_data]
 
-            print(f"Loaded {len(characters)} characters.")
-            return characters
+            print(f"Loaded {len(self.characters)} characters.")
         except (FileNotFoundError, json.JSONDecodeError):
-            return []
+            self.characters = []
+
 
     def save_characters(self, characters=None, filename=None):
         """Save characters to a JSON file"""
@@ -39,9 +37,11 @@ class CharacterManager:
             characters = self.characters
         if filename is None:
             filename = self.FILE_PATH
+        
+        character_data = [character.to_dict() for character in characters]
         with open(filename, "w") as json_file:
-            json.dump(characters, json_file, indent=4,
-                      default=lambda o: o.__dict__)
+            json.dump(character_data, json_file, indent=4)
+
 
     def check_character_count(self):
         """Check if the maximum number of characters has been reached"""
