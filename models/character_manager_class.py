@@ -1,6 +1,11 @@
 import json
 import random
 import os
+from dotenv import load_dotenv
+
+# Load .env file
+load_dotenv()
+
 
 from settings.random_settings import (
     pick_random_age,
@@ -21,7 +26,6 @@ class CharacterManager:
     MAX_CHARACTER_ID = 9999  # Maximum character ID
     MAX_CHARACTER_COUNT = 9999  # Maximum number of characters
     FILE_PATH = "characters.json"  # Path to the JSON file containing character data
-    API_KEY = os.environ.get('API_KEY')  # API key
 
     def __init__(self):
         """Initialize the CharacterManager class"""

@@ -2,6 +2,10 @@ import json
 from flask import Flask, render_template, request, redirect, url_for
 from models.character_manager_class import CharacterManager
 import os
+from dotenv import load_dotenv
+
+# Load .env file
+load_dotenv()
 
 def file_exists(folder_path, filename):
     file_path = os.path.join(folder_path, filename)
