@@ -4,3 +4,7 @@ High-Key Portrait in the style of Sparth | Fantasy | an Uthgardt Tribe Member Ha
 
 Moody Portrait in the style of Ismail Inceoglu | Fantasy | a Waterdhavian Noble Elf Fighter named Brocky Eld | Brocky Eld is an Athletic male Elf. Brocky Eld has blond high pony hair and gold eyes. | Cream and Vermilion tones | Moonlight | tall, slender, pointed ears, almond-shaped eyes, graceful, ageless, delicate features, arcane, magic, scholarly, Fantasy, Medieval Fantasy, Dungeons & Dragons. --s 1000 --upbeta --seed 10031053317361
 
+Head and Shoulders Portrait in the style of Balthus | Fantasy | a Waterdhavian Noble Half-Elf Cleric named Shem Opharadanis | Shem Opharadanis is a Stout male Half-Elf. Shem Opharadanis has brown fauxhawk hair and honey eyes. | Forest Green and Chocolate tones | Soft Light | slim, pointed ears, fair skin, mix of human and elf features, Fantasy, Medieval Fantasy, Dungeons & Dragons. --s 1000 --upbeta --seed 1006031317493
+
+Broad Lighting Portrait in the style of Neil Welliver | Fantasy | a Cloistered Scholar Dragonborn Fighter named Amelia Ellean | Amelia Ellean is a Bulky female Dragonborn. Amelia Ellean has ashen updo hair and hazel eyes. | Chartreuse and Brown tones | Low Key Lighting | tall, muscular, dragon-like face, scales, tail, claws, frills, dragon anthropomorphic humanoid, reptilian, fearsome, Fantasy, Medieval Fantasy, Dungeons & Dragons. --s 1000 --upbeta --seed 0009054079885
+

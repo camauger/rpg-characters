@@ -202,5 +202,125 @@
         "personality_description": "\n\nBrocky Eld is an ambitious individual who is also overconfident. He is brave and adventurous by nature, and his main bond is with his family.",
         "background_story": "\n\nBrocky Eld was born into a wealthy Waterdhavian family with a long history of public service. His father was a successful politician and his mother was a well-known socialite. Brocky was raised in luxury and privilege, but he was always aware of the elven blood in his veins. His mother would tell him stories of her homeland and he would often daydream about adventuring in the wilds of Faerun. When he was old enough, he convinced his parents to send him to a prestigious elven academy in the city of Silverymoon.\n\nBrocky excelled in his studies and quickly became one of the top students in his class. He developed a keen interest in magic and history, and he dreamed of one day becoming a great wizard like his mother's people. However, his plans were derailed when his parents were killed in a freak accident. Brocky was suddenly the head of the family and he had to put his studies on hold to take up his father's political mantle.\n\nFor the next few years, Brocky devoted himself to his family's business interests and to Waterdhavian politics. He quickly rose through the ranks of the nobility and became one of the most powerful men in the city. But Brocky's heart was never in it. He longed for adventure and excitement, and he eventually came to the realization that his true calling was in the world of adventuring.\n\nBrocky left his family and Waterdeep behind and set out into the wide world of Faerun. He quickly made a name for himself as a skilled fighter and a master of magic. He has adventured across the length and breadth of the Realms, and he has seen and accomplished more than most people could ever dream of. But Brocky is still searching for something. He feels like there is something more out there for him, some greater purpose that he has yet to discover.\n\nOne possible adventure hook for",
         "has_image": true
+    },
+    {
+        "id": 7493,
+        "first_name": "Shem",
+        "last_name": "Opharadanis",
+        "full_name": "Shem Opharadanis",
+        "gender": "Male",
+        "character_class": "Cleric",
+        "character_class_id": "030",
+        "character_subclass": "Life Domain",
+        "character_subclass_id": "031",
+        "background": {
+            "name": "Waterdhavian Noble",
+            "id": "31"
+        },
+        "background_name": "Waterdhavian Noble",
+        "background_id": "31",
+        "ethnicity": "Half-Elf",
+        "ethnicity_name": "Half-Elf",
+        "ethnicity_id": "006",
+        "subrace": {
+            "race": "Half-Elf",
+            "id": "006",
+            "keywords": [
+                "slim",
+                "pointed ears",
+                "fair skin",
+                "mix of human and elf features"
+            ]
+        },
+        "subrace_name": "",
+        "subrace_id": "006",
+        "ethnicity_keywords": [
+            "slim",
+            "pointed ears",
+            "fair skin",
+            "mix of human and elf features"
+        ],
+        "age": "Adult",
+        "physical_description": {
+            "trait": "Stout",
+            "hair_color": "Brown",
+            "hair_style": "fauxhawk"
+        },
+        "physical_trait": "Stout",
+        "hair_color": "Brown",
+        "hair_style": "fauxhawk",
+        "eye_color": "honey",
+        "behavior": "Shem Opharadanis's ideal is creativity. His flaw is reckless, his bond is legacy, his behavior is brave, and his nature is wise.",
+        "picture_id": "1006031317493",
+        "image_prompt": "Head and Shoulders Portrait in the style of Balthus | Fantasy | a Waterdhavian Noble Half-Elf Cleric named Shem Opharadanis | Shem Opharadanis is a Stout male Half-Elf. Shem Opharadanis has brown fauxhawk hair and honey eyes. | Forest Green and Chocolate tones | Soft Light | slim, pointed ears, fair skin, mix of human and elf features, Fantasy, Medieval Fantasy, Dungeons & Dragons. --s 1000 --upbeta --seed 1006031317493",
+        "personality_description": "\n\nShem Opharadanis is a creative person who likes to experiment and take risks. He is also wise and brave, and he feels a strong sense of responsibility to uphold his family's legacy.",
+        "background_story": "\n\nShem Opharadanis was born into a wealthy Waterdhavian family of Half-Elven heritage. His parents were kind and loving, and he had a happy childhood. However, when he was ten years old, his parents were killed in a carriage accident. Shem was the only survivor.\n\nOrphaned and alone, Shem was taken in by his parents' closest friends, a couple who were also of Half-Elven heritage. They treated him like their own son, and he grew up happy and loved.\n\nWhen he was eighteen, Shem's adoptive parents died of a mysterious illness. Again, he was the only survivor. Shem was devastated by the loss of the only family he had ever known.\n\n Seeking answers, Shem turned to the church. He became a Cleric, and devoted his life to serving the gods. He also began to research the mysterious illness that had claimed the lives of his adoptive parents, in the hope of finding a cure.\n\nShem's quest for answers has led him on many adventures. He has battled evil wizards, dragons, and demons. He has also made many allies, including a group of like-minded Clerics who share his quest to find a cure for the mysterious illness.\n\nOne day, Shem hopes to find the answer to the mystery that has haunted him all his life. Until then, he will continue to serve the gods and fight evil in the world.",
+        "has_image": true
+    },
+    {
+        "id": 9885,
+        "first_name": "Amelia",
+        "last_name": "Ellean",
+        "full_name": "Amelia Ellean",
+        "gender": "Female",
+        "character_class": "Fighter",
+        "character_class_id": "050",
+        "character_subclass": "Psi Warrior",
+        "character_subclass_id": "054",
+        "background": {
+            "name": "Cloistered Scholar",
+            "id": "07"
+        },
+        "background_name": "Cloistered Scholar",
+        "background_id": "07",
+        "ethnicity": "Dragonborn",
+        "ethnicity_name": "Dragonborn",
+        "ethnicity_id": "009",
+        "subrace": {
+            "race": "Dragonborn",
+            "id": "009",
+            "keywords": [
+                "tall",
+                "muscular",
+                "dragon-like face",
+                "scales",
+                "tail",
+                "claws",
+                "frills",
+                "dragon anthropomorphic humanoid",
+                "reptilian",
+                "fearsome"
+            ]
+        },
+        "subrace_name": "",
+        "subrace_id": "009",
+        "ethnicity_keywords": [
+            "tall",
+            "muscular",
+            "dragon-like face",
+            "scales",
+            "tail",
+            "claws",
+            "frills",
+            "dragon anthropomorphic humanoid",
+            "reptilian",
+            "fearsome"
+        ],
+        "age": "Senior",
+        "physical_description": {
+            "trait": "Bulky",
+            "hair_color": "Ashen",
+            "hair_style": "updo"
+        },
+        "physical_trait": "Bulky",
+        "hair_color": "Ashen",
+        "hair_style": "updo",
+        "eye_color": "hazel",
+        "behavior": "Amelia Ellean's ideal is growth. Her flaw is forgetful, her bond is family, her behavior is aggressive, and her nature is reserved.",
+        "picture_id": "0009054079885",
+        "image_prompt": "Broad Lighting Portrait in the style of Neil Welliver | Fantasy | a Cloistered Scholar Dragonborn Fighter named Amelia Ellean | Amelia Ellean is a Bulky female Dragonborn. Amelia Ellean has ashen updo hair and hazel eyes. | Chartreuse and Brown tones | Low Key Lighting | tall, muscular, dragon-like face, scales, tail, claws, frills, dragon anthropomorphic humanoid, reptilian, fearsome, Fantasy, Medieval Fantasy, Dungeons & Dragons. --s 1000 --upbeta --seed 0009054079885",
+        "personality_description": "\n\nAmelia Ellean is a character who is always striving to grow and improve herself. She is very forgetful and often lets things slip her mind. Amelia is also quite aggressive and can be quick to lash out if she feels threatened. Despite all of this, she is actually a very reserved person who doesn't open up to many people. Amelia's main priority is her family and she will do anything to protect them.",
+        "background_story": "\n\nAmelia Ellean is a Cloistered Scholar and a Dragonborn. She was born and raised in the city of Waterdeep. Her parents were scholars who worked at the local library. Amelia was always curious and loved to learn. She would often sneak into the library to read when she was supposed to be doing her chores. When she was old enough, she enrolled in the local academy. She excelled in her studies and graduated at the top of her class.\n\nAfter graduation, Amelia decided to join the city guard. She was quickly promoted to captain. She served the city for many years, until one day she was called to investigate a strange disturbance in the city. Amelia discovered a group of cultists trying to summon a demon. She was able to stop them, but not before the demon was summoned. The demon attacked Amelia and she was gravely injured. Amelia was able to kill the demon, but she was left with scars that would never heal.\n\nAmelia retired from the city guard and became a Cloistered Scholar. She now spends her days researching the demon that nearly killed her. She hopes to find a way to destroy it and prevent it from harming anyone else.",
+        "has_image": true
     }
 ]
