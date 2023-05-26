@@ -46,7 +46,7 @@ def character(picture_id):
     return render_template('character.html', character_data=character_data)
 
 # Route for the create page
-@app.route('/create', methods=['GET', 'POST'])
+@app.route('/create.html', methods=['GET', 'POST'])
 def create_character():
     if request.method == 'POST':
         try:
