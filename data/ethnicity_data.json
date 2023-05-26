@@ -30,21 +30,17 @@
           "id": "0021",
           "keywords": [
             "stout and tough",
-            "exceptional endurance",
-            "wisdom",
-            "strength"
+            "exceptional endurance"
           ]
         },
         {
           "name": "Mountain Dwarf",
           "id": "0022",
           "keywords": [
-            "warrior",
             "miner",
             "smith",
-            "artisans",
-            "hardiness",
-            "combat training"
+            "artisan",
+            "hardiness"
           ]
         }
       ]
@@ -69,8 +65,7 @@
             "arcane",
             "magic",
             "scholarly",
-            "graceful",
-            "weapon training"
+            "graceful"
           ]
         },
         {
@@ -79,8 +74,7 @@
           "keywords": [
             "agile",
             "quick",
-            "forest dwellers",
-            "masters of the bow",
+            "forest dweller",
             "fleet-footed",
             "mask of the wild"
           ]
@@ -92,9 +86,7 @@
             "underdark",
             "subterranean",
             "cunning",
-            "mysterious",
-            "superior darkvision",
-            "magic resistance"
+            "mysterious"
           ]
         }
       ]
@@ -153,8 +145,7 @@
             "illusion magic",
             "stealth",
             "pranks",
-            "love of nature",
-            "mask of the wild"
+            "love of nature"
           ]
         },
         {
@@ -162,7 +153,6 @@
           "id": "0052",
           "keywords": [
             "tinkerer",
-            "engineering",
             "inventions",
             "mechanical devices",
             "tinkering abilities"
@@ -174,11 +164,9 @@
       "race": "Half-Elf",
       "id": "006",
       "keywords": [
-        "medium height",
         "slim",
         "pointed ears",
         "fair skin",
-        "various eye colors",
         "mix of human and elf features"
       ]
     },
@@ -208,7 +196,6 @@
         "horns",
         "tail",
         "fangs",
-        "purple skin",
         "glowing eyes",
         "sharp features",
         "devilish",
@@ -223,8 +210,6 @@
           "id": "0081",
           "keywords": [
             "Asmodeus bloodline",
-            "rulership",
-            "leadership",
             "commanding presence"
           ]
         },
@@ -242,8 +227,6 @@
           "name": "Zariel Tiefling",
           "id": "0083",
           "keywords": [
-            "Zariel bloodline",
-            "warriors",
             "combat prowess",
             "resilience"
           ]
@@ -285,8 +268,7 @@
           "keywords": [
             "angelic guardian",
             "healing hands",
-            "wings",
-            "celestial resistance"
+            "wings"
           ]
         },
         {
@@ -295,7 +277,6 @@
           "keywords": [
             "radiant consumption",
             "destructive energy",
-            "burst of radiant damage",
             "divine light"
           ]
         },
@@ -304,9 +285,7 @@
           "id": "0103",
           "keywords": [
             "dark transformation",
-            "necrotic damage",
-            "wings of shadow",
-            "divine aversion"
+            "wings of shadow"
           ]
         }
       ]
