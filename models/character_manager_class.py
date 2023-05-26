@@ -1,9 +1,19 @@
 import json
 import random
-from settings.random_settings import pick_random_age, pick_random_gender, pick_random_ethnicity, pick_random_subrace, pick_random_character_class, pick_random_subclass, pick_random_background, get_ethnicity_keywords
+import os
+
+from settings.random_settings import (
+    pick_random_age,
+    pick_random_gender,
+    pick_random_ethnicity,
+    pick_random_subrace,
+    pick_random_character_class,
+    pick_random_subclass,
+    pick_random_background,
+    get_ethnicity_keywords
+)
 from models.character_class import Character
 from discord_bot import start_discord_bot
-import os
 
 
 class CharacterManager:
@@ -24,44 +34,24 @@ class CharacterManager:
             with open(self.FILE_PATH, "r") as json_file:
                 character_data = json.load(json_file)
                 self.characters = [Character(character['id'], character)
-                                for character in character_data]
+                                    for character in character_data]
 
             print(f"Loaded {len(self.characters)} characters.")
         except (FileNotFoundError, json.JSONDecodeError):
             self.characters = []
 
-
-    def save_characters(self, characters=None, filename=None):
-        """Save characters to a JSON file"""
-        if characters is None:
-            characters = self.characters
-        if filename is None:
-            filename = self.FILE_PATH
-        
-        character_data = [character.to_dict() for character in characters]
-        with open(filename, "w") as json_file:
+    def save_characters(self):
+        """Save characters to the JSON file"""
+        character_data = [character.to_dict() for character in self.characters]
+        with open(self.FILE_PATH, "w") as json_file:
             json.dump(character_data, json_file, indent=4)
-
 
     def check_character_count(self):
         """Check if the maximum number of characters has been reached"""
-        if len(self.characters) > self.MAX_CHARACTER_COUNT:
-            print(
-                "There are too many characters. Please delete some characters before creating a new one.")
+        if len(self.characters) >= self.MAX_CHARACTER_COUNT:
+            print("There are too many characters. Please delete some characters before creating a new one.")
             return False
         return True
-
-    def get_character_info(self):
-        """Get information about existing characters"""
-        try:
-            with open(self.FILE_PATH, "r") as json_file:
-                existing_characters = json.load(json_file)
-            character_count = len(existing_characters)
-            character_ids = [character.get('id')
-                             for character in existing_characters]
-            return character_count, character_ids
-        except (FileNotFoundError, json.JSONDecodeError):
-            return 0, []
 
     def generate_character_id(self, existing_ids):
         """Generate a unique character ID"""
@@ -73,17 +63,12 @@ class CharacterManager:
     def get_character_params(self, is_random):
         """Get parameters for a new character"""
         params = {}
-        params['random_class'] = pick_random_character_class() if is_random else input(
-            "What class do you want your character to be? ")
-        params['random_subclass'] = pick_random_subclass(params['random_class']) if is_random else input(
-            "What subclass do you want your character to be? ")
+        params['random_class'] = pick_random_character_class() if is_random else input("What class do you want your character to be? ")
+        params['random_subclass'] = pick_random_subclass(params['random_class']) if is_random else input("What subclass do you want your character to be? ")
         
-     
-
         if is_random:
             params['random_ethnicity'] = pick_random_ethnicity()
-            params['random_subrace'] = pick_random_subrace(
-                params['random_ethnicity'])
+            params['random_subrace'] = pick_random_subrace(params['random_ethnicity'])
         else:
             ethnicity_input = input("What is your character's ethnicity?")
             # Find the ethnicity based on the input (assuming the input matches a valid ethnicity)
@@ -95,20 +80,15 @@ class CharacterManager:
 
             if params['random_ethnicity']:
                 params['random_ethnicity_name'] = params['random_ethnicity']['race']
-                params['ethnicity_keywords'] = get_ethnicity_keywords(
-                    params['random_ethnicity'], params['random_subrace'])
+                params['ethnicity_keywords'] = get_ethnicity_keywords(params['random_ethnicity'], params['random_subrace'])
                 subrace_input = input("What is your character's subrace?")
-                params['random_subrace'] = next((subrace for subrace in params['random_ethnicity'].get(
-                    'subraces', []) if subrace['name'] == subrace_input), None)
+                params['random_subrace'] = next((subrace for subrace in params['random_ethnicity'].get('subraces', []) if subrace['name'] == subrace_input), None)
             else:
                 print("Invalid ethnicity input!")
 
-        params['age'] = pick_random_age() if is_random else input(
-            "How old is your character? ")
-        params['gender'] = pick_random_gender() if is_random else input(
-            "What is your character's gender?")
-        params['background'] = pick_random_background() if is_random else input(
-            "What is your character's background?")
+        params['age'] = pick_random_age() if is_random else input("How old is your character? ")
+        params['gender'] = pick_random_gender() if is_random else input("What is your character's gender?")
+        params['background'] = pick_random_background() if is_random else input("What is your character's background?")
         return params
 
     def create_character(self, is_random):
@@ -116,44 +96,47 @@ class CharacterManager:
         character_count, existing_ids = self.get_character_info()
         if self.check_character_count():
             params = self.get_character_params(is_random)
-            new_character = Character(
-                self.generate_character_id(existing_ids), params)
+            new_character = Character(self.generate_character_id(existing_ids), params)
             new_character.update_has_image()
             # create a new text file with the prompt
             with open(f"./data/image_prompts/{new_character.picture_id}.txt", "w") as file:
                 file.write(new_character.picture_id + "\n" + new_character.image_prompt + "\n")
+            
+            self.characters.append(new_character)  # Add the new character to the list
             return new_character
         return None
 
+
     def create_characters(self, num_characters):
         """Create multiple characters"""
+        new_characters = []
         for _ in range(num_characters):
             new_character = self.create_character(is_random=True)
-            new_character.update_has_image()
-            self.characters.append(new_character)
+            if new_character:
+                new_characters.append(new_character)
+        return new_characters
+
 
     def create_random_character_option(self):
         """Create a number of random characters"""
         print("This program will create a number of random characters for you.")
         while True:
-            num_characters = input(
-                "How many characters do you want to create? ")
+            num_characters = input("How many characters do you want to create? ")
             while not num_characters.isdigit() or int(num_characters) <= 0:
-                num_characters = input(
-                    "Please enter a valid number greater than 0: ")
+                num_characters = input("Please enter a valid number greater than 0: ")
 
             num_characters = int(num_characters)
-            self.create_characters(num_characters)
-            self.save_characters(self.characters)
+            new_characters = self.create_characters(num_characters)
+            if new_characters:
+                self.characters.extend(new_characters)  # Add the new characters to the list
+                #self.save_characters()  # Save the characters after creation
+
             existing_characters = self.characters
             print(f"Created {num_characters} character(s).")
-            print(
-                f"Finished creating characters. There are now a total of {len(existing_characters)} characters.")
-            create_more = input(
-                "Do you want to create more characters? (y/n) ").lower()
+            print(f"Finished creating characters. There are now a total of {len(existing_characters)} characters.")
+            create_more = input("Do you want to create more characters? (y/n) ").lower()
             if create_more != 'y':
-                start_bot = input(
-                    "Do you want to start the Discord bot? (y/n) ").lower()
+                start_bot = input("Do you want to start the Discord bot? (y/n) ").lower()
                 if start_bot == 'y':
                     start_discord_bot()
                 else:
@@ -161,10 +144,8 @@ class CharacterManager:
 
     def update_character_prompt(self):
         """Prompt the user to update a character's information"""
-        character_id = int(
-            input("What is the ID of the character you want to update? "))
-        new_info_input = input(
-            "Enter the new information you want to add in the format 'attribute value', separated by commas for multiple updates: ")
+        character_id = int(input("What is the ID of the character you want to update? "))
+        new_info_input = input("Enter the new information you want to add in the format 'attribute value', separated by commas for multiple updates: ")
 
         # Convert the user's input into a dictionary
         new_info = {}
@@ -177,8 +158,7 @@ class CharacterManager:
     def update_character(self, character_id, new_info):
         """Update a character's information"""
         # Find the character
-        character = next(
-            (c for c in self.characters if c.id == character_id), None)
+        character = next((c for c in self.characters if c.id == character_id), None)
         if not character:
             print(f"No character found with ID {character_id}.")
             return
@@ -196,3 +176,14 @@ class CharacterManager:
     def get_files_in_folder(self, folder_path):
         """Get list of files in a folder"""
         return [file_name for file_name in os.listdir(folder_path) if os.path.isfile(os.path.join(folder_path, file_name))]
+
+    def get_character_info(self):
+        """Get information about existing characters"""
+        try:
+            with open(self.FILE_PATH, "r") as json_file:
+                existing_characters = json.load(json_file)
+            character_count = len(existing_characters)
+            character_ids = [character.get('id') for character in existing_characters]
+            return character_count, character_ids
+        except (FileNotFoundError, json.JSONDecodeError):
+            return 0, []
