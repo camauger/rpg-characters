@@ -1,8 +1,5 @@
 import json
-import threading
 from flask import Flask, render_template, request, redirect, url_for
-import discord
-from discord.ext import commands
 from models.character_manager_class import CharacterManager
 from api_settings import discord_token
 import os
@@ -85,25 +82,6 @@ def subscribe():
             json.dump(data, file)
     return redirect(url_for('index'))
 
-# Discord Bot
-intents = discord.Intents.all()
-intents.typing = True
-
-bot = commands.Bot(command_prefix='!', intents=intents)
-
-@bot.event
-async def on_ready():
-    print(f'Logged in')
-
-def run_discord_bot():
-    bot.run(discord_token)
 
 if __name__ == '__main__':
-    flask_thread = threading.Thread(target=app.run, kwargs={'debug': False})
-    discord_thread = threading.Thread(target=run_discord_bot)
-
-    flask_thread.start()
-    discord_thread.start()
-
-    flask_thread.join()
-    discord_thread.join()
+    app.run(debug=True)
