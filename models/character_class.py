@@ -165,13 +165,13 @@ class Character:
     def create_picture_id(self):
         gender_id = ""
         if self.gender == 'Male':
-            gender_id = '01'
+            gender_id = '1'
         elif self.gender == 'Female':
-            gender_id = '02'
+            gender_id = '0'
         else:
-            gender_id = '00'
+            gender_id = '2'
 
-        return (gender_id or '') + (self.ethnicity_id or '') + (self.subrace_id or '') + (self.character_class_id or '') + (self.character_subclass_id or '') + (self.background_id or '') + str(self.id)
+        return (gender_id or '') + (self.subrace_id or self.ethnicity_id) + (self.character_subclass_id or self.character_class_id) + (self.background_id or '') + str(self.id)
 
 
     def create_physical_description_text(self):

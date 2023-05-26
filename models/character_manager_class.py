@@ -80,7 +80,7 @@ class CharacterManager:
         """Generate a unique character ID"""
         character_id = random.randint(1, self.MAX_CHARACTER_ID)
         while character_id in existing_ids:
-            character_id = random.randint(1, self.MAX_CHARACTER_ID)
+            character_id = random.randint(1000, self.MAX_CHARACTER_ID)
         return character_id
 
 

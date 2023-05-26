@@ -68,27 +68,27 @@ hair_colors_settings = [
     ('White', 15),
     ('Auburn', 20),
     ('Mahogany', 15),
-    ('Red', 25),
+    ('Red', 15),
     ('Orange', 10),
     ('Yellow', 10),
-    ('Green', 5),
-    ('Teal', 5),
-    ('Blue', 15),
+    ('Green', 1),
+    ('Teal', 1),
+    ('Blue', 1),
     ('Indigo', 10),
     ('Purple', 15),
-    ('Lilac', 5),
-    ('Pink', 15),
-    ('Blush', 5),
-    ('Rainbow', 5),
-    ('Fluorescent', 5),
+    ('Lilac', 1),
+    ('Pink', 1),
+    ('Blush', 1),
+    ('Rainbow', 1),
+    ('Fluorescent', 1),
     ('Ombre', 10),
-    ('Streaked', 10),
+    ('Streaked', 5),
 ]
 
 gender_settings = [
-('Male', 50),
+('Male', 45),
 ('Female', 50),
-('Non-binary', 10)
+('Non-binary', 5)
 ]
 
 physical_settings = ["Tall", "Short", "Slender", "Muscular", "Lean", "Athletic", "Curvy", "Voluptuous", "Stocky", "Chiseled", "Petite", "Plump", "Stout", "Bulky", "Svelte", "Lithe", "Solid", "Broad-shouldered", "Delicate", "Lanky", "Sinewy", "Compact", "Shapely", "Ripped", "Toned", "Angular", "Gorgeous", "Handsome", "Pretty", "Attractive", "Exotic", "Elegant", "Graceful", "Striking", "Radiant", "Youthful", "Aging", "Weathered", "Wrinkled", "Wizened", "Scarred", "Fierce", "Intimidating", "Fierce", "Commanding", "Mysterious", "Enigmatic", "Alluring", "Seductive", "Mesmerizing", "Majestic", "Regal", "Noble"]
