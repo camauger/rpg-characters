@@ -6,7 +6,7 @@ from dotenv import load_dotenv
 from PIL import Image
 import os
 import time
-from api_settings import discord_token, WEB_HOOK
+from settings.env_settings import WEB_HOOK, DISCORD_TOKEN
 import re
 
 load_dotenv()
@@ -135,7 +135,7 @@ async def on_message(message):
 
 # Start the bot
 def start_discord_bot():
-    bot.run(discord_token)
+    bot.run(DISCORD_TOKEN)
 
 
 import shutil

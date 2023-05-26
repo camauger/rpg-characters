@@ -6,7 +6,8 @@ from settings.random_settings import create_eye_color, create_hair_color, create
 import requests
 import json
 from utils.indefinite_article import indefinite_article
-from api_settings import api_key
+from settings.env_settings import API_KEY
+
 # Create a background story for an RPG character
 def fetch_character_data(prompt, api_key):
     url = "https://api.openai.com/v1/engines/text-davinci-002/completions"
@@ -199,7 +200,7 @@ class Character:
 
     def create_background_story(self):
         prompt = f"Write a background story for an RPG character named {self.full_name}, a {self.character_class} in the world of Forgotten Realms. The character is a {self.background_name} with {self.ethnicity} heritage. Describe their upbringing, key events in their life, and their motivations. Please write three paragraphs with a total word count of around 300 words. Conclude the background story by including a potential adventure hook or a mystery that the character seeks to unravel."
-        background_story = fetch_character_data(prompt, api_key)
+        background_story = fetch_character_data(prompt, API_KEY)
         # Transform the /n in paragraphs into <br> for HTML
         ## background_story = background_story.replace('\n\n', '<br>')
         return background_story
@@ -211,7 +212,7 @@ class Character:
 
     def create_personality_description(self):
         prompt = f"Make a description of a character's personality based on this sentence: {self.behavior}"
-        personality = fetch_character_data(prompt, api_key)
+        personality = fetch_character_data(prompt, API_KEY)
         return personality
     
     def create_image_prompt(self):

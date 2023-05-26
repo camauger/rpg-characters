@@ -1,7 +1,6 @@
 import json
 from flask import Flask, render_template, request, redirect, url_for
 from models.character_manager_class import CharacterManager
-from api_settings import discord_token
 import os
 
 def file_exists(folder_path, filename):

@@ -14,8 +14,8 @@ data/locations.txt
 data/image_prompts.txt
 subscribers.json
 
-# Ignore api_settings.py
-api_settings.py
+# Ignore api_settings
+.env
 
 # Image folders
 input
