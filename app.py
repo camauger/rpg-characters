@@ -16,16 +16,12 @@ app = Flask(__name__, static_folder='static', static_url_path='/static')
 character_manager = CharacterManager()
 
 def get_character_data(picture_id):
-    with open('characters.json', 'r') as f:
-        characters = json.load(f)
+    characters = load_characters()
     for character in characters:
         if character.get('picture_id') == picture_id:
-            # Replace '\n\n' with '<br>' in all string fields
-            for key, value in character.items():
-                if isinstance(value, str):
-                    character[key] = value.replace('\n\n', '<br>')
             return character
     return None
+
 
 def load_characters():
     with open('characters.json', 'r') as f:
@@ -46,14 +42,12 @@ def about():
     return render_template('about.html')
 
 # Route for individual character based on ID
-@app.route('/character/<int:picture_id>.html')
+@app.route('/character/<string:picture_id>.html')
 def character(picture_id):
     # Retrieve character data based on the ID
     character_data = get_character_data(picture_id)
-    # Check if the character has an image:
-    
     # Process character data and render the template
-    return render_template('character.html', character=character_data)
+    return render_template('character.html', character_data=character_data)
 
 # Route for the create page
 @app.route('/create.html', methods=['GET', 'POST'])

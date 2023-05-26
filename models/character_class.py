@@ -112,9 +112,6 @@ class Character:
         except (KeyError, TypeError) as e:
            raise Exception(f"Invalid parameter format: {e}")
 
-    def update_has_image(self):
-        self.has_image = file_exists('static/images', f"{self.picture_id}.png")
-
     def get_subrace_name(self):
         if self.subrace is not None:
             return self.subrace['name']

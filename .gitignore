@@ -11,7 +11,7 @@ env/
 # Ignore generated data files
 characters.json
 data/locations.txt
-data/characters_data.csv
+data/image_prompts/
 subscribers.json
 
 # Ignore api_settings.py

@@ -7,6 +7,7 @@ from PIL import Image
 import os
 import time
 from api_settings import discord_token, WEB_HOOK
+import re
 
 load_dotenv()
 bot = commands.Bot(command_prefix="*", intents=discord.Intents.all())
@@ -88,15 +89,6 @@ async def on_ready():
 def send_message_to_channel(message):
     webhook = SyncWebhook.from_url(WEB_HOOK)
     webhook.send(f"{message}")
-    imagine(message)
-
-@bot.command()
-async def imagine(ctx, *, message):  # The * allows for multi-word arguments
-    channel_id = 1110536849799254056
-    channel = bot.get_channel(channel_id)
-    await channel.send(f"/imagine {message}")
-
-
 
 @bot.event
 async def on_message(message):

@@ -2,7 +2,7 @@ import json
 import random
 from settings.random_settings import pick_random_age, pick_random_gender, pick_random_ethnicity, pick_random_subrace, pick_random_character_class, pick_random_subclass, pick_random_background, get_ethnicity_keywords
 from models.character_class import Character
-from discord_bot import start_discord_bot, send_message_to_channel
+from discord_bot import start_discord_bot
 import os
 
 
@@ -77,13 +77,11 @@ class CharacterManager:
             "What class do you want your character to be? ")
         params['random_subclass'] = pick_random_subclass(params['random_class']) if is_random else input(
             "What subclass do you want your character to be? ")
-        params['random_class_name'] = params['random_class']
-        params['random_subclass_name'] = params['random_subclass']
+        
      
 
         if is_random:
             params['random_ethnicity'] = pick_random_ethnicity()
-            params['random_ethnicity_name'] = params['random_ethnicity']['race']
             params['random_subrace'] = pick_random_subrace(
                 params['random_ethnicity'])
         else:
@@ -121,7 +119,9 @@ class CharacterManager:
             new_character = Character(
                 self.generate_character_id(existing_ids), params)
             new_character.update_has_image()
-
+            # create a new text file with the prompt
+            with open(f"./data/image_prompts/{new_character.picture_id}.txt", "w") as file:
+                file.write(new_character.picture_id + "\n" + new_character.image_prompt + "\n")
             return new_character
         return None
 

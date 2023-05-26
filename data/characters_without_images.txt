@@ -1,4 +1,0 @@
-Character Portrait in the style of Julie Dillon | Fantasy | a Sailor None None named Ben Zen | Ben Zen is an Intimidating male None. Ben Zen has black punk hair and emerald eyes. | Lemon and Carnation tones | Backlighting | , Fantasy, Medieval Fantasy, Dungeons & Dragons. --s 1000 --upbeta --seed 010254835
-
-Split Lighting Portrait in the style of Craig Mullins | Fantasy | an Anthropologist None None named Farah Syl | Farah Syl is a Scarred female None. Farah Syl has brown bob cut hair and amber eyes. | Teal and Olive tones | Rim Lighting | , Fantasy, Medieval Fantasy, Dungeons & Dragons. --s 1000 --upbeta --seed 020023290
-

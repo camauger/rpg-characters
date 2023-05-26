@@ -34,7 +34,6 @@ def main():
         start_discord_bot()
     elif choice == "6":
         character_manager.update_character_prompt()
-
     elif choice == "0":
         print("Goodbye!")
         return

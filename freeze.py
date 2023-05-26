@@ -18,11 +18,11 @@ def index():
 
 @freezer.register_generator
 def character():
-    # yield a URL for each possible value of id
     with open('characters.json', 'r') as f:
         characters = json.load(f)
-    for character in characters:
-        yield {'picture_id': character.get('picture_id')}
+    for char in characters:
+        yield {'picture_id': str(char.get('picture_id'))}
+
 
 if __name__ == '__main__':
     configure_app(app)

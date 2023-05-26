@@ -34,7 +34,7 @@ class ImagePrompt:
 
     def tags(self):
         keywords = ', '.join(self.character.ethnicity_keywords)
-        return f"{keywords}, Fantasy, Medieval Fantasy, Dungeons & Dragons. --s 1000 --upbeta --seed {self.character.picture_id}"
+        return f"{keywords}, Fantasy, Medieval Fantasy, Dungeons & Dragons. --s 1000 --upbeta"
 
     def actor(self):
         return f"{self.character.create_physical_description_text()}"
@@ -46,4 +46,5 @@ class ImagePrompt:
         return random.choice(portrait)
     
     def craft_image_prompt(self):
-        return f"{self.image_type} in the style of {self.style} | {self.genre} | {self.scene} | {self.actor} | {self.tones} tones | {self.lighting} | {self.tags}"
+        prompt = f"{self.image_type} in the style of {self.style} | {self.genre} | {self.scene} | {self.actor} | {self.tones} tones | {self.lighting} | {self.tags}"
+        return prompt

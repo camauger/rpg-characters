@@ -79,11 +79,11 @@
     <div class="container-fluid" style="margin-bottom: 90px">
       <div class="row">
         <div class="col-md-6">
-          {% if character.has_image %}
+          {% if character_data.has_image: %}
           <img
-            src="{{ url_for('static', filename='images/' ~ character.picture_id ~ '.png') }}"
+            src="{{ url_for('static', filename='images/' ~ character_data.picture_id ~ '.png') }}"
             class="img-fluid"
-            alt="{{ character.full_name }}"
+            alt="{{ character_data.full_name }}"
           />
           {% else %}
           <h2>This character portrait will be created soon.</h2>
@@ -106,16 +106,16 @@
                 class="display-4 text-center mt-5"
                 style="font-family: MrEavesRemake; color: #58180d"
               >
-                {{character.full_name}}
+                {{character_data.full_name}}
               </h1>
               <div class="display-4 text-center mb-4">
                 <h3 style="font-family: MrEavesRemake">
-                  {{ character.ethnicity }} {{ character.gender}} {{
-                  character.background_name }}
+                  {{ character_data.ethnicity_name }} {{ character_data.gender}} {{
+                  character_data.background_name }}
                 </h3>
                 <h3 style="font-family: MrEavesRemake">
-                  {{ character.character_class }} - {{
-                  character.character_subclass}}
+                  {{ character_data.character_class }} - {{
+                  character_data.character_subclass}}
                 </h3>
               </div>
               <div>
@@ -129,7 +129,7 @@
                   Background Story
                 </h3>
                 <p style="font-family: BookInsanityRemake">
-                  {{ character.background_story|safe }}
+                  {{ character_data.background_story|safe }}
                 </p>
                 <h3
                   style="
@@ -140,13 +140,13 @@
                 >
                   Personality
                 </h3>
-                {% if character.personality_description: %}
+                {% if character_data.personality_description: %}
                 <p style="font-family: BookInsanityRemake">
-                  {{character.personality_description|safe}}
+                  {{character_data.personality_description|safe}}
                 </p>
                 {% else %}
                 <p style="font-family: BookInsanityRemake">
-                  {{character.behavior|safe}}
+                  {{character_data.behavior|safe}}
                 </p>
                 {% endif %}
               </div>
