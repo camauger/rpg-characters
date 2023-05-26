@@ -22,7 +22,3 @@ input
 output
 archives
 large_images
-
-# discord bot for now
-discord_bot.py
-```
