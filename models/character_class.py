@@ -169,9 +169,25 @@ class Character:
         elif self.gender == 'Female':
             gender_id = '0'
         else:
-            gender_id = '2'
+            gender_id = '2'            
 
-        return (gender_id or '') + (self.subrace_id or self.ethnicity_id) + (self.character_subclass_id or self.character_class_id) + (self.background_id or '') + str(self.id)
+        race_id = ""
+        if self.subrace is not None and len(self.subrace_id) > 0:
+            race_id = self.subrace_id
+        elif self.ethnicity_id and len(self.ethnicity_id) > 0:
+            race_id = self.ethnicity_id
+        else:
+            race_id = ''
+
+        class_id = ""
+        if self.character_subclass_id and len(self.character_subclass_id) > 0:
+            class_id = self.character_subclass_id
+        elif self.character_class_id and len(self.character_class_id) > 0:
+            class_id = self.character_class_id
+        else:
+            class_id = ''
+
+        return (gender_id or '') + (race_id) + (class_id) + (self.background_id or '') + str(self.id)
 
 
     def create_physical_description_text(self):

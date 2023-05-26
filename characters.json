@@ -1,1 +1,206 @@
-[]
+[
+    {
+        "id": 2897,
+        "first_name": "Clemmy",
+        "last_name": "Araophnyxnyx",
+        "full_name": "Clemmy Araophnyxnyx",
+        "gender": "Female",
+        "character_class": "Rogue",
+        "character_class_id": "090",
+        "character_subclass": "Arcane Trickster",
+        "character_subclass_id": "093",
+        "background": {
+            "name": "Cloistered Scholar",
+            "id": "07"
+        },
+        "background_name": "Cloistered Scholar",
+        "background_id": "07",
+        "ethnicity": "Half-Orc",
+        "ethnicity_name": "Half-Orc",
+        "ethnicity_id": "007",
+        "subrace": {
+            "race": "Half-Orc",
+            "id": "007",
+            "keywords": [
+                "tall",
+                "muscular",
+                "green skin",
+                "tusks",
+                "broad nose",
+                "heavy eyebrows",
+                "wild hair",
+                "scarred",
+                "intimidating",
+                "fearsome",
+                "savage",
+                "brutish",
+                "barbaric"
+            ]
+        },
+        "subrace_name": "",
+        "subrace_id": "007",
+        "ethnicity_keywords": [
+            "tall",
+            "muscular",
+            "green skin",
+            "tusks",
+            "broad nose",
+            "heavy eyebrows",
+            "wild hair",
+            "scarred",
+            "intimidating",
+            "fearsome",
+            "savage",
+            "brutish",
+            "barbaric"
+        ],
+        "age": "Young Adult",
+        "physical_description": {
+            "trait": "Lithe",
+            "hair_color": "Black",
+            "hair_style": "blunt bangs"
+        },
+        "physical_trait": "Lithe",
+        "hair_color": "Black",
+        "hair_style": "blunt bangs",
+        "eye_color": "multi-colored",
+        "behavior": "Clemmy Araophnyxnyx's ideal is growth. Her flaw is manipulative, her bond is protection, her behavior is introverted, and her nature is bold.",
+        "picture_id": "0007093072897",
+        "image_prompt": "Glamour Portrait in the style of Bill Plympton | Fantasy | a Cloistered Scholar Half-Orc Rogue named Clemmy Araophnyxnyx | Clemmy Araophnyxnyx is a Lithe female Half-Orc. Clemmy Araophnyxnyx has black blunt bangs hair and multi-colored eyes. | Pearl and Steel Blue tones | Soft Light | tall, muscular, green skin, tusks, broad nose, heavy eyebrows, wild hair, scarred, intimidating, fearsome, savage, brutish, barbaric, Fantasy, Medieval Fantasy, Dungeons & Dragons. --s 1000 --upbeta --seed 0007093072897",
+        "personality_description": "\n\nClemmy's ideal is growth, and she is very manipulative in order to get what she wants. She is introverted, but her nature is bold, and she is very protective of her loved ones.",
+        "background_story": "\n\nClemmy was born in the city of Waterdeep to a Half-Orc mother and a Human father. Her father was a member of the city guard, and her mother was a cloistered scholar. When Clemmy was five, her father was killed in a raid on the city by a group of bandits. Her mother died of a broken heart soon after. Clemmy was raised by her uncle, a member of the city guard. He taught her how to fight and how to read and write. When Clemmy was sixteen, her uncle was killed in a raid on the city by a group of bandits. She vowed to avenge his death and to find out who was behind the raids. She has been working as a rogue ever since.\n\nClemmy is motivated by revenge and by a desire to find out who is behind the raids on the city. She is also motivated by a desire to help others. She has a strong sense of justice and does not tolerate injustice. She is always looking for a way to help those who are oppressed or persecuted.\n\nOne day, Clemmy discovers that the raids on the city are being conducted by a group of bandits who are in league with the city guard. She also discovers that her uncle was killed by the same group of bandits. She vows to expose the city guard and to bring the bandits to justice.",
+        "has_image": true
+    },
+    {
+        "id": 7400,
+        "first_name": "Marley",
+        "last_name": "Ae",
+        "full_name": "Marley Ae",
+        "gender": "Female",
+        "character_class": "Sorcerer",
+        "character_class_id": "100",
+        "character_subclass": "Wild Magic",
+        "character_subclass_id": "102",
+        "background": {
+            "name": "Uthgardt Tribe Member",
+            "id": "30"
+        },
+        "background_name": "Uthgardt Tribe Member",
+        "background_id": "30",
+        "ethnicity": "Half-Orc",
+        "ethnicity_name": "Half-Orc",
+        "ethnicity_id": "007",
+        "subrace": {
+            "race": "Half-Orc",
+            "id": "007",
+            "keywords": [
+                "tall",
+                "muscular",
+                "green skin",
+                "tusks",
+                "broad nose",
+                "heavy eyebrows",
+                "wild hair",
+                "scarred",
+                "intimidating",
+                "fearsome",
+                "savage",
+                "brutish",
+                "barbaric"
+            ]
+        },
+        "subrace_name": "",
+        "subrace_id": "007",
+        "ethnicity_keywords": [
+            "tall",
+            "muscular",
+            "green skin",
+            "tusks",
+            "broad nose",
+            "heavy eyebrows",
+            "wild hair",
+            "scarred",
+            "intimidating",
+            "fearsome",
+            "savage",
+            "brutish",
+            "barbaric"
+        ],
+        "age": "Young Adult",
+        "physical_description": {
+            "trait": "Commanding",
+            "hair_color": "White",
+            "hair_style": "three-strand braid"
+        },
+        "physical_trait": "Commanding",
+        "hair_color": "White",
+        "hair_style": "three-strand braid",
+        "eye_color": "hazel",
+        "behavior": "Marley Ae's ideal is balance. Her flaw is indecisive, her bond is freedom, her behavior is perceptive, and her nature is inquisitive.",
+        "picture_id": "0007102307400",
+        "image_prompt": "High-Key Portrait in the style of Sparth | Fantasy | an Uthgardt Tribe Member Half-Orc Sorcerer named Marley Ae | Marley Ae is a Commanding female Half-Orc. Marley Ae has white three-strand braid hair and hazel eyes. | Coffee and Gold tones | Split Lighting | tall, muscular, green skin, tusks, broad nose, heavy eyebrows, wild hair, scarred, intimidating, fearsome, savage, brutish, barbaric, Fantasy, Medieval Fantasy, Dungeons & Dragons. --s 1000 --upbeta --seed 0007102307400",
+        "personality_description": "\n\nMarley Ae is an idealistic person who strives for balance in her life. She can be indecisive at times, but is generally perceptive and inquisitive. Her main bond is with her sense of freedom.",
+        "background_story": "\n\nMarley Ae was born to a human mother and a half-orc father from the Uthgardt tribe. Marley's mother died during childbirth, and their father was killed in a raid when Marley was only a child. Marley was then raised by their grandparents. As a child, Marley was always interested in the magical arts. When they were old enough, Marley left their grandparents to begin their own journey and learn more about magic.\n\nDuring their travels, Marley met a wizard who took them under their wing and taught them the basics of magic. Marley quickly began to develop their own unique style of magic. After many years of study, Marley eventually became a powerful sorcerer.\n\nMarley now roam the lands, using their magic to help those in need. They also search for any clues that might help them solve the mystery of their parents' deaths.",
+        "has_image": true
+    },
+    {
+        "id": 7361,
+        "first_name": "Brocky",
+        "last_name": "Eld",
+        "full_name": "Brocky Eld",
+        "gender": "Male",
+        "character_class": "Fighter",
+        "character_class_id": "050",
+        "character_subclass": "Eldritch Knight",
+        "character_subclass_id": "053",
+        "background": {
+            "name": "Waterdhavian Noble",
+            "id": "31"
+        },
+        "background_name": "Waterdhavian Noble",
+        "background_id": "31",
+        "ethnicity": "Elf",
+        "ethnicity_name": "Elf",
+        "ethnicity_id": "003",
+        "subrace": {
+            "name": "High Elf",
+            "id": "0031",
+            "keywords": [
+                "arcane",
+                "magic",
+                "scholarly",
+                "graceful"
+            ]
+        },
+        "subrace_name": "High Elf",
+        "subrace_id": "0031",
+        "ethnicity_keywords": [
+            "tall",
+            "slender",
+            "pointed ears",
+            "almond-shaped eyes",
+            "graceful",
+            "ageless",
+            "delicate features",
+            "arcane",
+            "magic",
+            "scholarly"
+        ],
+        "age": "Adult",
+        "physical_description": {
+            "trait": "Athletic",
+            "hair_color": "Blond",
+            "hair_style": "high pony"
+        },
+        "physical_trait": "Athletic",
+        "hair_color": "Blond",
+        "hair_style": "high pony",
+        "eye_color": "gold",
+        "behavior": "Brocky Eld's ideal is ambition. His flaw is overconfident, his bond is family, his behavior is brave, and his nature is adventurous.",
+        "picture_id": "10031053317361",
+        "image_prompt": "Moody Portrait in the style of Ismail Inceoglu | Fantasy | a Waterdhavian Noble Elf Fighter named Brocky Eld | Brocky Eld is an Athletic male Elf. Brocky Eld has blond high pony hair and gold eyes. | Cream and Vermilion tones | Moonlight | tall, slender, pointed ears, almond-shaped eyes, graceful, ageless, delicate features, arcane, magic, scholarly, Fantasy, Medieval Fantasy, Dungeons & Dragons. --s 1000 --upbeta --seed 10031053317361",
+        "personality_description": "\n\nBrocky Eld is an ambitious individual who is also overconfident. He is brave and adventurous by nature, and his main bond is with his family.",
+        "background_story": "\n\nBrocky Eld was born into a wealthy Waterdhavian family with a long history of public service. His father was a successful politician and his mother was a well-known socialite. Brocky was raised in luxury and privilege, but he was always aware of the elven blood in his veins. His mother would tell him stories of her homeland and he would often daydream about adventuring in the wilds of Faerun. When he was old enough, he convinced his parents to send him to a prestigious elven academy in the city of Silverymoon.\n\nBrocky excelled in his studies and quickly became one of the top students in his class. He developed a keen interest in magic and history, and he dreamed of one day becoming a great wizard like his mother's people. However, his plans were derailed when his parents were killed in a freak accident. Brocky was suddenly the head of the family and he had to put his studies on hold to take up his father's political mantle.\n\nFor the next few years, Brocky devoted himself to his family's business interests and to Waterdhavian politics. He quickly rose through the ranks of the nobility and became one of the most powerful men in the city. But Brocky's heart was never in it. He longed for adventure and excitement, and he eventually came to the realization that his true calling was in the world of adventuring.\n\nBrocky left his family and Waterdeep behind and set out into the wide world of Faerun. He quickly made a name for himself as a skilled fighter and a master of magic. He has adventured across the length and breadth of the Realms, and he has seen and accomplished more than most people could ever dream of. But Brocky is still searching for something. He feels like there is something more out there for him, some greater purpose that he has yet to discover.\n\nOne possible adventure hook for",
+        "has_image": true
+    }
+]

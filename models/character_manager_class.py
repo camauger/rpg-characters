@@ -124,18 +124,11 @@ class CharacterManager:
             new_character = Character(character_id, params)
             existing_ids.append(character_id)  # Update the existing IDs list
 
-            #new_character.update_has_image()
-            # create a new text file with the prompt
-            with open(f"./data/image_prompts/{new_character.picture_id}.txt", "w") as file:
-                file.write(new_character.picture_id + "\n" + new_character.image_prompt + "\n")
+            with open(f"./data/image_prompts.txt", "a") as file:
+                file.write(new_character.image_prompt + "\n\n")
 
-            #self.save_characters(characters=[new_character])  # Save the new character to the JSON file
-            #self.characters.append(new_character)  # Add the new character to the list
             return new_character
         return None
-
-
-
 
     def create_characters(self, num_characters):
         """Create multiple characters"""

@@ -7,14 +7,37 @@
       integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="{{ url_for('static', filename='custom.css') }}" />
+    <link rel="stylesheet" href="../static/custom_css.css" />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>{{character_data.full_name}}</title>
-    <meta
-      name="description"
-      content="A randomly generated character for D&D - {{ character_data.ethnicity_name }} {{ character_data.gender}} {{
-        character_data.background_name }}">
+    <title>RPG Characters</title>
+
+    <style type="text/css">
+      @font-face {
+        font-family: BookInsanityRemake;
+        src: url("../static/fonts/5e/Bookinsanity.woff2");
+        font-weight: normal;
+      }
+
+      @font-face {
+        font-family: MrEavesRemake;
+        src: url("../static/fonts/5e/Mr Eaves Small Caps.woff2");
+        font-weight: normal;
+        font-style: normal;
+      }
+
+      :root {
+        --HB_Color_Background: #eee5ce;
+        --HB_Color_Accent: #e0e5c1;
+        --HB_Color_HeaderUnderline: #c0ad6a;
+        --HB_Color_HorizontalRule: #9c2b1b;
+        --HB_Color_HeaderText: #58180d;
+        --HB_Color_MonsterStatBackground: #f2e5b5;
+        --HB_Color_CaptionText: #766649;
+        --HB_Color_WatercolorStain: #bbad82;
+        --HB_Color_Footnotes: #c9ad6a;
+      }
+    </style>
   </head>
 
   <body style="background-color: #eee5ce">
@@ -56,24 +79,13 @@
     <div class="container-fluid" style="margin-bottom: 90px">
       <div class="row">
         <div class="col-md-6">
-          {% if character_data.has_image: %}
+          
           <img
-            src="{{ url_for('static', filename='images/' ~ character_data.picture_id ~ '.png') }}"
+            src="../static/images/0007093072897.png"
             class="img-fluid"
-            alt="{{ character_data.full_name }}"
+            alt="Clemmy Araophnyxnyx"
           />
-          {% else %}
-          <h2>This character portrait will be created soon.</h2>
-          <p>Subscribe to be informed when it will be updated!</p>
-          <form action="/subscribe" method="post">
-            <div class="form-group">
-              <label for="email">Email</label>
-              <input type="email" class="form-control" id="email" name="email" aria-describedby="emailHelp" placeholder="Enter email">
-              <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-            </div>
-            <button type="submit" value="Subscribe" class="btn btn-primary">Submit</button>
-          </form>
-          {% endif %}
+          
         </div>
 
         <div class="col-md-6">
@@ -83,16 +95,14 @@
                 class="display-4 text-center mt-5"
                 style="font-family: MrEavesRemake; color: #58180d"
               >
-                {{character_data.full_name}}
+                Clemmy Araophnyxnyx
               </h1>
               <div class="display-4 text-center mb-4">
                 <h3 style="font-family: MrEavesRemake">
-                  {{ character_data.ethnicity_name }} {{ character_data.gender}} {{
-                  character_data.background_name }}
+                  Half-Orc Female Cloistered Scholar
                 </h3>
                 <h3 style="font-family: MrEavesRemake">
-                  {{ character_data.character_class }} - {{
-                  character_data.character_subclass}}
+                  Rogue - Arcane Trickster
                 </h3>
               </div>
               <div>
@@ -106,7 +116,13 @@
                   Background Story
                 </h3>
                 <p class="character-text">
-                  {{ character_data.background_story|safe }}
+                  
+
+Clemmy was born in the city of Waterdeep to a Half-Orc mother and a Human father. Her father was a member of the city guard, and her mother was a cloistered scholar. When Clemmy was five, her father was killed in a raid on the city by a group of bandits. Her mother died of a broken heart soon after. Clemmy was raised by her uncle, a member of the city guard. He taught her how to fight and how to read and write. When Clemmy was sixteen, her uncle was killed in a raid on the city by a group of bandits. She vowed to avenge his death and to find out who was behind the raids. She has been working as a rogue ever since.
+
+Clemmy is motivated by revenge and by a desire to find out who is behind the raids on the city. She is also motivated by a desire to help others. She has a strong sense of justice and does not tolerate injustice. She is always looking for a way to help those who are oppressed or persecuted.
+
+One day, Clemmy discovers that the raids on the city are being conducted by a group of bandits who are in league with the city guard. She also discovers that her uncle was killed by the same group of bandits. She vows to expose the city guard and to bring the bandits to justice.
                 </p>
                 <h3
                   style="
@@ -117,15 +133,13 @@
                 >
                   Personality
                 </h3>
-                {% if character_data.personality_description: %}
-                <p class="character-text">
-                  {{character_data.personality_description|safe}}
+                
+                <p style="font-family: BookInsanityRemake">
+                  
+
+Clemmy's ideal is growth, and she is very manipulative in order to get what she wants. She is introverted, but her nature is bold, and she is very protective of her loved ones.
                 </p>
-                {% else %}
-                <p class="character-text">
-                  {{character_data.behavior|safe}}
-                </p>
-                {% endif %}
+                
               </div>
             </div>
           </div>
@@ -133,7 +147,7 @@
       </div>
     </div>
     <footer
-      class="footer mt-auto py-3"
+      class="footer fixed-bottom mt-auto py-3"
       style="background-color: #58180d"
     >
       <div class="container">

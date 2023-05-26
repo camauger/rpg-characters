@@ -23,6 +23,10 @@ def main():
                 character_manager.create_random_character_option()
         elif choice == "2":
             optimize_images("./large_images", "./static/images")
+            character_manager.load_characters()
+            for character in character_manager.characters:
+                character.update_has_image()
+            character_manager.save_characters()
             print("Images optimized!")
         elif choice == "3":
             if character_manager.check_character_count():
