@@ -34,7 +34,7 @@ class ImagePrompt:
 
     def tags(self):
         keywords = ', '.join(self.character.ethnicity_keywords)
-        return f"{keywords}, Fantasy, Medieval Fantasy, Dungeons & Dragons. --s 1000 --upbeta"
+        return f"{keywords}, Fantasy, Medieval Fantasy, Dungeons & Dragons. --s 1000 --upbeta --seed {self.character.picture_id}"
 
     def actor(self):
         return f"{self.character.create_physical_description_text()}"
