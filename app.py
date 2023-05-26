@@ -46,23 +46,25 @@ def character(picture_id):
     return render_template('character.html', character_data=character_data)
 
 # Route for the create page
-@app.route('/create.html', methods=['GET', 'POST'])
+@app.route('/create', methods=['GET', 'POST'])
 def create_character():
     if request.method == 'POST':
-        # Handle the form submission
-        name = request.form.get('name', None)
-        is_random = request.form.get('is_random', False)
+        try:
+            # Handle the form submission
+            new_character = None
+            new_character = character_manager.create_character(is_random=True)
 
-        if is_random == 'true':
-            new_character = character_manager.create_character(True)
-        else:
-            new_character = character_manager.create_character(False, name)
-
-        character_manager.save_characters(characters=[new_character])
-        return render_template('character.html', character=new_character)
+            if new_character is not None:
+                character_manager.save_characters(characters=[new_character])
+            return render_template('character.html', character_data=new_character)
+     
+        except Exception as e:
+            return f"An error occurred: {e}"
     else:
         # Display the form
         return render_template('create-character.html')
+
+
 
 @app.route('/subscribe', methods=['POST'])
 def subscribe():

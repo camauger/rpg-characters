@@ -21,6 +21,7 @@ class CharacterManager:
     MAX_CHARACTER_ID = 9999  # Maximum character ID
     MAX_CHARACTER_COUNT = 9999  # Maximum number of characters
     FILE_PATH = "characters.json"  # Path to the JSON file containing character data
+    API_KEY = os.environ.get('API_KEY')  # API key
 
     def __init__(self):
         """Initialize the CharacterManager class"""
@@ -113,6 +114,7 @@ class CharacterManager:
 
     def create_character(self, is_random):
         """Create a new character"""
+        new_character = None # Define the new_character variable as None
         character_count, existing_ids = self.get_character_info()
         if self.check_character_count():
             params = self.get_character_params(is_random)

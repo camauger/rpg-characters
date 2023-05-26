@@ -3,41 +3,31 @@ from models.physical_description_class import PhysicalDescription
 from models.image_prompt_class import ImagePrompt
 from settings.name_composition import generate_random_first_name, generate_random_last_name
 from settings.random_settings import create_eye_color, create_hair_color, create_hair_style, create_physical_trait, get_ethnicity_keywords
-import requests
-import json
 from utils.indefinite_article import indefinite_article
 from settings.env_settings import API_KEY
+import openai
+import os
+from dotenv import load_dotenv
+
+# Load the .env file
+load_dotenv()
+
+# Get the OpenAI API key
+api_key = os.environ.get('API_KEY')
 
 # Create a background story for an RPG character
-def fetch_character_data(prompt, api_key):
-    url = "https://api.openai.com/v1/engines/text-davinci-002/completions"
-    headers = {
-        "Content-Type": "application/json",
-        "Authorization": f"Bearer {api_key}",
-    }
-    data = {
-        "prompt": prompt,
-        "max_tokens": 400,
-        "n": 1,
-        "stop": None,
-        "temperature": 0.7,
-    }
+def fetch_character_data(prompt):
+    openai.api_key_path = api_key
+    response = openai.Completion.create(
+        model="text-davinci-003",
+        prompt=prompt,
+        max_tokens=400,
+        temperature=0
+    )
+    # access choices directly from response object
+    return response.choices[0].text.strip()
 
-    try:
-        response = requests.post(url, headers=headers, data=json.dumps(data))
-        response.raise_for_status()
-        response_json = response.json()
 
-        if response.status_code == 200:
-            return response_json['choices'][0]['text']
-        else:
-            raise Exception(f"Failed to fetch data from ChatGPT: {response_json}")
-
-    except requests.exceptions.RequestException as e:
-        raise Exception(f"Error occurred during API request: {e}")
-
-    except (KeyError, IndexError) as e:
-        raise Exception(f"Invalid response received from ChatGPT: {e}")
 
 """
 This code is defining a class called Character.
@@ -200,7 +190,7 @@ class Character:
 
     def create_background_story(self):
         prompt = f"Write a background story for an RPG character named {self.full_name}, a {self.character_class} in the world of Forgotten Realms. The character is a {self.background_name} with {self.ethnicity} heritage. Describe their upbringing, key events in their life, and their motivations. Please write three paragraphs with a total word count of around 300 words. Conclude the background story by including a potential adventure hook or a mystery that the character seeks to unravel."
-        background_story = fetch_character_data(prompt, API_KEY)
+        background_story = fetch_character_data(prompt)
         # Transform the /n in paragraphs into <br> for HTML
         ## background_story = background_story.replace('\n\n', '<br>')
         return background_story
@@ -212,7 +202,7 @@ class Character:
 
     def create_personality_description(self):
         prompt = f"Make a description of a character's personality based on this sentence: {self.behavior}"
-        personality = fetch_character_data(prompt, API_KEY)
+        personality = fetch_character_data(prompt)
         return personality
     
     def create_image_prompt(self):

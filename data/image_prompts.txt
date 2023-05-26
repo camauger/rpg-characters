@@ -8,3 +8,7 @@ Head and Shoulders Portrait in the style of Balthus | Fantasy | a Waterdhavian N
 
 Broad Lighting Portrait in the style of Neil Welliver | Fantasy | a Cloistered Scholar Dragonborn Fighter named Amelia Ellean | Amelia Ellean is a Bulky female Dragonborn. Amelia Ellean has ashen updo hair and hazel eyes. | Chartreuse and Brown tones | Low Key Lighting | tall, muscular, dragon-like face, scales, tail, claws, frills, dragon anthropomorphic humanoid, reptilian, fearsome, Fantasy, Medieval Fantasy, Dungeons & Dragons. --s 1000 --upbeta --seed 0009054079885
 
+Minimalist Portrait in the style of Marc Silvestri | Fantasy | an Anthropologist Aasimar Ranger named Lauren Xanhel | Lauren Xanhel is a Stocky male Aasimar. Lauren Xanhel has brown tail hair and hazel eyes. | Caramel and Auburn tones | Split Lighting | radiant, glowing eyes, fair skin, halo, celestial, ethereal, angelic, radiant consumption, destructive energy, divine light, Fantasy, Medieval Fantasy, Dungeons & Dragons. --s 1000 --upbeta --seed 10102082029513
+
+Rembrandt Portrait in the style of Alexandra Semushina | Fantasy | a Haunted One Gnome Bard named Sibelle Vivelmi | Sibelle Vivelmi is a Bulky female Gnome. Sibelle Vivelmi has grey layered cut with length hair and amber eyes. | Indigo and Pumpkin tones | Natural Light | very small, bright eyes, round face, pointed ears, rosy cheeks, illusion magic, stealth, pranks, love of nature, Fantasy, Medieval Fantasy, Dungeons & Dragons. --s 1000 --upbeta --seed 00051021164889
+
