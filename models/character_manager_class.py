@@ -129,8 +129,8 @@ class CharacterManager:
             existing_ids.append(character_id)  # Update the existing IDs list
 
             # Create image for the character
-            create_image_stable_diffusion(new_character.image_prompt, new_character.picture_id)
-            new_character.has_image = file_exists("./static/images/", f"{new_character.picture_id}.png")
+            # create_image_stable_diffusion(new_character.image_prompt, new_character.picture_id)
+            # new_character.has_image = file_exists("./static/images/", f"{new_character.picture_id}.png")
             with open(f"./data/image_prompts.txt", "a") as file:
                 file.write(new_character.image_prompt + "\n\n")
 
