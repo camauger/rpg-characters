@@ -43,7 +43,7 @@
       </nav>
     </header>
     <div class="container-fluid" style="margin-bottom: 90px">
-      <div class="row">
+      <div class="row align-items-center">
         <div class="col-md-6 card-text">
           {% if character_data.has_image: %}
           <img
@@ -52,7 +52,8 @@
             alt="{{ character_data.full_name }}"
           />
           {% else %}
-          <h2>This character portrait will be created soon.</h2>
+          <div class="p-4">
+            <h2>This character portrait will be created soon.</h2>
           <p>Subscribe to be informed when it will be updated!</p>
           <form action="/subscribe" method="post">
             <div class="form-group">
@@ -62,6 +63,7 @@
             </div>
             <button type="submit" value="Subscribe" class="btn btn-primary">Submit</button>
           </form>
+          </div>
           {% endif %}
         </div>
 
