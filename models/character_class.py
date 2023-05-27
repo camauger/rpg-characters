@@ -17,7 +17,7 @@ api_key = os.environ.get('API_KEY')
 
 # Create a background story for an RPG character
 def fetch_character_data(prompt):
-    openai.api_key_path = api_key
+    openai.api_key = api_key
     response = openai.Completion.create(
         model="text-davinci-003",
         prompt=prompt,
