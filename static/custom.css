@@ -24,17 +24,17 @@
 }
 
 .heading-main {
-  font-family: "MrEavesRemake"!important;
-  color: #58180d!important;
+  font-family: "MrEavesRemake";
+  color: #58180d;
 }
 
 .character-card-title {
-  font-family: "MrEavesRemake"!important;
-  color:  #58180d!important;
+  font-family: "MrEavesRemake";
+  color:  #58180d;
 }
 
 .character-card-subtitle,
 .card-text,
 .character-text {
-  font-family: "BookInsanityRemake"!important;
+  font-family: "BookInsanityRemake";
 }
