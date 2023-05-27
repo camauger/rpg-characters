@@ -28,11 +28,12 @@
   color: #58180d;
 }
 
-.card-title {
+.character-card-title {
   font-family: "MrEavesRemake";
   color:  #58180d;
 }
 
+.character-card-subtitle,
 .card-text,
 .character-text {
   font-family: "BookInsanityRemake";
