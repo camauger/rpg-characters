@@ -2,6 +2,7 @@ import json
 import random
 import os
 from dotenv import load_dotenv
+from utils.file_exists import file_exists
 
 # Load .env file
 load_dotenv()
@@ -18,7 +19,7 @@ from settings.random_settings import (
     get_ethnicity_keywords
 )
 from models.character_class import Character
-
+from create_image_stable import create_image_stable_diffusion
 
 class CharacterManager:
     """Class to manage characters"""
@@ -116,6 +117,7 @@ class CharacterManager:
         params['background'] = pick_random_background() if is_random else input("What is your character's background?")
         return params
 
+    
     def create_character(self, is_random):
         """Create a new character"""
         new_character = None # Define the new_character variable as None
@@ -126,6 +128,9 @@ class CharacterManager:
             new_character = Character(character_id, params)
             existing_ids.append(character_id)  # Update the existing IDs list
 
+            # Create image for the character
+            create_image_stable_diffusion(new_character.image_prompt, new_character.picture_id)
+            new_character.has_image = file_exists("./static/images/", f"{new_character.picture_id}.png")
             with open(f"./data/image_prompts.txt", "a") as file:
                 file.write(new_character.image_prompt + "\n\n")
 

@@ -499,5 +499,65 @@
         "personality_description": "Harriett Braniushel is an ambitious and driven individual who strives to gain knowledge and understanding. She is often impatient and can be dishonest in her pursuit of her goals. Despite this, she is deeply compassionate and has a strong sense of duty to those she cares about.",
         "background_story": "Harriett Braniushel was born in the small gnome village of Glimmerwood, nestled in the heart of the Forgotten Realms. Her parents were both adventurers, and they instilled in her a love of exploration and discovery. As a child, Harriett was fascinated by the stories of the Haunted Ones, a group of adventurers who had been cursed with a powerful magical affliction. She was determined to join their ranks one day.\n\nHarriett's parents were killed in a tragic accident when she was still young, and she was taken in by a family of Rangers. She trained with them for many years, learning the ways of the wilderness and honing her skills as a Ranger. Eventually, she was accepted into the ranks of the Haunted Ones, and she embraced her newfound power.\n\nHarriett now travels the Forgotten Realms, seeking out adventure and mystery. She is driven by a desire to uncover the secrets of her parents' past, and to discover the truth behind their untimely deaths. She is also determined to use her newfound powers to help those in need, and to protect the innocent from the forces of evil.\n\nHarriett's current quest is to uncover the truth behind a mysterious cult that has been operating in the shadows of the Forgotten Realms. She believes that the cult is connected to her parents' deaths, and she is determined to bring them to justice. With her skills as a Ranger and her newfound powers as a Haunted One, Harriett is sure that she can uncover the truth and bring the cult to justice.",
         "has_image": false
+    },
+    {
+        "id": 9054,
+        "first_name": "Ortensia",
+        "last_name": "Iusmir",
+        "full_name": "Ortensia Iusmir",
+        "gender": "Female",
+        "character_class": "Cleric",
+        "character_class_id": "030",
+        "character_subclass": "Nature Domain",
+        "character_subclass_id": "033",
+        "background": {
+            "name": "Spy",
+            "id": "27"
+        },
+        "background_name": "Spy",
+        "background_id": "27",
+        "ethnicity": "Tiefling",
+        "ethnicity_name": "Tiefling",
+        "ethnicity_id": "008",
+        "subrace": {
+            "name": "Asmodeus Tiefling",
+            "id": "0081",
+            "keywords": [
+                "Asmodeus bloodline",
+                "commanding presence"
+            ]
+        },
+        "subrace_name": "Asmodeus Tiefling",
+        "subrace_id": "0081",
+        "ethnicity_keywords": [
+            "horns",
+            "tail",
+            "fangs",
+            "glowing eyes",
+            "sharp features",
+            "devilish",
+            "demonic",
+            "fiendish",
+            "infernal",
+            "hellish",
+            "Asmodeus bloodline",
+            "commanding presence"
+        ],
+        "age": "Young Adult",
+        "physical_description": {
+            "trait": "Ripped",
+            "hair_color": "Orange",
+            "hair_style": "layered cut"
+        },
+        "physical_trait": "Ripped",
+        "hair_color": "Orange",
+        "hair_style": "layered cut",
+        "eye_color": "dark",
+        "behavior": "Ortensia Iusmir's ideal is balance. Her flaw is indecisive, her bond is family, her behavior is gentle, and her nature is independent.",
+        "picture_id": "00081033279054",
+        "image_prompt": "Photorealistic portrait in the style of Paul Rand | Fantasy | a Spy Tiefling Cleric named Ortensia Iusmir | Ortensia Iusmir is a Ripped female Tiefling. Ortensia Iusmir has orange layered cut hair and dark eyes. | Orange and Vermilion tones | Rim Lighting | horns, tail, fangs, glowing eyes, sharp features, devilish, demonic, fiendish, infernal, hellish, Asmodeus bloodline, commanding presence, Fantasy, Medieval Fantasy, Dungeons & Dragons. --s 1000 --upbeta --seed 00081033279054",
+        "personality_description": "Ortensia Iusmir is a person who strives for balance in all aspects of her life. She is often indecisive, making it difficult for her to make decisions. Family is very important to her, and she is gentle and kind in her behavior towards them. Despite her gentle nature, she is independent and prefers to make her own decisions.",
+        "background_story": "Ortensia Iusmir was born in the city of Waterdeep, the daughter of a Tiefling spy and a human cleric. Her parents had met while her father was on a mission for the Lords of Waterdeep, and her mother had been sent to aid him. Ortensia was raised in a loving home, but her parents were often away on missions, leaving her to be cared for by her extended family.\n\nAs she grew older, Ortensia began to follow in her parents' footsteps, learning the skills of a spy and a cleric. She was a natural at both, and soon she was able to combine her skills to become a powerful force in the city. She was often called upon to help the Lords of Waterdeep with their missions, and she quickly gained a reputation as a reliable and trustworthy ally.\n\nOrtensia's motivations are simple: to protect the people of Waterdeep and to uncover the truth behind the mysterious events that have been occurring in the city. She is determined to uncover the secrets that the Lords of Waterdeep have been keeping, and to bring justice to those who have wronged the city. Her potential adventure hook is to investigate a series of strange disappearances in the city, which may be connected to a powerful cult that is operating in the shadows.",
+        "has_image": true
     }
 ]

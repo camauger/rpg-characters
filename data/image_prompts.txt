@@ -14,3 +14,5 @@ Rembrandt Portrait in the style of Alexandra Semushina | Fantasy | a Haunted One
 
 Silhouette Portrait in the style of Friedensreich Regentag Dunkelbunt Hundertwasser | Fantasy | a Haunted One Gnome Ranger named Harriett Braniushel | Harriett Braniushel is a Weathered female Gnome. Harriett Braniushel has ash brown bob cut with fringe hair and amber eyes. | Chocolate and Amber tones | Hard Light | very small, bright eyes, round face, pointed ears, rosy cheeks, tinkerer, inventions, mechanical devices, tinkering abilities, Fantasy, Medieval Fantasy, Dungeons & Dragons. --s 1000 --upbeta --seed 00052084165262
 
+Photorealistic portrait in the style of Paul Rand | Fantasy | a Spy Tiefling Cleric named Ortensia Iusmir | Ortensia Iusmir is a Ripped female Tiefling. Ortensia Iusmir has orange layered cut hair and dark eyes. | Orange and Vermilion tones | Rim Lighting | horns, tail, fangs, glowing eyes, sharp features, devilish, demonic, fiendish, infernal, hellish, Asmodeus bloodline, commanding presence, Fantasy, Medieval Fantasy, Dungeons & Dragons. --s 1000 --upbeta --seed 00081033279054
+
