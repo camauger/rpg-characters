@@ -22,3 +22,5 @@ input
 output
 archives
 large_images
+create_image_stable.py
+create_image.py

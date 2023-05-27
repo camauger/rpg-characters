@@ -7,14 +7,13 @@
       integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="{{ url_for('static', filename='custom.css') }}" />
+    <link rel="stylesheet" href="../static/custom.css" />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>{{character_data.full_name}}</title>
+    <title>Harriett Braniushel</title>
     <meta
       name="description"
-      content="A randomly generated character for D&D - {{ character_data.ethnicity_name }} {{ character_data.gender}} {{
-        character_data.background_name }}">
+      content="A randomly generated character for D&D - Gnome Female Haunted One">
   </head>
 
   <body style="background-color: #eee5ce">
@@ -45,13 +44,7 @@
     <div class="container-fluid" style="margin-bottom: 90px">
       <div class="row">
         <div class="col-md-6 card-text">
-          {% if character_data.has_image: %}
-          <img
-            src="{{ url_for('static', filename='images/' ~ character_data.picture_id ~ '.png') }}"
-            class="img-fluid"
-            alt="{{ character_data.full_name }}"
-          />
-          {% else %}
+          
           <h2>This character portrait will be created soon.</h2>
           <p>Subscribe to be informed when it will be updated!</p>
           <form action="/subscribe" method="post">
@@ -62,7 +55,7 @@
             </div>
             <button type="submit" value="Subscribe" class="btn btn-primary">Submit</button>
           </form>
-          {% endif %}
+          
         </div>
 
         <div class="col-md-6">
@@ -72,16 +65,14 @@
                 class="display-4 text-center mt-5"
                 style="font-family: MrEavesRemake; color: #58180d"
               >
-                {{character_data.full_name}}
+                Harriett Braniushel
               </h1>
               <div class="display-4 text-center mb-4">
                 <h3 style="font-family: MrEavesRemake">
-                  {{ character_data.ethnicity_name }} {{ character_data.gender}} {{
-                  character_data.background_name }}
+                  Gnome Female Haunted One
                 </h3>
                 <h3 style="font-family: MrEavesRemake">
-                  {{ character_data.character_class }} - {{
-                  character_data.character_subclass}}
+                  Ranger - Gloom Stalker
                 </h3>
               </div>
               <div>
@@ -95,7 +86,13 @@
                   Background Story
                 </h3>
                 <p class="character-text">
-                  {{ character_data.background_story|safe }}
+                  Harriett Braniushel was born in the small gnome village of Glimmerwood, nestled in the heart of the Forgotten Realms. Her parents were both adventurers, and they instilled in her a love of exploration and discovery. As a child, Harriett was fascinated by the stories of the Haunted Ones, a group of adventurers who had been cursed with a powerful magical affliction. She was determined to join their ranks one day.
+
+Harriett's parents were killed in a tragic accident when she was still young, and she was taken in by a family of Rangers. She trained with them for many years, learning the ways of the wilderness and honing her skills as a Ranger. Eventually, she was accepted into the ranks of the Haunted Ones, and she embraced her newfound power.
+
+Harriett now travels the Forgotten Realms, seeking out adventure and mystery. She is driven by a desire to uncover the secrets of her parents' past, and to discover the truth behind their untimely deaths. She is also determined to use her newfound powers to help those in need, and to protect the innocent from the forces of evil.
+
+Harriett's current quest is to uncover the truth behind a mysterious cult that has been operating in the shadows of the Forgotten Realms. She believes that the cult is connected to her parents' deaths, and she is determined to bring them to justice. With her skills as a Ranger and her newfound powers as a Haunted One, Harriett is sure that she can uncover the truth and bring the cult to justice.
                 </p>
                 <h3
                   style="
@@ -106,15 +103,11 @@
                 >
                   Personality
                 </h3>
-                {% if character_data.personality_description: %}
+                
                 <p class="character-text">
-                  {{character_data.personality_description|safe}}
+                  Harriett Braniushel is an ambitious and driven individual who strives to gain knowledge and understanding. She is often impatient and can be dishonest in her pursuit of her goals. Despite this, she is deeply compassionate and has a strong sense of duty to those she cares about.
                 </p>
-                {% else %}
-                <p class="character-text">
-                  {{character_data.behavior|safe}}
-                </p>
-                {% endif %}
+                
               </div>
             </div>
           </div>

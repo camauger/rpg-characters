@@ -23,6 +23,17 @@
   --HB_Color_Footnotes: #c9ad6a;
 }
 
+.heading-main {
+  font-family: "MrEavesRemake";
+  color: #58180d;
+}
+
+.card-title {
+  font-family: "MrEavesRemake";
+  color:  #58180d;
+}
+
+.card-text,
 .character-text {
   font-family: "BookInsanityRemake";
 }
