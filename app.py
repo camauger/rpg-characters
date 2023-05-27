@@ -7,9 +7,6 @@ from dotenv import load_dotenv
 # Load .env file
 load_dotenv()
 
-def file_exists(folder_path, filename):
-    file_path = os.path.join(folder_path, filename)
-    return os.path.exists(file_path)
 
 # Flask App
 app = Flask(__name__, static_folder='static', static_url_path='/static')
@@ -30,6 +27,7 @@ def load_characters():
 
 # Route for the home page
 @app.route('/')
+@app.route('/index.html')
 def index():
     characters = load_characters()
     return render_template('index.html', characters=characters)

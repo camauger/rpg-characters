@@ -10,8 +10,6 @@ def configure_app(app):
     app.config['FREEZER_BASE_URL'] = os.environ.get('FREEZER_BASE_URL', '')
     app.config["FREEZER_DESTINATION"] = './build'
     
-freezer = Freezer(app)
-
 @freezer.register_generator
 def index():
     yield '/'
