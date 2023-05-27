@@ -1,56 +1,52 @@
 # RPG Character Generator
 
-This Python script is a Role-Playing Game (RPG) Character Generator. It allows you to create, manage, and archive RPG characters with various attributes such as age, gender, ethnicity, class, subclass, and background. The characters are stored in a JSON file, and the script also supports image optimization and Discord bot integration.
+This Python program is an RPG (Role Playing Game) Character Generator. It provides a simple interface to generate and manage RPG characters. The characters can be either randomly generated or custom-made based on user input. Additionally, the program allows users to manage image resources for the characters and update existing character data.
+
+## Key Components
+
+The key components of the program are:
+
+- `CharacterManager`: This class manages all aspects of character creation and maintenance, including loading, saving, and updating character data, checking if the maximum character count has been reached, and generating unique character IDs. Character data is stored in a JSON file.
+
+- `Character`: This class is used to instantiate new character objects. It includes attributes like ID, age, gender, ethnicity, class, subclass, background, and other parameters.
+
+- `Random Settings`: This includes a suite of functions to select random attributes for characters such as age, gender, ethnicity, subrace, character class, subclass, and background.
 
 ## Features
 
-1. **Create Random Characters**: Generate a random character with random attributes.
-2. **Create Specific Characters**: Create a character with specific attributes based on user input.
-3. **Manage Characters**: Load existing characters from a JSON file, add new characters, and save them back to the file.
-4. **Character Images**: Manage character images, including checking which characters have images and which do not.
-5. **Discord Bot Integration**: Start a Discord bot (the bot's functionality is not detailed in this script).
-6. **Optimize Images**: Optimize images in a specified directory.
-7. **Archive Files**: Move files to an archive (the specifics of this functionality are not detailed in this script).
+1. **Create Random Characters**: The program can generate random characters using the `Random Settings` functions. A check is performed to ensure that the character count doesn't exceed a certain limit before creating new characters.
 
-## Usage
+2. **Optimize Images**: This feature optimizes images for your characters. It is an efficient tool to reduce the size of the images stored in the `large_images` directory and saves the optimized images in the `static/images` directory.
 
-Run the script in a Python environment. You will be presented with a menu of options:
+3. **Create a Specific Character**: The program can create a specific character based on user inputs. The user is prompted to provide input for various character attributes.
+
+4. **Update a Specific Character**: This feature allows users to update the attributes of an existing character. The user provides the character ID and the new attribute values, which are then updated in the character data.
+
+## How to Run
+
+To run this program, navigate to the directory containing the script in your terminal and run the command `python3 filename.py`, replacing "filename.py" with the name of the script file.
+
+The program will print a menu with options, prompting you for what you want to do:
 
 ```
 Welcome to the RPG Character Generator!
 1. Create random characters
 2. Optimize images
 3. Create a specific character
-4. Archive files
-5. Manage characters
-6. Start the Discord bot
+4. Update a specific character
 0. Exit the program
+What do you want to do? 
 ```
 
-Enter the number of the option you want to choose.
+Enter the corresponding number for the task you want to perform.
 
 ## Dependencies
 
-This script imports several modules, some of which are not included in the standard Python library:
+This program relies on several modules:
 
-- `json`
-- `random`
-- `os`
-- `settings.random_settings`
-- `models.character_class`
-- `utils.image_optim`
-- `discord_bot`
+1. `utils.image_optim` - a utility module for optimizing images.
+2. `models.character_manager_class` - a module that handles the creation, modification, and management of RPG characters.
+3. `settings.random_settings` - a module that contains functions to select random attributes for characters.
+4. `models.character_class` - a module that defines the `Character` class used to instantiate new character objects.
 
-Please ensure that you have all necessary modules installed in your Python environment before running the script.
-
-## Limitations
-
-The script has a maximum limit of 9999 characters. If you try to create more characters than this, you will be asked to delete some characters before creating new ones.
-
-## Contributing
-
-Contributions to this script are welcome. Please fork the repository and create a pull request with your changes.
-
-## License
-
-This script is available under the [MIT License](https://opensource.org/licenses/MIT).
+Please ensure these modules are present in your project directory before running the script.

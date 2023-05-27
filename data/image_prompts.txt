@@ -12,3 +12,5 @@ Minimalist Portrait in the style of Marc Silvestri | Fantasy | an Anthropologist
 
 Rembrandt Portrait in the style of Alexandra Semushina | Fantasy | a Haunted One Gnome Bard named Sibelle Vivelmi | Sibelle Vivelmi is a Bulky female Gnome. Sibelle Vivelmi has grey layered cut with length hair and amber eyes. | Indigo and Pumpkin tones | Natural Light | very small, bright eyes, round face, pointed ears, rosy cheeks, illusion magic, stealth, pranks, love of nature, Fantasy, Medieval Fantasy, Dungeons & Dragons. --s 1000 --upbeta --seed 00051021164889
 
+Silhouette Portrait in the style of Friedensreich Regentag Dunkelbunt Hundertwasser | Fantasy | a Haunted One Gnome Ranger named Harriett Braniushel | Harriett Braniushel is a Weathered female Gnome. Harriett Braniushel has ash brown bob cut with fringe hair and amber eyes. | Chocolate and Amber tones | Hard Light | very small, bright eyes, round face, pointed ears, rosy cheeks, tinkerer, inventions, mechanical devices, tinkering abilities, Fantasy, Medieval Fantasy, Dungeons & Dragons. --s 1000 --upbeta --seed 00052084165262
+

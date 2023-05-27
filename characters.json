@@ -440,5 +440,64 @@
         "personality_description": "\n\nSibelle Vivelmi is an idealistic person who believes in equality for all. She can be stubborn at times, but she is also very loyal and faithful to her beliefs. She is usually logical in her thinking, and she is generally a very patient person.",
         "background_story": "\n\nSibelle Vivelmi was born in the small village of Barovia to a family of traveling performers. Her parents were both bards and taught her everything they knew about music, dance, and the art of storytelling. From a young age, Sibelle showed a natural talent for the lute and was often asked to perform for the village elders. She was happy to oblige and quickly became known as the best entertainer in Barovia.\n\nWhen she was sixteen, her parents were killed by a pack of vampires while they were on the road. Sibelle was devastated by their loss but refused to let their memory fade. She vowed to continue their work and keep their legacy alive.\n\nSibelle has since traveled the world, performing for anyone who will listen. She uses her music to lift people's spirits and bring them joy, even in the darkest of times. She knows that her parents would be proud of her and that's what motivates her to keep going.\n\nOne day, Sibelle hopes to find the vampires who killed her parents and make them pay for their crime. Until then, she'll continue to bring happiness to those who need it the most.",
         "has_image": false
+    },
+    {
+        "id": 5262,
+        "first_name": "Harriett",
+        "last_name": "Braniushel",
+        "full_name": "Harriett Braniushel",
+        "gender": "Female",
+        "character_class": "Ranger",
+        "character_class_id": "080",
+        "character_subclass": "Gloom Stalker",
+        "character_subclass_id": "084",
+        "background": {
+            "name": "Haunted One",
+            "id": "16"
+        },
+        "background_name": "Haunted One",
+        "background_id": "16",
+        "ethnicity": "Gnome",
+        "ethnicity_name": "Gnome",
+        "ethnicity_id": "005",
+        "subrace": {
+            "name": "Rock Gnome",
+            "id": "0052",
+            "keywords": [
+                "tinkerer",
+                "inventions",
+                "mechanical devices",
+                "tinkering abilities"
+            ]
+        },
+        "subrace_name": "Rock Gnome",
+        "subrace_id": "0052",
+        "ethnicity_keywords": [
+            "very small",
+            "bright eyes",
+            "round face",
+            "pointed ears",
+            "rosy cheeks",
+            "tinkerer",
+            "inventions",
+            "mechanical devices",
+            "tinkering abilities"
+        ],
+        "age": "Elderly",
+        "physical_description": {
+            "trait": "Weathered",
+            "hair_color": "Ash Brown",
+            "hair_style": "bob cut with fringe"
+        },
+        "physical_trait": "Weathered",
+        "hair_color": "Ash Brown",
+        "hair_style": "bob cut with fringe",
+        "eye_color": "amber",
+        "behavior": "Harriett Braniushel's ideal is knowledge. Her flaw is dishonest, her bond is duty, her behavior is impatient, and her nature is compassionate.",
+        "picture_id": "00052084165262",
+        "image_prompt": "Silhouette Portrait in the style of Friedensreich Regentag Dunkelbunt Hundertwasser | Fantasy | a Haunted One Gnome Ranger named Harriett Braniushel | Harriett Braniushel is a Weathered female Gnome. Harriett Braniushel has ash brown bob cut with fringe hair and amber eyes. | Chocolate and Amber tones | Hard Light | very small, bright eyes, round face, pointed ears, rosy cheeks, tinkerer, inventions, mechanical devices, tinkering abilities, Fantasy, Medieval Fantasy, Dungeons & Dragons. --s 1000 --upbeta --seed 00052084165262",
+        "personality_description": "Harriett Braniushel is an ambitious and driven individual who strives to gain knowledge and understanding. She is often impatient and can be dishonest in her pursuit of her goals. Despite this, she is deeply compassionate and has a strong sense of duty to those she cares about.",
+        "background_story": "Harriett Braniushel was born in the small gnome village of Glimmerwood, nestled in the heart of the Forgotten Realms. Her parents were both adventurers, and they instilled in her a love of exploration and discovery. As a child, Harriett was fascinated by the stories of the Haunted Ones, a group of adventurers who had been cursed with a powerful magical affliction. She was determined to join their ranks one day.\n\nHarriett's parents were killed in a tragic accident when she was still young, and she was taken in by a family of Rangers. She trained with them for many years, learning the ways of the wilderness and honing her skills as a Ranger. Eventually, she was accepted into the ranks of the Haunted Ones, and she embraced her newfound power.\n\nHarriett now travels the Forgotten Realms, seeking out adventure and mystery. She is driven by a desire to uncover the secrets of her parents' past, and to discover the truth behind their untimely deaths. She is also determined to use her newfound powers to help those in need, and to protect the innocent from the forces of evil.\n\nHarriett's current quest is to uncover the truth behind a mysterious cult that has been operating in the shadows of the Forgotten Realms. She believes that the cult is connected to her parents' deaths, and she is determined to bring them to justice. With her skills as a Ranger and her newfound powers as a Haunted One, Harriett is sure that she can uncover the truth and bring the cult to justice.",
+        "has_image": false
     }
 ]
