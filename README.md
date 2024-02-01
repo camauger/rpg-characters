@@ -2,6 +2,11 @@
 
 This Python program is an RPG (Role Playing Game) Character Generator. It provides a simple interface to generate and manage RPG characters. The characters can be either randomly generated or custom-made based on user input. Additionally, the program allows users to manage image resources for the characters and update existing character data.
 
+## Install Requirements
+
+To install requirements:
+pip install -r requirements.txt
+
 ## Key Components
 
 The key components of the program are:
@@ -28,15 +33,15 @@ To run this program, navigate to the directory containing the script in your ter
 
 The program will print a menu with options, prompting you for what you want to do:
 
-```
 Welcome to the RPG Character Generator!
+
 1. Create random characters
 2. Optimize images
 3. Create a specific character
 4. Update a specific character
-0. Exit the program
-What do you want to do? 
-```
+5. Exit the program
+
+What do you want to do?
 
 Enter the corresponding number for the task you want to perform.
 

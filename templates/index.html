@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -12,38 +13,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>RPG Characters</title>
   </head>
-
-  <body style="background-color: #eee5ce">
+  <body>
     <header class="container">
-      <nav class="navbar navbar-expand-lg navbar-light" style="font-family: MrEavesRemake; background-color: #eee5ce">
+      <nav class="navbar navbar-expand-lg navbar-light custom-nav">
         <div class="container-fluid">
-          <a class="navbar-brand" href="#">RPG Characters</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="/index.html">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="/create-character.html">Create a Character</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="/about.html">About</a>
-              </li>
-            </ul>
-          </div>
+          <!-- Navigation code -->
+          <nav class="navbar navbar-expand-lg navbar-light" style="font-family: MrEavesRemake; background-color: #eee5ce">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="#">RPG Characters</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="/index.html">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="/create-character.html">Create a Character</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="/about.html">About</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
         </div>
       </nav>
-      <h1
-        class="display-4 text-center mt-5 heading-main"
-      >
-        the RPG Characters Collection
+      <h1 class="display-4 text-center mt-5 heading-main">
+        The RPG Characters Collection
       </h1>
     </header>
-    <div class="container-fluid" style="margin-bottom: 90px">
+    <div class="container-fluid mb-5">
+      <!-- Body code -->
       <div class="row mt-5">
         {% for character in characters %}
         <div class="col-md-3">
@@ -89,13 +93,10 @@
         
       </div>
     </div>
-    <footer
-      class="footer fixed-bottom mt-auto py-3"
-      style="background-color: #58180d"
-    >
+    <footer class="footer fixed-bottom mt-auto py-3 custom-footer">
       <div class="container">
-        <p class="text-center" style="color: #bbad82">
-          Made with <span style="color: #e25555">&#9829;</span> by
+        <p class="text-center custom-text">
+          Made with <span class="heart">&#9829;</span> by
           <a href="https://ludomancien.com/">Christian Amauger</a>
         </p>
       </div>
@@ -108,3 +109,4 @@
     ></script>
   </body>
 </html>
+

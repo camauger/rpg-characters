@@ -4,7 +4,6 @@ from models.image_prompt_class import ImagePrompt
 from settings.name_composition import generate_random_first_name, generate_random_last_name
 from settings.random_settings import create_eye_color, create_hair_color, create_hair_style, create_physical_trait, get_ethnicity_keywords
 from utils.indefinite_article import indefinite_article
-from settings.env_settings import API_KEY
 import openai
 import os
 from dotenv import load_dotenv
@@ -16,17 +15,25 @@ load_dotenv()
 api_key = os.environ.get('API_KEY')
 
 # Create a background story for an RPG character
+
+
 def fetch_character_data(prompt):
     openai.api_key = api_key
-    response = openai.Completion.create(
-        model="text-davinci-003",
-        prompt=prompt,
-        max_tokens=400,
-        temperature=0
-    )
-    # access choices directly from response object
-    return response.choices[0].text.strip()
+    try:
+        response = openai.ChatCompletion.create(
+        model="gpt-4-turbo-preview",
+        response_format={ "type": "json_object" },
+        messages=[
+            {"role": "system", "content": "You are a RPG character in the world of Forgotten Realms. Write a background story for your character. Include their upbringing, key events in their life, and their motivations. Conclude the background story by including a potential adventure hook or a mystery that the character seeks to unravel. Please write three paragraphs with a total word count of around 300 words. Write output in JSON format."},
+            {"role": "user", "content": f"{prompt}"},
+        ]
+        )
+        print(response.choices[0].message.content)
+        return response.choices[0].message.content
 
+    except openai.error.OpenAIError as e:
+        print(f"An error occurred: {e}")
+        return None
 
 
 """
@@ -40,21 +47,24 @@ Additionally, it creates physical and psychological descriptions for the charact
 
 Finally, the __str__ method is used to return a string representation of the character.
 """
-import os
+
+
 def file_exists(folder_path, filename):
     file_path = os.path.join(folder_path, filename)
     return os.path.exists(file_path)
+
+
 class Character:
     def __init__(self, character_id, params):
         # Initialize the Character object with the provided ID and parameters
         try:
             # Assign basic character information
             self.id = character_id
+            self.gender = params['gender']
             self.first_name = generate_random_first_name(params['gender'])
             self.last_name = generate_random_last_name()
             self.full_name = f"{self.first_name} {self.last_name}"
-            self.gender = params['gender']
-        
+
             # Assign character class information
             random_class = params.get('random_class', {})
             self.character_class = random_class.get('name')
@@ -64,7 +74,7 @@ class Character:
             random_subclass = params.get('random_subclass', {})
             self.character_subclass = random_subclass.get('name')
             self.character_subclass_id = random_subclass.get('id')
-        
+
             # Assign background information
             self.background = params.get('background', {})
             self.background_name = self.background.get('name')
@@ -80,10 +90,11 @@ class Character:
             self.subrace = params.get('random_subrace', {})
             self.subrace_name = self.subrace.get('name', '')
             self.subrace_id = self.subrace.get('id', '')
-        
+
             # Assign ethnicity keywords
-            self.ethnicity_keywords = get_ethnicity_keywords(random_ethnicity, self.subrace)
-            
+            self.ethnicity_keywords = get_ethnicity_keywords(
+                random_ethnicity, self.subrace)
+
             # Assign other character attributes
             self.age = params.get('age')
             self.physical_description = self.create_physical_description()
@@ -97,11 +108,11 @@ class Character:
             self.personality_description = self.create_personality_description()
             self.background_story = self.create_background_story()
 
-            self.has_image = file_exists('static/images', f"{self.picture_id}.png")
-            
-        
+            self.has_image = file_exists(
+                'static/images', f"{self.picture_id}.png")
+
         except (KeyError, TypeError) as e:
-           raise Exception(f"Invalid parameter format: {e}")
+            raise Exception(f"Invalid parameter format: {e}")
 
     def to_dict(self):
         """Convert the character object to a dictionary"""
@@ -142,10 +153,9 @@ class Character:
             'background_story': self.background_story,
             'has_image': self.has_image
         }
-    
+
     def update_has_image(self):
         self.has_image = file_exists('static/images', f"{self.picture_id}.png")
-
 
     def get_subrace_name(self):
         if self.subrace is not None:
@@ -160,7 +170,7 @@ class Character:
         elif self.gender == 'Female':
             gender_id = '0'
         else:
-            gender_id = '2'            
+            gender_id = '2'
 
         race_id = ""
         if self.subrace is not None and len(self.subrace_id) > 0:
@@ -180,7 +190,6 @@ class Character:
 
         return (gender_id or '') + (race_id) + (class_id) + (self.background_id or '') + str(self.id)
 
-
     def create_physical_description_text(self):
         physical_description = f"{indefinite_article(self.physical_trait)} {self.gender.lower()} {self.ethnicity}. {self.full_name} has {self.hair_color.lower()} {self.hair_style} hair and {self.eye_color} eyes"
         return f"{self.full_name} is {physical_description}."
@@ -192,7 +201,7 @@ class Character:
         prompt = f"Write a background story for an RPG character named {self.full_name}, a {self.character_class} in the world of Forgotten Realms. The character is a {self.background_name} with {self.ethnicity} heritage. Describe their upbringing, key events in their life, and their motivations. Please write three paragraphs with a total word count of around 300 words. Conclude the background story by including a potential adventure hook or a mystery that the character seeks to unravel."
         background_story = fetch_character_data(prompt)
         # Transform the /n in paragraphs into <br> for HTML
-        ## background_story = background_story.replace('\n\n', '<br>')
+        # background_story = background_story.replace('\n\n', '<br>')
         return background_story
 
     def create_behavior(self):
@@ -204,12 +213,11 @@ class Character:
         prompt = f"Make a description of a character's personality based on this sentence: {self.behavior}"
         personality = fetch_character_data(prompt)
         return personality
-    
+
     def create_image_prompt(self):
         image_prompt = ImagePrompt(character=self)
         prompt = image_prompt.craft_image_prompt()
         return prompt
-    
+
     def __str__(self):
         return f"{self.full_name} is a {self.ethnicity} {self.character_class} ({self.character_subclass}) and a {self.background}"
-

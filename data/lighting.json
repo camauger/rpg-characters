@@ -1,0 +1,85 @@
+{
+    "lighting": [
+      {
+        "name": "Three-Point Lighting",
+        "description": "A standard method using three lights called the key light, fill light, and back light, to illuminate the subject and scene without flat lighting. It creates depth and dimension."
+      },
+      {
+        "name": "Key Light",
+        "description": "The primary light source in the scene, usually placed to one side of the camera/subject to create a shadow on the opposite side of the subject's face."
+      },
+      {
+        "name": "Fill Light",
+        "description": "Placed on the opposite side of the key light, it is used to fill the shadows created by the key light. It is usually softer and less intense than the key light."
+      },
+      {
+        "name": "Back Light",
+        "description": "Also known as a rim light or hair light, placed behind the subject to create a rim of light around the edge, separating the subject from the background."
+      },
+      {
+        "name": "Butterfly Lighting",
+        "description": "A technique where the light is placed directly in front of the subject and slightly above their head, creating a shadow under the nose that resembles a butterfly."
+      },
+      {
+        "name": "Rembrandt Lighting",
+        "description": "Characterized by an illuminated triangle or rectangle on the cheek of the subject not facing the light source, creating depth, dimension, and a sense of volume."
+      },
+      {
+        "name": "Loop Lighting",
+        "description": "Similar to Rembrandt lighting, but the shadow of the nose and cheek do not touch, creating a small shadow loop on the subject’s cheek."
+      },
+      {
+        "name": "Split Lighting",
+        "description": "A dramatic technique where half of the subject's face is in shadow, achieved by placing the key light at a 90-degree angle to the side of the subject."
+      },
+      {
+        "name": "Broad Lighting",
+        "description": "Illuminates the side of the face that is towards the camera, often used to make a face appear broader or fuller."
+      },
+      {
+        "name": "Short Lighting",
+        "description": "The side of the face away from the camera is illuminated, creating a more slimming and dramatic effect by casting more of the face in shadow."
+      },
+      {
+        "name": "High-Key Lighting",
+        "description": "A lighting scheme in which the light is soft and the scene is uniformly lit with few shadows. Often used in comedies and light-hearted scenes."
+      },
+      {
+        "name": "Low-Key Lighting",
+        "description": "Features high contrast, strong shadows, and minimal fill light. Often used to create suspense or mystery."
+      },
+      {
+        "name": "Natural Light",
+        "description": "Uses sunlight or moonlight as the light source, can vary widely in appearance depending on the time of day, weather, and location."
+      },
+      {
+        "name": "Practical Light",
+        "description": "Uses light sources visible within the scene, such as lamps or candles, as part of the lighting design."
+      },
+      {
+        "name": "Motivated Light",
+        "description": "Light that imitates natural sources within the scene, like a window or an open door, to maintain realism."
+      },
+      {
+        "name": "Hard Light",
+        "description": "Produces sharp, defined shadows and high contrast, often used to create a dramatic mood."
+      },
+      {
+        "name": "Soft Light",
+        "description": "Creates diffuse, soft-edged shadows and lower contrast, often used for a more flattering or gentle effect."
+      },
+      {
+        "name": "Silhouette",
+        "description": "Backlighting the subject to create a silhouette effect, obscuring details and emphasizing shape."
+      },
+      {
+        "name": "Cross Lighting",
+        "description": "Uses two lights positioned at opposite sides of the subject, creating interesting patterns of light and shadow."
+      },
+      {
+        "name": "Kicker Light",
+        "description": "A light placed at a low angle and to the side behind the subject, used to add a slight rim of light to the side of the face or body."
+      }
+    ]
+  }
+  

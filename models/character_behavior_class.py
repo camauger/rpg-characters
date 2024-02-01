@@ -1,4 +1,5 @@
-import json, random
+import json
+import random
 
 class CharacterBehavior:
     def __init__(self, character):
@@ -10,35 +11,20 @@ class CharacterBehavior:
             data = json.load(f)
         return data
 
-    def ideal(self):
-        random_ideal = random.choice(self.settings['ideals'])
-        return random_ideal.lower()
-    
-    def flaw(self):
-        random_flaw = random.choice(self.settings['flaws'])
-        return random_flaw.lower()
-    
-    def bond(self):
-        random_bond = random.choice(self.settings['bonds'])
-        return random_bond.lower()
-    
-    def behavior(self):
-        random_behavior = random.choice(self.settings['behaviors'])
-        return random_behavior.lower()
-    
-    def nature(self):
-        random_nature = random.choice(self.settings['natures'])
-        return random_nature.lower()
-    
+    def select_random_attribute(self, attributeName):
+        random_attribute = random.choice(self.settings[attributeName])
+        return random_attribute.lower()
+
     def create_behavior(self):
+        pronoun = "their"
         if (self.character.gender == "Female"):
-            return f"{self.character.full_name}'s ideal is {self.ideal()}. Her flaw is {self.flaw()}, her bond is {self.bond()}, her behavior is {self.behavior()}, and her nature is {self.nature()}."
+            pronoun = "her"
         elif (self.character.gender == "Male"):
-            return f"{self.character.full_name}'s ideal is {self.ideal()}. His flaw is {self.flaw()}, his bond is {self.bond()}, his behavior is {self.behavior()}, and his nature is {self.nature()}."
-        else:
-            return f"{self.character.full_name}'s ideal is {self.ideal()}. {self.character.full_name}'s traits are: {self.flaw()}, {self.bond()}, {self.behavior()} and {self.nature()}."
+            pronoun = "his"
+
+        behaviorDescription = f"{self.character.full_name}'s ideal is {self.select_random_attribute('ideals')}. {pronoun} flaw is {self.select_random_attribute('flaws')}, {pronoun} bond is {self.select_random_attribute('bonds')}, {pronoun} behavior is {self.select_random_attribute('behaviors')}, and {pronoun} nature is {self.select_random_attribute('natures')}."
+
+        return behaviorDescription
 
     def __str__(self) -> str:
-        return f"The character's ideal is {self.ideal()}, their flaw is {self.flaw()}, their bond is {self.bond()}, their behavior is {self.behavior()}, and their nature is {self.nature()}."
-    
-
+        return f"The character's ideal is {self.select_random_attribute('ideals')}, their flaw is {self.select_random_attribute('flaws')}, their bond is {self.select_random_attribute('bonds')}, their behavior is {self.select_random_attribute('behaviors')}, and their nature is {self.select_random_attribute('natures')}."

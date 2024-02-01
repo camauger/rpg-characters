@@ -1,0 +1,62 @@
+{
+    "cameras": [
+      {
+        "name": "DSLR",
+        "description": "Digital Single-Lens Reflex cameras use a mirror mechanism to provide an optical viewfinder. Known for their versatility and image quality.",
+        "suitable_angle_shots": ["Eye Level", "Low Angle", "High Angle", "Point-of-View Shot"]
+      },
+      {
+        "name": "Mirrorless",
+        "description": "These cameras lack the mirror mechanism of DSLRs, making them lighter and more compact, while still offering high image quality.",
+        "suitable_angle_shots": ["Eye Level", "Medium Shot", "Close-Up", "Two-Shot"]
+      },
+      {
+        "name": "Medium Format",
+        "description": "Larger than full-frame sensors, these cameras provide higher resolution and better detail, ideal for professional studio work.",
+        "suitable_angle_shots": ["Portrait", "High Detail Close-Up", "Extreme Close-Up", "Fashion Photography"]
+      },
+      {
+        "name": "Point-and-Shoot",
+        "description": "Compact and user-friendly, these cameras are designed for casual photography with automatic settings.",
+        "suitable_angle_shots": ["Medium Shot", "Point-of-View Shot", "Casual Portrait", "Landscape"]
+      },
+      {
+        "name": "Film Camera",
+        "description": "Traditional analog cameras using film rolls. Valued for their unique aesthetic and high dynamic range.",
+        "suitable_angle_shots": ["Vintage Style Portrait", "Artistic Landscape", "Candid Shot", "Street Photography"]
+      }
+    ],
+    "lenses": [
+      {
+        "name": "Prime Lens",
+        "description": "Fixed focal length lens known for its sharpness and wide apertures, ideal for low light conditions and depth of field control.",
+        "suitable_angle_shots": ["Close-Up", "Portrait", "Two-Shot", "Low Light"]
+      },
+      {
+        "name": "Zoom Lens",
+        "description": "Offers a range of focal lengths in one lens, providing flexibility for various shooting scenarios.",
+        "suitable_angle_shots": ["Variable Angle Shots", "Sport Photography", "Wildlife Photography", "Event Coverage"]
+      },
+      {
+        "name": "Telephoto Lens",
+        "description": "Long focal length lens ideal for sports and wildlife photography, allowing for close-up shots from a distance.",
+        "suitable_angle_shots": ["Long Distance Close-Up", "Sports Action Shot", "Wildlife Close-Up", "Distant Portrait"]
+      },
+      {
+        "name": "Wide-Angle Lens",
+        "description": "Short focal length lens that captures a wider field of view, great for landscapes and architectural photography.",
+        "suitable_angle_shots": ["Landscape", "Architectural Shot", "Group Portrait", "Environmental Portrait"]
+      },
+      {
+        "name": "Macro Lens",
+        "description": "Designed for extreme close-up photography, capturing fine details with a high magnification ratio.",
+        "suitable_angle_shots": ["Extreme Close-Up", "Macro Detail", "Textural Shot", "Close-Up Nature Photography"]
+      },
+      {
+        "name": "Fish-Eye Lens",
+        "description": "An ultra wide-angle lens that produces a highly distorted, spherical view of the world, often used for artistic effect.",
+        "suitable_angle_shots": ["Artistic Distorted View", "360-degree Scene", "Creative Landscape", "Unique Portraits"]
+      }
+    ]
+  }
+  

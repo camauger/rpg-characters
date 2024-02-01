@@ -1,0 +1,81 @@
+{
+    "angles": [
+      {
+        "name": "High Angle",
+        "description": "The camera is positioned above the subject, looking down. This angle can make the subject appear smaller, weaker, or more vulnerable."
+      },
+      {
+        "name": "Low Angle",
+        "description": "The camera is placed below the subject, looking up. This can make the subject look more powerful or threatening."
+      },
+      {
+        "name": "Eye Level",
+        "description": "The camera is positioned at the subject's eye level. This is a neutral angle, often used for conversations or to show characters on an equal footing."
+      },
+      {
+        "name": "Bird's Eye View",
+        "description": "The camera is placed very high above the subject, offering a panoramic view of the landscape or setting. This can provide context or show the subject's insignificance in the larger environment."
+      },
+      {
+        "name": "Worm's Eye View",
+        "description": "An extreme version of the low angle shot, where the camera is placed as if on the ground, looking up. This can create a sense of grandeur or awe."
+      },
+      {
+        "name": "Dutch Angle",
+        "description": "The camera is tilted, so the horizon line is not level. This technique is used to create a sense of unease, tension, or disorientation."
+      },
+      {
+        "name": "Over-the-Shoulder Shot",
+        "description": "The camera looks over the shoulder of one character, focusing on another character or object. This is often used in conversations to create a sense of inclusion."
+      },
+      {
+        "name": "Point-of-View Shot (POV)",
+        "description": "The camera shows what a character is looking at, effectively putting the audience in the character's shoes. This can create a strong connection to the character's experiences."
+      },
+      {
+        "name": "Two-Shot",
+        "description": "A shot that frames two characters, often used in conversations to show the interaction between them."
+      },
+      {
+        "name": "Three-Shot",
+        "description": "Similar to the two-shot but includes three characters. This is used for group interactions."
+      },
+      {
+        "name": "Extreme Close-Up",
+        "description": "The camera is very close to the subject, showing detail that would not be visible in a wider shot. This can highlight emotions or important objects."
+      },
+      {
+        "name": "Close-Up",
+        "description": "The camera is close to the subject, usually framing the face. This is used to capture expressions and emotions."
+      },
+      {
+        "name": "Medium Shot",
+        "description": "The camera frames the subject from the waist up. This is a common shot for dialogue scenes, offering a balance between the character and their setting."
+      },
+      {
+        "name": "Long Shot",
+        "description": "The subject is framed from a greater distance, showing them in their entirety. This can establish the setting or the character's place in it."
+      },
+      {
+        "name": "Extreme Long Shot",
+        "description": "The camera is at a very long distance from the subject, often used to show vast landscapes or settings, making the subject appear small or insignificant."
+      },
+      {
+        "name": "Master Shot",
+        "description": "A shot that covers the characters and action in one continuous scene, usually from a long or full shot perspective. This is often used at the beginning of a scene to establish setting and relationships."
+      },
+      {
+        "name": "Crane Shot",
+        "description": "The camera moves vertically, typically with the use of a crane, to reveal the subject or landscape. This can add drama or reveal something previously unseen."
+      },
+      {
+        "name": "Tracking Shot",
+        "description": "The camera moves along with the subject, keeping them in frame while they move through their environment. This can be used to follow a character or explore a space."
+      },
+      {
+        "name": "Steadicam Shot",
+        "description": "A shot achieved using a Steadicam for smooth movement while following action or moving through a location. This allows for fluid motion without the constraints of tracks."
+      }
+    ]
+  }
+  

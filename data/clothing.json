@@ -1,0 +1,65 @@
+{
+    "clothing": [
+      {
+        "name": "Leather",
+        "description": "Durable and flexible, commonly used for armor, boots, and belts. Often seen in rogue or ranger outfits."
+      },
+      {
+        "name": "Chainmail",
+        "description": "Interlocking metal rings, providing good protection. Used in various types of armor, especially for knights and warriors."
+      },
+      {
+        "name": "Silk",
+        "description": "Luxurious and lightweight, favored by mages and nobles for robes and cloaks."
+      },
+      {
+        "name": "Linen",
+        "description": "Light and breathable, typically used for common wear, undergarments, or mage robes."
+      },
+      {
+        "name": "Wool",
+        "description": "Heavy and warm, often used for cloaks, tunics, and pants, suitable for travel and colder climates."
+      },
+      {
+        "name": "Fur",
+        "description": "Thick and insulating, used for warmth in cloaks, boots, and trims. Common in barbarian or northern character attire."
+      },
+      {
+        "name": "Brocade",
+        "description": "Rich, decorative fabric with raised designs, often seen in noble or royal garments."
+      },
+      {
+        "name": "Velvet",
+        "description": "Soft, with a distinctive feel, used for luxurious clothing and nobility's attire."
+      },
+      {
+        "name": "Scale",
+        "description": "Small, overlapping plates, resembling fish scales. Used in armor for flexibility and protection."
+      },
+      {
+        "name": "Canvas",
+        "description": "Sturdy and heavy-duty, used for durable clothing like pants and jackets, common for adventurers."
+      },
+      {
+        "name": "Damask",
+        "description": "Woven fabric with patterns, seen in high-quality vests, robes, and gowns."
+      },
+      {
+        "name": "Suede",
+        "description": "Soft and luxurious, used for gloves, boots, and caps, popular among rogues and bards."
+      },
+      {
+        "name": "Tweed",
+        "description": "Durable and moisture-resistant, ideal for travel cloaks and scholar attire."
+      },
+      {
+        "name": "Mesh",
+        "description": "Light and airy, used in layers for mystical or exotic outfits."
+      },
+      {
+        "name": "Gossamer",
+        "description": "Sheer and lightweight, often used in elven attire or for magical robes."
+      }
+    ]
+  }
+  

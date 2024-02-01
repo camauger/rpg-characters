@@ -1,0 +1,49 @@
+{
+    "focus_types": [
+      {
+        "name": "Auto Focus",
+        "description": "Automatically adjusts the camera's focus based on its sensors. Ideal for quick shooting and moving subjects."
+      },
+      {
+        "name": "Manual Focus",
+        "description": "Gives the photographer full control over the focus. Preferred for precise focusing in macro, portrait, and landscape photography."
+      },
+      {
+        "name": "Continuous Auto Focus",
+        "description": "Continuously adjusts focus on a moving subject, useful in sports and wildlife photography."
+      },
+      {
+        "name": "Single Point Auto Focus",
+        "description": "Focuses on a single, selected point in the frame. Great for portraits or static subjects."
+      },
+      {
+        "name": "Dynamic Auto Focus",
+        "description": "Automatically selects from multiple focus points to track and maintain focus on a moving subject."
+      },
+      {
+        "name": "Zone Focusing",
+        "description": "Focuses on a specific zone or area in the frame, useful in street photography and for subjects that move unpredictably."
+      },
+      {
+        "name": "Face Detection Focus",
+        "description": "Automatically detects and focuses on human faces, ideal for portraits and group shots."
+      },
+      {
+        "name": "Eye Auto Focus",
+        "description": "Specifically focuses on a subject's eyes, perfect for close-up portraits and maintaining sharp focus on the eyes."
+      },
+      {
+        "name": "Rack Focus",
+        "description": "A technique where the focus shifts smoothly from one subject to another within the same shot. Commonly used in film to direct attention or create dramatic effect."
+      },
+      {
+        "name": "Touch Focus",
+        "description": "Allows the photographer to select the focus point by touching it on the camera's touchscreen. Useful for quick and intuitive focusing."
+      },
+      {
+        "name": "Predictive Focus",
+        "description": "Anticipates the movement of a subject to maintain focus on it, particularly useful in fast-paced shooting scenarios like sports."
+      }
+    ]
+  }
+  

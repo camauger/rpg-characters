@@ -1,0 +1,184 @@
+{
+    "styles": [
+        {
+            "name": "Chiaroscuro and Tenebrism",
+            "description": "Styles utilizing stark light and dark contrasts, creating dramatic and emotionally charged images with a sense of mystery and intrigue."
+        },
+        {
+            "name": "Grisaille",
+            "description": "A monochromatic palette style giving images a 3D sculptural look, focusing on form and structure with minimalist aesthetics."
+        },
+        {
+            "name": "Dark Synth",
+            "description": "Characterized by a dark, retro-futuristic, deconstructed look, suitable for edgy, avant-garde, and thought-provoking images."
+        },
+        {
+            "name": "Vaporwave",
+            "description": "A colorful digital art style influenced by 1980s and 1990s computer graphics, creating vibrant and nostalgic images."
+        },
+        {
+            "name": "Prismatic",
+            "description": "Marked by facets of color and geometric gem-like structures, ideal for dynamic and visually complex images."
+        },
+        {
+            "name": "Sfumato",
+            "description": "Features softly blended colors and edges with indistinct outlines, producing subtle and nuanced imagery."
+        },
+        {
+            "name": "Impasto",
+            "description": "Characterized by bold colors and thick brush strokes, creating vibrant images with a 3D quality."
+        },
+        {
+            "name": "Pentimento",
+            "description": "Known for a layered effect with underlying images visible, creating complex and intriguing visuals."
+        },
+        {
+            "name": "Diffusion",
+            "description": "Spreads and mixes colors to create unique patterns, ideal for striking and unique image creation."
+        },
+        {
+            "name": "Deconstructivism",
+            "description": "Focused on fragmentation and radical freedom of form, suited for edgy and thought-provoking images."
+        },
+        {
+            "name": "Fractal",
+            "description": "Characterized by infinitely complex patterns, perfect for dynamic and visually engaging images."
+        },
+        {
+            "name": "Filigree",
+            "description": "Involves intricate metalwork and delicate patterns, creating elegant and sophisticated images."
+        },
+        {
+            "name": "Sgraffito",
+            "description": "Known for cutting away surface layers to reveal intricate patterns, ideal for unique and complex visuals."
+        },
+        {
+            "name": "Ukiyo-e",
+            "description": "A colorful, stylized Japanese woodblock print style, producing vibrant and dynamic imagery."
+        },
+        {
+            "name": "Encaustic",
+            "description": "Uses wax and fire for a textured and layered surface, creating striking and unique images."
+        },
+        {
+            "name": "Kinetic Art",
+            "description": "Characterized by motion extending beyond the frame, perfect for dynamic and engaging images."
+        },
+        {
+            "name": "Op Art",
+            "description": "Focused on the illusion of movement and abstract geometric forms, ideal for complex and dynamic visuals."
+        },
+        {
+            "name": "Aboriginal Dot Painting",
+            "description": "An indigenous Australian style with colorful dots and shapes, creating vibrant and culturally rich images."
+        },
+        {
+            "name": "Feng Shui",
+            "description": "Characterized by circular compositions and symbols of natural balance, producing soothing and calming imagery."
+        },
+        {
+            "name": "Wabi-Sabi",
+            "description": "Finds beauty in imperfection, creating gritty, muted images that are tranquil and calming."
+        },
+        {
+            "name": "Surrealism",
+            "description": "Focuses on dream-like visuals with illogical, fantastical arrangements, evoking mystery and oddity."
+        },
+        {
+            "name": "Art Deco",
+            "description": "Known for its sleek, geometric, and stylized designs, creating elegant and sophisticated imagery."
+        },
+        {
+            "name": "Fauvism",
+            "description": "Emphasizes painterly qualities and strong, vibrant colors over realistic values."
+        },
+        {
+            "name": "Constructivism",
+            "description": "Focuses on abstraction and modernity, using geometric forms and modern materials."
+        },
+        {
+            "name": "Minimalism",
+            "description": "Known for simplicity and focus on the essentials of the form, creating clean, abstract compositions."
+        },
+        {
+            "name": "Rococo",
+            "description": "Ornate and decorative, emphasizing lightness, elegance, and the use of curving natural forms."
+        },
+        {
+            "name": "Neo-Expressionism",
+            "description": "Characterized by intense subjectivity, vivid colors, and dynamic, often unsettling compositions."
+        },
+        {
+            "name": "Pop Art",
+            "description": "Utilizes aspects of mass culture and popular media, often with vivid colors and contemporary themes."
+        },
+        {
+            "name": "Abstract Expressionism",
+            "description": "Focuses on spontaneous, automatic, or subconscious creation, emphasizing a non-representational approach."
+        },
+        {
+            "name": "Hyperrealism",
+            "description": "Creates highly realistic and detailed images that often resemble high-resolution photographs."
+        },
+        {
+            "name": "Art Nouveau",
+            "description": "Characterized by elegant, flowing lines and natural forms, creating ornate and decorative images."
+        },
+        {
+            "name": "Cubism",
+            "description": "Known for abstracted forms and multiple viewpoints, creating fragmented and geometric images."
+        },
+        {
+            "name": "Surrealism",
+            "description": "Focuses on dream-like, fantastical imagery with unexpected combinations and bizarre forms."
+        },
+        {
+            "name": "Abstract Expressionism",
+            "description": "Emphasizes spontaneous, automatic, or subconscious creation, producing abstract and emotionally charged images."
+        },
+        {
+            "name": "Pop Art",
+            "description": "Utilizes bright colors and commercial or popular culture imagery, creating bold and graphic images."
+        },
+        {
+            "name": "Minimalism",
+            "description": "Focuses on simplicity and purity of form, often with monochromatic color schemes and basic geometric shapes."
+        },
+        {
+            "name": "Art Deco",
+            "description": "Known for bold geometric patterns, rich colors, and lavish ornamentation, creating elegant and sophisticated images."
+        },
+        {
+            "name": "Futurism",
+            "description": "Emphasizes speed, technology, and dynamic motion, creating energetic and forward-looking imagery."
+        },
+        {
+            "name": "Constructivism",
+            "description": "Focuses on industrial materials and geometric forms, often with a political message, creating structured and abstract images."
+        },
+        {
+            "name": "Gothic",
+            "description": "Characterized by dark, mysterious, and medieval elements, often creating moody and atmospheric images."
+        },
+        {
+            "name": "Baroque",
+            "description": "Known for dramatic use of light and shadow, rich color palettes, and grandeur, creating dynamic and ornate images."
+        },
+        {
+            "name": "Rococo",
+            "description": "Features elaborate ornamentation, pastel colors, and playful themes, creating light and charming imagery."
+        },
+        {
+            "name": "Fauvism",
+            "description": "Emphasizes painterly qualities and strong, vibrant colors, creating intense and wild images."
+        },
+        {
+            "name": "Byzantine",
+            "description": "Characterized by religious and imperial themes, gold backgrounds, and flat, symbolic figures, creating spiritual and iconic imagery."
+        },
+        {
+            "name": "Dadaism",
+            "description": "Focuses on absurdity and anti-art sensibilities, often using collage and photomontage to create whimsical and nonsensical images."
+        }
+    ]
+}

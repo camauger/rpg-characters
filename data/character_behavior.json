@@ -19,7 +19,14 @@
     "Inquisitive",
     "Honest",
     "Mysterious",
-    "Resourceful"
+    "Resourceful",
+    "Sarcastic",
+    "Sincere",
+    "Skeptical",
+    "Stoic",
+    "Vigilant",
+    "Witty",
+    "Zealous"
   ],
   "behaviors": [
     "Brave",
@@ -63,7 +70,9 @@
     "Independence",
     "Growth",
     "Selflessness",
-    "Innovation"
+    "Innovation",
+    "Tradition",
+    "Peace"
   ],
   "flaws": [
     "Impulsive",
@@ -85,9 +94,10 @@
     "Cynical",
     "Forgetful",
     "Easily influenced",
-    "Pessimistic"
+    "Pessimistic",
+    "Sarcastic",
+    "Lazy"
   ],
-
   "bonds": [
     "Family",
     "Friendship",

@@ -1,6 +1,7 @@
 import random
 from settings.image_prompt_settings import artists_and_photographers, colors, illustrators, lighting, portrait, artists
 from utils.indefinite_article import indefinite_article
+import json
 
 def choose_two_and_join(elements):
     choices = random.sample(elements, 2)
@@ -21,8 +22,10 @@ class ImagePrompt:
         self.tags = self.tags()
         self.actor = self.actor()
         self.lighting = self.lighting()
+        self.clothing = self.clothing()
         self.image_type = self.image_type()
         
+
     def scene(self):
         return f"{indefinite_article(self.background)} {self.ethnicity} {self.character.character_class} named {self.character.full_name}"
 
@@ -40,11 +43,30 @@ class ImagePrompt:
         return f"{self.character.create_physical_description_text()}"
 
     def lighting(self):
-        return random.choice(lighting)
+        with open('data/lighting.json', 'r') as f:
+            lighting_data = json.load(f)
+
+        # Extract the 'name' from each item in the 'lighting' list
+        lighting_names = [item['name'] for item in lighting_data['lighting']]
+
+        # Return a random 'name'
+        return random.choice(lighting_names)
+    
+    def clothing(self):
+        with open('data/clothing.json', 'r') as f:
+            clothing_data = json.load(f)
+
+        # Extract the 'name' from each item in the 'clothing' list
+        clothing_names = [item['name'] for item in clothing_data['clothing']]
+
+        # Return a random 'name'
+        return random.choice(clothing_names)
     
     def image_type(self):
         return random.choice(portrait)
     
     def craft_image_prompt(self):
-        prompt = f"{self.image_type} in the style of {self.style} | {self.genre} | {self.scene} | {self.actor} | {self.tones} tones | {self.lighting} | {self.tags}"
+        prompt = f"{self.image_type} in the style of {self.style} | {self.genre} | {self.scene} wearing {self.clothing} clothing | {self.actor} | {self.tones} tones | {self.lighting} | {self.tags}"
         return prompt
+
+

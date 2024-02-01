@@ -1,0 +1,850 @@
+[
+    {
+        "id": 2897,
+        "first_name": "Clemmy",
+        "last_name": "Araophnyxnyx",
+        "full_name": "Clemmy Araophnyxnyx",
+        "gender": "Female",
+        "character_class": "Rogue",
+        "character_class_id": "090",
+        "character_subclass": "Arcane Trickster",
+        "character_subclass_id": "093",
+        "background": {
+            "name": "Cloistered Scholar",
+            "id": "07"
+        },
+        "background_name": "Cloistered Scholar",
+        "background_id": "07",
+        "ethnicity": "Half-Orc",
+        "ethnicity_name": "Half-Orc",
+        "ethnicity_id": "007",
+        "subrace": {
+            "race": "Half-Orc",
+            "id": "007",
+            "keywords": [
+                "tall",
+                "muscular",
+                "green skin",
+                "tusks",
+                "broad nose",
+                "heavy eyebrows",
+                "wild hair",
+                "scarred",
+                "intimidating",
+                "fearsome",
+                "savage",
+                "brutish",
+                "barbaric"
+            ]
+        },
+        "subrace_name": "",
+        "subrace_id": "007",
+        "ethnicity_keywords": [
+            "tall",
+            "muscular",
+            "green skin",
+            "tusks",
+            "broad nose",
+            "heavy eyebrows",
+            "wild hair",
+            "scarred",
+            "intimidating",
+            "fearsome",
+            "savage",
+            "brutish",
+            "barbaric"
+        ],
+        "age": "Young Adult",
+        "physical_description": {
+            "trait": "Lithe",
+            "hair_color": "Black",
+            "hair_style": "blunt bangs"
+        },
+        "physical_trait": "Lithe",
+        "hair_color": "Black",
+        "hair_style": "blunt bangs",
+        "eye_color": "multi-colored",
+        "behavior": "Clemmy Araophnyxnyx's ideal is growth. Her flaw is manipulative, her bond is protection, her behavior is introverted, and her nature is bold.",
+        "picture_id": "0007093072897",
+        "image_prompt": "Glamour Portrait in the style of Bill Plympton | Fantasy | a Cloistered Scholar Half-Orc Rogue named Clemmy Araophnyxnyx | Clemmy Araophnyxnyx is a Lithe female Half-Orc. Clemmy Araophnyxnyx has black blunt bangs hair and multi-colored eyes. | Pearl and Steel Blue tones | Soft Light | tall, muscular, green skin, tusks, broad nose, heavy eyebrows, wild hair, scarred, intimidating, fearsome, savage, brutish, barbaric, Fantasy, Medieval Fantasy, Dungeons & Dragons. --s 1000 --upbeta --seed 0007093072897",
+        "personality_description": "\n\nClemmy's ideal is growth, and she is very manipulative in order to get what she wants. She is introverted, but her nature is bold, and she is very protective of her loved ones.",
+        "background_story": "\n\nClemmy was born in the city of Waterdeep to a Half-Orc mother and a Human father. Her father was a member of the city guard, and her mother was a cloistered scholar. When Clemmy was five, her father was killed in a raid on the city by a group of bandits. Her mother died of a broken heart soon after. Clemmy was raised by her uncle, a member of the city guard. He taught her how to fight and how to read and write. When Clemmy was sixteen, her uncle was killed in a raid on the city by a group of bandits. She vowed to avenge his death and to find out who was behind the raids. She has been working as a rogue ever since.\n\nClemmy is motivated by revenge and by a desire to find out who is behind the raids on the city. She is also motivated by a desire to help others. She has a strong sense of justice and does not tolerate injustice. She is always looking for a way to help those who are oppressed or persecuted.\n\nOne day, Clemmy discovers that the raids on the city are being conducted by a group of bandits who are in league with the city guard. She also discovers that her uncle was killed by the same group of bandits. She vows to expose the city guard and to bring the bandits to justice.",
+        "has_image": true
+    },
+    {
+        "id": 7400,
+        "first_name": "Marley",
+        "last_name": "Ae",
+        "full_name": "Marley Ae",
+        "gender": "Female",
+        "character_class": "Sorcerer",
+        "character_class_id": "100",
+        "character_subclass": "Wild Magic",
+        "character_subclass_id": "102",
+        "background": {
+            "name": "Uthgardt Tribe Member",
+            "id": "30"
+        },
+        "background_name": "Uthgardt Tribe Member",
+        "background_id": "30",
+        "ethnicity": "Half-Orc",
+        "ethnicity_name": "Half-Orc",
+        "ethnicity_id": "007",
+        "subrace": {
+            "race": "Half-Orc",
+            "id": "007",
+            "keywords": [
+                "tall",
+                "muscular",
+                "green skin",
+                "tusks",
+                "broad nose",
+                "heavy eyebrows",
+                "wild hair",
+                "scarred",
+                "intimidating",
+                "fearsome",
+                "savage",
+                "brutish",
+                "barbaric"
+            ]
+        },
+        "subrace_name": "",
+        "subrace_id": "007",
+        "ethnicity_keywords": [
+            "tall",
+            "muscular",
+            "green skin",
+            "tusks",
+            "broad nose",
+            "heavy eyebrows",
+            "wild hair",
+            "scarred",
+            "intimidating",
+            "fearsome",
+            "savage",
+            "brutish",
+            "barbaric"
+        ],
+        "age": "Young Adult",
+        "physical_description": {
+            "trait": "Commanding",
+            "hair_color": "White",
+            "hair_style": "three-strand braid"
+        },
+        "physical_trait": "Commanding",
+        "hair_color": "White",
+        "hair_style": "three-strand braid",
+        "eye_color": "hazel",
+        "behavior": "Marley Ae's ideal is balance. Her flaw is indecisive, her bond is freedom, her behavior is perceptive, and her nature is inquisitive.",
+        "picture_id": "0007102307400",
+        "image_prompt": "High-Key Portrait in the style of Sparth | Fantasy | an Uthgardt Tribe Member Half-Orc Sorcerer named Marley Ae | Marley Ae is a Commanding female Half-Orc. Marley Ae has white three-strand braid hair and hazel eyes. | Coffee and Gold tones | Split Lighting | tall, muscular, green skin, tusks, broad nose, heavy eyebrows, wild hair, scarred, intimidating, fearsome, savage, brutish, barbaric, Fantasy, Medieval Fantasy, Dungeons & Dragons. --s 1000 --upbeta --seed 0007102307400",
+        "personality_description": "\n\nMarley Ae is an idealistic person who strives for balance in her life. She can be indecisive at times, but is generally perceptive and inquisitive. Her main bond is with her sense of freedom.",
+        "background_story": "\n\nMarley Ae was born to a human mother and a half-orc father from the Uthgardt tribe. Marley's mother died during childbirth, and their father was killed in a raid when Marley was only a child. Marley was then raised by their grandparents. As a child, Marley was always interested in the magical arts. When they were old enough, Marley left their grandparents to begin their own journey and learn more about magic.\n\nDuring their travels, Marley met a wizard who took them under their wing and taught them the basics of magic. Marley quickly began to develop their own unique style of magic. After many years of study, Marley eventually became a powerful sorcerer.\n\nMarley now roam the lands, using their magic to help those in need. They also search for any clues that might help them solve the mystery of their parents' deaths.",
+        "has_image": true
+    },
+    {
+        "id": 7361,
+        "first_name": "Brocky",
+        "last_name": "Eld",
+        "full_name": "Brocky Eld",
+        "gender": "Male",
+        "character_class": "Fighter",
+        "character_class_id": "050",
+        "character_subclass": "Eldritch Knight",
+        "character_subclass_id": "053",
+        "background": {
+            "name": "Waterdhavian Noble",
+            "id": "31"
+        },
+        "background_name": "Waterdhavian Noble",
+        "background_id": "31",
+        "ethnicity": "Elf",
+        "ethnicity_name": "Elf",
+        "ethnicity_id": "003",
+        "subrace": {
+            "name": "High Elf",
+            "id": "0031",
+            "keywords": [
+                "arcane",
+                "magic",
+                "scholarly",
+                "graceful"
+            ]
+        },
+        "subrace_name": "High Elf",
+        "subrace_id": "0031",
+        "ethnicity_keywords": [
+            "tall",
+            "slender",
+            "pointed ears",
+            "almond-shaped eyes",
+            "graceful",
+            "ageless",
+            "delicate features",
+            "arcane",
+            "magic",
+            "scholarly"
+        ],
+        "age": "Adult",
+        "physical_description": {
+            "trait": "Athletic",
+            "hair_color": "Blond",
+            "hair_style": "high pony"
+        },
+        "physical_trait": "Athletic",
+        "hair_color": "Blond",
+        "hair_style": "high pony",
+        "eye_color": "gold",
+        "behavior": "Brocky Eld's ideal is ambition. His flaw is overconfident, his bond is family, his behavior is brave, and his nature is adventurous.",
+        "picture_id": "10031053317361",
+        "image_prompt": "Moody Portrait in the style of Ismail Inceoglu | Fantasy | a Waterdhavian Noble Elf Fighter named Brocky Eld | Brocky Eld is an Athletic male Elf. Brocky Eld has blond high pony hair and gold eyes. | Cream and Vermilion tones | Moonlight | tall, slender, pointed ears, almond-shaped eyes, graceful, ageless, delicate features, arcane, magic, scholarly, Fantasy, Medieval Fantasy, Dungeons & Dragons. --s 1000 --upbeta --seed 10031053317361",
+        "personality_description": "\n\nBrocky Eld is an ambitious individual who is also overconfident. He is brave and adventurous by nature, and his main bond is with his family.",
+        "background_story": "\n\nBrocky Eld was born into a wealthy Waterdhavian family with a long history of public service. His father was a successful politician and his mother was a well-known socialite. Brocky was raised in luxury and privilege, but he was always aware of the elven blood in his veins. His mother would tell him stories of her homeland and he would often daydream about adventuring in the wilds of Faerun. When he was old enough, he convinced his parents to send him to a prestigious elven academy in the city of Silverymoon.\n\nBrocky excelled in his studies and quickly became one of the top students in his class. He developed a keen interest in magic and history, and he dreamed of one day becoming a great wizard like his mother's people. However, his plans were derailed when his parents were killed in a freak accident. Brocky was suddenly the head of the family and he had to put his studies on hold to take up his father's political mantle.\n\nFor the next few years, Brocky devoted himself to his family's business interests and to Waterdhavian politics. He quickly rose through the ranks of the nobility and became one of the most powerful men in the city. But Brocky's heart was never in it. He longed for adventure and excitement, and he eventually came to the realization that his true calling was in the world of adventuring.\n\nBrocky left his family and Waterdeep behind and set out into the wide world of Faerun. He quickly made a name for himself as a skilled fighter and a master of magic. He has adventured across the length and breadth of the Realms, and he has seen and accomplished more than most people could ever dream of. But Brocky is still searching for something. He feels like there is something more out there for him, some greater purpose that he has yet to discover.\n\nOne possible adventure hook for",
+        "has_image": true
+    },
+    {
+        "id": 7493,
+        "first_name": "Shem",
+        "last_name": "Opharadanis",
+        "full_name": "Shem Opharadanis",
+        "gender": "Male",
+        "character_class": "Cleric",
+        "character_class_id": "030",
+        "character_subclass": "Life Domain",
+        "character_subclass_id": "031",
+        "background": {
+            "name": "Waterdhavian Noble",
+            "id": "31"
+        },
+        "background_name": "Waterdhavian Noble",
+        "background_id": "31",
+        "ethnicity": "Half-Elf",
+        "ethnicity_name": "Half-Elf",
+        "ethnicity_id": "006",
+        "subrace": {
+            "race": "Half-Elf",
+            "id": "006",
+            "keywords": [
+                "slim",
+                "pointed ears",
+                "fair skin",
+                "mix of human and elf features"
+            ]
+        },
+        "subrace_name": "",
+        "subrace_id": "006",
+        "ethnicity_keywords": [
+            "slim",
+            "pointed ears",
+            "fair skin",
+            "mix of human and elf features"
+        ],
+        "age": "Adult",
+        "physical_description": {
+            "trait": "Stout",
+            "hair_color": "Brown",
+            "hair_style": "fauxhawk"
+        },
+        "physical_trait": "Stout",
+        "hair_color": "Brown",
+        "hair_style": "fauxhawk",
+        "eye_color": "honey",
+        "behavior": "Shem Opharadanis's ideal is creativity. His flaw is reckless, his bond is legacy, his behavior is brave, and his nature is wise.",
+        "picture_id": "1006031317493",
+        "image_prompt": "Head and Shoulders Portrait in the style of Balthus | Fantasy | a Waterdhavian Noble Half-Elf Cleric named Shem Opharadanis | Shem Opharadanis is a Stout male Half-Elf. Shem Opharadanis has brown fauxhawk hair and honey eyes. | Forest Green and Chocolate tones | Soft Light | slim, pointed ears, fair skin, mix of human and elf features, Fantasy, Medieval Fantasy, Dungeons & Dragons. --s 1000 --upbeta --seed 1006031317493",
+        "personality_description": "\n\nShem Opharadanis is a creative person who likes to experiment and take risks. He is also wise and brave, and he feels a strong sense of responsibility to uphold his family's legacy.",
+        "background_story": "\n\nShem Opharadanis was born into a wealthy Waterdhavian family of Half-Elven heritage. His parents were kind and loving, and he had a happy childhood. However, when he was ten years old, his parents were killed in a carriage accident. Shem was the only survivor.\n\nOrphaned and alone, Shem was taken in by his parents' closest friends, a couple who were also of Half-Elven heritage. They treated him like their own son, and he grew up happy and loved.\n\nWhen he was eighteen, Shem's adoptive parents died of a mysterious illness. Again, he was the only survivor. Shem was devastated by the loss of the only family he had ever known.\n\n Seeking answers, Shem turned to the church. He became a Cleric, and devoted his life to serving the gods. He also began to research the mysterious illness that had claimed the lives of his adoptive parents, in the hope of finding a cure.\n\nShem's quest for answers has led him on many adventures. He has battled evil wizards, dragons, and demons. He has also made many allies, including a group of like-minded Clerics who share his quest to find a cure for the mysterious illness.\n\nOne day, Shem hopes to find the answer to the mystery that has haunted him all his life. Until then, he will continue to serve the gods and fight evil in the world.",
+        "has_image": true
+    },
+    {
+        "id": 9885,
+        "first_name": "Amelia",
+        "last_name": "Ellean",
+        "full_name": "Amelia Ellean",
+        "gender": "Female",
+        "character_class": "Fighter",
+        "character_class_id": "050",
+        "character_subclass": "Psi Warrior",
+        "character_subclass_id": "054",
+        "background": {
+            "name": "Cloistered Scholar",
+            "id": "07"
+        },
+        "background_name": "Cloistered Scholar",
+        "background_id": "07",
+        "ethnicity": "Dragonborn",
+        "ethnicity_name": "Dragonborn",
+        "ethnicity_id": "009",
+        "subrace": {
+            "race": "Dragonborn",
+            "id": "009",
+            "keywords": [
+                "tall",
+                "muscular",
+                "dragon-like face",
+                "scales",
+                "tail",
+                "claws",
+                "frills",
+                "dragon anthropomorphic humanoid",
+                "reptilian",
+                "fearsome"
+            ]
+        },
+        "subrace_name": "",
+        "subrace_id": "009",
+        "ethnicity_keywords": [
+            "tall",
+            "muscular",
+            "dragon-like face",
+            "scales",
+            "tail",
+            "claws",
+            "frills",
+            "dragon anthropomorphic humanoid",
+            "reptilian",
+            "fearsome"
+        ],
+        "age": "Senior",
+        "physical_description": {
+            "trait": "Bulky",
+            "hair_color": "Ashen",
+            "hair_style": "updo"
+        },
+        "physical_trait": "Bulky",
+        "hair_color": "Ashen",
+        "hair_style": "updo",
+        "eye_color": "hazel",
+        "behavior": "Amelia Ellean's ideal is growth. Her flaw is forgetful, her bond is family, her behavior is aggressive, and her nature is reserved.",
+        "picture_id": "0009054079885",
+        "image_prompt": "Broad Lighting Portrait in the style of Neil Welliver | Fantasy | a Cloistered Scholar Dragonborn Fighter named Amelia Ellean | Amelia Ellean is a Bulky female Dragonborn. Amelia Ellean has ashen updo hair and hazel eyes. | Chartreuse and Brown tones | Low Key Lighting | tall, muscular, dragon-like face, scales, tail, claws, frills, dragon anthropomorphic humanoid, reptilian, fearsome, Fantasy, Medieval Fantasy, Dungeons & Dragons. --s 1000 --upbeta --seed 0009054079885",
+        "personality_description": "\n\nAmelia Ellean is a character who is always striving to grow and improve herself. She is very forgetful and often lets things slip her mind. Amelia is also quite aggressive and can be quick to lash out if she feels threatened. Despite all of this, she is actually a very reserved person who doesn't open up to many people. Amelia's main priority is her family and she will do anything to protect them.",
+        "background_story": "\n\nAmelia Ellean is a Cloistered Scholar and a Dragonborn. She was born and raised in the city of Waterdeep. Her parents were scholars who worked at the local library. Amelia was always curious and loved to learn. She would often sneak into the library to read when she was supposed to be doing her chores. When she was old enough, she enrolled in the local academy. She excelled in her studies and graduated at the top of her class.\n\nAfter graduation, Amelia decided to join the city guard. She was quickly promoted to captain. She served the city for many years, until one day she was called to investigate a strange disturbance in the city. Amelia discovered a group of cultists trying to summon a demon. She was able to stop them, but not before the demon was summoned. The demon attacked Amelia and she was gravely injured. Amelia was able to kill the demon, but she was left with scars that would never heal.\n\nAmelia retired from the city guard and became a Cloistered Scholar. She now spends her days researching the demon that nearly killed her. She hopes to find a way to destroy it and prevent it from harming anyone else.",
+        "has_image": true
+    },
+    {
+        "id": 9513,
+        "first_name": "Lauren",
+        "last_name": "Xanhel",
+        "full_name": "Lauren Xanhel",
+        "gender": "Male",
+        "character_class": "Ranger",
+        "character_class_id": "080",
+        "character_subclass": "Beast Master",
+        "character_subclass_id": "082",
+        "background": {
+            "name": "Anthropologist",
+            "id": "02"
+        },
+        "background_name": "Anthropologist",
+        "background_id": "02",
+        "ethnicity": "Aasimar",
+        "ethnicity_name": "Aasimar",
+        "ethnicity_id": "010",
+        "subrace": {
+            "name": "Scourge Aasimar",
+            "id": "0102",
+            "keywords": [
+                "radiant consumption",
+                "destructive energy",
+                "divine light"
+            ]
+        },
+        "subrace_name": "Scourge Aasimar",
+        "subrace_id": "0102",
+        "ethnicity_keywords": [
+            "radiant",
+            "glowing eyes",
+            "fair skin",
+            "halo",
+            "celestial",
+            "ethereal",
+            "angelic",
+            "radiant consumption",
+            "destructive energy",
+            "divine light"
+        ],
+        "age": "Middle-aged",
+        "physical_description": {
+            "trait": "Stocky",
+            "hair_color": "Brown",
+            "hair_style": "tail"
+        },
+        "physical_trait": "Stocky",
+        "hair_color": "Brown",
+        "hair_style": "tail",
+        "eye_color": "hazel",
+        "behavior": "Lauren Xanhel's ideal is unity. His flaw is gullible, his bond is love, his behavior is kind, and his nature is resourceful.",
+        "picture_id": "10102082029513",
+        "image_prompt": "Minimalist Portrait in the style of Marc Silvestri | Fantasy | an Anthropologist Aasimar Ranger named Lauren Xanhel | Lauren Xanhel is a Stocky male Aasimar. Lauren Xanhel has brown tail hair and hazel eyes. | Caramel and Auburn tones | Split Lighting | radiant, glowing eyes, fair skin, halo, celestial, ethereal, angelic, radiant consumption, destructive energy, divine light, Fantasy, Medieval Fantasy, Dungeons & Dragons. --s 1000 --upbeta --seed 10102082029513",
+        "personality_description": "\n\nLauren Xanhel is a very idealistic person who strongly believes in the power of unity and cooperation. He is also very gullible and can be easily tricked or taken advantage of. Despite this, he is a very kind and resourceful person who is always willing to help others.",
+        "background_story": "\n\nLauren Xanhel was born in the small town of Daggerford to a human mother and an Aasimar father. She grew up surrounded by stories of the great heroes of the Realms and dreamed of one day becoming one of them. When she was old enough, she left Daggerford to begin her studies at the University of Neverwinter.\n\nDuring her time at the university, Lauren became fascinated by the cultures of the different races of the Realms. She decided to focus her studies on anthropology and set out to learn as much as she could about the different cultures of the world.\n\nAfter graduation, Lauren joined the Rangers of Neverwinter and began using her knowledge to help protect the people of the Realms. She has since become one of the most respected Rangers in the organization and is known for her keen understanding of the cultures of the world.\n\nLauren is currently on a mission to track down a group of bandits who have been preying on small villages in the area. She is also searching for clues to the identity of a mysterious figure who has been leaving strange symbols at the scenes of the crimes.",
+        "has_image": true
+    },
+    {
+        "id": 4889,
+        "first_name": "Sibelle",
+        "last_name": "Vivelmi",
+        "full_name": "Sibelle Vivelmi",
+        "gender": "Female",
+        "character_class": "Bard",
+        "character_class_id": "020",
+        "character_subclass": "College of Lore",
+        "character_subclass_id": "021",
+        "background": {
+            "name": "Haunted One",
+            "id": "16"
+        },
+        "background_name": "Haunted One",
+        "background_id": "16",
+        "ethnicity": "Gnome",
+        "ethnicity_name": "Gnome",
+        "ethnicity_id": "005",
+        "subrace": {
+            "name": "Forest Gnome",
+            "id": "0051",
+            "keywords": [
+                "illusion magic",
+                "stealth",
+                "pranks",
+                "love of nature"
+            ]
+        },
+        "subrace_name": "Forest Gnome",
+        "subrace_id": "0051",
+        "ethnicity_keywords": [
+            "very small",
+            "bright eyes",
+            "round face",
+            "pointed ears",
+            "rosy cheeks",
+            "illusion magic",
+            "stealth",
+            "pranks",
+            "love of nature"
+        ],
+        "age": "Senior",
+        "physical_description": {
+            "trait": "Bulky",
+            "hair_color": "Grey",
+            "hair_style": "layered cut with length"
+        },
+        "physical_trait": "Bulky",
+        "hair_color": "Grey",
+        "hair_style": "layered cut with length",
+        "eye_color": "amber",
+        "behavior": "Sibelle Vivelmi's ideal is equality. Her flaw is stubborn, her bond is faith, her behavior is logical, and her nature is patient.",
+        "picture_id": "00051021164889",
+        "image_prompt": "Rembrandt Portrait in the style of Alexandra Semushina | Fantasy | a Haunted One Gnome Bard named Sibelle Vivelmi | Sibelle Vivelmi is a Bulky female Gnome. Sibelle Vivelmi has grey layered cut with length hair and amber eyes. | Indigo and Pumpkin tones | Natural Light | very small, bright eyes, round face, pointed ears, rosy cheeks, illusion magic, stealth, pranks, love of nature, Fantasy, Medieval Fantasy, Dungeons & Dragons. --s 1000 --upbeta --seed 00051021164889",
+        "personality_description": "\n\nSibelle Vivelmi is an idealistic person who believes in equality for all. She can be stubborn at times, but she is also very loyal and faithful to her beliefs. She is usually logical in her thinking, and she is generally a very patient person.",
+        "background_story": "\n\nSibelle Vivelmi was born in the small village of Barovia to a family of traveling performers. Her parents were both bards and taught her everything they knew about music, dance, and the art of storytelling. From a young age, Sibelle showed a natural talent for the lute and was often asked to perform for the village elders. She was happy to oblige and quickly became known as the best entertainer in Barovia.\n\nWhen she was sixteen, her parents were killed by a pack of vampires while they were on the road. Sibelle was devastated by their loss but refused to let their memory fade. She vowed to continue their work and keep their legacy alive.\n\nSibelle has since traveled the world, performing for anyone who will listen. She uses her music to lift people's spirits and bring them joy, even in the darkest of times. She knows that her parents would be proud of her and that's what motivates her to keep going.\n\nOne day, Sibelle hopes to find the vampires who killed her parents and make them pay for their crime. Until then, she'll continue to bring happiness to those who need it the most.",
+        "has_image": true
+    },
+    {
+        "id": 5262,
+        "first_name": "Harriett",
+        "last_name": "Braniushel",
+        "full_name": "Harriett Braniushel",
+        "gender": "Female",
+        "character_class": "Ranger",
+        "character_class_id": "080",
+        "character_subclass": "Gloom Stalker",
+        "character_subclass_id": "084",
+        "background": {
+            "name": "Haunted One",
+            "id": "16"
+        },
+        "background_name": "Haunted One",
+        "background_id": "16",
+        "ethnicity": "Gnome",
+        "ethnicity_name": "Gnome",
+        "ethnicity_id": "005",
+        "subrace": {
+            "name": "Rock Gnome",
+            "id": "0052",
+            "keywords": [
+                "tinkerer",
+                "inventions",
+                "mechanical devices",
+                "tinkering abilities"
+            ]
+        },
+        "subrace_name": "Rock Gnome",
+        "subrace_id": "0052",
+        "ethnicity_keywords": [
+            "very small",
+            "bright eyes",
+            "round face",
+            "pointed ears",
+            "rosy cheeks",
+            "tinkerer",
+            "inventions",
+            "mechanical devices",
+            "tinkering abilities"
+        ],
+        "age": "Elderly",
+        "physical_description": {
+            "trait": "Weathered",
+            "hair_color": "Ash Brown",
+            "hair_style": "bob cut with fringe"
+        },
+        "physical_trait": "Weathered",
+        "hair_color": "Ash Brown",
+        "hair_style": "bob cut with fringe",
+        "eye_color": "amber",
+        "behavior": "Harriett Braniushel's ideal is knowledge. Her flaw is dishonest, her bond is duty, her behavior is impatient, and her nature is compassionate.",
+        "picture_id": "00052084165262",
+        "image_prompt": "Silhouette Portrait in the style of Friedensreich Regentag Dunkelbunt Hundertwasser | Fantasy | a Haunted One Gnome Ranger named Harriett Braniushel | Harriett Braniushel is a Weathered female Gnome. Harriett Braniushel has ash brown bob cut with fringe hair and amber eyes. | Chocolate and Amber tones | Hard Light | very small, bright eyes, round face, pointed ears, rosy cheeks, tinkerer, inventions, mechanical devices, tinkering abilities, Fantasy, Medieval Fantasy, Dungeons & Dragons. --s 1000 --upbeta --seed 00052084165262",
+        "personality_description": "Harriett Braniushel is an ambitious and driven individual who strives to gain knowledge and understanding. She is often impatient and can be dishonest in her pursuit of her goals. Despite this, she is deeply compassionate and has a strong sense of duty to those she cares about.",
+        "background_story": "Harriett Braniushel was born in the small gnome village of Glimmerwood, nestled in the heart of the Forgotten Realms. Her parents were both adventurers, and they instilled in her a love of exploration and discovery. As a child, Harriett was fascinated by the stories of the Haunted Ones, a group of adventurers who had been cursed with a powerful magical affliction. She was determined to join their ranks one day.\n\nHarriett's parents were killed in a tragic accident when she was still young, and she was taken in by a family of Rangers. She trained with them for many years, learning the ways of the wilderness and honing her skills as a Ranger. Eventually, she was accepted into the ranks of the Haunted Ones, and she embraced her newfound power.\n\nHarriett now travels the Forgotten Realms, seeking out adventure and mystery. She is driven by a desire to uncover the secrets of her parents' past, and to discover the truth behind their untimely deaths. She is also determined to use her newfound powers to help those in need, and to protect the innocent from the forces of evil.\n\nHarriett's current quest is to uncover the truth behind a mysterious cult that has been operating in the shadows of the Forgotten Realms. She believes that the cult is connected to her parents' deaths, and she is determined to bring them to justice. With her skills as a Ranger and her newfound powers as a Haunted One, Harriett is sure that she can uncover the truth and bring the cult to justice.",
+        "has_image": true
+    },
+    {
+        "id": 9054,
+        "first_name": "Ortensia",
+        "last_name": "Iusmir",
+        "full_name": "Ortensia Iusmir",
+        "gender": "Female",
+        "character_class": "Cleric",
+        "character_class_id": "030",
+        "character_subclass": "Nature Domain",
+        "character_subclass_id": "033",
+        "background": {
+            "name": "Spy",
+            "id": "27"
+        },
+        "background_name": "Spy",
+        "background_id": "27",
+        "ethnicity": "Tiefling",
+        "ethnicity_name": "Tiefling",
+        "ethnicity_id": "008",
+        "subrace": {
+            "name": "Asmodeus Tiefling",
+            "id": "0081",
+            "keywords": [
+                "Asmodeus bloodline",
+                "commanding presence"
+            ]
+        },
+        "subrace_name": "Asmodeus Tiefling",
+        "subrace_id": "0081",
+        "ethnicity_keywords": [
+            "horns",
+            "tail",
+            "fangs",
+            "glowing eyes",
+            "sharp features",
+            "devilish",
+            "demonic",
+            "fiendish",
+            "infernal",
+            "hellish",
+            "Asmodeus bloodline",
+            "commanding presence"
+        ],
+        "age": "Young Adult",
+        "physical_description": {
+            "trait": "Ripped",
+            "hair_color": "Orange",
+            "hair_style": "layered cut"
+        },
+        "physical_trait": "Ripped",
+        "hair_color": "Orange",
+        "hair_style": "layered cut",
+        "eye_color": "dark",
+        "behavior": "Ortensia Iusmir's ideal is balance. Her flaw is indecisive, her bond is family, her behavior is gentle, and her nature is independent.",
+        "picture_id": "00081033279054",
+        "image_prompt": "Photorealistic portrait in the style of Paul Rand | Fantasy | a Spy Tiefling Cleric named Ortensia Iusmir | Ortensia Iusmir is a Ripped female Tiefling. Ortensia Iusmir has orange layered cut hair and dark eyes. | Orange and Vermilion tones | Rim Lighting | horns, tail, fangs, glowing eyes, sharp features, devilish, demonic, fiendish, infernal, hellish, Asmodeus bloodline, commanding presence, Fantasy, Medieval Fantasy, Dungeons & Dragons. --s 1000 --upbeta --seed 00081033279054",
+        "personality_description": "Ortensia Iusmir is a person who strives for balance in all aspects of her life. She is often indecisive, making it difficult for her to make decisions. Family is very important to her, and she is gentle and kind in her behavior towards them. Despite her gentle nature, she is independent and prefers to make her own decisions.",
+        "background_story": "Ortensia Iusmir was born in the city of Waterdeep, the daughter of a Tiefling spy and a human cleric. Her parents had met while her father was on a mission for the Lords of Waterdeep, and her mother had been sent to aid him. Ortensia was raised in a loving home, but her parents were often away on missions, leaving her to be cared for by her extended family.\n\nAs she grew older, Ortensia began to follow in her parents' footsteps, learning the skills of a spy and a cleric. She was a natural at both, and soon she was able to combine her skills to become a powerful force in the city. She was often called upon to help the Lords of Waterdeep with their missions, and she quickly gained a reputation as a reliable and trustworthy ally.\n\nOrtensia's motivations are simple: to protect the people of Waterdeep and to uncover the truth behind the mysterious events that have been occurring in the city. She is determined to uncover the secrets that the Lords of Waterdeep have been keeping, and to bring justice to those who have wronged the city. Her potential adventure hook is to investigate a series of strange disappearances in the city, which may be connected to a powerful cult that is operating in the shadows.",
+        "has_image": true
+    },
+    {
+        "id": 2152,
+        "first_name": "Peta",
+        "last_name": "Isana",
+        "full_name": "Peta Isana",
+        "gender": "Female",
+        "character_class": "Monk",
+        "character_class_id": "060",
+        "character_subclass": "Way of the Open Hand",
+        "character_subclass_id": "061",
+        "background": {
+            "name": "Acolyte",
+            "id": "01"
+        },
+        "background_name": "Acolyte",
+        "background_id": "01",
+        "ethnicity": "Elf",
+        "ethnicity_name": "Elf",
+        "ethnicity_id": "003",
+        "subrace": {
+            "name": "High Elf",
+            "id": "0031",
+            "keywords": [
+                "arcane",
+                "magic",
+                "scholarly",
+                "graceful"
+            ]
+        },
+        "subrace_name": "High Elf",
+        "subrace_id": "0031",
+        "ethnicity_keywords": [
+            "tall",
+            "slender",
+            "pointed ears",
+            "almond-shaped eyes",
+            "graceful",
+            "ageless",
+            "delicate features",
+            "arcane",
+            "magic",
+            "scholarly"
+        ],
+        "age": "Young Adult",
+        "physical_description": {
+            "trait": "Seductive",
+            "hair_color": "Light Brown",
+            "hair_style": "textured long hair"
+        },
+        "physical_trait": "Seductive",
+        "hair_color": "Light Brown",
+        "hair_style": "textured long hair",
+        "eye_color": "honey",
+        "behavior": "Peta Isana's ideal is selflessness. Her flaw is cynical, her bond is knowledge, her behavior is optimistic, and her nature is resourceful.",
+        "picture_id": "00031061012152",
+        "image_prompt": "Split Lighting Portrait in the style of Yigit Koroglu | Fantasy | an Acolyte Elf Monk named Peta Isana | Peta Isana is a Seductive female Elf. Peta Isana has light brown textured long hair hair and honey eyes. | Mint and Mahogany tones | Side Lighting | tall, slender, pointed ears, almond-shaped eyes, graceful, ageless, delicate features, arcane, magic, scholarly, Fantasy, Medieval Fantasy, Dungeons & Dragons. --s 1000 --upbeta --seed 00031061012152",
+        "personality_description": "Peta Isana is a selfless and resourceful individual who is driven by knowledge. She is an optimist at heart, but her cynical nature can sometimes get in the way of her goals. She is always looking for ways to help others and is willing to go the extra mile to make sure her actions are beneficial to those around her.",
+        "background_story": "Peta Isana was born in the small elven village of Lirith, nestled in the heart of the High Forest. Her parents were devout followers of the goddess of the moon, Selune, and raised her to be a devout acolyte. Peta was a bright and curious child, and her parents encouraged her to explore the world around her. She spent her days learning the ways of the forest, and her nights studying the teachings of Selune.\n\nAs Peta grew older, she began to feel a strong connection to the divine. She was drawn to the teachings of the monks, and soon began to train in the martial arts of the monastery. Peta quickly excelled in her studies, and her teachers were impressed by her dedication and skill.\n\nPeta's life changed when she was chosen to join a group of adventurers on a quest to find a powerful artifact. The artifact was said to be hidden in a long-forgotten temple deep in the High Forest. Peta was eager to prove her worth, and she threw herself into the quest with enthusiasm. After a long and dangerous journey, the adventurers were successful in their mission.\n\nNow, Peta Isana is a respected monk, and she continues to seek out new challenges. She is driven by a desire to prove her worth and to bring glory to Selune. Peta is also determined to uncover the secrets of the forgotten temple, and she hopes to one day uncover the truth behind the powerful artifact she helped to find.",
+        "has_image": true
+    },
+    {
+        "id": 2348,
+        "first_name": "Delora",
+        "last_name": "Iusdandor",
+        "full_name": "Delora Iusdandor",
+        "gender": "Female",
+        "character_class": "Fighter",
+        "character_class_id": "050",
+        "character_subclass": "Psi Warrior",
+        "character_subclass_id": "054",
+        "background": {
+            "name": "Inheritor",
+            "id": "18"
+        },
+        "background_name": "Inheritor",
+        "background_id": "18",
+        "ethnicity": "Halfling",
+        "ethnicity_name": "Halfling",
+        "ethnicity_id": "004",
+        "subrace": {
+            "name": "Stout Halfling",
+            "id": "0042",
+            "keywords": [
+                "exceptional fortitude",
+                "resilient",
+                "durable",
+                "stout resilience"
+            ]
+        },
+        "subrace_name": "Stout Halfling",
+        "subrace_id": "0042",
+        "ethnicity_keywords": [
+            "small",
+            "childlike",
+            "curly hair",
+            "round face",
+            "rosy cheeks",
+            "barefoot",
+            "cheerful",
+            "nimble",
+            "exceptional fortitude",
+            "resilient",
+            "durable",
+            "stout resilience"
+        ],
+        "age": "Ageless",
+        "physical_description": {
+            "trait": "Muscular",
+            "hair_color": "Light Brown",
+            "hair_style": "bun"
+        },
+        "physical_trait": "Muscular",
+        "hair_color": "Light Brown",
+        "hair_style": "bun",
+        "eye_color": "azure",
+        "behavior": "Delora Iusdandor's ideal is growth. Her flaw is pessimistic, her bond is revenge, her behavior is perceptive, and her nature is reserved.",
+        "picture_id": "00042054182348",
+        "image_prompt": "Documentary Portrait in the style of Arthur Rackham | Fantasy | an Inheritor Halfling Fighter named Delora Iusdandor | Delora Iusdandor is a Muscular female Halfling. Delora Iusdandor has light brown bun hair and azure eyes. | Gray and Gold tones | Low Key Lighting | small, childlike, curly hair, round face, rosy cheeks, barefoot, cheerful, nimble, exceptional fortitude, resilient, durable, stout resilience, Fantasy, Medieval Fantasy, Dungeons & Dragons. --s 1000 --upbeta --seed 00042054182348",
+        "personality_description": "Delora Iusdandor is an ambitious and determined individual who is always striving for personal growth. She is a realist and can be quite pessimistic at times, but her perceptive nature allows her to see the world for what it is. She is a reserved person who keeps her emotions and thoughts to herself, but she is driven by a strong sense of revenge.",
+        "background_story": "Delora Iusdandor was born in the small village of Halfling's Rest, located in the heart of the Forgotten Realms. Her parents were both Halflings, and she was raised in a loving and supportive environment. Delora was a bright and curious child, and she quickly developed a passion for adventure and exploration.\n\nAt the age of sixteen, Delora left her home to pursue her dreams of becoming a fighter. She traveled to the city of Waterdeep, where she trained with some of the most renowned warriors in the realm. After several years of hard work and dedication, Delora became a skilled fighter and was eventually granted the title of Inheritor.\n\nDelora now travels the Forgotten Realms, seeking out new challenges and adventures. She is driven by a desire to prove her worth and to make a name for herself. She is also determined to uncover the truth behind her family's mysterious past, as she believes that her parents were hiding something from her. Delora is determined to uncover the secrets of her family's past, and she hopes that her journey will lead her to the answers she seeks.",
+        "has_image": true
+    },
+    {
+        "id": 3885,
+        "first_name": "Gilles",
+        "last_name": "Yneanail",
+        "full_name": "Gilles Yneanail",
+        "gender": "Male",
+        "character_class": "Monk",
+        "character_class_id": "060",
+        "character_subclass": "Way of the Astral Self",
+        "character_subclass_id": "064",
+        "background": {
+            "name": "Mercenary Veteran",
+            "id": "21"
+        },
+        "background_name": "Mercenary Veteran",
+        "background_id": "21",
+        "ethnicity": "Half-Elf",
+        "ethnicity_name": "Half-Elf",
+        "ethnicity_id": "006",
+        "subrace": {
+            "race": "Half-Elf",
+            "id": "006",
+            "keywords": [
+                "slim",
+                "pointed ears",
+                "fair skin",
+                "mix of human and elf features"
+            ]
+        },
+        "subrace_name": "",
+        "subrace_id": "006",
+        "ethnicity_keywords": [
+            "slim",
+            "pointed ears",
+            "fair skin",
+            "mix of human and elf features"
+        ],
+        "age": "Adult",
+        "physical_description": {
+            "trait": "Sinewy",
+            "hair_color": "Dark Brown",
+            "hair_style": "punk"
+        },
+        "physical_trait": "Sinewy",
+        "hair_color": "Dark Brown",
+        "hair_style": "punk",
+        "eye_color": "dark",
+        "behavior": "Gilles Yneanail's ideal is innovation. His flaw is easily influenced, his bond is legacy, his behavior is humble, and his nature is loyal.",
+        "picture_id": "1006064213885",
+        "image_prompt": "Photorealistic headshot in the style of Tom Thomson | Fantasy | a Mercenary Veteran Half-Elf Monk named Gilles Yneanail | Gilles Yneanail is a Sinewy male Half-Elf. Gilles Yneanail has dark brown punk hair and dark eyes. | Chestnut and Peach tones | Moonlight | slim, pointed ears, fair skin, mix of human and elf features, Fantasy, Medieval Fantasy, Dungeons & Dragons. --s 1000 --upbeta --seed 1006064213885",
+        "personality_description": "Gilles Yneanail is an ambitious and creative individual who is always striving to innovate and push the boundaries of what is possible. He is easily influenced by the opinions of others, but his loyalty to his family and their legacy is unwavering. He is humble in his behavior, never seeking recognition or praise for his accomplishments, but instead preferring to let his work speak for itself.",
+        "background_story": "Gilles Yneanail was born in the city of Waterdeep, the son of a human mercenary and a half-elf mother. His father was a veteran of many battles, and his mother was a skilled healer. Growing up, Gilles was exposed to both the martial and spiritual sides of life. His father taught him the ways of combat, while his mother taught him the ways of the monk.\n\nGilles was a natural fighter, and he quickly rose through the ranks of his father's mercenary company. He fought in many battles, and his skill and courage earned him the respect of his peers. He also developed a deep respect for the spiritual side of life, and he began to study the ways of the monk.\n\nGilles eventually left his father's mercenary company and set out on his own. He traveled the world, seeking knowledge and adventure. He encountered many strange and powerful creatures, and he honed his skills in combat and meditation. He also developed a deep respect for the natural world, and he vowed to protect it from those who would do it harm.\n\nGilles's travels eventually led him to the city of Neverwinter, where he heard rumors of a powerful artifact hidden in the ruins of an ancient temple. He believes that this artifact could be the key to unlocking the secrets of his past, and he is determined to find it. He has set out on a quest to uncover the truth, and he will stop at nothing to uncover the mystery of his heritage.",
+        "has_image": true
+    },
+    {
+        "id": 269,
+        "first_name": "Raye",
+        "last_name": "Ophiabri",
+        "full_name": "Raye Ophiabri",
+        "gender": "Female",
+        "character_class": "Paladin",
+        "character_class_id": "070",
+        "character_subclass": "Oath of Vengeance",
+        "character_subclass_id": "073",
+        "background": {
+            "name": "Noble",
+            "id": "22"
+        },
+        "background_name": "Noble",
+        "background_id": "22",
+        "ethnicity": "Half-Elf",
+        "ethnicity_name": "Half-Elf",
+        "ethnicity_id": "006",
+        "subrace": {
+            "race": "Half-Elf",
+            "id": "006",
+            "keywords": [
+                "slim",
+                "pointed ears",
+                "fair skin",
+                "mix of human and elf features"
+            ]
+        },
+        "subrace_name": "",
+        "subrace_id": "006",
+        "ethnicity_keywords": [
+            "slim",
+            "pointed ears",
+            "fair skin",
+            "mix of human and elf features"
+        ],
+        "age": "Adult",
+        "physical_description": {
+            "trait": "Enigmatic",
+            "hair_color": "Purple",
+            "hair_style": "layered cut"
+        },
+        "physical_trait": "Enigmatic",
+        "hair_color": "Purple",
+        "hair_style": "layered cut",
+        "eye_color": "amber",
+        "behavior": "Raye Ophiabri's ideal is ambition. Her flaw is stubborn, her bond is revenge, her behavior is kind, and her nature is patient.",
+        "picture_id": "000607322269",
+        "image_prompt": "Glamour Portrait in the style of Elain de Kooning | Fantasy | a Noble Half-Elf Paladin named Raye Ophiabri | Raye Ophiabri is an Enigmatic female Half-Elf. Raye Ophiabri has purple layered cut hair and amber eyes. | Pearl and Mint tones | Diffused Light | slim, pointed ears, fair skin, mix of human and elf features, Fantasy, Medieval Fantasy, Dungeons & Dragons. --s 1000 --upbeta --seed 000607322269",
+        "personality_description": "Raye Ophiabri is an ambitious and determined individual who is driven to succeed. She is stubborn and will not give up easily, even when faced with adversity. Her bond is revenge, and she will go to great lengths to get it. Despite her strong will, she is kind and understanding to those around her, and her nature is patient and understanding.",
+        "background_story": "Raye Ophiabri was born to a noble family of half-elves in the city of Waterdeep. His father was a powerful wizard and his mother a renowned paladin. Raye was raised in a privileged environment, surrounded by the finest tutors and mentors. He was taught the ways of the paladin from a young age, and his parents instilled in him a strong sense of justice and honor.\n\nAs Raye grew older, he began to take on more responsibility within his family. He was sent on diplomatic missions to other cities, and he was often called upon to mediate disputes between rival factions. He also took part in several battles against the forces of evil, and his courage and skill in combat earned him a reputation as a formidable warrior.\n\nRaye's life changed when he was sent on a mission to the city of Baldur's Gate. There, he encountered a mysterious figure who claimed to be an ancient god. The god told Raye of a powerful artifact that had been lost centuries ago, and he tasked Raye with finding it. Raye accepted the challenge, and he has since been on a quest to uncover the truth behind the artifact and its mysterious origins. He believes that the artifact holds the key to unlocking a great power, and he is determined to find it and use it to protect the people of Forgotten Realms. \n\nRaye's quest has taken him to many strange and dangerous places, and he has encountered many powerful foes along the way. He is determined to find the artifact and unlock its secrets, but he knows that the journey will be fraught with danger. He is driven by a sense of justice and a desire to protect the innocent, and he will not rest until he has found the artifact and fulfilled his mission.",
+        "has_image": true
+    },
+    {
+        "id": 3487,
+        "first_name": "Baxy",
+        "last_name": "Lorloriuskal",
+        "full_name": "Baxy Lorloriuskal",
+        "gender": "Male",
+        "character_class": "Fighter",
+        "character_class_id": "050",
+        "character_subclass": "Battle Master",
+        "character_subclass_id": "052",
+        "background": {
+            "name": "Outlander",
+            "id": "23"
+        },
+        "background_name": "Outlander",
+        "background_id": "23",
+        "ethnicity": "Aasimar",
+        "ethnicity_name": "Aasimar",
+        "ethnicity_id": "010",
+        "subrace": {
+            "name": "Fallen Aasimar",
+            "id": "0103",
+            "keywords": [
+                "dark transformation",
+                "wings of shadow"
+            ]
+        },
+        "subrace_name": "Fallen Aasimar",
+        "subrace_id": "0103",
+        "ethnicity_keywords": [
+            "radiant",
+            "glowing eyes",
+            "fair skin",
+            "halo",
+            "celestial",
+            "ethereal",
+            "angelic",
+            "dark transformation",
+            "wings of shadow"
+        ],
+        "age": "Youthful",
+        "physical_description": {
+            "trait": "Wizened",
+            "hair_color": "Brown",
+            "hair_style": "updo"
+        },
+        "physical_trait": "Wizened",
+        "hair_color": "Brown",
+        "hair_style": "updo",
+        "eye_color": "teal",
+        "behavior": "Baxy Lorloriuskal's ideal is independence. His flaw is cowardly, his bond is loyalty, his behavior is brave, and his nature is wise.",
+        "picture_id": "10103052233487",
+        "image_prompt": "Studio Portrait in the style of John Frederick Kensett | Fantasy | an Outlander Aasimar Fighter named Baxy Lorloriuskal | Baxy Lorloriuskal is a Wizened male Aasimar. Baxy Lorloriuskal has brown updo hair and teal eyes. | Emerald and Rose tones | Moonlight | radiant, glowing eyes, fair skin, halo, celestial, ethereal, angelic, dark transformation, wings of shadow, Fantasy, Medieval Fantasy, Dungeons & Dragons. --s 1000 --upbeta --seed 10103052233487",
+        "personality_description": "Baxy Lorloriuskal is an independent-minded individual who values his freedom above all else. He is wise and brave, but can be cowardly when faced with difficult situations. He is loyal to those he cares about and will go to great lengths to protect them. He is a person of strong moral character and will always strive to do the right thing.",
+        "background_story": "Baxy Lorloriuskal was born in a small village in the Forgotten Realms, far from the hustle and bustle of the larger cities. His parents were both outlanders, but his mother had a hint of Aasimar heritage in her blood. Growing up, Baxy was always a bit of an outsider, but he was also a natural leader. He was always the first to volunteer for any task, and he was always eager to help his neighbors.\n\nAs Baxy grew older, he began to feel a strong pull towards adventure. He wanted to explore the world and see what it had to offer. He decided to leave his village and become a fighter, traveling the land and helping those in need. He quickly gained a reputation as a brave and noble warrior, and he was often called upon to help protect the innocent from the forces of evil.\n\nBaxy's travels eventually led him to a mysterious temple deep in the forest. He had heard rumors of a powerful artifact hidden within the temple, and he was determined to find it. He was sure that the artifact could help him in his quest to protect the innocent, and he was determined to uncover its secrets. He hopes that by unlocking the mysteries of the temple, he can finally fulfill his destiny and become the hero he was always meant to be.",
+        "has_image": true
+    }
+]
