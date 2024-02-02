@@ -7,7 +7,8 @@
     "test": "tests"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "netlify build"
   },
   "repository": {
     "type": "git",
@@ -22,5 +23,8 @@
   "homepage": "https://github.com/camauger/rpg-characters#readme",
   "dependencies": {
     "mongodb": "^6.3.0"
+  },
+  "devDependencies": {
+    "netlify-cli": "^17.15.7"
   }
 }
