@@ -1,6 +1,7 @@
 import random
 from create_image import create_image
-from settings.image_prompt_settings import artists_and_photographers, colors, illustrators, lighting, portrait, artists
+from settings.image_prompt_settings import colors
+from utils.data_utils import pick_random_item
 from utils.indefinite_article import indefinite_article
 import json
 import openai
@@ -17,7 +18,7 @@ def choose_two_and_join(elements):
     choices = random.sample(elements, 2)
     return ' and '.join(str(choice) for choice in choices)
 
-# duplicate of fetch_character_data
+# TODO duplicate of fetch_character_data
 
 
 def optimize_prompt(prompt):
@@ -32,134 +33,119 @@ def optimize_prompt(prompt):
                 {"role": "user", "content": f"Optimize this prompt for dall-e: {prompt}. Give only the text prompt to use with dall-e, nothing else."},
             ]
         )
-        # print(response.choices[0].message.content)
         return response.choices[0].message.content
 
     except openai.error.OpenAIError as e:
         print(f"An error occurred: {e}")
         return None
 
+
 # Create a class object for the character's image prompt
+# Load JSON Data globally
+ 
+# def load_json_files(data_folder):
+#     """
+#     Function that takes in a path to a folder 
+#     and returns a dictionary where keys are file names
+#     (without .json extension) and values are loaded json data.
+#     """
+#     data = {}
+
+#     # Validate if the provided folder exists
+#     if not os.path.isdir(data_folder):
+#         print(f"Provided path: {data_folder} does not exist.")
+#         return data
+
+#     for file_name in os.listdir(data_folder):
+#         # Check for .json files only
+#         if file_name.endswith('.json'):
+#             file_path = os.path.join(data_folder, file_name)
+#             try:
+#                 with open(file_path, 'r') as file:
+#                     data[file_name.split('.')[0]] = json.load(file)
+#             except Exception as e:
+#                 print(f"An error occurred while reading {file_name}: {str(e)}")
+    
+#     return data
+
+# data_folder = 'data'
+# data = load_json_files(data_folder)
+
+data_files = ['artists', 'accessories', 'angles', 'clothing', 'facial_expressions', 'portraits',
+              'genres', 'styles', 'lighting', 'cameras', 'posing']
+data = {file: json.load(open(f'data/{file}.json', 'r')) for file in data_files}
 
 
 class ImagePrompt:
     def __init__(self, character):
+        """
+        Initialize an ImagePrompt object.
 
-        # Open the data
-        with open('data/accessories.json', 'r') as f:
-            self.accessories_data = json.load(f)
-        
-        with open('data/angles.json', 'r') as f:
-            self.angles_data = json.load(f)
+        Parameters:
+        - character: The character object for which the image prompt is being created.
+                """
+        self.character = character   # one-time retrieval
 
-        with open('data/clothing.json', 'r') as f:
-            self.clothing_data = json.load(f)
-
-        self.character = character
-        self.genre = self.genre()
-        self.emotion = self.character.behavior
-        self.ethnicity = self.character.ethnicity_name
-        self.background = self.character.background_name
-        self.portrait_setting = self.character.background_setting
-        self.scene = self.scene()
-        self.tones = self.tones()
-        self.artist = self.artist()
-        self.style = self.style()
-        self.tags = self.tags()
-        self.actor = self.actor()
-        self.lighting = self.lighting()
-        self.clothing = self.clothing()
-        self.image_type = self.image_type()
-        self.camera = self.camera()
-        self.angle = self.angle()
-        self.posing = self.posing()
-        self.accessories = self.accessories()
-
-    def genre(self):
-        with open('data/genres.json', 'r') as f:
-            genres = json.load(f)
-
-        # Extract the 'name' from each item in the 'genres' list
-        genre_names = [item['name'] for item in genres['genres']]
-
-        # Return a random 'name'
-        return random.choice(genre_names)
-
-    def scene(self):
-        return f"{indefinite_article(self.background)} {self.ethnicity} {self.character.character_class} named {self.character.full_name}"
-
-    def tones(self):
-        return choose_two_and_join(colors)
-
-    def artist(self):
-        return random.choice(artists_and_photographers + illustrators + artists)
-
-    def style(self):
-        with open('data/styles.json', 'r') as f:
-            art_styles = json.load(f)
-
-        # Extract the 'name' from each item in the 'art_styles' list
-        style_names = [item['name'] for item in art_styles['styles']]
-
-        # Return a random 'name'
-        return random.choice(style_names)
-
-    def tags(self):
-        keywords = ', '.join(self.character.ethnicity_keywords)
-        return f"{keywords}"
-
-    def actor(self):
-        return f"{self.character.create_physical_description_text()}"
-
-    def lighting(self):
-        with open('data/lighting.json', 'r') as f:
-            lighting_data = json.load(f)
-
-        # Extract the 'name' from each item in the 'lighting' list
-        lighting_names = [item['name'] for item in lighting_data['lighting']]
-
-        # Return a random 'name'
-        return random.choice(lighting_names)
-
-    def camera(self):
-        with open('data/cameras.json', 'r') as f:
-            cameras_data = json.load(f)
-
-        # Extract the 'name' from each item in the 'cameras' list
-        cameras_names = [item['name'] for item in cameras_data['cameras']]
-
-        # Return a random 'name'
-        return random.choice(cameras_names)
-
-    def posing(self):
-        with open('data/posing.json', 'r') as f:
-            posing_data = json.load(f)
-
-        # Extract the 'name' from each item in the 'posing' list
-        posing_names = [item for item in posing_data['posing']]
-
-        # Return a random 'name'
-        return random.choice(posing_names)
-
-    def clothing(self):
-        clothing_names = [item['name'] for item in self.clothing_data['clothing']]
-        return random.choice(clothing_names)
-
-    def accessories(self):
-        return random.choice(self.accessories_data['accessories'])
-
-    def image_type(self):
-        return random.choice(portrait)
-    
-    #TODO: Not used for now
-    def angle(self):
-        angles_names = [item['name'] for item in self.angles_data['angles']]
-        return random.choice(angles_names)
+        self.background = character.background_name
+        self.personality_description = character.create_personality_description()
+        self.actor = character.create_physical_description_text()
+        self.portrait_setting = character.background_setting
+        self.tags = ', '.join(character.ethnicity_keywords)
+        self.scene = f"{indefinite_article(self.background)} {character.ethnicity_name} {character.character_class} named {character.full_name}"
+        self.tones = ' and '.join(random.sample(colors, 2))
+        # self.artist = random.choice(
+        #     artists_and_photographers + illustrators + artists)
+        # Get the description of the artistis style rather than the name
+        self.artist = pick_random_item(
+            data, ['artists', 'artists'], 'description')
+        self.style = pick_random_item(data, ['styles', 'styles'], 'name')
+        self.lighting = pick_random_item(
+            data, ['lighting', 'lighting'], 'name')
+        self.clothing = pick_random_item(
+            data, ['clothing', 'clothing'], 'name')
+        self.portrait = pick_random_item(data, ['portraits', 'portraits'], 'name')
+        self.camera = pick_random_item(data, ['cameras', 'cameras'], 'name')
+        self.angle = pick_random_item(data, ['angles', 'angles'], 'name')
+        self.posing = pick_random_item(data, ['posing', 'posing'])
+        self.accessories = pick_random_item(
+            data, ['accessories', 'accessories'])
+        self.facial_expression = pick_random_item(
+            data, ['facial_expressions', 'facial_expressions'], 'expression')
+        self.genre = pick_random_item(data, ['genres', 'genres'], 'name')
+  
 
     def craft_image_prompt(self):
-        #General prompt
-        prompt = f"{self.image_type} in the style of {self.artist} and {self.style} | {self.genre} | {self.actor} | {self.character.full_name} is wearing {self.clothing} clothing | {self.tones} tones | {self.camera} | {self.posing} | {self.accessories} | {self.lighting} | {self.portrait_setting} | {self.tags}"
+        """
+        Craft the image prompt and create the image.
 
+        Returns:
+        - prompt: The crafted image prompt.
+        """
+        # General prompt
+        # TODO testing personaility_description, not using facial expression for now
+        # Prepare a dictionary of properties
+        prompt_properties = {
+            'accessories': self.accessories,
+            'actor': self.actor,
+            'artist': self.artist,
+            'camera': self.camera,
+            'clothing': self.clothing,
+            'full_name': self.character.full_name,
+            'genre': self.genre,
+            'lighting': self.lighting,
+            'personality_description': self.personality_description,
+            'picture_id': self.character.picture_id,
+            'portrait_setting': self.portrait_setting,
+            'portrait': self.portrait,
+            'posing': self.posing,
+            'style': self.style,
+            'tags': self.tags,
+            'tones': self.tones
+        }
+
+        # Now form the prompt string using format_map()
+        prompt = "{portrait} in the style of {artist} mixed with {style} | {genre} | {actor} | {personality_description} | {full_name} is wearing {clothing} clothing | {tones} tones | {camera} | {posing} | {accessories} | {lighting} | {portrait_setting} | {tags}".format_map(
+            prompt_properties)
 
         # This is the prompt for midjourney
         prompt_midjourney = f"{prompt} , RPG, D&D. --s 1000 --ar 90:160 --seed {self.character.picture_id}"

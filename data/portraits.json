@@ -1,0 +1,176 @@
+{
+    "portraits": [
+        {
+            "name": "Photorealistic Portrait",
+            "description": "A highly detailed portrait that aims to replicate the precise appearance of the subject as seen in real life."
+        },
+        {
+            "name": "Photorealistic Headshot",
+            "description": "A detailed close-up of the face or head, mimicking the subject's real-life features with precision."
+        },
+        {
+            "name": "Classic Portrait",
+            "description": "A traditional style of portrait where the subject is posed in a manner that highlights their best features and personality."
+        },
+        {
+            "name": "Candid Portrait",
+            "description": "Captured without a posed appearance, showing the subject in a natural state, often unaware of the photograph being taken."
+        },
+        {
+            "name": "Environmental Portrait",
+            "description": "Places the subject in a context or environment that tells a story about who they are or what they do."
+        },
+        {
+            "name": "Studio Portrait",
+            "description": "A portrait taken in a controlled studio environment, allowing for precise lighting and background setups."
+        },
+        {
+            "name": "Headshot",
+            "description": "A professional image of a person's face, often used for business profiles, acting, or social media."
+        },
+        {
+            "name": "Close-up Portrait",
+            "description": "Focuses closely on the subject's features, typically framing the face or details of the face."
+        },
+        {
+            "name": "Fashion Portrait",
+            "description": "Emphasizes clothing or accessories, often with the subject styled in fashionable attire."
+        },
+        {
+            "name": "Glamour Portrait",
+            "description": "Aims to portray the subject in a visually appealing and often glamorous way, with emphasis on beauty."
+        },
+        {
+            "name": "Lifestyle Portrait",
+            "description": "Shows an aspect of the subject's lifestyle or interests, often in a natural, everyday setting."
+        },
+        {
+            "name": "Fine Art Portrait",
+            "description": "An artistic representation that focuses on the creative expression of the photographer, often with abstract elements."
+        },
+        {
+            "name": "Documentary Portrait",
+            "description": "Captures the subject in real-life situations, often with the intent to tell a story or document a social issue."
+        },
+        {
+            "name": "Surreal Portrait",
+            "description": "Incorporates elements of surrealism, presenting the subject in imaginative or fantastical settings."
+        },
+        {
+            "name": "Dramatic Portrait",
+            "description": "Utilizes dramatic lighting or expressions to convey emotion or intensity."
+        },
+        {
+            "name": "Minimalist Portrait",
+            "description": "Characterized by simplicity, using minimal elements to focus attention on the subject."
+        },
+        {
+            "name": "Moody Portrait",
+            "description": "Conveys a mood or emotion through the use of lighting, color, and composition."
+        },
+        {
+            "name": "Character Portrait",
+            "description": "Captures the essence or personality of the subject, often through detailed expressions or settings."
+        },
+        {
+            "name": "Head and Shoulders Portrait",
+            "description": "Focuses on the subject from the head to the shoulders, capturing facial expressions and often used for professional purposes."
+        },
+        {
+            "name": "Three-Quarter Portrait",
+            "description": "The subject is captured from head to mid-thigh, providing a broader view of their posture and clothing."
+        },
+        {
+            "name": "Full-Length Portrait",
+            "description": "Shows the subject's entire body, often used to capture fashion or the entirety of the subject's attire."
+        },
+        {
+            "name": "High-Angle Portrait",
+            "description": "Shot from a higher angle looking down on the subject, can create a sense of vulnerability or playfulness."
+        },
+        {
+            "name": "Low-Angle Portrait",
+            "description": "Shot from below the subject's eye level, often imbuing the subject with a sense of power or dominance."
+        },
+        {
+            "name": "Profile Portrait",
+            "description": "The subject is viewed from the side, highlighting the silhouette of the face from a lateral perspective."
+        },
+        {
+            "name": "Silhouette Portrait",
+            "description": "The subject is backlit, appearing as a dark shape against a lighter background, emphasizing the outline."
+        },
+        {
+            "name": "High-Key Portrait",
+            "description": "Characterized by bright lighting and minimal shadows, creating a light and airy feel."
+        },
+        {
+            "name": "Low-Key Portrait",
+            "description": "Features predominantly dark tones and shadows for a moody or dramatic effect."
+        },
+        {
+            "name": "Rembrandt Portrait",
+            "description": "Utilizes a lighting technique that creates a small triangle of light on the cheek, mimicking the style of Rembrandt paintings."
+        },
+        {
+            "name": "Split Lighting Portrait",
+            "description": "Half of the subject's face is in shadow while the other half is well-lit, creating a dramatic contrast."
+        },
+        {
+            "name": "Loop Lighting Portrait",
+            "description": "A lighting technique where the light creates a small shadow of the nose on the cheek, suitable for most faces."
+        },
+        {
+            "name": "Broad Lighting Portrait",
+            "description": "The side of the face towards the camera is well-lit, often used to make faces appear broader."
+        },
+        {
+            "name": "Short Lighting Portrait",
+            "description": "The side turned away from the camera is the most lit, creating depth and dimension."
+        },
+        {
+            "name": "Glamour Lighting Portrait",
+            "description": "A lighting style that flatters the subject, often used in fashion and beauty photography."
+        },
+        {
+            "name": "Beauty Lighting Portrait",
+            "description": "A soft, even light that illuminates the subject's face, minimizing shadows and imperfections."
+        },
+        {
+            "name": "Window Light Portrait",
+            "description": "Uses natural light coming from a window to create soft, directional lighting."
+        },
+        {
+            "name": "Natural Light Portrait",
+            "description": "Relies on sunlight or ambient light, often resulting in a more natural and soft appearance."
+        },
+        {
+            "name": "Outdoor Portrait",
+            "description": "Taken outside, utilizing natural landscapes or urban settings as the backdrop."
+        },
+        {
+            "name": "Indoor Portrait",
+            "description": "Shot inside, using interior settings for the background, and often involves artificial lighting."
+        },
+        {
+            "name": "Wildlife Portrait",
+            "description": "Captures animals in their natural habitat, focusing on the face or entire body with a portrait-like quality."
+        },
+        {
+            "name": "Soulful Portrait",
+            "description": "Aims to capture the essence and depth of the subject's character, often through expressive eyes or gestures."
+        },
+        {
+            "name": "Emotive Portrait",
+            "description": "Focuses on conveying a strong emotion or feeling through the subject's facial expression or posture."
+        },
+        {
+            "name": "Expressive Portrait",
+            "description": "Highlights the subject's expressions, capturing moments of laughter, sadness, or other emotions."
+        },
+        {
+            "name": "Intimate Portrait",
+            "description": "Creates a sense of closeness and personal connection, often through close framing and soft lighting."
+        }
+    ]
+}

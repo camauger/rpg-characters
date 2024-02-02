@@ -1,9 +1,14 @@
-import random
 import json
+import random
 from settings.character_settings import gender_settings, age_settings, hair_colors_settings, physical_settings
+from utils.data_utils import pick_random_data_from_file
 
 
 def pick_random_setting(setting):
+    return random.choice(setting)
+
+
+def pick_random_setting_with_weight(setting):
     setting, setting_weights = zip(*setting)
     return random.choices(setting, weights=setting_weights)[0]
 
@@ -12,40 +17,73 @@ def pick_random_gender():
     return pick_random_setting(gender_settings)
 
 
-def pick_random_background():
-    with open('data/background_data.json', 'r') as f:
-        # Load the JSON string into a Python dictionary
-        data = json.load(f)
-        return random.choice(data['backgrounds'])
-
-
 def pick_random_age():
-    age, age_weights = zip(*age_settings)
-    return random.choices(age, weights=age_weights)[0]
+    return pick_random_setting_with_weight(age_settings)
 
 
 def pick_random_hair_color():
-    hair_color, hair_weights = zip(*hair_colors_settings)
-    return random.choices(hair_color, weights=hair_weights)[0]
+    return pick_random_setting_with_weight(hair_colors_settings)
 
 
 def pick_random_physical_trait():
-    return random.choice(physical_settings)
+    return pick_random_setting(physical_settings)
+
+
+def pick_random_background():
+    return pick_random_data_from_file('data/background_data.json', 'backgrounds')
 
 
 def pick_random_ethnicity():
-    with open('data/ethnicity_data.json', 'r') as f:
-        # Load the JSON string into a Python dictionary
-        data = json.load(f)
-        random_race = random.choice(data['ethnicity'])
-        return random_race
+    return pick_random_data_from_file('data/ethnicity_data.json', 'ethnicity')
 
+def pick_random_subrace(ethnicity):
+    # if ethnicity has subraces, pick a random subrace
+    if ethnicity.get('subraces'):
+        return random.choice
+    else:
+        return None
+    
 def pick_random_ethnicity_fantasy():
-    with open('data/ethnicity_fantasy_data.json', 'r') as f:
-        # Load the JSON string into a Python dictionary
-        data = json.load(f)
-        random_race = random.choice(data['ethnicity'])
-        return random_race
+    return pick_random_data_from_file('data/ethnicity_fantasy_data.json', 'ethnicity')
+
+
+def pick_random_character_class():
+    return pick_random_data_from_file('data/character_classes.json', 'classes')
+
+def pick_random_subclass(character_class):
+    return random.choice(character_class['subclasses'])
+
+
+def create_physical_description():
+    with open('data/physical_description.json', 'r') as f:
+        physical_description = json.load(f)
+    return physical_description
+
+
+def create_physical_trait():
+    return pick_random_physical_trait()
+
+
+def create_physical_desc_synonym(key):
+    data = create_physical_description()
+    random_synonym_element = random.choice(data[key])
+    random_synonym = random.choice(random_synonym_element['synonyms'])
+    return random_synonym.lower()
+
+
+def create_body_type():
+    return create_physical_desc_synonym('body_types')
+
+
+def create_hair_style():
+    return create_physical_desc_synonym('hair_styles')
+
+def create_hair_color():
+    return pick_random_hair_color()
+
+
+def create_eye_color():
+    return create_physical_desc_synonym('eye_colors')
 
 def get_ethnicity_keywords(ethnicity, subrace):
     ethnicity_keywords = ethnicity.get('keywords', [])
@@ -63,85 +101,3 @@ def get_ethnicity_keywords(ethnicity, subrace):
         total_keywords = random.sample(total_keywords, len(total_keywords))
     
     return total_keywords
-
-
-def pick_random_subrace(ethnicity):
-    # if ethnicity has subraces, pick a random subrace
-    if ethnicity.get('subraces'):
-        return random.choice
-
-
-# Pick a random class
-def pick_random_character_class():
-    with open('data/character_classes.json', 'r') as f:
-        # Load the JSON string into a Python dictionary
-        data = json.load(f)
-        random_class = random.choice(data['classes'])
-        return random_class
-
-
-def pick_random_subclass(character_class):
-    return random.choice(character_class['subclasses'])
-
-
-def create_physical_description():
-    with open('data/physical_description.json', 'r') as f:
-        physical_description = json.load(f)
-    return physical_description
-
-
-# Create a physical trait of the character
-def create_physical_trait():
-    return pick_random_physical_trait()
-
-# Create the character's body type
-
-
-def create_body_type():
-    with open('data/physical_description.json', 'r') as f:
-        # Load the JSON string into a Python dictionary
-        data = json.load(f)
-
-       # Get a random body type
-        random_body_type = random.choice(data['body_types'])
-
-        # Get a random synonym of the body type
-        random_synonym = random.choice(random_body_type['synonyms'])
-        return random_synonym.lower()
-
-
-# Create the character's hair color
-
-def create_hair_color():
-    return pick_random_hair_color()
-
-
-# Create the character's hair style
-def create_hair_style():
-    with open('data/physical_description.json', 'r') as f:
-        # Load the JSON string into a Python dictionary
-        data = json.load(f)
-
-       # Get a random hair style
-        random_hair_style = random.choice(data['hair_styles'])
-
-        # Get a random synonym of the hair style
-        random_synonym = random.choice(random_hair_style['synonyms'])
-        return random_synonym.lower()
-
-# Create the character's eye color
-
-
-def create_eye_color():
-    with open('data/physical_description.json', 'r') as f:
-        # Load the JSON string into a Python dictionary
-        data = json.load(f)
-
-       # Get a random eye color
-        random_eye_color = random.choice(data['eye_colors'])
-
-        # Get a random synonym of the eye color
-        random_synonym = random.choice(random_eye_color['synonyms'])
-        return random_synonym.lower()
-
-

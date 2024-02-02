@@ -4,11 +4,11 @@ from settings.random_settings import (
     pick_random_ethnicity_fantasy,
     pick_random_gender,
     pick_random_ethnicity,
-    pick_random_subrace,
     pick_random_character_class,
-    pick_random_subclass,
     pick_random_background,
-    get_ethnicity_keywords
+    get_ethnicity_keywords,
+    pick_random_subclass,
+    pick_random_subrace
 )
 import json
 import random

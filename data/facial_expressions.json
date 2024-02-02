@@ -1,0 +1,37 @@
+{
+    "facial_expressions": [
+      {
+        "expression": "Smiling",
+        "description": "Uplifted corners of the mouth, often showing teeth, conveying happiness or friendliness."
+      },
+      {
+        "expression": "Frowning",
+        "description": "Downward turning of the corners of the mouth, indicating sadness, disapproval, or concentration."
+      },
+      {
+        "expression": "Surprised",
+        "description": "Raised eyebrows, wide-open eyes, and a slightly open mouth, indicating shock or astonishment."
+      },
+      {
+        "expression": "Angry",
+        "description": "Furrowed brows, narrowed eyes, and a tight or downturned mouth, conveying irritation or rage."
+      },
+      {
+        "expression": "Thoughtful",
+        "description": "A focused or distant gaze, often with a hand on the chin, indicating contemplation or deep thought."
+      },
+      {
+        "expression": "Skeptical",
+        "description": "One eyebrow raised higher than the other, sometimes with a slight smirk, indicating doubt or disbelief."
+      },
+      {
+        "expression": "Sad",
+        "description": "Slight downward turn of the mouth, sometimes with a slight furrow of the brow, conveying disappointment or sorrow."
+      },
+      {
+        "expression": "Amused",
+        "description": "A light smile with crinkled eyes, indicating mild amusement or pleasure."
+      }
+    ]
+  }
+  
