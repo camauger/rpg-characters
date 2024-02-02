@@ -142,8 +142,9 @@ class CharacterManager:
         character_id = self.generate_character_id()
         new_character = Character(character_id, params)
         self.characters.append(new_character)
-
+        
         return new_character
+    
 
     def create_characters(self, num_characters):
         """Create multiple characters"""

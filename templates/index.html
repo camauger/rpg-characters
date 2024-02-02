@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -8,7 +7,10 @@
       integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="{{ url_for('static', filename='custom.css') }}" />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='custom.css') }}"
+    />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>RPG Characters</title>
@@ -18,23 +20,42 @@
       <nav class="navbar navbar-expand-lg navbar-light custom-nav">
         <div class="container-fluid">
           <!-- Navigation code -->
-          <nav class="navbar navbar-expand-lg navbar-light" style="font-family: MrEavesRemake; background-color: #eee5ce">
+          <nav
+            class="navbar navbar-expand-lg navbar-light"
+            style="font-family: MrEavesRemake; background-color: #eee5ce"
+          >
             <div class="container-fluid">
               <a class="navbar-brand" href="#">RPG Characters</a>
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+              >
                 <span class="navbar-toggler-icon"></span>
               </button>
               <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                   <li class="nav-item">
-                    <a class="nav-link" aria-current="page" href="/index.html">Home</a>
+                    <a class="nav-link" aria-current="page" href="/index.html"
+                      >Home</a
+                    >
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" aria-current="page" href="/create-character.html">Create a Character</a>
+                    <a
+                      class="nav-link"
+                      aria-current="page"
+                      href="/create-character.html"
+                      >Create a Character</a
+                    >
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" aria-current="page" href="/about.html">About</a>
+                    <a class="nav-link" aria-current="page" href="/about.html"
+                      >About</a
+                    >
                   </li>
                 </ul>
               </div>
@@ -70,11 +91,7 @@
             />
             {% endif %}
             <div class="card-body">
-              <h5
-                class="character-card-title"
-              >
-                {{ character.full_name }}
-              </h5>
+              <h5 class="character-card-title">{{ character.full_name }}</h5>
               <h6 class="character-card-subtitle mb-2">
                 {{ character.ethnicity }} {{ character.character_class }}
               </h6>
@@ -82,7 +99,7 @@
                 {{ character.background_name }}
               </h6>
               <a
-              href="{{ url_for('character', picture_id=character.picture_id) }}"
+                href="{{ url_for('character', picture_id=character.picture_id) }}"
                 class="btn btn-outline-secondary"
                 >More details</a
               >
@@ -90,7 +107,6 @@
           </div>
         </div>
         {% endfor %}
-        
       </div>
     </div>
     <footer class="footer fixed-bottom mt-auto py-3 custom-footer">
@@ -109,4 +125,3 @@
     ></script>
   </body>
 </html>
-

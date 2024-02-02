@@ -218,7 +218,8 @@ class Character:
 
     def create_personality_description(self):
         prompt = f"Make a description of a character's personality based on this sentence: {self.behavior}"
-        personality = "" if self.simplified else fetch_character_data(prompt)
+        personality = fetch_character_data(prompt)
+        #personality = "" if self.simplified else fetch_character_data(prompt)
         return personality
 
     def create_image_prompt(self):
