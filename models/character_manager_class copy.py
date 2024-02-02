@@ -16,15 +16,9 @@ import os
 from dotenv import load_dotenv
 from utils.file_exists import file_exists
 from models.character_class import Character
-from pymongo import MongoClient
-import os
-from dotenv import load_dotenv
-import logging
 
-# Load .env file for MongoDB URI
+# Load .env file
 load_dotenv()
-MONGODB_URI = os.getenv('MONGODB_URI')
-DB_NAME = 'your_database_name'  # Specify your database name
 
 
 class CharacterManager:
@@ -35,56 +29,61 @@ class CharacterManager:
     FILE_PATH = "characters.json"  # Path to the JSON file containing character data
 
     def __init__(self):
-        # """Initialize the CharacterManager class"""
+        """Initialize the CharacterManager class"""
         self.characters = []  # Define the characters attribute as an empty list
         # self.load_characters()  # Load existing characters from the JSON file
-        """Initialize the CharacterManager class with MongoDB collection"""
-        client = MongoClient(MONGODB_URI)
-        db = client[DB_NAME]
-        # Assume your collection is named 'characters'
-        self.characters = db['rpg-characters']
 
     def load_characters(self):
-        """Load existing characters from MongoDB"""
+        """Load existing characters from the JSON file"""
         try:
-            self.characters = list(self.characters_collection.find({}))
-        except Exception as e:
-            logging.error(f"An error occurred while loading characters: {e}")
-            # You may want to add more robust error handling here
-        else:
-            if len(self.characters) == 0:
-                logging.info("No characters found in the database.")
-            else:
-                logging.info(f"Loaded {len(self.characters)} characters.")
+            with open(self.FILE_PATH, "r") as json_file:
+                character_data = json.load(json_file)
+                self.characters = [
+                    Character(character['id'], character)
+                    for character in character_data
+                ]
+
+            print(f"Loaded {len(self.characters)} characters.")
+        except (FileNotFoundError, json.JSONDecodeError):
+            self.characters = []
 
     def save_characters(self, characters=None):
-        """Save characters to MongoDB"""
+        """Append new characters to the existing characters in the JSON file"""
+        # If no characters are passed, use the existing characters
         if characters is None:
             characters = self.characters
-        # Assuming `to_dict` method in Character model converts it to dictionary format suitable for MongoDB
-        character_docs = [character.to_dict() for character in characters]
-        if character_docs:
-            self.characters_collection.insert_many(character_docs)
+
+        # Transform all Character objects into dictionaries
+        character_data = [character.to_dict() for character in characters]
+
+        # Load existing data
+        try:
+            with open(self.FILE_PATH, 'r') as json_file:
+                existing_data = json.load(json_file)
+        except FileNotFoundError:
+            existing_data = []
+
+        # Append new data
+        updated_data = existing_data + character_data
+
+        # Write updated data to file
+        with open(self.FILE_PATH, 'w') as json_file:
+            json.dump(updated_data, json_file, indent=4)
 
     def check_character_count(self):
         """Check if the maximum number of characters has been reached"""
-        # if len(self.characters) >= self.MAX_CHARACTER_COUNT:
-        #     print(
-        #         "There are too many characters. Please delete some characters before creating a new one.")
-        #     return False
+        if len(self.characters) >= self.MAX_CHARACTER_COUNT:
+            print(
+                "There are too many characters. Please delete some characters before creating a new one.")
+            return False
         return True
 
     def generate_character_id(self):
-        """Generate a unique character ID for MongoDB."""
+        """Generate a unique character ID"""
+        existing_ids = {char.id for char in self.characters}
         character_id = random.randint(1, self.MAX_CHARACTER_ID)
-        existing_id = self.characters.find_one({"character_id": character_id})
-
-        while existing_id is not None:
-            # If the ID already exists, generate a new one
-            character_id = random.randint(1, self.MAX_CHARACTER_ID)
-            existing_id = self.characters.find_one(
-                {"character_id": character_id})
-
+        while character_id in existing_ids:
+            character_id = random.randint(1000, self.MAX_CHARACTER_ID)
         return character_id
 
     def get_character_params(self, is_random, is_fantasy):
@@ -107,17 +106,18 @@ class CharacterManager:
         if is_random:
             params['random_ethnicity'] = pick_random_ethnicity()
             params['random_subrace'] = pick_random_subrace(
-                params['random_ethnicity'])
-
+            params['random_ethnicity'])
+        
         elif is_fantasy:
             params['random_ethnicity'] = pick_random_ethnicity_fantasy()
             params['random_subrace'] = pick_random_subrace(
-                params['random_ethnicity'])
+            params['random_ethnicity'])
 
         else:
             # User input for ethnicity and subrace
             self.user_defined_ethnicity_and_subrace(params)
         return params
+
 
     def user_defined_ethnicity_and_subrace(self, params):
         """Helper function to handle user input for ethnicity and subrace"""
@@ -132,16 +132,19 @@ class CharacterManager:
             else:
                 print("Invalid ethnicity input!")
 
-    def create_character(self, params=[], is_random=True, is_fantasy=False):
+    def create_character(self, is_random, is_fantasy=False):
+        """Create a new character"""
+        if not self.check_character_count():
+            print("Maximum character count reached.")
+            return None
+
         params = self.get_character_params(is_random, is_fantasy)
         character_id = self.generate_character_id()
-        character = Character(
-            id=character_id,
-            **params
-            # Add other fields accordingly
-        )
-        character.save()
-        return character
+        new_character = Character(character_id, params)
+        self.characters.append(new_character)
+        
+        return new_character
+    
 
     def create_characters(self, num_characters):
         """Create multiple characters"""
@@ -153,8 +156,7 @@ class CharacterManager:
                     print(
                         "There are too many characters. Please delete some characters before creating a new one.")
                     break
-                #TODO: à valider
-                new_character = self.create_character(params=[], is_random=True)
+                new_character = self.create_character(is_random=True)
                 if new_character:
                     new_characters.append(new_character)
 

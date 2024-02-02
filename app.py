@@ -1,6 +1,7 @@
 from dotenv import load_dotenv
 from flask import Flask, render_template, request, redirect, url_for
 from flask_wtf import FlaskForm
+from models.character_class import Character
 from models.character_manager_class import CharacterManager
 from mongoengine import Document, StringField, IntField, connect
 from pymongo import MongoClient
@@ -9,6 +10,7 @@ from wtforms import StringField, SubmitField
 from wtforms.validators import DataRequired
 import json
 import os
+import logging
 
 # Load .env file
 load_dotenv()
@@ -17,45 +19,35 @@ load_dotenv()
 lock = Lock()
 
 # Flask App
-app = Flask(__name__, static_folder='static',
-            static_url_path='/static')
+app = Flask(__name__, static_folder='static', static_url_path='/static')
 
+# Connect to your MongoDB database
 connection_string = os.environ.get('MONGO_CONNECTION_STRING')
 client = MongoClient(connection_string)
-
-# Access database
 db = client.rpg
-
-# Access collection
 collection = db.rpgCharacters
-
+connect(db='rpg', host=connection_string)
 
 character_manager = CharacterManager()
 
-
-# Connect to your MongoDB database
-connect(db='rpg', host=os.environ.get('MONGO_CONNECTION_STRING'))
-
-
-class CharacterDB(Document):
-    name = StringField(required=True)
-    # 'class' is a reserved keyword in Python
-    class_ = StringField(required=True)
-    level = IntField(required=True)
-
-
-class SubscriberDB(Document):
-    email = StringField(required=True)
-    # Consider using DateTimeField for real applications
-    subscription_date = StringField(required=True)
-
-
-# Form
 
 class CharacterForm(FlaskForm):
     name = StringField('Character Name', validators=[DataRequired()])
     # Add other fields as necessary
     submit = SubmitField('Generate Character')
+    
+def handle_db_operations():
+    try:
+        collection.create_index([("character_id", 1)], unique=True)
+    except Exception as e:
+        logging.error(f"An error occurred while creating index: {e}")
+
+@app.route('/')
+@app.route('/index.html')
+def index():
+    characters = load_characters()
+    return render_template('index.html', characters=characters)
+
 
 
 @app.route('/generate', methods=['GET', 'POST'])
@@ -64,7 +56,7 @@ def generate_character():
     if form.validate_on_submit():
         try:
             # Assuming character_manager.create_character returns a dictionary with character info
-            new_character = character_manager.create_character(is_random=True)
+            new_character = character_manager.create_character(params=[], is_random=True)
 
             # Insert the character into MongoDB
             collection.insert_one(new_character)
@@ -89,12 +81,12 @@ def get_character_data(picture_id):
 
 def load_characters():
     try:
-        with open('characters.json', 'r') as f:
-            characters = json.load(f)
+        characters = Character.objects.all()  # Using MongoEngine to query all character documents
         return characters
-    except IOError:
-        print("Error loading characters file")
+    except Exception as e:
+        logging.error(f"Error loading characters from MongoDB: {e}")
         return []
+
 
 
 @app.route('/')
@@ -152,4 +144,5 @@ def subscribe():
 
 
 if __name__ == '__main__':
+    handle_db_operations()
     app.run(debug=True)

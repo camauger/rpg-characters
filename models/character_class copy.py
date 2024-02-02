@@ -1,4 +1,3 @@
-from mongoengine import Document, StringField, IntField, BooleanField, ListField, DictField
 from models.character_behavior_class import CharacterBehavior
 from models.physical_description_class import PhysicalDescription
 from models.image_prompt_class import ImagePrompt
@@ -22,12 +21,12 @@ def fetch_character_data(prompt):
     openai.api_key = api_key
     try:
         response = openai.ChatCompletion.create(
-            model="gpt-4-turbo-preview",
-            response_format={"type": "json_object"},
-            messages=[
-                {"role": "system", "content": "You are a RPG character in the world of Forgotten Realms. Write a background story for your character. Include their upbringing, key events in their life, and their motivations. Conclude the background story by including a potential adventure hook or a mystery that the character seeks to unravel. Please write three paragraphs with a total word count of around 300 words. Write output in JSON format."},
-                {"role": "user", "content": f"{prompt}"},
-            ]
+        model="gpt-4-turbo-preview",
+        response_format={ "type": "json_object" },
+        messages=[
+            {"role": "system", "content": "You are a RPG character in the world of Forgotten Realms. Write a background story for your character. Include their upbringing, key events in their life, and their motivations. Conclude the background story by including a potential adventure hook or a mystery that the character seeks to unravel. Please write three paragraphs with a total word count of around 300 words. Write output in JSON format."},
+            {"role": "user", "content": f"{prompt}"},
+        ]
         )
         # print(response.choices[0].message.content)
         return response.choices[0].message.content
@@ -55,48 +54,71 @@ def file_exists(folder_path, filename):
     return os.path.exists(file_path)
 
 
-class Character(Document):
-    # Basic character information
-    id = IntField(required=True, primary_key=True)
-    first_name = StringField(required=True)
-    last_name = StringField(required=True)
-    full_name = StringField(required=True)
-    gender = StringField(required=True)
+class Character:
+    def __init__(self, character_id, params):
+        # Initialize the Character object with the provided ID and parameters
+        try:
+            # Simplified character creation
+            self.simplified = params['simplified'] if 'simplified' in params else False
 
-    # Character class and subclass information
-    character_class = StringField()
-    character_class_id = StringField()
-    character_subclass = StringField()
-    character_subclass_id = StringField()
+            # Assign basic character information
+            self.id = character_id
+            self.gender = params['gender']
+            self.first_name = generate_random_first_name(params['gender'])
+            self.last_name = generate_random_last_name()
+            self.full_name = f"{self.first_name} {self.last_name}"
 
-    # Background information
-    background = DictField()
-    background_name = StringField()
-    background_setting = StringField()
-    background_id = StringField()
+            # Assign character class information
+            random_class = params.get('random_class', {})
+            self.character_class = random_class.get('fname') or random_class.get('name')
+            self.character_class_id = random_class.get('id')
 
-    # Ethnicity and subrace information
-    ethnicity = StringField()
-    ethnicity_name = StringField()
-    ethnicity_id = StringField()
-    subrace = DictField()
-    subrace_name = StringField()
-    subrace_id = StringField()
-    ethnicity_keywords = ListField(StringField())
+            # Assign character subclass information
+            random_subclass = params.get('random_subclass', {})
+            self.character_subclass = random_subclass.get('name')
+            self.character_subclass_id = random_subclass.get('id')
 
-    # Other character attributes
-    age = IntField()
-    physical_description = DictField()
-    physical_trait = StringField()
-    hair_color = StringField()
-    hair_style = StringField()
-    eye_color = StringField()
-    behavior = StringField()
-    picture_id = StringField()
-    image_prompt = StringField()
-    personality_description = StringField()
-    background_story = StringField()
-    has_image = BooleanField(default=False)
+            # Assign background information
+            self.background = params.get('background', {})
+            self.background_name = self.background.get('name')
+            self.background_setting = self.background.get('setting')
+            self.background_id = self.background.get('id')
+
+            # Assign ethnicity information
+            random_ethnicity = params.get('random_ethnicity', {})
+            self.ethnicity = random_ethnicity.get('race')
+            self.ethnicity_name = random_ethnicity.get('race')
+            self.ethnicity_id = random_ethnicity.get('id')
+
+            # Assign subrace information
+            self.subrace = None
+            if self.subrace is not None:
+                self.subrace = params.get('random_subrace', {})
+                self.subrace_name = self.subrace.get('name', '')
+                self.subrace_id = self.subrace.get('id', '')
+
+            # Assign ethnicity keywords
+            self.ethnicity_keywords = get_ethnicity_keywords(
+                random_ethnicity, self.subrace)
+
+            # Assign other character attributes
+            self.age = params.get('age')
+            self.physical_description = self.create_physical_description()
+            self.physical_trait = create_physical_trait()
+            self.hair_color = create_hair_color()
+            self.hair_style = create_hair_style()
+            self.eye_color = create_eye_color()
+            self.behavior = self.create_behavior()
+            self.picture_id = self.create_picture_id()
+            self.image_prompt = self.create_image_prompt()
+            self.personality_description = self.create_personality_description()
+            self.background_story = self.create_background_story()
+
+            self.has_image = file_exists(
+                'static/images', f"{self.picture_id}.png")
+
+        except (KeyError, TypeError) as e:
+            raise Exception(f"Invalid parameter format: {e}")
 
     def to_dict(self):
         """Convert the character object to a dictionary"""
@@ -184,8 +206,7 @@ class Character(Document):
 
     def create_background_story(self):
         prompt = f"Write a background story for an RPG character named {self.full_name}, a {self.character_class} in the world of Forgotten Realms. The character is a {self.background_name} with {self.ethnicity} heritage. Describe their upbringing, key events in their life, and their motivations. Please write three paragraphs with a total word count of around 300 words. Conclude the background story by including a potential adventure hook or a mystery that the character seeks to unravel."
-        background_story = "" if self.simplified else fetch_character_data(
-            prompt)
+        background_story = "" if self.simplified else fetch_character_data(prompt)
         # Transform the /n in paragraphs into <br> for HTML
         # background_story = background_story.replace('\n\n', '<br>')
         return background_story
@@ -198,7 +219,7 @@ class Character(Document):
     def create_personality_description(self):
         prompt = f"Make a description of a character's personality based on this sentence: {self.behavior}"
         personality = fetch_character_data(prompt)
-        # personality = "" if self.simplified else fetch_character_data(prompt)
+        #personality = "" if self.simplified else fetch_character_data(prompt)
         return personality
 
     def create_image_prompt(self):
