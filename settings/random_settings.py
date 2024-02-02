@@ -14,7 +14,7 @@ def pick_random_setting_with_weight(setting):
 
 
 def pick_random_gender():
-    return pick_random_setting(gender_settings)
+    return pick_random_setting_with_weight(gender_settings)
 
 
 def pick_random_age():
@@ -38,10 +38,10 @@ def pick_random_ethnicity():
 
 def pick_random_subrace(ethnicity):
     # if ethnicity has subraces, pick a random subrace
-    if ethnicity.get('subraces'):
-        return random.choice
-    else:
-        return None
+    # if ethnicity.get('subraces'):
+    #     return pick_random_data_from_file('data/ethnicity_data.json', 'subraces')
+    # else:
+    return dict()
     
 def pick_random_ethnicity_fantasy():
     return pick_random_data_from_file('data/ethnicity_fantasy_data.json', 'ethnicity')

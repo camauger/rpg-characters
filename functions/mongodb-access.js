@@ -1,13 +1,14 @@
+
 const { MongoClient } = require('mongodb');
 
 exports.handler = async (event, context) => {
-  const uri = process.env.MONGODB_URI;
+  const uri = process.env.MONGO_CONNECTION_STRING;
   const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true });
 
   try {
     await client.connect();
-    const database = client.db("yourDatabaseName");
-    const collection = database.collection("yourCollectionName");
+    const database = client.db("rpg");
+    const collection = database.collection("rpgCharacters");
     const documents = await collection.find({}).toArray();
 
     return {

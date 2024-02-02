@@ -11,9 +11,24 @@ from wtforms.validators import DataRequired
 import json
 import os
 import logging
+from pymongo.mongo_client import MongoClient
+from pymongo.server_api import ServerApi
+
 
 # Load .env file
 load_dotenv()
+from mongoengine import connect
+try :
+    # Connect to your MongoDB database
+    connection_string = os.environ.get('MONGO_CONNECTION_STRING')
+    client = MongoClient(connection_string)
+    db = client.rpg
+    collection = db.rpgCharacters
+    connect(db='rpg', host=connection_string)
+    print("Connected to MongoDB")
+except Exception as e:
+    logging.error(f"An error occurred while connecting to MongoDB: {e}")
+
 
 # Initialize a thread lock
 lock = Lock()
@@ -22,17 +37,9 @@ lock = Lock()
 logging.basicConfig(level=logging.INFO)
 
 # Flask App
-app = Flask(__name__, static_folder='static', static_url_path='/static')
-
-# Connect to your MongoDB database
-connection_string = os.environ.get('MONGO_CONNECTION_STRING')
-client = MongoClient(connection_string)
-db = client.rpg
-collection = db.rpgCharacters
-connect(db='rpg', host=connection_string)
+app = Flask(__name__, static_folder='static')
 
 character_manager = CharacterManager()
-
 
 class CharacterForm(FlaskForm):
     name = StringField('Character Name', validators=[DataRequired()])
@@ -47,7 +54,6 @@ def handle_db_operations():
 
 
 @app.route('/', methods=['GET'])
-@app.route('/index.html', methods=['GET'])
 def index():
     characters = load_characters()
     return render_template('index.html', characters=characters)
