@@ -1,0 +1,26 @@
+{
+  "name": "rpg-characters",
+  "version": "1.0.0",
+  "description": "This Python program is an RPG (Role Playing Game) Character Generator. It provides a simple interface to generate and manage RPG characters. The characters can be either randomly generated or custom-made based on user input. Additionally, the program allows users to manage image resources for the characters and update existing character data.",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/camauger/rpg-characters.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/camauger/rpg-characters/issues"
+  },
+  "homepage": "https://github.com/camauger/rpg-characters#readme",
+  "dependencies": {
+    "mongodb": "^6.3.0"
+  }
+}

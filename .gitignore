@@ -24,3 +24,7 @@ archives
 large_images
 create_image_stable.py
 create_image.py
+
+# Ignore node_modules
+node_modules/
+package-lock.json
