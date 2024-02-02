@@ -298,5 +298,59 @@
         "personality_description": "{\n  \"character_description\": {\n    \"name\": \"Lewes Ervold\",\n    \"personality\": {\n      \"ideal\": \"Balance is the cornerstone upon which Lewes Ervold builds his life and decisions. He strives to maintain equilibrium in all aspects, be it in the midst of a chaotic skirmish or the delicate politics of court.\",\n      \"flaw\": \"Despite his striving for balance, Lewes is often clouded by a pessimistic outlook. He tends to anticipate the worst outcomes, which sometimes hinders his ability to take decisive action at crucial moments.\",\n      \"bond\": \"The legacy of his family or a cause he believes in deeply is what drives Lewes forward. He is determined to leave a mark on the world that will outlast his lifetime, seeing his actions as part of a larger history he wants to shape positively.\",\n      \"behavior\": \"Ambitious in his endeavors, Lewes is not one to shy away from challenges. He pushes himself hard, sometimes to his own detriment, fueled by a desire to achieve his lofty goals and secure his legacy.\",\n      \"nature\": \"At his core, Lewes is honest, often to a fault. His integrity is unwavering, and he demands the same level of honesty from those around him. This honesty builds strong, albeit sometimes blunt, relationships with his allies.\"\n    }\n  }\n}",
         "background_story": "{\n  \"name\": \"Lewes Ervold\",\n  \"race\": \"Dwarf\",\n  \"class\": \"Druid\",\n  \"background\": \"Sage\",\n  \"story\": {\n    \"upbringing\": \"Lewes Ervold grew up in the bustling dwarven city of Hammerfast, nestled in the heart of the mountains. From a young age, Lewes showed an unusual affinity for the natural world, a trait that set him apart from his kin, more inclined towards the forge and stonecraft. His curiosity was nurtured by his parents, scholars devoted to the study of ancient lore and the Old Magick. Lewes spent his childhood wandering the wild fringes of the dwarf realms, learning the languages of trees and streams, guided by his innate connection to the earth.\",\n    \"key_events\": \"As Lewes matured, his powers as a Druid began to blossom, a rare gift for a dwarf. This budding strength drew the attention of a circle of Druids, who saw in him the potential to bridge the gap between the reclusive natural order and the industrious dwarf kingdoms. Lewes embraced this path, dedicating himself to the balance of nature and civilization. However, this harmony was shattered when an ancient blight, long buried beneath the stones of Hammerfast, awakened. Lewes led the effort to quell this corruption, delving into the forgotten depths with a band of allies. Though they prevailed, the ordeal left Lewes with a deep scar, a whisper of some greater, unseen threat.\",\n    \"motivations_and_mystery\": \"Haunted by the incident, Lewes now seeks to understand the source of this corruption, fearing that what they had encountered was merely a symptom of a far greater danger. Driven by the need to protect his home and the natural world he holds dear, Lewes embarks on a quest to uncover ancient secrets and prevent a catastrophe foretold in cryptic prophecies. A mysterious figure, known only as the Green Warden, becomes a focal point of his journey, believed to hold the keys to stopping the impending doom and possibly connected to Lewes\u2019s own unique heritage.\"\n  }\n}",
         "has_image": false
+    },
+    {
+        "id": 2635,
+        "first_name": "Eal",
+        "last_name": "Iusmorius",
+        "full_name": "Eal Iusmorius",
+        "gender": "Male",
+        "character_class": "Ranger",
+        "character_class_id": "080",
+        "character_subclass": "Gloom Stalker",
+        "character_subclass_id": "084",
+        "background": {
+            "name": "Acolyte",
+            "id": "01"
+        },
+        "background_name": "Acolyte",
+        "background_id": "01",
+        "ethnicity": "Half-Orc",
+        "ethnicity_name": "Half-Orc",
+        "ethnicity_id": "007",
+        "subrace": null,
+        "subrace_name": "",
+        "subrace_id": "",
+        "ethnicity_keywords": [
+            "tall",
+            "muscular",
+            "green skin",
+            "tusks",
+            "broad nose",
+            "heavy eyebrows",
+            "wild hair",
+            "scarred",
+            "intimidating",
+            "fearsome",
+            "savage",
+            "brutish",
+            "barbaric"
+        ],
+        "age": "Adult",
+        "physical_description": {
+            "trait": "Gorgeous",
+            "hair_color": "Golden",
+            "hair_style": "pixie cut"
+        },
+        "physical_trait": "Gorgeous",
+        "hair_color": "Golden",
+        "hair_style": "pixie cut",
+        "eye_color": "silver",
+        "behavior": "Eal Iusmorius's ideal is freedom. his flaw is reckless, his bond is adventure, his behavior is gentle, and his nature is charismatic.",
+        "picture_id": "1007084012635",
+        "image_prompt": "Lifestyle Portrait in the style of Sachin Teng and Feng Shui | Comic Fantasy | an Acolyte Half-Orc Ranger named Eal Iusmorius wearing Scale clothing | Eal Iusmorius is a Gorgeous male Half-Orc. Eal Iusmorius has golden pixie cut hair and silver eyes. | Purple and Jade tones | Loop Lighting | tall, muscular, green skin, tusks, broad nose, heavy eyebrows, wild hair, scarred, intimidating, fearsome, savage, brutish, barbaric, Fantasy, Medieval Fantasy, Dungeons & Dragons. --s 1000 --upbeta --seed 1007084012635",
+        "personality_description": "{\n  \"description\": \"Eal Iusmorius is a character whose heart beats fiercest for the ideal of freedom. His spirit is unchained, and he pursues life with a zealous passion for unbridled liberty. However, this passionate pursuit is not without its flaws; Eal is known to be reckless. His desire for freedom often blinds him to the dangers of his choices, leading him into situations that could easily be avoided with a bit of caution. Despite this, there's an undeniable charm about Eal, his nature charismatic, drawing others to him with an almost magnetic pull. People are captivated by his enthusiasm and his vision of a life free from constraints. When it comes to his bonds, adventure is what ties Eal's heart to the world. The unknown calls to him, promising the taste of freedom he so deeply craves. In his quest for adventure, Eal's behavior remains gentle. He approaches others with kindness and a soft demeanor, proving that one does not need to be harsh or aggressive to be free or ambitious. This blend of gentleness, charisma, and a thirst for adventure makes Eal a complex yet compelling individual. His journey is one of seeking liberty, not just for himself, but in a way that inspires those around him to break free from their own chains.\"\n}",
+        "background_story": "{\n  \"name\": \"Eal Iusmorius\",\n  \"race\": \"Half-Orc\",\n  \"class\": \"Ranger\",\n  \"background\": \"Acolyte\",\n  \"story\": [\n    \"Eal Iusmorius was born under the crescent moon to a human priestess and an orc chieftain in a secluded shrine deep within the Neverwinter Wood. Despite the initial reluctance from both communities, Eal was raised in a unique blend of faith and ferocity. His mother taught him the virtues of the gods, embedding a strong sense of duty and compassion within him, while his father trained him in the arts of survival and combat, ensuring Eal could navigate both the dangers of the wilderness and the complexities of spiritual existence. This duality shaped Eal into a protector of both the natural world and those who seek refuge within its embrace.\",\n    \"A pivotal moment in Eal's life came when a marauding band of dark sorcerers seeking ancient relics desecrated the shrine. In the fierce battle that ensued, Eal managed to fend off the attackers but not before they succeeded in stealing a sacred artifact, causing his mother to fall into a mysterious, magical coma. This event fueled Eal's resolve to master both his ranger and acolyte teachings, vowing to retrieve the stolen relic and awaken his mother. His quest for knowledge and justice has since led him on many adventures, earning him both allies and enemies.\",\n    \"The mystery that Eal seeks to unravel is the true power and purpose of the stolen artifact, which his studies suggest could either bring great healing or catastrophic destruction. His journey is driven by the need to restore his mother's health and prevent the artifact from falling into the wrong hands again. As Eal prepares to venture into the ruins of an ancient temple rumored to hold the key to unlocking the artifact's secrets, he is unaware of the dark forces that are aligning against him, setting the stage for an epic confrontation that could change the balance of power in the Neverwinter region.\"\n  ]\n}",
+        "has_image": false
     }
 ]

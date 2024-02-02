@@ -1,15 +1,18 @@
 import openai
-from settings.env_settings import api_key
 import requests
-openai.api_key = api_key
-
+import os
+# Get the OpenAI API key
+api_key = os.environ.get('API_KEY')
 
 def create_image(prompt, id):
+    openai.api_key = api_key
     try:
         response = openai.Image.create(
-            prompt=prompt,
-            n=1,
-            size="1024x1024"
+        model="dall-e-3",
+        prompt= f"I NEED to test how the tool works with extremely simple prompts. DO NOT add any detail, just use it AS-IS: {prompt}",
+        size="1024x1024",
+        quality="standard",
+        n=1,
         )
         image_url = response['data'][0]['url']
 

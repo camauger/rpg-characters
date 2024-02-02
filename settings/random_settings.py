@@ -40,21 +40,35 @@ def pick_random_ethnicity():
         random_race = random.choice(data['ethnicity'])
         return random_race
 
+def pick_random_ethnicity_fantasy():
+    with open('data/ethnicity_fantasy_data.json', 'r') as f:
+        # Load the JSON string into a Python dictionary
+        data = json.load(f)
+        random_race = random.choice(data['ethnicity'])
+        return random_race
 
 def get_ethnicity_keywords(ethnicity, subrace):
     ethnicity_keywords = ethnicity.get('keywords', [])
-    subrace_keywords = subrace.get('keywords', [])
-    total_keywords = ethnicity_keywords + subrace_keywords
+    if subrace is not None:
+        subrace_keywords = subrace.get('keywords', [])
+        total_keywords = ethnicity_keywords + subrace_keywords
+    else:
+        total_keywords = ethnicity_keywords
     # remove duplicate keywords
     total_keywords = list(dict.fromkeys(total_keywords))
+    # Pick upt 5 keywords at random
+    if len(total_keywords) > 5:
+        total_keywords = random.sample(total_keywords, 5)
+    else:
+        total_keywords = random.sample(total_keywords, len(total_keywords))
+    
     return total_keywords
 
 
-def pick_random_subrace(race):
-    # If race has no subrace
-    if race.get('subraces') is None:
-        return race
-    return random.choice(race['subraces'])
+def pick_random_subrace(ethnicity):
+    # if ethnicity has subraces, pick a random subrace
+    if ethnicity.get('subraces'):
+        return random.choice
 
 
 # Pick a random class
@@ -131,4 +145,3 @@ def create_eye_color():
         return random_synonym.lower()
 
 
-pick_random_ethnicity()

@@ -1,0 +1,289 @@
+{
+  "ethnicity": [
+    {
+      "race": "Human",
+      "id": "001",
+      "keywords": [
+        "alluring",
+        "enticing",
+        "sultry",
+        "seductive",
+        "captivating",
+        "beguiling",
+        "enchanting",
+        "provocative",
+        "tempting",
+        "mesmerizing",
+        "playful banter",
+        "coy smiles",
+        "suggestive glances",
+        "teasing remarks",
+        "flirty winks",
+        "charming gestures",
+        "whispered compliments",
+        "light-hearted jesting",
+        "amorous advances",
+        "lively repartee",
+        "witty exchanges",
+        "flirtatious teasing",
+        "cheeky comments",
+        "enticing looks",
+        "gentle ribbing",
+        "affectionate jests",
+        "mischievous smiles",
+        "playful quips",
+        "seductive hints",
+        "engaging banter",
+        "intriguing conversations",
+        "impish grins",
+        "tantalizing suggestions",
+        "warm chuckles",
+        "intimate whispers",
+        "coquettish demeanor",
+        "playful provocations",
+        "fascinating dialogues",
+        "lighthearted banter",
+        "irresistible charm"
+      ]
+    },
+    {
+      "race": "Elf",
+      "id": "003",
+      "keywords": [
+        "tall",
+        "slender",
+        "pointed ears",
+        "almond-shaped eyes",
+        "graceful",
+        "ageless",
+        "delicate features",
+        "alluring",
+        "enticing",
+        "sultry",
+        "seductive",
+        "captivating",
+        "beguiling",
+        "enchanting",
+        "provocative",
+        "tempting",
+        "mesmerizing",
+        "fair skin",
+        "ethereal",
+        "luminous",
+        "enigmatic",
+        "mystical",
+        "radiant",
+        "otherworldly",
+        "svelte",
+        "elegant",
+        "wispy",
+        "translucent skin",
+        "enrapturing",
+        "hypnotic",
+        "irresistible",
+        "elusive",
+        "fey-like",
+        "aristocratic"
+      ],
+      "subraces": [
+        {
+          "name": "High Elf",
+          "id": "0031",
+          "keywords": [
+            "arcane",
+            "magic",
+            "scholarly",
+            "graceful",
+            "alluring",
+            "enticing",
+            "sultry",
+            "seductive",
+            "captivating",
+            "beguiling",
+            "enchanting",
+            "provocative",
+            "tempting",
+            "mesmerizing"
+          ]
+        },
+        {
+          "name": "Wood Elf",
+          "id": "0032",
+          "keywords": [
+            "agile",
+            "quick",
+            "forest dweller",
+            "fleet-footed",
+            "mask of the wild"
+          ]
+        },
+        {
+          "name": "Dark Elf (Drow)",
+          "id": "0033",
+          "keywords": [
+            "underdark",
+            "subterranean",
+            "cunning",
+            "mysterious"
+          ]
+        }
+      ]
+    },
+    {
+      "race": "Half-Elf",
+      "id": "006",
+      "keywords": [
+        "slim",
+        "pointed ears",
+        "fair skin",
+        "mix of human and elf features"
+      ]
+    },
+    {
+      "race": "Dragonborn",
+      "id": "009",
+      "keywords": [
+        "tall",
+        "anthropomorphic muscular build",
+        "dragon-like creature",
+        "scales",
+        "clear detailed draconic features",
+        "dragon anthropomorphic humanoid",
+        "reptilian",
+        "fearsome"
+      ]
+    },
+    {
+      "race": "Tiefling",
+      "id": "008",
+      "keywords": [
+        "short horns",
+        "fangs",
+        "glowing eyes",
+        "sharp features",
+        "devilish",
+        "demonic",
+        "fiendish",
+        "infernal",
+        "hellish",
+        "alluring",
+        "enticing",
+        "sultry",
+        "seductive",
+        "beguiling",
+        "enchanting",
+        "provocative",
+        "tempting",
+        "mesmerizing",
+        "spiked tail",
+        "sinister smile",
+        "smoldering gaze",
+        "wicked grin",
+        "malevolent aura",
+        "charismatic darkness",
+        "mystifying",
+        "captivating",
+        "hypnotic allure",
+        "otherworldly charm",
+        "intense stare",
+        "forbidden allure",
+        "twisted elegance",
+        "dark allure",
+        "unearthly beauty",
+        "haunting presence"
+      ],
+      "subraces": [
+        {
+          "name": "Asmodeus Tiefling",
+          "id": "0081",
+          "keywords": [
+            "Asmodeus bloodline",
+            "commanding presence"
+          ]
+        },
+        {
+          "name": "Mephistopheles Tiefling",
+          "id": "0082",
+          "keywords": [
+            "Mephistopheles bloodline",
+            "fire magic",
+            "manipulation",
+            "deception"
+          ]
+        },
+        {
+          "name": "Zariel Tiefling",
+          "id": "0083",
+          "keywords": [
+            "combat prowess",
+            "resilience"
+          ]
+        }
+      ]
+    },
+    {
+      "race": "Aasimar",
+      "id": "010",
+      "keywords": [
+        "radiant",
+        "glowing eyes",
+        "fair skin",
+        "halo",
+        "celestial",
+        "ethereal",
+        "angelic",
+        "alluring",
+        "enticing",
+        "seductive",
+        "captivating",
+        "enchanting",
+        "provocative",
+        "tempting",
+        "mesmerizing",
+        "luminous",
+        "shimmering eyes",
+        "porcelain skin",
+        "aura",
+        "heavenly",
+        "supernatural",
+        "seraphic",
+        "beguiling",
+        "inviting",
+        "irresistible",
+        "spellbinding",
+        "bewitching",
+        "intriguing",
+        "luring",
+        "hypnotic"
+      ],
+      "subraces": [
+        {
+          "name": "Protector Aasimar",
+          "id": "0101",
+          "keywords": [
+            "angelic guardian",
+            "healing hands",
+            "wings"
+          ]
+        },
+        {
+          "name": "Scourge Aasimar",
+          "id": "0102",
+          "keywords": [
+            "radiant consumption",
+            "destructive energy",
+            "divine light"
+          ]
+        },
+        {
+          "name": "Fallen Aasimar",
+          "id": "0103",
+          "keywords": [
+            "dark transformation",
+            "wings of shadow"
+          ]
+        }
+      ]
+    }
+  ]
+}

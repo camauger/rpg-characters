@@ -1,6 +1,7 @@
 from create_image_stable import create_image_stable_diffusion
 from settings.random_settings import (
     pick_random_age,
+    pick_random_ethnicity_fantasy,
     pick_random_gender,
     pick_random_ethnicity,
     pick_random_subrace,
@@ -77,81 +78,72 @@ class CharacterManager:
             return False
         return True
 
-    def generate_character_id(self, existing_ids):
+    def generate_character_id(self):
         """Generate a unique character ID"""
+        existing_ids = {char.id for char in self.characters}
         character_id = random.randint(1, self.MAX_CHARACTER_ID)
         while character_id in existing_ids:
             character_id = random.randint(1000, self.MAX_CHARACTER_ID)
         return character_id
 
-    def get_character_params(self, is_random, is_fantasy=False):
+    def get_character_params(self, is_random, is_fantasy):
         """Get parameters for a new character"""
-        params = {}
-        params['random_class'] = pick_random_character_class() if is_random else input(
-            "What class do you want your character to be? ")
-        params['random_subclass'] = pick_random_subclass(params['random_class']) if is_random else input(
-            "What subclass do you want your character to be? ")
+        params = {
+            'random_class': pick_random_character_class() if (is_random | is_fantasy) else input("Character class: "),
+            'age': pick_random_age() if (is_random | is_fantasy) else input("Character age: "),
+            'gender': pick_random_gender() if (is_random | is_fantasy) else input("Character gender: "),
+            'background': pick_random_background() if (is_random | is_fantasy) else input("Character background: ")
+        }
+
+        params['random_subclass'] = pick_random_subclass(
+            params['random_class']) if (is_random | is_fantasy) else input("Character subclass: ")
+
+        # Simplified creation
+        if is_fantasy:
+            params['simplified'] = True
+            params['gender'] = "Female"
 
         if is_random:
             params['random_ethnicity'] = pick_random_ethnicity()
             params['random_subrace'] = pick_random_subrace(
-                params['random_ethnicity'])
-        else:
-            ethnicity_input = input("What is your character's ethnicity?")
-            # Find the ethnicity based on the input (assuming the input matches a valid ethnicity)
-            with open('data/ethnicity_data.json', 'r') as f:
-                # Load the JSON string into a Python dictionary
-                data = json.load(f)
-            params['random_ethnicity'] = next(
-                (ethnicity for ethnicity in data['ethnicity'] if ethnicity['race'] == ethnicity_input), None)
+            params['random_ethnicity'])
+        
+        elif is_fantasy:
+            params['random_ethnicity'] = pick_random_ethnicity_fantasy()
+            params['random_subrace'] = pick_random_subrace(
+            params['random_ethnicity'])
 
+        else:
+            # User input for ethnicity and subrace
+            self.user_defined_ethnicity_and_subrace(params)
+        return params
+
+
+    def user_defined_ethnicity_and_subrace(self, params):
+        """Helper function to handle user input for ethnicity and subrace"""
+        ethnicity_input = input("Character ethnicity: ")
+        with open('data/ethnicity_data.json', 'r') as file:
+            data = json.load(file)
+            params['random_ethnicity'] = next(
+                (e for e in data['ethnicity'] if e['race'] == ethnicity_input), None)
             if params['random_ethnicity']:
-                params['random_ethnicity_name'] = params['random_ethnicity']['race']
-                params['ethnicity_keywords'] = get_ethnicity_keywords(
-                    params['random_ethnicity'], params['random_subrace'])
-                subrace_input = input("What is your character's subrace?")
                 params['random_subrace'] = next((subrace for subrace in params['random_ethnicity'].get(
-                    'subraces', []) if subrace['name'] == subrace_input), None)
+                    'subraces', []) if subrace['name'] == input("Character subrace: ")), None)
             else:
                 print("Invalid ethnicity input!")
 
-        if is_random:
-            params['age'] = pick_random_age()
-            params['gender'] = pick_random_gender()
-            params['background'] = pick_random_background()
-
-        elif is_fantasy:
-            params['age'] = '25'
-            params['gender'] = 'Female'
-            params['background'] = pick_random_background()
-
-        else:
-            params['age'] = input("How old is your character? ")
-            params['gender'] = input("What is your gender? ")
-            params['background'] = input(
-                "What is your character's background? ")
-
-        return params
-
-    def create_character(self, is_random):
+    def create_character(self, is_random, is_fantasy=False):
         """Create a new character"""
-        new_character = None  # Define the new_character variable as None
-        character_count, existing_ids = self.get_character_info()
+        if not self.check_character_count():
+            print("Maximum character count reached.")
+            return None
 
-        if self.check_character_count():
-            params = self.get_character_params(is_random)
-            character_id = self.generate_character_id(existing_ids)
-            new_character = Character(character_id, params)
-            existing_ids.append(character_id)  # Update the existing IDs list
+        params = self.get_character_params(is_random, is_fantasy)
+        character_id = self.generate_character_id()
+        new_character = Character(character_id, params)
+        self.characters.append(new_character)
 
-            # Create image for the character
-            # create_image_stable_diffusion(new_character.image_prompt, new_character.picture_id)
-            # new_character.has_image = file_exists("./static/images/", f"{new_character.picture_id}.png")
-            with open(f"./data/image_prompts.txt", "a") as file:
-                file.write(new_character.image_prompt + "\n\n")
-
-            return new_character
-        return None
+        return new_character
 
     def create_characters(self, num_characters):
         """Create multiple characters"""

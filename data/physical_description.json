@@ -2,39 +2,44 @@
   "hair_types": [
     {
       "type": "Straight",
-      "synonyms": ["Sleek", "Smooth", "Pin-straight"],
+      "synonyms": ["Straight", "Sleek", "Smooth", "Pin-straight"],
       "description": "Hair with no natural wave or curl, laying flat from roots to ends."
     },
     {
       "type": "Wavy",
-      "synonyms": ["Undulating", "Loose curls", "Flowing"],
+      "synonyms": ["Wavy","Undulating", "Loose curls", "Flowing"],
       "description": "Hair with a natural wave or slight curl, forming an 'S' shape."
     },
     {
       "type": "Curly",
-      "synonyms": ["Spiraled", "Coiled", "Ringlets"],
+      "synonyms": ["Curly","Spiraled", "Coiled", "Ringlets"],
       "description": "Hair with a defined curl pattern, forming spirals or ringlets."
     },
     {
       "type": "Kinky",
-      "synonyms": ["Coarse", "Tightly coiled", "Zigzag"],
+      "synonyms": ["Kinky","Coarse", "Tightly coiled", "Zigzag"],
       "description": "Hair with a tight curl or coil pattern, often forming small, dense curls or zigzag shapes."
+    },
+    {
+      "type": "Frizzy",
+      "synonyms": ["Frizzy","Flyaway", "Puffy", "Fuzzy"],
+      "description": "Hair that is prone to frizziness, often dry and difficult to manage, creating a fluffy appearance."
     }
   ],
   "hair_styles": [
     {
       "name": "Bob",
-      "synonyms": ["Bob cut", "Short bob"],
+      "synonyms": ["Bob","Bob cut", "Short bob"],
       "description": "A short haircut where the hair is typically cut straight around the head, at the level of the jaw or above."
     },
     {
       "name": "Pixie",
-      "synonyms": ["Pixie cut", "Short crop"],
+      "synonyms": ["Pixie","Pixie cut", "Short crop"],
       "description": "A very short haircut, often characterized by closely cropped sides and back with slightly longer hair on top."
     },
     {
       "name": "Layered",
-      "synonyms": ["Layered cut", "Textured"],
+      "synonyms": ["Layered","Layered cut", "Textured"],
       "description": "A haircut in which the hair is cut into different lengths, creating layers and adding texture and volume."
     },
     {
@@ -44,7 +49,7 @@
     },
     {
       "name": "Long Layers",
-      "synonyms": ["Layered cut with length", "Textured long hair"],
+      "synonyms": ["Long Layers","Layered cut", "Textured long hair"],
       "description": "A hairstyle with long hair and layers cut throughout the length to create movement and dimension."
     },
     {
@@ -54,23 +59,28 @@
     },
     {
       "name": "French Braid",
-      "synonyms": ["Three-strand braid", "Plait"],
+      "synonyms": ["French Braid", "Three-strand braid", "Plait", "Cornrow", "Dutch braid", "Fishtail braid", "Boxer braid"],
       "description": "A braiding technique where the hair is divided into three sections and crossed over each other, creating a woven effect."
     },
     {
       "name": "Ponytail",
-      "synonyms": ["High pony", "Tail"],
+      "synonyms": ["Ponytail", "High pony", "Tail", "Updo", "Pulled back", "Tied back", "Slicked back", "Swept back", "Tied up"],
       "description": "A hairstyle where the hair is gathered and secured at the back of the head, creating a tail-like appearance."
     },
     {
       "name": "Mohawk",
-      "synonyms": ["Fauxhawk", "Punk"],
+      "synonyms": ["Mohawk", "Fauxhawk", "Punk", "Spiky"],
       "description": "A hairstyle where the hair on the sides of the head is shaved or very short, while the hair in the middle is left longer and styled upwards."
     },
     {
       "name": "Braided Crown",
-      "synonyms": ["Halo braid", "Crown plait"],
+      "synonyms": ["Braided Crown", "Halo braid", "Crown plait", "Milkmaid braid", "Goddess braid", "Crown braid", "Halo twist"],
       "description": "A hairstyle where the hair is braided around the head, creating a crown-like effect."
+    },
+    {
+      "name": "Undercut",
+      "synonyms": ["Undercut", "Shaved sides", "Buzzed sides", "Disconnected cut", "Shaved undercut"],
+      "description": "A hairstyle where the sides and back are shaved very short, with longer hair on top."
     }
   ],
   "hair_colors": [
@@ -103,10 +113,20 @@
       "type": "White",
       "synonyms": ["Platinum", "Snowy", "Icy"],
       "description": "Hair color that is completely or nearly all white or very light gray."
+    },
+    {
+      "type": "Pastel",
+      "synonyms": ["Lavender", "Mint", "Rose"],
+      "description": "Hair colors dyed in soft, washed-out pastel hues."
     }
   ],
 
   "body_types": [
+    {
+      "type": "Athletic",
+      "synonyms": ["Toned", "Fit", "Strong"],
+      "description": "A body type characterized by muscle definition and low body fat, often associated with regular exercise and strength training."
+    },
     {
       "type": "Ectomorph",
       "synonyms": ["Lean", "Slender", "Skinny"],
@@ -218,6 +238,11 @@
       "name": "Turquoise",
       "synonyms": ["Teal"],
       "description": "A blue-green color reminiscent of the gemstone."
+  },
+  {
+    "name": "Violet",
+    "synonyms": ["Purple", "Lilac"],
+    "description": "A rare eye color that appears purple, often due to a lack of melanin mixed with light reflecting off red blood vessels."
   }
   ]
 }

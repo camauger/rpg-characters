@@ -68,6 +68,7 @@
         },
         {
           "name": "Druid",
+          "fname": "Druidess",
           "id": "040",
           "subclasses": [
             {
@@ -200,6 +201,7 @@
         },
         {
           "name": "Sorcerer",
+          "fname": "Sorceress",
           "id": "100",
           "subclasses": [
             {

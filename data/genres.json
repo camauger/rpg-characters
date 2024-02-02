@@ -1,0 +1,73 @@
+{
+    "genres": [
+      {
+        "name": "High Fantasy",
+        "description": "Features epic tales, often in imaginary worlds with magic and heroes."
+      },
+      {
+        "name": "Low Fantasy",
+        "description": "Grounded in real-world settings with subtle magical elements."
+      },
+      {
+        "name": "Sword and Sorcery",
+        "description": "Focuses on action-packed adventures with magic and combat."
+      },
+      {
+        "name": "Dark Fantasy",
+        "description": "Blends fantasy with elements of horror or grimdark themes."
+      },
+      {
+        "name": "Urban Fantasy",
+        "description": "Set in a modern urban setting with magical or supernatural elements."
+      },
+      {
+        "name": "Historical Fantasy",
+        "description": "Incorporates fantasy elements into real historical settings."
+      },
+      {
+        "name": "Romantic Fantasy",
+        "description": "Centers around romantic relationships in a fantasy setting."
+      },
+      {
+        "name": "Steampunk",
+        "description": "Combines fantasy with industrial steam-powered technology."
+      },
+      {
+        "name": "Dieselpunk",
+        "description": "Similar to steampunk but set in an era of diesel-powered technology."
+      },
+      {
+        "name": "Mythopoeia",
+        "description": "Involves creating detailed mythologies and fictional universes."
+      },
+      {
+        "name": "Fairy Tale",
+        "description": "Based on traditional fairy tales, often with a modern twist."
+      },
+      {
+        "name": "Science Fantasy",
+        "description": "Merges elements of science fiction and fantasy."
+      },
+      {
+        "name": "Comic Fantasy",
+        "description": "Features humorous and whimsical fantasy stories."
+      },
+      {
+        "name": "Superhero Fantasy",
+        "description": "Involves characters with superpowers in a fantasy context."
+      },
+      {
+        "name": "Grimdark Fantasy",
+        "description": "Characterized by a bleak, dark, and often violent setting."
+      },
+      {
+        "name": "Magical Realism",
+        "description": "Blends realistic narrative with surreal, magical elements."
+      },
+      {
+        "name": "Wuxia",
+        "description": "A Chinese genre featuring martial arts adventures in ancient settings."
+      }
+    ]
+  }
+  

@@ -2,127 +2,158 @@
   "backgrounds": [
     {
       "name": "Acolyte",
-      "id": "01"
+      "id": "01",
+      "setting": "Temple or Shrine"
     },
     {
       "name": "Anthropologist",
-      "id": "02"
+      "id": "02",
+      "setting": "Museum or Expedition Site"
     },
     {
       "name": "Archaeologist",
-      "id": "03"
+      "id": "03",
+      "setting": "Historical Dig Site"
     },
     {
       "name": "Charlatan",
-      "id": "04"
+      "id": "04",
+      "setting": "Busy Urban Streets"
     },
     {
       "name": "City Watch",
-      "id": "05"
+      "id": "05",
+      "setting": "City Streets and Alleys"
     },
     {
       "name": "Clan Crafter",
-      "id": "06"
+      "id": "06",
+      "setting": "Crafting Workshop"
     },
     {
       "name": "Cloistered Scholar",
-      "id": "07"
+      "id": "07",
+      "setting": "Library or University"
     },
     {
       "name": "Courtier",
-      "id": "08"
+      "id": "08",
+      "setting": "Royal Court or Diplomatic Assembly"
     },
     {
       "name": "Criminal",
-      "id": "09"
+      "id": "09",
+      "setting": "Underworld or Hidden Dens"
     },
     {
       "name": "Entertainer",
-      "id": "10"
+      "id": "10",
+      "setting": "Stage or Tavern"
     },
     {
       "name": "Faction Agent",
-      "id": "11"
+      "id": "11",
+      "setting": "Political Headquarters"
     },
     {
       "name": "Far Traveler",
-      "id": "12"
+      "id": "12",
+      "setting": "Foreign Lands"
     },
     {
       "name": "Folk Hero",
-      "id": "13"
+      "id": "13",
+      "setting": "Rural Villages"
     },
     {
       "name": "Gladiator",
-      "id": "14"
+      "id": "14",
+      "setting": "Arena or Colosseum"
     },
     {
       "name": "Guild Artisan",
-      "id": "15"
+      "id": "15",
+      "setting": "Artisan's Guildhall"
     },
     {
       "name": "Haunted One",
-      "id": "16"
+      "id": "16",
+      "setting": "Cursed Grounds or Abandoned Places"
     },
     {
       "name": "Hermit",
-      "id": "17"
+      "id": "17",
+      "setting": "Secluded Wilderness"
     },
     {
       "name": "Inheritor",
-      "id": "18"
+      "id": "18",
+      "setting": "Family Estate"
     },
     {
       "name": "Knight",
-      "id": "19"
+      "id": "19",
+      "setting": "Castle or Battlefield"
     },
     {
       "name": "Knight of the Order",
-      "id": "20"
+      "id": "20",
+      "setting": "Order's Headquarters"
     },
     {
       "name": "Mercenary Veteran",
-      "id": "21"
+      "id": "21",
+      "setting": "Military Camp or War Zone"
     },
     {
       "name": "Noble",
-      "id": "22"
+      "id": "22",
+      "setting": "Aristocratic Estate"
     },
     {
       "name": "Outlander",
-      "id": "23"
+      "id": "23",
+      "setting": "Wilderness or Frontier Lands"
     },
     {
       "name": "Sage",
-      "id": "24"
+      "id": "24",
+      "setting": "Academic Library or Study"
     },
     {
       "name": "Sailor",
-      "id": "25"
+      "id": "25",
+      "setting": "Sea or Port"
     },
     {
       "name": "Soldier",
-      "id": "26"
+      "id": "26",
+      "setting": "Barracks or Battlefields"
     },
     {
       "name": "Spy",
-      "id": "27"
+      "id": "27",
+      "setting": "Covert Operations Base"
     },
     {
       "name": "Urban Bounty Hunter",
-      "id": "28"
+      "id": "28",
+      "setting": "Urban Underbelly"
     },
     {
       "name": "Urchin",
-      "id": "29"
+      "id": "29",
+      "setting": "City Streets and Slums"
     },
     {
       "name": "Uthgardt Tribe Member",
-      "id": "30"
+      "id": "30",
+      "setting": "Tribal Lands"
     },
     {
       "name": "Waterdhavian Noble",
-      "id": "31"
+      "id": "31",
+      "setting": "High Society Gatherings"
     }
   ]
 }

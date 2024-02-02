@@ -28,7 +28,7 @@ def fetch_character_data(prompt):
             {"role": "user", "content": f"{prompt}"},
         ]
         )
-        print(response.choices[0].message.content)
+        # print(response.choices[0].message.content)
         return response.choices[0].message.content
 
     except openai.error.OpenAIError as e:
@@ -58,6 +58,9 @@ class Character:
     def __init__(self, character_id, params):
         # Initialize the Character object with the provided ID and parameters
         try:
+            # Simplified character creation
+            self.simplified = params['simplified'] if 'simplified' in params else False
+
             # Assign basic character information
             self.id = character_id
             self.gender = params['gender']
@@ -67,7 +70,7 @@ class Character:
 
             # Assign character class information
             random_class = params.get('random_class', {})
-            self.character_class = random_class.get('name')
+            self.character_class = random_class.get('fname') or random_class.get('name')
             self.character_class_id = random_class.get('id')
 
             # Assign character subclass information
@@ -78,6 +81,7 @@ class Character:
             # Assign background information
             self.background = params.get('background', {})
             self.background_name = self.background.get('name')
+            self.background_setting = self.background.get('setting')
             self.background_id = self.background.get('id')
 
             # Assign ethnicity information
@@ -87,9 +91,11 @@ class Character:
             self.ethnicity_id = random_ethnicity.get('id')
 
             # Assign subrace information
-            self.subrace = params.get('random_subrace', {})
-            self.subrace_name = self.subrace.get('name', '')
-            self.subrace_id = self.subrace.get('id', '')
+            self.subrace = None
+            if self.subrace is not None:
+                self.subrace = params.get('random_subrace', {})
+                self.subrace_name = self.subrace.get('name', '')
+                self.subrace_id = self.subrace.get('id', '')
 
             # Assign ethnicity keywords
             self.ethnicity_keywords = get_ethnicity_keywords(
@@ -128,13 +134,14 @@ class Character:
             'character_subclass_id': self.character_subclass_id,
             'background': self.background,
             'background_name': self.background_name,
+            'background_setting': self.background_setting,
             'background_id': self.background_id,
             'ethnicity': self.ethnicity,
             'ethnicity_name': self.ethnicity_name,
             'ethnicity_id': self.ethnicity_id,
             'subrace': self.subrace,
-            'subrace_name': self.subrace_name,
-            'subrace_id': self.subrace_id,
+            'subrace_name': self.subrace_name if self.subrace is not None else '',
+            'subrace_id': self.subrace_id if self.subrace is not None else '',
             'ethnicity_keywords': self.ethnicity_keywords,
             'age': self.age,
             'physical_description': {
@@ -199,7 +206,7 @@ class Character:
 
     def create_background_story(self):
         prompt = f"Write a background story for an RPG character named {self.full_name}, a {self.character_class} in the world of Forgotten Realms. The character is a {self.background_name} with {self.ethnicity} heritage. Describe their upbringing, key events in their life, and their motivations. Please write three paragraphs with a total word count of around 300 words. Conclude the background story by including a potential adventure hook or a mystery that the character seeks to unravel."
-        background_story = fetch_character_data(prompt)
+        background_story = "" if self.simplified else fetch_character_data(prompt)
         # Transform the /n in paragraphs into <br> for HTML
         # background_story = background_story.replace('\n\n', '<br>')
         return background_story
@@ -211,12 +218,13 @@ class Character:
 
     def create_personality_description(self):
         prompt = f"Make a description of a character's personality based on this sentence: {self.behavior}"
-        personality = fetch_character_data(prompt)
+        personality = "" if self.simplified else fetch_character_data(prompt)
         return personality
 
     def create_image_prompt(self):
         image_prompt = ImagePrompt(character=self)
         prompt = image_prompt.craft_image_prompt()
+        print(prompt)
         return prompt
 
     def __str__(self):
