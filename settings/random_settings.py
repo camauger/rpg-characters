@@ -37,15 +37,6 @@ def pick_random_ethnicity():
     return pick_random_data_from_file('data/ethnicity_data.json', 'ethnicity')
 
 
-def pick_random_subrace(ethnicity):
-    subrace = dict()
-    # if ethnicity has subraces, pick a random subrace
-    if 'subraces' in ethnicity and ethnicity['subraces']:
-        subrace = random.choice(ethnicity['subraces'])
-    return subrace
-
-
-
 def pick_random_ethnicity_fantasy():
     return pick_random_data_from_file('data/ethnicity_fantasy_data.json', 'ethnicity')
 
@@ -92,10 +83,9 @@ def create_eye_color():
 
 from itertools import chain
 
-def get_ethnicity_keywords(ethnicity, subrace):
-    # Combine keywords from ethnicity and subrace, if any
-    total_keywords = set(chain(ethnicity.get('keywords', []),
-                               [] if subrace is None else subrace.get('keywords', [])))
+def get_ethnicity_keywords(ethnicity):
+    # Combine keywords from ethnicity
+    total_keywords = set(chain(ethnicity.get('keywords', [])))
     
     # Convert set back to list for sampling
     total_keywords = list(total_keywords)

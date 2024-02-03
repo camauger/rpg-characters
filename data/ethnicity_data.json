@@ -23,26 +23,24 @@
         "hardy",
         "stubborn",
         "gruff"
-      ],
-      "subraces": [
-        {
-          "name": "Hill Dwarf",
-          "id": "0021",
-          "keywords": [
-            "stout and tough",
-            "exceptional endurance"
-          ]
-        },
-        {
-          "name": "Mountain Dwarf",
-          "id": "0022",
-          "keywords": [
-            "miner",
-            "smith",
-            "artisan",
-            "hardiness"
-          ]
-        }
+      ]
+    },
+    {
+      "name": "Hill Dwarf",
+      "id": "0021",
+      "keywords": [
+        "stout and tough",
+        "exceptional endurance"
+      ]
+    },
+    {
+      "name": "Mountain Dwarf",
+      "id": "0022",
+      "keywords": [
+        "miner",
+        "smith",
+        "artisan",
+        "hardiness"
       ]
     },
     {
@@ -56,39 +54,37 @@
         "graceful",
         "ageless",
         "delicate features"
-      ],
-      "subraces": [
-        {
-          "name": "High Elf",
-          "id": "0031",
-          "keywords": [
-            "arcane",
-            "magic",
-            "scholarly",
-            "graceful"
-          ]
-        },
-        {
-          "name": "Wood Elf",
-          "id": "0032",
-          "keywords": [
-            "agile",
-            "quick",
-            "forest dweller",
-            "fleet-footed",
-            "mask of the wild"
-          ]
-        },
-        {
-          "name": "Dark Elf (Drow)",
-          "id": "0033",
-          "keywords": [
-            "underdark",
-            "subterranean",
-            "cunning",
-            "mysterious"
-          ]
-        }
+      ]
+    },
+    {
+      "name": "High Elf",
+      "id": "0031",
+      "keywords": [
+        "arcane",
+        "magic",
+        "scholarly",
+        "graceful"
+      ]
+    },
+    {
+      "name": "Wood Elf",
+      "id": "0032",
+      "keywords": [
+        "agile",
+        "quick",
+        "forest dweller",
+        "fleet-footed",
+        "mask of the wild"
+      ]
+    },
+    {
+      "name": "Dark Elf (Drow)",
+      "id": "0033",
+      "keywords": [
+        "underdark",
+        "subterranean",
+        "cunning",
+        "mysterious"
       ]
     },
     {
@@ -103,28 +99,26 @@
         "barefoot",
         "cheerful",
         "nimble"
-      ],
-      "subraces": [
-        {
-          "name": "Lightfoot Halfling",
-          "id": "0041",
-          "keywords": [
-            "natural stealth",
-            "hide easily",
-            "good-natured",
-            "friendly"
-          ]
-        },
-        {
-          "name": "Stout Halfling",
-          "id": "0042",
-          "keywords": [
-            "exceptional fortitude",
-            "resilient",
-            "durable",
-            "stout resilience"
-          ]
-        }
+      ]
+    },
+    {
+      "name": "Lightfoot Halfling",
+      "id": "0041",
+      "keywords": [
+        "natural stealth",
+        "hide easily",
+        "good-natured",
+        "friendly"
+      ]
+    },
+    {
+      "name": "Stout Halfling",
+      "id": "0042",
+      "keywords": [
+        "exceptional fortitude",
+        "resilient",
+        "durable",
+        "stout resilience"
       ]
     },
     {
@@ -136,28 +130,26 @@
         "round face",
         "pointed ears",
         "rosy cheeks"
-      ],
-      "subraces": [
-        {
-          "name": "Forest Gnome",
-          "id": "0051",
-          "keywords": [
-            "illusion magic",
-            "stealth",
-            "pranks",
-            "love of nature"
-          ]
-        },
-        {
-          "name": "Rock Gnome",
-          "id": "0052",
-          "keywords": [
-            "tinkerer",
-            "inventions",
-            "mechanical devices",
-            "tinkering abilities"
-          ]
-        }
+      ]
+    },
+    {
+      "name": "Forest Gnome",
+      "id": "0051",
+      "keywords": [
+        "illusion magic",
+        "stealth",
+        "pranks",
+        "love of nature"
+      ]
+    },
+    {
+      "name": "Rock Gnome",
+      "id": "0052",
+      "keywords": [
+        "tinkerer",
+        "inventions",
+        "mechanical devices",
+        "tinkering abilities"
       ]
     },
     {
@@ -186,107 +178,24 @@
         "fearsome",
         "savage",
         "brutish",
-        "barbaric"
+        "strong",
+        "endurance"
       ]
     },
     {
       "name": "Tiefling",
       "id": "008",
       "keywords": [
-        "horns",
-        "tail",
-        "fangs",
-        "glowing eyes",
-        "sharp features",
-        "devilish",
-        "demonic",
-        "fiendish",
-        "infernal",
-        "hellish"
-      ],
-      "subraces": [
-        {
-          "name": "Asmodeus Tiefling",
-          "id": "0081",
-          "keywords": [
-            "Asmodeus bloodline",
-            "commanding presence"
-          ]
-        },
-        {
-          "name": "Mephistopheles Tiefling",
-          "id": "0082",
-          "keywords": [
-            "Mephistopheles bloodline",
-            "fire magic",
-            "manipulation",
-            "deception"
-          ]
-        },
-        {
-          "name": "Zariel Tiefling",
-          "id": "0083",
-          "keywords": [
-            "combat prowess",
-            "resilience"
-          ]
-        }
-      ]
-    },
-    {
-      "name": "Dragonborn",
-      "id": "009",
-      "keywords": [
         "tall",
-        "anthropomorphic muscular build",
-        "dragon-like creature",
-        "scales",
-        "clear detailed draconic features",
-        "dragon anthropomorphic humanoid",
-        "reptilian",
-        "fearsome"
-      ]
-    },
-    {
-      "name": "Aasimar",
-      "id": "010",
-      "keywords": [
-        "radiant",
-        "glowing eyes",
-        "fair skin",
-        "halo",
-        "celestial",
-        "ethereal",
-        "angelic"
-      ],
-      "subraces": [
-        {
-          "name": "Protector Aasimar",
-          "id": "0101",
-          "keywords": [
-            "angelic guardian",
-            "healing hands",
-            "wings"
-          ]
-        },
-        {
-          "name": "Scourge Aasimar",
-          "id": "0102",
-          "keywords": [
-            "radiant consumption",
-            "destructive energy",
-            "divine light"
-          ]
-        },
-        {
-          "name": "Fallen Aasimar",
-          "id": "0103",
-          "keywords": [
-            "dark transformation",
-            "wings of shadow"
-          ]
-        }
+        "horns",
+        "sharp teeth",
+        "forked tongue",
+        "red skin",
+        "fiendish heritage",
+        "infernal bloodline",
+        "dark"
       ]
     }
   ]
 }
+

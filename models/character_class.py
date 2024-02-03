@@ -5,7 +5,7 @@ from models.character_behavior_class import CharacterBehavior
 from models.image_prompt_class import ImagePrompt
 from models.physical_description_class import PhysicalDescription
 from settings.name_composition import generate_random_first_name, generate_random_last_name
-from settings.random_settings import create_eye_color, create_hair_color, create_hair_style, create_physical_trait, get_ethnicity_keywords, pick_random_age, pick_random_background, pick_random_character_class, pick_random_ethnicity, pick_random_gender, pick_random_subclass, pick_random_subrace
+from settings.random_settings import create_eye_color, create_hair_color, create_hair_style, create_physical_trait, get_ethnicity_keywords, pick_random_age, pick_random_background, pick_random_character_class, pick_random_ethnicity, pick_random_gender, pick_random_subclass
 from utils.indefinite_article import indefinite_article
 import openai
 import os
@@ -72,9 +72,6 @@ class Character(Document):
     ethnicity_id = StringField()
     ethnicity_keywords = ListField(StringField())
     ethnicity_name = StringField()
-    subrace = DictField()
-    subrace_id = StringField()
-    subrace_name = StringField()
 
     # Other character attributes
     age = StringField()
@@ -104,7 +101,7 @@ class Character(Document):
         # Create the ID components with conditional expressions 
         ids = [
             gender_map.get(self.gender, '2') if self.gender else '',
-            self.subrace_id if self.subrace and self.subrace_id else self.ethnicity_id or '',
+            self.ethnicity_id or '',
             self.character_subclass_id or self.character_class_id or '',
             self.background_id or '',
             str(self.id) or ''
@@ -189,11 +186,8 @@ class Character(Document):
         self.ethnicity = pick_random_ethnicity()
         self.ethnicity_id = self.ethnicity['id']
         self.ethnicity_name = self.ethnicity['name']
-        self.subrace = pick_random_subrace(self.ethnicity)
-        self.subrace_name = self.subrace['name'] if self.subrace else None
-        self.subrace_id = self.subrace_id = self.subrace['id'] if self.subrace else None
         self.ethnicity_keywords = get_ethnicity_keywords(
-            self.ethnicity, self.subrace)
+            self.ethnicity)
         
         # Image
         self.picture_id = self.create_picture_id()
