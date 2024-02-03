@@ -1,7 +1,7 @@
 {
   "ethnicity": [
     {
-      "race": "Human",
+      "name": "Human",
       "id": "001",
       "keywords": [
         "medium height",
@@ -9,7 +9,7 @@
       ]
     },
     {
-      "race": "Dwarf",
+      "name": "Dwarf",
       "id": "002",
       "keywords": [
         "short",
@@ -46,7 +46,7 @@
       ]
     },
     {
-      "race": "Elf",
+      "name": "Elf",
       "id": "003",
       "keywords": [
         "tall",
@@ -92,7 +92,7 @@
       ]
     },
     {
-      "race": "Halfling",
+      "name": "Halfling",
       "id": "004",
       "keywords": [
         "small",
@@ -128,7 +128,7 @@
       ]
     },
     {
-      "race": "Gnome",
+      "name": "Gnome",
       "id": "005",
       "keywords": [
         "very small",
@@ -161,7 +161,7 @@
       ]
     },
     {
-      "race": "Half-Elf",
+      "name": "Half-Elf",
       "id": "006",
       "keywords": [
         "slim",
@@ -171,7 +171,7 @@
       ]
     },
     {
-      "race": "Half-Orc",
+      "name": "Half-Orc",
       "id": "007",
       "keywords": [
         "tall",
@@ -190,7 +190,7 @@
       ]
     },
     {
-      "race": "Tiefling",
+      "name": "Tiefling",
       "id": "008",
       "keywords": [
         "horns",
@@ -234,7 +234,7 @@
       ]
     },
     {
-      "race": "Dragonborn",
+      "name": "Dragonborn",
       "id": "009",
       "keywords": [
         "tall",
@@ -248,7 +248,7 @@
       ]
     },
     {
-      "race": "Aasimar",
+      "name": "Aasimar",
       "id": "010",
       "keywords": [
         "radiant",

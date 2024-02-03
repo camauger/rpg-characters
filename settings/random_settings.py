@@ -36,19 +36,23 @@ def pick_random_background():
 def pick_random_ethnicity():
     return pick_random_data_from_file('data/ethnicity_data.json', 'ethnicity')
 
+
 def pick_random_subrace(ethnicity):
+    subrace = dict()
     # if ethnicity has subraces, pick a random subrace
-    # if ethnicity.get('subraces'):
-    #     return pick_random_data_from_file('data/ethnicity_data.json', 'subraces')
-    # else:
-    return dict()
-    
+    if 'subraces' in ethnicity and ethnicity['subraces']:
+        subrace = random.choice(ethnicity['subraces'])
+    return subrace
+
+
+
 def pick_random_ethnicity_fantasy():
     return pick_random_data_from_file('data/ethnicity_fantasy_data.json', 'ethnicity')
 
 
 def pick_random_character_class():
     return pick_random_data_from_file('data/character_classes.json', 'classes')
+
 
 def pick_random_subclass(character_class):
     return random.choice(character_class['subclasses'])
@@ -78,6 +82,7 @@ def create_body_type():
 def create_hair_style():
     return create_physical_desc_synonym('hair_styles')
 
+
 def create_hair_color():
     return pick_random_hair_color()
 
@@ -85,19 +90,17 @@ def create_hair_color():
 def create_eye_color():
     return create_physical_desc_synonym('eye_colors')
 
+from itertools import chain
+
 def get_ethnicity_keywords(ethnicity, subrace):
-    ethnicity_keywords = ethnicity.get('keywords', [])
-    if subrace is not None:
-        subrace_keywords = subrace.get('keywords', [])
-        total_keywords = ethnicity_keywords + subrace_keywords
-    else:
-        total_keywords = ethnicity_keywords
-    # remove duplicate keywords
-    total_keywords = list(dict.fromkeys(total_keywords))
-    # Pick upt 5 keywords at random
-    if len(total_keywords) > 5:
-        total_keywords = random.sample(total_keywords, 5)
-    else:
-        total_keywords = random.sample(total_keywords, len(total_keywords))
+    # Combine keywords from ethnicity and subrace, if any
+    total_keywords = set(chain(ethnicity.get('keywords', []),
+                               [] if subrace is None else subrace.get('keywords', [])))
     
-    return total_keywords
+    # Convert set back to list for sampling
+    total_keywords = list(total_keywords)
+    
+    # Pick up to 5 keywords at random
+    keyword_count = min(5, len(total_keywords))
+    return random.sample(total_keywords, keyword_count)
+

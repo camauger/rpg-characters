@@ -4,24 +4,11 @@ import os
 import logging
 import json
 import random
-
 from models.character_class import Character
-from utils.file_exists import file_exists
-from create_image_stable import create_image_stable_diffusion
-from settings.random_settings import (
-    pick_random_age,
-    pick_random_ethnicity_fantasy,
-    pick_random_gender,
-    pick_random_ethnicity,
-    pick_random_character_class,
-    pick_random_background,
-    get_ethnicity_keywords,
-    pick_random_subclass,
-    pick_random_subrace)
+
 
 
 class CharacterManager:
-    """Class to manage characters"""
 
     MAX_CHARACTER_ID = 9999  # Maximum character ID
 
@@ -35,19 +22,16 @@ class CharacterManager:
         db = client[self.MONGO_DB_NAME]
         self.characters_collection = db[self.MONGO_DB_COLLECTION]
 
-
-
-
     def create_character(self, params={}, is_random=True, is_fantasy=False):
+        character_id = random.randint(1, self.MAX_CHARACTER_ID)
+        # Check if character with generated ID already exists
+        while self.characters_collection.find_one({'id': character_id}):
+            # Generate a new ID if the previous one exists
             character_id = random.randint(1, self.MAX_CHARACTER_ID)
-            # Check if character with generated ID already exists
-            while self.characters_collection.find_one({'id': character_id}):
-                character_id = random.randint(1, self.MAX_CHARACTER_ID)  # Generate a new ID if the previous one exists
-            params = self.get_character_params(is_random, is_fantasy)
-            character = Character(id=character_id, **params)
-            character.save()
-            return character
-
+        params = self.get_character_params(is_random, is_fantasy)
+        character = Character(id=character_id, **params)
+        character.save()
+        return character
 
     def load_characters(self):
         try:
@@ -61,43 +45,27 @@ class CharacterManager:
         try:
             for character in characters:
                 # Assuming Character class has a method to_dict() for serialization
-                character_dict = character.to_dict() if hasattr(character, 'to_dict') else character
+                character_dict = character.to_dict() if hasattr(
+                    character, 'to_dict') else character
                 self.characters_collection.insert_one(character_dict)
                 print(f"Character {character_dict['id']} saved successfully.")
         except Exception as e:
             logging.error(f"An error occurred while saving characters: {e}")
 
-
-
-    def get_character_params(self, is_random, is_fantasy):
+    def get_character_params(self):
         params = {
-            'character_class': pick_random_character_class() if (is_random | is_fantasy) else input("Character class: "),
-            'age': pick_random_age() if (is_random | is_fantasy) else input("Character age: "),
-            'gender': pick_random_gender() if (is_random | is_fantasy) else input("Character gender: "),
-            'background': pick_random_background() if (is_random | is_fantasy) else input("Character background: ")
+            'full_name': input("Character name: "),
+            'ethnicity': input("Character ethnicity: "),
+            'subrace': input("Character subrace: "),
+            'character_class': input("Character class: "),
+            'character_subclass' : input("Character subclass: "),
+            'age': input("Character age: "),
+            'gender': input("Character gender: "),
+            'background': input("Character background: "),
+
         }
 
-        params['character_subclass'] = pick_random_subclass(
-            params['character_class']) if (is_random | is_fantasy) else input("Character subclass: ")
-
-        # Simplified creation
-        if is_fantasy:
-            params['simplified'] = True
-            params['gender'] = "Female"
-
-        if is_random:
-            params['ethnicity'] = pick_random_ethnicity()
-            params['subrace'] = pick_random_subrace(
-                params['ethnicity'])
-
-        elif is_fantasy:
-            params['ethnicity'] = pick_random_ethnicity_fantasy()
-            params['subrace'] = pick_random_subrace(
-                params['ethnicity'])
-
-        else:
-            # User input for ethnicity and subrace
-            self.user_defined_ethnicity_and_subrace(params)
+            #self.user_defined_ethnicity_and_subrace(params)
         return params
 
     def user_defined_ethnicity_and_subrace(self, params):
@@ -181,6 +149,3 @@ class CharacterManager:
 
         self.save_characters()
 
-    def get_files_in_folder(self, folder_path):
-        """Get list of files in a folder"""
-        return [file_name for file_name in os.listdir(folder_path) if os.path.isfile(os.path.join(folder_path, file_name))]

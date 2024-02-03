@@ -2,7 +2,7 @@ import json
 import random
 
 #Create a random first name
-def generate_random_first_name(gender):
+def generate_random_first_name(gender="Female"):
     data = ''
     
     if (gender == 'Male'):

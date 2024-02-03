@@ -1,6 +1,7 @@
 import json
 import random
 
+
 class CharacterBehavior:
     def __init__(self, character):
         self.settings = self.load_settings()

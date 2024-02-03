@@ -1,42 +1,7 @@
-from dotenv import load_dotenv
-from models.character_manager_class import CharacterManager
-from mongoengine import connect
-from pymongo import MongoClient
+from models.character_class import Character
+from settings.random_settings import pick_random_ethnicity
 from utils.image_optim import optimize_images
-import logging
-import os
-from mongoengine import disconnect
-
-# Load .env file
-load_dotenv()
-
-# Check if environment variable is set
-if not 'MONGO_CONNECTION_STRING' in os.environ:
-    logging.error('Missing MONGO_CONNECTION_STRING! Ensure file .env has correct data')
-    exit(1)
-
-try:
-    # Connect to your MongoDB database
-    client = MongoClient(os.getenv('MONGO_CONNECTION_STRING'))
-    db = client.rpg
-    collection = db.rpgCharacters
-    print("Connected to MongoDB")
-except Exception as e:
-    logging.error(f"An error occurred while connecting to MongoDB with the following details:\n{str(e)}")
-
-
-
-# Setting up logging
-logging.basicConfig(level=logging.INFO)
-
-MENU_OPTIONS = {
-    "1": {"message": "Create random characters", "method": "create_character"},
-    "2": {"message": "Optimize images", "method": None},
-    "3": {"message": "Create a specific character", "method": "create_character", "args": [False]},
-    "4": {"message": "Update a specific character", "method": "update_character_prompt"},
-    "5": {"message": "Create a fantasy character", "method": "create_character", "args": [False, True]},
-    "0": {"message": "Exit the program", "method": None}
-}
+from models.character_manager_class import CharacterManager
 
 
 class RPGCharacterGenerator:
@@ -45,30 +10,36 @@ class RPGCharacterGenerator:
 
     @staticmethod
     def print_menu():
-        for option, details in MENU_OPTIONS.items():
-            print(f"{option}. {details['message']}")
+        print("1. Create a random character")
+        print("2. Optimize images")
+        print("3. Create a specific character")
+        print("4. Update a specific character")
+        print("5. Create a fantasy character")
+        print("0. Exit the program")
 
     def user_choice(self, choice):
-        if choice in MENU_OPTIONS:
-            if choice == "2":
-                optimize_images("./large_images", "./static/images")
-                print("Images optimized!")
-                return True
-
-            if choice == "0":
-                disconnect()
-                print("Goodbye!")
-                return False
-
-            method = getattr(self.character_manager,
-                             MENU_OPTIONS[choice]['method'])
-            args = MENU_OPTIONS[choice].get('args', [])
-
-            method(*args)
-
+        if choice == "1":
+            new_character = Character()
+            new_character.create_character(params={
+            }, is_random=True)
+            new_character.save()
+        elif choice == "2":
+            optimize_images("./large_images", "./static/images")
+            print("Images optimized!")
+        elif choice == "3":
+            if self.character_manager.check_character_count():
+                self.character_manager.create_character(is_random=False)
+        elif choice == "4":
+            self.character_manager.update_character_prompt()
+        elif choice == "5":
+            if self.character_manager.check_character_count():
+                self.character_manager.create_character(
+                    is_random=False, is_fantasy=True)
+        elif choice == "0":
+            print("Goodbye!")
+            return False
         else:
             print("Invalid choice!")
-
         return True
 
     def main_loop(self):
