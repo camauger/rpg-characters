@@ -7,7 +7,6 @@ import random
 from models.character_class import Character
 
 
-
 class CharacterManager:
 
     MAX_CHARACTER_ID = 9999  # Maximum character ID
@@ -57,7 +56,7 @@ class CharacterManager:
             'full_name': input("Character name: "),
             'ethnicity': input("Character ethnicity: "),
             'character_class': input("Character class: "),
-            'character_subclass' : input("Character subclass: "),
+            'character_subclass': input("Character subclass: "),
             'age': input("Character age: "),
             'gender': input("Character gender: "),
             'background': input("Character background: "),
@@ -65,8 +64,6 @@ class CharacterManager:
         }
 
         return params
-
-
 
     def create_characters(self, num_characters):
         new_characters = []
@@ -135,4 +132,3 @@ class CharacterManager:
                 print(f"Invalid attribute: {key}")
 
         self.save_characters()
-
