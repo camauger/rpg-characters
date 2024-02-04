@@ -1,3 +1,4 @@
+from mongoengine import connect
 from dotenv import load_dotenv
 from flask import Flask, render_template, request, redirect, url_for
 from flask_wtf import FlaskForm
@@ -17,8 +18,7 @@ from pymongo.server_api import ServerApi
 
 # Load .env file
 load_dotenv()
-from mongoengine import connect
-try :
+try:
     # Connect to your MongoDB database
     connection_string = os.environ.get('MONGO_CONNECTION_STRING')
     client = MongoClient(connection_string)
@@ -33,13 +33,14 @@ except Exception as e:
 # Initialize a thread lock
 lock = Lock()
 
-# Setting up logging 
+# Setting up logging
 logging.basicConfig(level=logging.INFO)
 
 # Flask App
 app = Flask(__name__, static_folder='static')
 
 character_manager = CharacterManager()
+
 
 class CharacterForm(FlaskForm):
     name = StringField('Character Name', validators=[DataRequired()])
@@ -54,6 +55,7 @@ def handle_db_operations():
 
 
 @app.route('/', methods=['GET'])
+@app.route('/index.html', methods=['GET'])
 def index():
     characters = load_characters()
     return render_template('index.html', characters=characters)
@@ -64,20 +66,14 @@ def generate_character():
     form = CharacterForm()
     if form.validate_on_submit():
         try:
-            new_character = character_manager.create_character(params=[], is_random=True)
+            new_character = character_manager.create_character(
+                params=[], is_random=True)
             collection.insert_one(new_character)
             return redirect(url_for('character_result', id=new_character['id']))
         except errors.PyMongoError as e:
-            logging.error(f"An error occurred while inserting the character: {e}")
+            logging.error(
+                f"An error occurred while inserting the character: {e}")
     return render_template('generate_character.html', form=form)
-
-
-def get_character_data(picture_id):
-    characters = load_characters()
-    for character in characters:
-        if character.get('picture_id') == picture_id:
-            return character
-    return None
 
 
 def load_characters():
@@ -96,7 +92,7 @@ def about():
 
 @app.route('/character/<string:picture_id>.html', methods=['GET'])
 def character(picture_id):
-    character_data = get_character_data(picture_id)
+    character_data = Character.objects(picture_id=picture_id).first()
     return render_template('character.html', character_data=character_data)
 
 
@@ -120,7 +116,7 @@ def subscribe():
     if email:
         with lock:  # Ensure thread safety during file writes
             try:
-                with open('subscribers.json', 'a') as file:  
+                with open('subscribers.json', 'a') as file:
                     data = {'subscribers': [email]}
                     json.dump(data, file)
             except IOError:

@@ -7,10 +7,10 @@
       integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
       crossorigin="anonymous"
     />
-    <!-- <link
+    <link
       rel="stylesheet"
       href="{{ url_for('static', filename='custom.css') }}"
-    /> -->
+    />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>RPG Characters</title>
@@ -78,20 +78,20 @@
         <div class="col-md-3">
           <div class="card mb-4" style="background-color: #f2e5b5">
             <img
-              src="{{ url_for('static', filename='images/' ~ character.image_id ~ '.png') }}"
+              src="{{ url_for('static', filename='images/' ~ character.picture_id ~ '.png') }}"
               class="card-img-top"
               alt="{{ character.first_name }}"
             />
             <div class="card-body">
               <h5 class="character-card-title">{{ character.full_name }}</h5>
               <h6 class="character-card-subtitle mb-2">
-                {{ character.ethnicity }} {{ character.character_class }}
+                {{ character.ethnicity_name }} {{ character.character_class_name }}
               </h6>
               <h6 class="character-card-subtitle mb-2">
                 {{ character.background_name }}
               </h6>
               <a
-                href="{{ url_for('character', picture_id=character.image_id) }}"
+                href="{{ url_for('character', picture_id=character.picture_id) }}"
                 class="btn btn-outline-secondary"
                 >More details</a
               >

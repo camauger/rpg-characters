@@ -142,7 +142,7 @@ class Character(Document):
         self.has_image = file_exists('static/images', f"{self.picture_id}.png")
 
     def create_picture_id(self):
-        return str(random.randint(1, 9999))
+        return self.full_name.replace(" ", "_").lower()
 
     def create_physical_description_text(self):
         physical_description = f"{indefinite_article(self.physical_trait)} {self.gender.lower()} {self.ethnicity_name}. {self.full_name} has {self.hair_color.lower()} {self.hair_style} hair and {self.eye_color} eyes"
