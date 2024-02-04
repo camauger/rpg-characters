@@ -81,16 +81,16 @@ def create_hair_color():
 def create_eye_color():
     return create_physical_desc_synonym('eye_colors')
 
-from itertools import chain
+import random
 
 def get_ethnicity_keywords(ethnicity):
-    # Combine keywords from ethnicity
-    total_keywords = set(chain(ethnicity.get('keywords', [])))
-    
-    # Convert set back to list for sampling
-    total_keywords = list(total_keywords)
+    # Get keywords from ethnicity
+    total_keywords = ethnicity['keywords']
     
     # Pick up to 5 keywords at random
     keyword_count = min(5, len(total_keywords))
-    return random.sample(total_keywords, keyword_count)
+    total_keywords = random.sample(total_keywords, keyword_count)
+
+    # return the keywords in a string
+    return ', '.join(total_keywords)
 

@@ -56,7 +56,6 @@ class CharacterManager:
         params = {
             'full_name': input("Character name: "),
             'ethnicity': input("Character ethnicity: "),
-            'subrace': input("Character subrace: "),
             'character_class': input("Character class: "),
             'character_subclass' : input("Character subclass: "),
             'age': input("Character age: "),
@@ -65,21 +64,9 @@ class CharacterManager:
 
         }
 
-            #self.user_defined_ethnicity_and_subrace(params)
         return params
 
-    def user_defined_ethnicity_and_subrace(self, params):
-        """Helper function to handle user input for ethnicity and subrace"""
-        ethnicity_input = input("Character ethnicity: ")
-        with open('data/ethnicity_data.json', 'r') as file:
-            data = json.load(file)
-            params['random_ethnicity'] = next(
-                (e for e in data['ethnicity'] if e['race'] == ethnicity_input), None)
-            if params['random_ethnicity']:
-                params['random_subrace'] = next((subrace for subrace in params['random_ethnicity'].get(
-                    'subraces', []) if subrace['name'] == input("Character subrace: ")), None)
-            else:
-                print("Invalid ethnicity input!")
+
 
     def create_characters(self, num_characters):
         new_characters = []
