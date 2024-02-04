@@ -24,3 +24,17 @@ exports.handler = async (event, context) => {
     await client.close();
   }
 };
+
+// Example: functions/subscribe.js
+exports.handler = async (event, context) => {
+  if (event.httpMethod !== 'POST') {
+    return { statusCode: 405, body: 'Method Not Allowed' };
+  }
+  const email = JSON.parse(event.body).email;
+  // Add logic to handle the email, like saving it to a database
+  return {
+    statusCode: 200,
+    body: JSON.stringify({ message: `Email ${email} subscribed successfully!` }),
+  };
+};
+
