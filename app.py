@@ -1,10 +1,9 @@
-import logging
 from dotenv import load_dotenv
 from flask import Flask, request, jsonify, render_template
+from flask import request, jsonify
 from flask_cors import CORS
 from models.character_manager_class import CharacterManager
 import os
-
 # Load .env file
 load_dotenv()
 
@@ -15,10 +14,6 @@ from flask_cors import CORS
 
 # After initializing your Flask app
 CORS(app)
-
-# Character manager
-character_manager = CharacterManager()
-
 
 @app.route('/', methods=['GET'])
 @app.route('/index.html', methods=['GET'])
@@ -41,7 +36,7 @@ def about():
 
 
 @app.route('/thank-you.html', methods=['GET'])
-def about():
+def thank_you():
     # Static page, no changes needed
     return render_template('thank-you.html')
 
@@ -53,13 +48,12 @@ def character(picture_id):
     # And then use JavaScript to fetch the character data from a serverless function
     return render_template('character.html', picture_id=picture_id)
 
-from flask import request, jsonify
-
-@app.route('/generate-random-character', methods=['POST'])
-def create_character():
+@app.route('/generate-random-character/', methods=['POST'])
+def generate_random_character():
     data = request.json  # Access JSON data sent with the POST request
     print(data)
-    # Your logic here:
+    # Character manager
+    character_manager = CharacterManager()
     new_character = character_manager.create_character({}, is_random=True)
     if new_character:
         return jsonify({'message': 'Character created successfully', 'character': new_character.to_dict()})

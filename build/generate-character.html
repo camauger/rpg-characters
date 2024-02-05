@@ -34,7 +34,7 @@
             data-netlify="true"
             onsubmit=""
           >
-          <input type="hidden" name="form-name" value="randomCharacter" />
+            <input type="hidden" name="form-name" value="randomCharacter" />
 
             <p>
               <label>Your Email: <input type="email" name="email" /></label>
@@ -74,19 +74,18 @@
         })
         .catch((err) => console.error("Failed to load navigation:", err));
 
+    // Handle form submission
       document
         .getElementById("createCharacterForm")
         .addEventListener("submit", function (event) {
-          // event.preventDefault(); // Prevent default form submission behavior
+          event.preventDefault(); // Prevent default form submission behavior
 
-          fetch("/generate-random-character", {
+          let formData = new URLSearchParams(new FormData(event.target)).toString();
+
+          fetch("/generate-random-character/", {
             method: "POST",
-            headers: {
-              "Content-Type": "application/json",
-            },
-            body: JSON.stringify({
-              data: "random character",
-            }),
+            headers: { "Content-Type": "application/x-www-form-urlencoded" },
+            body: formData,
           })
             .then((response) => {
               if (!response.ok) {
