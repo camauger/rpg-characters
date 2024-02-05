@@ -54,10 +54,10 @@
               const characterHtml = `
           <div class="col-md-3">
             <div class="card mb-4" style="background-color: #f2e5b5">
-              <img src="static/images/${character.picture_id}.png" class="card-img-top" alt="${character.name}">
+              <img src="static/images/${character.picture_id}.png" class="card-img-top" alt="${character.full_name}">
               <div class="card-body">
-                <h5 class="character-card-title">${character.name}</h5>
-                <h6 class="character-card-subtitle mb-2">${character.class}</h6>
+                <h5 class="character-card-title">${character.full_name}</h5>
+                <h6 class="character-card-subtitle mb-2">${character.class_name}</h6>
                 <a href="/character/${character.picture_id}.html" class="btn btn-outline-secondary">More details</a>
               </div>
             </div>

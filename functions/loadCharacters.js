@@ -6,7 +6,7 @@ exports.handler = async (event, context) => {
 
   try {
     await client.connect();
-    const collection = client.db("rpg").collection("rpgCharacters");
+    const collection = client.db("rpg").collection("characters");
     const characters = await collection.find({}).toArray();
     
     return {
