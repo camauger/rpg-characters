@@ -1,9 +1,6 @@
-import logging
 from dotenv import load_dotenv
 from flask import Flask, render_template
 import os
-from mongoengine import connect
-from pymongo import MongoClient
 
 
 # Load .env file
