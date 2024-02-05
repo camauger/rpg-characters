@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='custom.css') }}" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>RPG Characters</title>
+
+</head>
+
+<body style="background-color: #eee5ce">
+  <header class="container">
+    <nav class="navbar navbar-expand-lg navbar-light" style="font-family: MrEavesRemake; background-color: #eee5ce">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">RPG Characters</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="/">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="/create-character.html">Create a Character</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="/about.html">About</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <div class="container-fluid" style="margin-bottom: 90px">
+    <div class="col-6 m-auto">
+      <h1 class="heading-main">Create a Random Character</h1>
+    <p class="character-text">Enter your email and click create. You will receive a notification when your random character will be available.</p>
+    <div class="form-group">
+      <form action="/create-character.html" name="character-creation" method="post" data-netlify="true">
+        <label for="email">Your Email</label>
+        <input type="text" class="form-control" id="email" name="email" placeholder="Enter your email" required>
+        <button type="submit" class="btn btn-primary"  value="Create Character">Submit</button>
+      </form>
+    </div>
+    </div>
+  </div>
+
+  <footer class="footer fixed-bottom mt-auto py-3" style="background-color: #58180d">
+    <div class="container">
+      <p class="text-center" style="color: #bbad82">
+        Made with <span style="color: #e25555">&#9829;</span> by
+        <a href="https://ludomancien.com/">Christian Amauger</a>
+      </p>
+    </div>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
