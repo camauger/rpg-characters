@@ -52,17 +52,17 @@
           } else {
             characters.forEach((character) => {
               const characterHtml = `
-          <div class="col-md-3">
-            <div class="card mb-4" style="background-color: #f2e5b5">
-              <img src="static/images/${character.picture_id}.png" class="card-img-top" alt="${character.full_name}">
-              <div class="card-body">
-                <h5 class="character-card-title">${character.full_name}</h5>
-                <h6 class="character-card-subtitle mb-2">${character.class_name}</h6>
-                <a href="/character/${character.picture_id}.html" class="btn btn-outline-secondary">More details</a>
-              </div>
-            </div>
-          </div>
-        `;
+    <div class="col-md-3">
+      <div class="card mb-4" style="background-color: #f2e5b5">
+        <img src="static/images/${character.picture_id}.png" class="card-img-top" alt="${character.full_name}">
+        <div class="card-body">
+          <h5 class="character-card-title">${character.full_name}</h5>
+          <h6 class="character-card-subtitle mb-2">${character.character_class_name} - ${character.character_subclass_name}</h6>
+          <a href="/character.html?picture_id=${character.picture_id}" class="btn btn-outline-secondary">More details</a>
+        </div>
+      </div>
+    </div>
+  `;
               container.innerHTML += characterHtml;
             });
           }

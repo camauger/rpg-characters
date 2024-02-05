@@ -1,14 +1,17 @@
-const { MongoClient } = require('mongodb');
+const { MongoClient } = require("mongodb");
 
 exports.handler = async (event, context) => {
   const uri = process.env.MONGO_CONNECTION_STRING;
-  const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true });
+  const client = new MongoClient(uri, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+  });
 
   try {
     await client.connect();
     const collection = client.db("rpg").collection("characters");
     const characters = await collection.find({}).toArray();
-    
+
     return {
       statusCode: 200,
       body: JSON.stringify(characters),
