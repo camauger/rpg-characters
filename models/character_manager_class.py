@@ -6,7 +6,6 @@ import json
 import random
 from models.character_class import Character
 
-
 class CharacterManager:
 
     MAX_CHARACTER_ID = 9999  # Maximum character ID
@@ -132,3 +131,13 @@ class CharacterManager:
                 print(f"Invalid attribute: {key}")
 
         self.save_characters()
+
+    # from apscheduler.schedulers.background import BackgroundScheduler
+
+    # def process_new_characters():
+    #     # Implement logic to process new characters
+    #     character_manager.process_new_characters()  # You'll need to implement this
+
+    # scheduler = BackgroundScheduler()
+    # scheduler.add_job(process_new_characters, 'interval', minutes=30)
+    # scheduler.start()

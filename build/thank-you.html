@@ -14,7 +14,8 @@
   </head>
   <body>
     <header class="container">
-      <!-- Navigation code remains unchanged -->
+      <!-- Navigation -->
+      <div id="navigation-placeholder"></div>
     </header>
 
     <div class="container-fluid mb-5">
@@ -22,7 +23,7 @@
         The RPG Characters Collection
       </h1>
       <div class="row mt-5" id="charactersContainer">
-        <!-- Characters will be loaded here by JavaScript -->
+        <p>THANK YOU</p>
       </div>
     </div>
 
@@ -41,40 +42,12 @@
       crossorigin="anonymous"
     ></script>
     <script>
-      fetch("navigation.html")
+              fetch("navigation.html")
         .then((response) => response.text())
         .then((html) => {
           document.getElementById("navigation-placeholder").innerHTML = html;
         })
         .catch((err) => console.error("Failed to load navigation:", err));
-
-      // Fetch characters from the serverless function
-      fetch("/.netlify/functions/loadCharacters")
-        .then((response) => response.json())
-        .then((characters) => {
-          const container = document.getElementById("charactersContainer");
-          if (characters.length === 0) {
-            container.innerHTML =
-              '<div class="col-md-12"><h2 class="text-center">No characters found</h2></div>';
-          } else {
-            characters.forEach((character) => {
-              const characterHtml = `
-    <div class="col-md-3">
-      <div class="card mb-4" style="background-color: #f2e5b5">
-        <img src="static/images/${character.picture_id}.png" class="card-img-top" alt="${character.full_name}">
-        <div class="card-body">
-          <h5 class="character-card-title">${character.full_name}</h5>
-          <h6 class="character-card-subtitle mb-2">${character.character_class_name} - ${character.character_subclass_name}</h6>
-          <a href="/character.html?picture_id=${character.picture_id}" class="btn btn-outline-secondary">More details</a>
-        </div>
-      </div>
-    </div>
-  `;
-              container.innerHTML += characterHtml;
-            });
-          }
-        })
-        .catch((error) => console.error("Error loading characters:", error));
     </script>
   </body>
 </html>

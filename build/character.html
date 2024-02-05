@@ -1,66 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-  <link rel="stylesheet" href="static/custom.css">
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Character Details</title>
-  <meta name="description" content="A randomly generated character for D&D">
-</head>
-<body style="background-color: #eee5ce">
-<header class="container">
-  <!-- Navigation Placeholder -->
-</header>
-<div class="container-fluid" style="margin-bottom: 90px">
-  <div class="row align-items-center">
-    <div class="col-md-6" id="imageSection">
-      <!-- Image will be dynamically inserted here -->
-    </div>
-    <div class="col-md-6">
-      <div id="characterInfo">
-        <!-- Character information will be dynamically inserted here -->
+  <head>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="static/custom.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Character Details</title>
+    <meta name="description" content="A randomly generated character for D&D" />
+  </head>
+  <body style="background-color: #eee5ce">
+    <header class="container">
+       <!-- Navigation -->
+       <div id="navigation-placeholder"></div>
+    </header>
+    <div class="container-fluid" style="margin-bottom: 90px">
+      <div class="row align-items-center">
+        <div class="col-md-6" id="imageSection">
+          <!-- Image will be dynamically inserted here -->
+        </div>
+        <div class="col-md-6">
+          <div id="characterInfo">
+            <!-- Character information will be dynamically inserted here -->
+          </div>
+        </div>
       </div>
     </div>
-  </div>
-</div>
-<footer class="footer mt-auto py-3" style="background-color: #58180d">
-  <div class="container">
-    <p class="text-center" style="color: #bbad82">Made with <span style="color: #e25555">&#9829;</span> by <a href="https://ludomancien.com/">Christian Amauger</a></p>
-  </div>
-</footer>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-  const pictureId = new URLSearchParams(window.location.search).get('picture_id');
-  if (pictureId) {
-    fetch(`/.netlify/functions/getCharacter?picture_id=${pictureId}`)
-      .then(response => response.json())
-      .then(character => {
-        document.title = character.full_name + ' - Character Details'; // Update the page title dynamically
-        const imageSection = document.getElementById('imageSection');
-        const characterInfo = document.getElementById('characterInfo');
+    <footer class="footer mt-auto py-3" style="background-color: #58180d">
+      <div class="container">
+        <p class="text-center" style="color: #bbad82">
+          Made with <span style="color: #e25555">&#9829;</span> by
+          <a href="https://ludomancien.com/">Christian Amauger</a>
+        </p>
+      </div>
+    </footer>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      fetch("navigation.html")
+        .then((response) => response.text())
+        .then((html) => {
+          document.getElementById("navigation-placeholder").innerHTML = html;
+        })
+        .catch((err) => console.error("Failed to load navigation:", err));
 
-        // Build and insert the image HTML
-        imageSection.innerHTML = character.picture_id ? `<img src="static/images/${character.picture_id}.png" class="img-fluid" alt="${character.full_name}">` : `<div class="p-4"><h2>This character portrait will be created soon.</h2></div>`;
+      document.addEventListener("DOMContentLoaded", function () {
+        const pictureId = new URLSearchParams(window.location.search).get(
+          "picture_id"
+        );
+        if (pictureId) {
+          fetch(`/.netlify/functions/getCharacter?picture_id=${pictureId}`)
+            .then((response) => response.json())
+            .then((character) => {
+              document.title = character.full_name + " - Character Details"; // Update the page title dynamically
+              const imageSection = document.getElementById("imageSection");
+              const characterInfo = document.getElementById("characterInfo");
 
-        // Build and insert the character information HTML
-        characterInfo.innerHTML = `
-          <h1 class="display-4 text-center mt-5" style="font-family: MrEavesRemake; color: #58180d">${character.full_name}</h1>
+              // Build and insert the image HTML
+              imageSection.innerHTML = `<img src="static/images/${character.picture_id}.png" class="img-fluid" alt="${character.full_name}">`;
+
+              // Build and insert the character information HTML
+
+              characterInfo.innerHTML = `
+          <h1 class="display-4 text-center mt-5" style="font-family: MrEavesRemake; color: #58180d">${
+            character.full_name
+          }</h1>
           <div class="display-4 text-center mb-4">
-            <h3 style="font-family: MrEavesRemake">${character.ethnicity_name} ${character.gender} ${character.background_name}</h3>
-            <h3 style="font-family: MrEavesRemake">${character.character_class_name} - ${character.character_subclass_name}</h3>
+            <h3 style="font-family: MrEavesRemake">${
+              character.ethnicity_name
+            } ${character.gender} ${character.background_name}</h3>
+            <h3 style="font-family: MrEavesRemake">${
+              character.character_class_name
+            } - ${character.character_subclass_name}</h3>
           </div>
           <div>
             <h3 style="font-family: MrEavesRemake; color: #58180d; border-bottom: 2px solid var(--HB_Color_HeaderUnderline);">Background Story</h3>
-            <p class="character-text">${character.background_story}</p>
+            <p class="character-text">${
+              JSON.parse(character.background_story).background_story
+            }</p>
             <h3 style="font-family: MrEavesRemake; color: #58180d; border-bottom: 2px solid var(--HB_Color_HeaderUnderline);">Personality</h3>
-            <p class="character-text">${character.personality_description || character.behavior}</p>
+            <p class="character-text">${
+              JSON.parse(character.personality_description)
+                .personality_description
+            }</p>
           </div>`;
-      })
-      .catch(error => console.error("Error loading character details:", error));
-  }
-});
-</script>
-</body>
+            })
+            .catch((error) =>
+              console.error("Error loading character details:", error)
+            );
+        }
+      });
+    </script>
+  </body>
 </html>

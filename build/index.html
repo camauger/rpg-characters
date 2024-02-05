@@ -14,7 +14,9 @@
   </head>
   <body>
     <header class="container">
-      <!-- Navigation code remains unchanged -->
+      <!-- Navigation -->
+      <div id="navigation-placeholder"></div>
+
     </header>
 
     <div class="container-fluid mb-5">
@@ -41,6 +43,13 @@
       crossorigin="anonymous"
     ></script>
     <script>
+      fetch("navigation.html")
+        .then((response) => response.text())
+        .then((html) => {
+          document.getElementById("navigation-placeholder").innerHTML = html;
+        })
+        .catch((err) => console.error("Failed to load navigation:", err));
+
       // Fetch characters from the serverless function
       fetch("/.netlify/functions/loadCharacters")
         .then((response) => response.json())
