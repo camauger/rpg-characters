@@ -2,6 +2,7 @@ from mongoengine import Document, StringField, BooleanField, DictField
 import os
 import random
 
+
 class Character(Document):
     meta = {'collection': 'characters'}
 
@@ -30,7 +31,7 @@ class Character(Document):
     hair_style = StringField()
     has_image = BooleanField(default=False)
     picture_id = StringField()
-    
+
     # Image prompt attributes (simplified for focus on main attributes)
     clothing = StringField()
     physical_trait = StringField()
@@ -50,7 +51,7 @@ class Character(Document):
         Generates a unique picture ID for the character.
         """
         return f"{self.full_name.replace(' ', '_').lower()}"
-    #return f"{self.full_name.replace(' ', '_').lower()}_{random.randint(1000, 9999)}"
+    # return f"{self.full_name.replace(' ', '_').lower()}_{random.randint(1000, 9999)}"
 
     def to_dict(self):
         """

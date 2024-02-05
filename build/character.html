@@ -42,7 +42,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const characterInfo = document.getElementById('characterInfo');
 
         // Build and insert the image HTML
-        imageSection.innerHTML = character.has_image ? `<img src="static/images/${character.picture_id}.png" class="img-fluid" alt="${character.full_name}">` : `<div class="p-4"><h2>This character portrait will be created soon.</h2></div>`;
+        imageSection.innerHTML = character.picture_id ? `<img src="static/images/${character.picture_id}.png" class="img-fluid" alt="${character.full_name}">` : `<div class="p-4"><h2>This character portrait will be created soon.</h2></div>`;
 
         // Build and insert the character information HTML
         characterInfo.innerHTML = `

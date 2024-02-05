@@ -18,7 +18,7 @@ exports.handler = async (event) => {
 
   try {
     await client.connect();
-    const collection = client.db("rpg").collection("rpgCharacters");
+    const collection = client.db("rpg").collection("characters");
     const character = await collection.findOne({ picture_id: pictureId });
 
     if (!character) {
