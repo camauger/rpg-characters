@@ -7,13 +7,13 @@ import os
 # Load .env file
 load_dotenv()
 
-    
+
 # Flask App
 app = Flask(__name__, static_folder='static')
-from flask_cors import CORS
 
 # After initializing your Flask app
 CORS(app)
+
 
 @app.route('/', methods=['GET'])
 @app.route('/index.html', methods=['GET'])
@@ -48,19 +48,15 @@ def character(picture_id):
     # And then use JavaScript to fetch the character data from a serverless function
     return render_template('character.html', picture_id=picture_id)
 
-@app.route('/generate-random-character/', methods=['POST'])
-def generate_random_character():
-    data = request.json  # Access JSON data sent with the POST request
-    print(data)
-    # Character manager
-    character_manager = CharacterManager()
-    new_character = character_manager.create_character({}, is_random=True)
-    if new_character:
-        return jsonify({'message': 'Character created successfully', 'character': new_character.to_dict()})
-    else:
-        return jsonify({'message': 'Failed to create character'}), 500
 
-DEBUG_MODE = os.getenv('FLASK_DEBUG', 'False').lower() in ['true', '1', 't']
+# @app.route('/generate-random-character', methods=['POST'])
+# def generate_random_character():
+#     data = request.json  # Access JSON data sent with the POST request
+#     print(data)
+
+
+
+DEBUG_MODE = os.getenv('FLASK_DEBUG', 'True').lower() in ['true', '1', 't']
 
 
 if __name__ == '__main__':

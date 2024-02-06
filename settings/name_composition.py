@@ -19,7 +19,7 @@ def generate_random_first_name(gender="Female"):
         first_name = random.choice(names)
         return first_name.capitalize()
 
-# Create a random character last name
+# Create a random character last named
 
 
 def generate_random_last_name():

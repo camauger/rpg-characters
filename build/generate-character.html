@@ -25,28 +25,9 @@
           Click the button below to generate a random character for your next
           adventure.
         </p>
-        <div class="form-group">
-          <form
-            id="createCharacterForm"
-            action="/thank-you.html"
-            name="randomCharacter"
-            method="POST"
-            data-netlify="true"
-            onsubmit=""
-          >
-            <input type="hidden" name="form-name" value="randomCharacter" />
-
-            <p>
-              <label>Your Email: <input type="email" name="email" /></label>
-            </p>
-
-            <p>
-              <button type="submit" class="btn btn-primary">
-                Create a random character
-              </button>
-            </p>
-          </form>
-        </div>
+        <button type="submit" class="btn btn-primary">
+          Create a random character
+        </button>
       </div>
     </div>
 
@@ -74,32 +55,19 @@
         })
         .catch((err) => console.error("Failed to load navigation:", err));
 
-    // Handle form submission
+      // Handle character creation
       document
-        .getElementById("createCharacterForm")
-        .addEventListener("submit", function (event) {
-          event.preventDefault(); // Prevent default form submission behavior
+        .querySelector(".btn-primary")
+        .addEventListener("click", function (event) {
+          event.preventDefault(); // Prevent default action
 
-          let formData = new URLSearchParams(new FormData(event.target)).toString();
-
-          fetch("/generate-random-character/", {
+          fetch("/.netlify/functions/generateRandomCharacter", {
             method: "POST",
-            headers: { "Content-Type": "application/x-www-form-urlencoded" },
-            body: formData,
-          })
-            .then((response) => {
-              if (!response.ok) {
-                throw new Error("Network response was not ok");
-              }
-              return response.json();
-            })
-            .then((data) => {
-              console.log("Character created:", data);
-            })
-            .catch((error) => {
-              console.error("Error:", error);
-              alert("Failed to create character.");
-            });
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify({}),
+          });
         });
     </script>
   </body>
